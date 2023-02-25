@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.SpotlightPlayerEffect;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
@@ -32,6 +33,15 @@ public class money extends AbstractPotion{
         //给予玩家100金币
         p.gainGold(100);
 
+    }
+    public boolean canUse() {
+        if (AbstractDungeon.actionManager.turnHasEnded &&
+                (AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT)
+            return false;
+        if ((AbstractDungeon.getCurrRoom()).event != null &&
+                (AbstractDungeon.getCurrRoom()).event instanceof com.megacrit.cardcrawl.events.shrines.WeMeetAgain)
+            return false;
+        return true;
     }
     public void initializeData(){
         this.potency = getPotency();
