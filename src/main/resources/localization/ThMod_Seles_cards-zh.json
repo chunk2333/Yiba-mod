@@ -102,5 +102,10 @@
   "Treacherous": {
     "NAME": "诡谲",
     "DESCRIPTION": "获得 !M! 点力量 !M! 点敏捷。 NL 本场战斗所有技能牌降低1费。"
+  },
+  "LongevityInHeavenAndEarth": {
+    "NAME": "天地同寿",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 进入 神格 。 NL  消耗。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 进入 神格 。 NL  消耗。 NL  保留 。"
   }
 }
