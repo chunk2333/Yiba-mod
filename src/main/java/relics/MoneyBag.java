@@ -59,4 +59,9 @@ public class MoneyBag extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new MoneyBag();
     }
+    @Override
+    public boolean canSpawn() {
+        return ((Settings.isEndless || AbstractDungeon.floorNum <= 48) &&
+                !(AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.ShopRoom));
+    }
 }
