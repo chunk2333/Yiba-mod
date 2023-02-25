@@ -28,8 +28,8 @@ public class reborn extends AbstractPotion{
     public void initializeData(){
         //药水描述
         this.potency = getPotency();
-        this.description = DESCRIPTIONS[0];
-        this.name = NAME;
+        this.description = potionString.DESCRIPTIONS[0];
+        this.name = potionString.NAME;
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
     }
