@@ -21,7 +21,7 @@ public class TreacherousAction extends AbstractGameAction {
             //弃牌堆
             for (AbstractCard c : this.p.drawPile.group) {
                 if (c.type == AbstractCard.CardType.SKILL) {
-                    if (c.cost >= 0) {
+                    if (c.cost > 0) {
                         c.costForTurn = c.cost - 1;
                         c.isCostModifiedForTurn = true;
                         c.cost = c.cost - 1;
