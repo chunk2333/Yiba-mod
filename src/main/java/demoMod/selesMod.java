@@ -217,6 +217,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addRelic(new RocoCoin(), RelicType.SHARED); //洛克贝
         BaseMod.addRelic(new HouseholdRegister(), RelicType.SHARED); //户口本
         BaseMod.addRelic(new CovertTrap(), RelicType.GREEN); //隐蔽陷阱----猎人专属
+        BaseMod.addRelic(new LuLu(), RelicType.GREEN); //LuLu
 
         //BaseMod.addPotion();
         //添加事件:会员制餐厅
