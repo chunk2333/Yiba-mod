@@ -24,7 +24,7 @@ public class Treacherous extends CustomCard {
     public Treacherous() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF);
         //设置 magicNumber
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }
     @Override
@@ -48,7 +48,7 @@ public class Treacherous extends CustomCard {
         if (!this.upgraded) {
             //更改名字和费用
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 }
