@@ -59,7 +59,7 @@
   },
   "DutifulSon": {
     "NAME": "孝子",
-    "DESCRIPTION": " 不能被打出 。 NL 抽到时进入 愤怒 ， 虚无 。"
+    "DESCRIPTION": " 不能被打出 。 NL 抽到时进入 愤怒。 NL  虚无 。"
   },
   "Baa": {
     "NAME": "大咩-未完成",
@@ -76,14 +76,18 @@
   },
   "IdleDagger": {
     "NAME": "闲置匕首",
-    "DESCRIPTION": "造成 !D! 伤害。你每次弃牌时，将这张牌从弃牌堆放回你的手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。你每次弃牌时，将这张牌从弃牌堆放回你的手牌。"
   },
   "MakeASurpriseAttack": {
     "NAME": "虚诱掩杀",
-    "DESCRIPTION": "造成 !D! 伤害。你下1张攻击牌会造成双倍伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。你下1张攻击牌会造成双倍伤害。"
   },
   "PunctureStake": {
     "NAME": "穿刺木桩",
-    "DESCRIPTION": "造成 !D! 伤害。 NL 有 !M %概率秒杀敌人。 NL 敌人每损失1%血增加0. !M! %概率。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 有 !M %概率秒杀敌人。 NL 敌人每损失1%血增加0. !M! %概率。"
+  },
+  "Bonesnap": {
+    "NAME": "碎骨",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点临时力量。"
   }
 }
