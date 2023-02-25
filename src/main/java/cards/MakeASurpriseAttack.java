@@ -37,8 +37,6 @@ public class MakeASurpriseAttack extends CustomCard{
         //添加基础攻击标签和将伤害设为6
         this.baseDamage = 8;
         this.damage = this.baseDamage;
-        this.exhaust = true;
-
     }
 
     @Override
