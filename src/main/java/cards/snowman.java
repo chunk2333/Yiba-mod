@@ -24,9 +24,7 @@ public class snowman extends CustomCard{
         this.magicNumber = this.baseMagicNumber;
         this.dontTriggerOnUseCard=true;
         this.isEthereal = true;
-
     }
-
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
@@ -37,16 +35,12 @@ public class snowman extends CustomCard{
         AbstractPlayer p = AbstractDungeon.player;
         addToBot(new ApplyPowerAction(p, p, new PoisonPower(p,p,this.magicNumber), this.magicNumber));
         UpdateStats.logger.info("开始中毒");
-        //AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
-        //addToBot(new ApplyPowerAction(p, p, new PoisonPower((AbstractCreature)p, this.magicNumber));
     }
     @Override
-
     public AbstractCard makeCopy() {
         //复制卡牌时触发
         return new snowman();
     }
-
     @Override
     public void upgrade() {
         //卡牌升级后的效果
