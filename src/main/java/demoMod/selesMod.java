@@ -61,14 +61,14 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
 
     public selesMod() {
         //构造方法，初始化各种参数
-        BaseMod.subscribe((ISubscriber) this);
+        BaseMod.subscribe(this);
         BaseMod.addColor(AbstractCardEnum.Seles_COLOR, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, ATTACK_CC, SKILL_CC, POWER_CC, ENERGY_ORB_CC, ATTACK_CC_PORTRAIT, SKILL_CC_PORTRAIT, POWER_CC_PORTRAIT, ENERGY_ORB_CC_PORTRAIT, CARD_ENERGY_ORB);
     }
 
     @Override
     public void receiveEditCharacters() {
         //添加角色到MOD中
-        BaseMod.addCharacter((AbstractPlayer) new seles("Seles"), MY_CHARACTER_BUTTON, MARISA_PORTRAIT, ThmodClassEnum.Seles_CLASS);
+        BaseMod.addCharacter(new seles("Seles"), MY_CHARACTER_BUTTON, MARISA_PORTRAIT, ThmodClassEnum.Seles_CLASS);
     }
 
     //初始化整个MOD,一定不能删
@@ -183,6 +183,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new ColdVoice());//寒音索绕
         this.cardsToAdd.add(new Treacherous());//诡谲
         this.cardsToAdd.add(new LongevityInHeavenAndEarth());//天地同寿
+        this.cardsToAdd.add(new HarmonyOfLightAndDust());//和光同尘
     }
 
     @Override

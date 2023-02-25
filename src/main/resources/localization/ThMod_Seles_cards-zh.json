@@ -107,5 +107,9 @@
     "NAME": "天地同寿",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 进入 神格 。 NL  消耗。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 进入 神格 。 NL  消耗。 NL  保留 。"
+  },
+  "HarmonyOfLightAndDust": {
+    "NAME": "和光同尘",
+    "DESCRIPTION": "你每回合打出的第一张牌会返还所有费用。"
   }
 }
