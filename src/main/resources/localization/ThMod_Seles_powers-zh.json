@@ -1,0 +1,23 @@
+{
+  "power1power": {
+    "NAME": "生命回复",
+    "DESCRIPTIONS": [
+      "每回合开始时回复",
+      "生命值"
+    ]
+  },
+  "happyOldHomePower": {
+    "NAME": "暗箱操作",
+    "DESCRIPTIONS": [
+      "每打出 #b1 张牌抽取 #b",
+      " 张牌"
+    ]
+  },
+  "DoubleDamage": {
+    "NAME": "虚诱掩杀",
+    "DESCRIPTIONS": [
+      "接下来的第 #b",
+      " 张牌造成两倍伤害"
+    ]
+  }
+}

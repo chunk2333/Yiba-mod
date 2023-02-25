@@ -1,0 +1,89 @@
+{
+  "Strike_Seles": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Defend_Seles": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "SavePower": {
+    "NAME": "凝神",
+    "DESCRIPTION": " 保留 。 NL 你的下一张攻击牌造成 !M! 点额外伤害。"
+  },
+  "Printf": {
+    "NAME": "printf(%d)",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张凝神加入手牌 。"
+  },
+  "yiba": {
+    "NAME": "林檎打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 压力马斯内。"
+  },
+  "LeiPu": {
+    "NAME": "雷普",
+    "DESCRIPTION": "造成 !D! 点伤害。 给予 !M! 层 虚弱 。 "
+  },
+  "goodtime": {
+    "NAME": "好时代来临力",
+    "DESCRIPTION": " 消耗 。 NL 给予自身 !M! 点多层护甲。 NL !D! 点 再生 。 "
+  },
+  "power1": {
+    "NAME": "让我康康！",
+    "DESCRIPTION": "每回合开始时回复2点生命值"
+  },
+  "snowman": {
+    "NAME": "食雪汉",
+    "DESCRIPTION": " 不能被打出 。回合结束给予自身三层 中毒 。 NL  虚无 。 "
+  },
+  "desire": {
+    "NAME": "三大欲望",
+    "DESCRIPTION": " 不能被打出 。回合结束给予自身四层 虚弱 。 NL 失去1点 力量 敏捷 NL  虚无 。"
+  },
+  "Hahaknife": {
+    "NAME": "哈哈，刀！TM全是刀！",
+    "DESCRIPTION": "将自己手牌剩余空间塞满 小刀 。"
+  },
+  "rebornGun": {
+    "NAME": "人生重来枪",
+    "DESCRIPTION": "选择任意数量手牌返回抽卡堆，之后抽出相同数量。 NL 视为丢弃。",
+    "UPGRADE_DESCRIPTION": "选择任意数量手牌返回抽卡堆，之后抽出相同数量。 NL 视为丢弃。 NL 额外抽 !M! 张。"
+  },
+  "happyOldHome": {
+    "NAME": "出千",
+    "DESCRIPTION": "每打出1张牌就抽1张牌。"
+  },
+  "Truce": {
+    "NAME": "一时休战",
+    "DESCRIPTION": "只有没有打出攻击牌时才能打出，结束自己的回合，跳过对手的回合。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "只有没有打出攻击牌时才能打出，结束自己的回合，跳过对手的回合。"
+  },
+  "DutifulSon": {
+    "NAME": "孝子",
+    "DESCRIPTION": " 不能被打出 。 NL 抽到时进入 愤怒 ， 虚无 。"
+  },
+  "Baa": {
+    "NAME": "大咩-未完成",
+    "DESCRIPTION": "改变一名敌人的意图-随机。 消耗 。",
+    "UPGRADE_DESCRIPTION": "改变一名敌人的意图-随机。"
+  },
+  "AcrobaticsPlus": {
+    "NAME": "技杂",
+    "DESCRIPTION": "丢弃1张牌。 NL 抽 !M! 张牌。"
+  },
+  "InstantThrowingDagger": {
+    "NAME": "瞬息飞刀",
+    "DESCRIPTION": " 不能被打出 。 NL 被丢弃时对随机敌一名敌人造成 !D! 点伤害。"
+  },
+  "IdleDagger": {
+    "NAME": "闲置匕首",
+    "DESCRIPTION": "造成 !D! 伤害。你每次弃牌时，将这张牌从弃牌堆放回你的手牌。"
+  },
+  "MakeASurpriseAttack": {
+    "NAME": "虚诱掩杀",
+    "DESCRIPTION": "造成 !D! 伤害。你下1张攻击牌会造成双倍伤害。"
+  },
+  "PunctureStake": {
+    "NAME": "穿刺木桩",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 有 !M %概率秒杀敌人。 NL 敌人每损失1%血增加0. !M! %概率。"
+  }
+}
