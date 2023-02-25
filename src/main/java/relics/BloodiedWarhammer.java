@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -46,22 +47,10 @@ public class BloodiedWarhammer extends CustomRelic {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         //在用户使用牌时触发
-        if(card.damage>0)
-        {
-            if(!isActive && action.target.currentBlock>0 ){
-
-                isActive = true;
-                AbstractMonster m =(AbstractMonster)action.target;
-                AbstractPlayer p = AbstractDungeon.player;
-
-                flash();
-                addToTop(new RelicAboveCreatureAction(p, this));
-                //移除所有格挡
-                addToBot(new RemoveAllBlockAction(m, p));
-                addToBot(new DamageAction(m,new DamageInfo(m,card.damage)));
-                //AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)m, new DamageInfo((AbstractCreature)p, 1, ), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-            }
-        }
+        AbstractPlayer p = AbstractDungeon.player;
+        flash();
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
+        addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, 1), 1));
     }
     @Override
     public void onVictory() {
