@@ -179,8 +179,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new MakeASurpriseAttack());//虚诱掩杀
         this.cardsToAdd.add(new PunctureStake());//穿刺木桩
         this.cardsToAdd.add(new Bonesnap());//碎骨
-
-
+        this.cardsToAdd.add(new Mimicry());//拟态
     }
 
     @Override

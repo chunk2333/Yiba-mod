@@ -89,5 +89,10 @@
   "Bonesnap": {
     "NAME": "碎骨",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点临时力量。"
+  },
+  "Mimicry": {
+    "NAME": "拟态",
+    "DESCRIPTION": "获得 !M! 层 无实体 。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 无实体 。"
   }
 }
