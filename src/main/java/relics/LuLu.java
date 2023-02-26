@@ -4,6 +4,7 @@
 
 package relics;
 
+import actions.MyFlightPower;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -54,7 +55,7 @@ public class LuLu extends CustomRelic {
         //边框金色闪烁效果
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLD, true));
         //给予自身1层飞行
-        addToTop(new ApplyPowerAction(p, p, new FlightPower(p, 1), 1));
+        addToTop(new ApplyPowerAction(p, p, new MyFlightPower(p, 1), 1));
     }
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
