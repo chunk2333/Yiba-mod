@@ -1,16 +1,10 @@
 package actions;
 
-//public class MyFlightPower {
-
-
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ChangeStateAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class MyFlightPower extends AbstractPower {
@@ -22,7 +16,7 @@ public class MyFlightPower extends AbstractPower {
 
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private int storedAmount;
+    private final int storedAmount;
 
     public MyFlightPower(AbstractCreature owner, int amount) {
         this.name = NAME;
