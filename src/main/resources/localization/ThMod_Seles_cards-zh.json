@@ -25,7 +25,7 @@
   },
   "goodtime": {
     "NAME": "好时代来临力",
-    "DESCRIPTION": " 消耗 。 NL 给予自身 !M! 点多层护甲。 NL !D! 点 再生 。 "
+    "DESCRIPTION": " 消耗 。 NL 给予自身5点多层护甲。 NL 4点 再生 。 "
   },
   "power1": {
     "NAME": "让我康康！",
@@ -97,7 +97,7 @@
   },
   "ColdVoice": {
     "NAME": "寒音索绕",
-    "DESCRIPTION": "给予所有敌人 !D! 层 易伤 3次。 NL 抽取 !M! 张牌。 NL  消耗 。"
+    "DESCRIPTION": "给予所有敌人33层 易伤 3次。 NL 抽取3张牌。 NL  消耗 。"
   },
   "Treacherous": {
     "NAME": "诡谲",
