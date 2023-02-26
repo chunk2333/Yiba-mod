@@ -224,6 +224,8 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).create());
         //添加事件:三幻批
         BaseMod.addEvent(new AddEventParams.Builder(SanHuanPi.ID, SanHuanPi.class).dungeonID(TheBeyond.ID).create());
+        //添加事件：LuLuEvent
+        BaseMod.addEvent(new AddEventParams.Builder(LuLuEvent.ID, LuLuEvent.class).eventType(EventUtils.EventType.NORMAL).create());
         //BaseMod.addEvent(new AddEventParams.Builder(RestaurantTest.ID, RestaurantTest.class).dungeonID(TheCity.ID).create());
         //添加药水Escape
         BaseMod.addPotion(time.class, null, null, null, "time");
