@@ -6,6 +6,7 @@ package potions;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.EscapeAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PotionStrings;
@@ -30,6 +31,10 @@ public class Escape extends AbstractPotion{
     }
     public void use(AbstractCreature target) {
         //
+        if(target.hasPower("Life Link")){
+            //移除小黑的生命链接
+            addToBot(new RemoveSpecificPowerAction(target, target, "Life Link"));
+        }
         AbstractDungeon.actionManager.addToBottom(new TalkAction(target, potionString.DESCRIPTIONS[1], 0.3F, 2.5F));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmokeBombEffect(target.hb.cX, target.hb.cY)));
         AbstractDungeon.actionManager.addToBottom(new EscapeAction((AbstractMonster) target));
