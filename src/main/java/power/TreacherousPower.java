@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class TreacherousPower extends AbstractPower {
@@ -59,6 +60,13 @@ public class TreacherousPower extends AbstractPower {
         }
     }
     public void onUseCard(AbstractCard card, UseCardAction action) {
+        if(!isUsed){
+            addToBot(new SetDrawPileSkill0CostActions());
+            addToBot(new SetDrawPileSkill0CostActions(true));
+        }
+        isUsed = true;
+    }
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if(!isUsed){
             addToBot(new SetDrawPileSkill0CostActions());
             addToBot(new SetDrawPileSkill0CostActions(true));

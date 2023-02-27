@@ -11,8 +11,8 @@ public class SetDrawPileSkill0CostActions extends AbstractGameAction {
     public SetDrawPileSkill0CostActions() {
         AbstractPlayer player = AbstractDungeon.player;
         for (AbstractCard c : player.drawPile.group){
-            c.costForTurn = c.costForTurn + 1;
-            if(c.costForTurn == c.cost){
+            if(c.costForTurn + 1 == c.cost){
+                c.costForTurn = c.costForTurn + 1;
                 c.isCostModifiedForTurn = false;
             }
         }
@@ -21,8 +21,8 @@ public class SetDrawPileSkill0CostActions extends AbstractGameAction {
     public SetDrawPileSkill0CostActions(boolean discard) {
         AbstractPlayer player = AbstractDungeon.player;
         for (AbstractCard c : player.discardPile.group){
-            c.costForTurn = c.costForTurn + 1;
-            if(c.costForTurn == c.cost){
+            if(c.costForTurn + 1 == c.cost){
+                c.costForTurn = c.costForTurn + 1;
                 c.isCostModifiedForTurn = false;
             }
         }
