@@ -1,6 +1,8 @@
 package power;
 
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import actions.BetterDiscardPileToHandSkillAction;
+import actions.BetterDrawPileToHandSkillAction;
+import actions.SetDrawPileSkill0CostActions;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,7 +23,7 @@ public class TreacherousPower extends AbstractPower {
 
     public static TextureAtlas atlas_self;
 
-    private int useNum = 1;
+    public boolean isUsed;
 
     public TreacherousPower(AbstractCreature owner, int amt) {
         super();
@@ -35,12 +37,19 @@ public class TreacherousPower extends AbstractPower {
         this.region48 = atlas_self.findRegion("48/TreacherousPower");
         this.region128 = atlas_self.findRegion("128/TreacherousPower");
         this.type = AbstractPower.PowerType.BUFF;
-        this.useNum = this.useNum + 1;
+
     }
 
     public void atStartOfTurn(){
         //回合开始时
-        this.useNum = 1;
+        isUsed=false;
+
+    }
+    public void atStartOfTurnPostDraw(){
+        //抽卡后
+        flash();
+        addToBot(new BetterDrawPileToHandSkillAction(this.amount));
+        addToBot(new BetterDiscardPileToHandSkillAction(this.amount));
     }
     public void updateDescription() {
         if (this.amount == 1) {
@@ -50,18 +59,10 @@ public class TreacherousPower extends AbstractPower {
         }
     }
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        //使用卡片时触发
-        //flash();
-        //addToBot(new DrawCardAction(AbstractDungeon.player, this.amount));
-        this.onDrawOrDiscard();
-        UpdateStats.logger.info("诡谲使用卡牌触发 card.discard：" + card.discard);
-
-        UpdateStats.logger.info("诡谲使用卡牌触发 card.draw：" + card.draw);
-
+        if(!isUsed){
+            addToBot(new SetDrawPileSkill0CostActions());
+            addToBot(new SetDrawPileSkill0CostActions(true));
+        }
+        isUsed = true;
     }
-    public void onDrawOrDiscard(){
-        UpdateStats.logger.info("诡谲触发：onDrawOrDiscard" );
-    }
-
 }
-

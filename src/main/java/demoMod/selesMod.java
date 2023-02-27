@@ -118,6 +118,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
 
     @Override
     public void receiveEditKeywords() {
+        BaseMod.addKeyword(new String[]{"诡谲状态"},"每回合开始时从自己抽牌和弃牌堆中选择一张技能牌加入手卡，并使其本回合降低 #b1 费。");
 
     }
 
@@ -152,6 +153,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.loadCustomStrings(UIStrings.class, uiStrings);
         String monsterStrings = Gdx.files.internal(monster).readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(MonsterStrings.class, monsterStrings);
+
     }
 
     private void loadCardsToAdd() {
@@ -274,7 +276,6 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
                         new NongPi(-500F, -20)
                 }));
     }
-
     @Override
     public void receivePostEnergyRecharge() {
         Iterator<AbstractCard> var1 = recyclecards.iterator();

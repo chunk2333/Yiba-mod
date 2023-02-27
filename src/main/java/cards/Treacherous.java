@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import actions.TreacherousAction;
+import power.TreacherousPower;
 
 public class Treacherous extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Treacherous");
@@ -35,7 +35,8 @@ public class Treacherous extends CustomCard {
         //给予敏捷
         addToTop(new ApplyPowerAction(p, p, new DexterityPower(p, this.baseMagicNumber), this.baseMagicNumber));
         //本场战斗所有技能牌降低1费
-        addToBot(new TreacherousAction());
+        //addToBot(new TreacherousAction());
+        addToBot(new ApplyPowerAction(p, p, new TreacherousPower(p, 1), 1));
     }
     @Override
     public AbstractCard makeCopy() {

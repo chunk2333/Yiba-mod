@@ -101,7 +101,7 @@
   },
   "Treacherous": {
     "NAME": "诡谲",
-    "DESCRIPTION": "获得 !M! 点力量 !M! 点敏捷。 NL 本场战斗所有技能牌降低1费。"
+    "DESCRIPTION": "获得 !M! 点力量 !M! 点敏捷。 NL 进入 诡谲状态 。"
   },
   "LongevityInHeavenAndEarth": {
     "NAME": "天地同寿",
