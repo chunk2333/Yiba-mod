@@ -124,5 +124,9 @@
       " 张技能牌。）",
       " 张技能牌。）"
     ]
+  },
+  "PeopleAndGodsAreOutraged": {
+    "NAME": "人神共愤",
+    "DESCRIPTION": "进入 愤怒 。 NL 造成 !D! 点伤害。 NL 获得 !M! 点临时 力量 。"
   }
 }
