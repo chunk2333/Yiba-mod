@@ -21,6 +21,8 @@ public class Imprisonment extends CustomCard{
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE);
         //不能被打出
         this.dontTriggerOnUseCard = true;
+        //虚无
+        this.isEthereal = true;
 
     }
 
@@ -34,6 +36,8 @@ public class Imprisonment extends CustomCard{
         //抽到时触发
         //不能被打出
         this.dontTriggerOnUseCard = true;
+        //虚无
+        this.isEthereal = true;
         //结束玩家回合
         addToBot(new PressEndTurnButtonAction());
     }
