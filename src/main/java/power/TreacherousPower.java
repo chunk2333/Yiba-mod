@@ -25,6 +25,14 @@ public class TreacherousPower extends AbstractPower {
     public static TextureAtlas atlas_self;
 
     public boolean isUsed;
+    //BUG：诡谲能力在触发时，先把抽牌堆/弃牌堆的所有技能牌临时费用-1，然后再让你选择一张到你手牌
+    //现在你查看抽牌堆/弃牌的牌组，发现技能牌的费用都比之前少了1费
+    //这时，你打出任意一张牌都会把抽牌堆/弃牌的所有变过费用的技能牌恢复原样
+    //这时你用必备工具丢了张本能反应。出bug了
+    //因为你这回合刚开始，没有打出任何一张卡，所以，抽牌/弃牌堆的所有技能牌费用-1，还没恢复你就抽上来了
+    //尖塔这游戏动画大于一切
+    //所以在打开选牌界面，底下的代码就已经跑完了。导致我必须触发一个开关来恢复卡牌的费用
+    //且因为原版能力牌没有与弃牌相关的接口，so，这怎么修？
 
     public TreacherousPower(AbstractCreature owner, int amt) {
         super();
