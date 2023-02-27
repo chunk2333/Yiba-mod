@@ -190,6 +190,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new KnockOut());//最后一击
         this.cardsToAdd.add(new PeopleAndGodsAreOutraged());//人神共愤
         this.cardsToAdd.add(new Abstract());//抽象
+        this.cardsToAdd.add(new Imprisonment());//坐牢-诅咒
     }
 
     @Override
