@@ -189,6 +189,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new SumUpExperience());//总结经验
         this.cardsToAdd.add(new KnockOut());//最后一击
         this.cardsToAdd.add(new PeopleAndGodsAreOutraged());//人神共愤
+        this.cardsToAdd.add(new Abstract());//抽象
     }
 
     @Override
