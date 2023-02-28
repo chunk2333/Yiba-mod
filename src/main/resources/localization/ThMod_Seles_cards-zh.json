@@ -140,7 +140,7 @@
   },
   "Rebound_My": {
     "NAME": "斗转星移",
-    "DESCRIPTION": "反弹本回合受到的所有未被格挡的伤害。"
+    "DESCRIPTION": "反弹本回合受到的所有未被 格挡 的伤害。"
   },
   "VFXTestCard": {
     "NAME": "特效测试卡",
