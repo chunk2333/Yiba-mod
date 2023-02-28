@@ -41,6 +41,8 @@ public class ForesightAndInsight extends CustomCard {
         this.baseMagicNumber = 1;
 
         this.magicNumber = this.baseMagicNumber;
+        //添加消耗
+        this.exhaust = true;
 
     }
 
