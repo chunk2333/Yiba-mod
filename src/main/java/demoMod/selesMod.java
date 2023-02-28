@@ -193,6 +193,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new Rebound_My());//斗转星移
         //this.cardsToAdd.add(new VFXTestCard());//特效测试卡牌
         this.cardsToAdd.add(new ForesightAndInsight());//远见明察
+        this.cardsToAdd.add(new EyesHeart());//心之眼
     }
 
     @Override
