@@ -58,7 +58,7 @@ public class TreacherousPower extends AbstractPower {
         //抽卡后
         flash();
         addToBot(new BetterDrawPileToHandSkillAction(this.amount));
-        addToBot(new BetterDiscardPileToHandSkillAction(this.amount));
+        //addToBot(new BetterDiscardPileToHandSkillAction(this.amount));
     }
     public void updateDescription() {
         if (this.amount == 1) {
@@ -70,14 +70,14 @@ public class TreacherousPower extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if(!isUsed){
             addToBot(new SetDrawPileSkill0CostActions());
-            addToBot(new SetDrawPileSkill0CostActions(true));
+            //addToBot(new SetDrawPileSkill0CostActions(true));
         }
         isUsed = true;
     }
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if(!isUsed){
             addToBot(new SetDrawPileSkill0CostActions());
-            addToBot(new SetDrawPileSkill0CostActions(true));
+            //addToBot(new SetDrawPileSkill0CostActions(true));
         }
         isUsed = true;
     }

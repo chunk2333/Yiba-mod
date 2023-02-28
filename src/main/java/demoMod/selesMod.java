@@ -118,7 +118,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
 
     @Override
     public void receiveEditKeywords() {
-        BaseMod.addKeyword(new String[]{"诡谲状态"},"每回合：暂时将抽牌堆，弃牌堆牌的所有技能牌降低 #b1 费，之后选两张加入手卡。当你打出任意一张牌时失效。");
+        BaseMod.addKeyword(new String[]{"诡谲状态"},"每回合：暂时将抽牌堆的所有技能牌降低 #b1 费，之后选一张加入手卡。当你打出任意一张牌时失效。");
 
     }
 
