@@ -10,7 +10,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -191,6 +190,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new PeopleAndGodsAreOutraged());//人神共愤
         this.cardsToAdd.add(new Abstract());//抽象
         this.cardsToAdd.add(new Imprisonment());//坐牢-诅咒
+        this.cardsToAdd.add(new Rebound_My());//斗转星移
     }
 
     @Override

@@ -137,5 +137,9 @@
   "Imprisonment": {
     "NAME": "坐牢",
     "DESCRIPTION": " 不能被打出 。 NL 被抽到时立即结束你的回合。"
+  },
+  "Rebound_My": {
+    "NAME": "斗转星移",
+    "DESCRIPTION": "反弹本回合受到的所有未被格挡的伤害。"
   }
 }
