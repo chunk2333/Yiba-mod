@@ -1,6 +1,5 @@
 package cards;
 //心之眼
-
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,11 +30,11 @@ public class EyesHeart extends CustomCard{
     }
 
     @Override
-
     public AbstractCard makeCopy() {
         //复制卡牌时触发
         return new EyesHeart();
     }
+
     @Override
     public void upgrade() {
         //卡牌升级后的效果
@@ -46,4 +45,3 @@ public class EyesHeart extends CustomCard{
         }
     }
 }
-
