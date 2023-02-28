@@ -18,7 +18,7 @@ public class Rebound_My extends CustomCard{
     public static final String ID = "Rebound_My";
 
     public Rebound_My() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.RARE, CardTarget.SELF);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.RARE, CardTarget.SELF);
         //设置 magicNumber
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
