@@ -85,8 +85,9 @@ public class ForesightAndInsight extends CustomCard {
             //提高回复血量
             upgradeMagicNumber(1);
             //this.selfRetain = true;
-            //this.rawDescription=cardStrings.UPGRADE_DESCRIPTION;
-            //initializeDescription();
+            this.isEthereal = false;
+            this.rawDescription=cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

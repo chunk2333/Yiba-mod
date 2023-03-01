@@ -148,7 +148,8 @@
   },
   "ForesightAndInsight": {
     "NAME": "远见明察",
-    "DESCRIPTION": "造成 !D!  + !D! ×目标所有buff数点伤害。 NL  回复 !M!  + !M! ×目标所有buff数血量。 NL 清除目标所有buff。 NL  消耗 。 NL  虚无 。"
+    "DESCRIPTION": "造成 !D!  + !D! ×目标所有buff数点伤害。 NL  回复 !M!  + !M! ×目标所有buff数血量。 NL 清除目标所有buff。 NL  消耗 。 NL  虚无 。",
+    "UPGRADE_DESCRIPTION":"造成 !D!  + !D! ×目标所有buff数点伤害。 NL  回复 !M!  + !M! ×目标所有buff数血量。 NL 清除目标所有buff。 NL  消耗 。。"
   },
   "EyesHeart": {
     "NAME": "心之眼",
