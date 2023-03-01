@@ -32,7 +32,7 @@ public class ForesightAndInsight extends CustomCard {
 
     public ForesightAndInsight() {
 
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.RARE, CardTarget.ENEMY);
 
         this.baseDamage = 5;
 
@@ -43,6 +43,8 @@ public class ForesightAndInsight extends CustomCard {
         this.magicNumber = this.baseMagicNumber;
         //添加消耗
         this.exhaust = true;
+        //添加虚无
+        this.isEthereal = true;
 
     }
 
@@ -63,7 +65,7 @@ public class ForesightAndInsight extends CustomCard {
                         this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         //回血
-        p.heal(1 + this.magicNumber * this.buffNum);
+        p.heal( this.magicNumber + this.magicNumber * this.buffNum);
     }
 
     @Override
@@ -82,11 +84,9 @@ public class ForesightAndInsight extends CustomCard {
             upgradeDamage(2);
             //提高回复血量
             upgradeMagicNumber(1);
-            this.selfRetain = true;
-
-            this.rawDescription=cardStrings.UPGRADE_DESCRIPTION;
-
-            initializeDescription();
+            //this.selfRetain = true;
+            //this.rawDescription=cardStrings.UPGRADE_DESCRIPTION;
+            //initializeDescription();
         }
     }
 }
