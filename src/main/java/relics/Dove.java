@@ -5,6 +5,7 @@ package relics;
 
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -40,7 +41,9 @@ public class Dove extends CustomRelic {
                 //触发消耗
                 p.hand.moveToExhaustPile(drawnCard);
                 //drawnCard.triggerOnExhaust();
-                isAcive=true;
+                isAcive = true;
+                //添加抽2效果
+                addToBot(new DrawCardAction(AbstractDungeon.player, 2));
             }
 
     }}
