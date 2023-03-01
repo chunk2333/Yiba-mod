@@ -31,7 +31,7 @@ public class money extends AbstractPotion{
         AbstractDungeon.effectsQueue.add(new SpotlightPlayerEffect());
         AbstractPlayer p = AbstractDungeon.player;
         //给予玩家100金币
-        p.gainGold(100);
+        p.gainGold(getPotency());
 
     }
     public boolean canUse() {
@@ -45,14 +45,14 @@ public class money extends AbstractPotion{
     }
     public void initializeData(){
         this.potency = getPotency();
-        //this.description = potionString.DESCRIPTIONS[0] + this.potency + potionString.DESCRIPTIONS[1];
-        this.description = potionString.DESCRIPTIONS[0];
+        this.description = potionString.DESCRIPTIONS[0] + this.potency + potionString.DESCRIPTIONS[1];
+        //this.description = potionString.DESCRIPTIONS[0];
         this.name = potionString.NAME;
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
     }
     public int getPotency(int ascensionLevel) {
-        return 0;
+        return 100;
     }
     public AbstractPotion makeCopy() {
         return new money();
