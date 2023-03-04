@@ -28,7 +28,7 @@ public class Bonesnap extends CustomCard{
 
         this.damage = this.baseDamage;
 
-        this.baseMagicNumber=3;
+        this.baseMagicNumber=2;
 
         this.magicNumber=this.baseMagicNumber;
 
