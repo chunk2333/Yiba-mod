@@ -229,6 +229,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addRelic(new CovertTrap(), RelicType.GREEN); //隐蔽陷阱----猎人专属
         BaseMod.addRelic(new LuLu(), RelicType.SHARED); //LuLu
         BaseMod.addRelic(new Dog(), RelicType.SHARED); //狗狗
+        BaseMod.addRelic(new FairyBlessing(), RelicType.SHARED); //精灵祝福
 
         //BaseMod.addPotion();
         //添加事件:会员制餐厅
@@ -237,14 +238,14 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addEvent(new AddEventParams.Builder(SanHuanPi.ID, SanHuanPi.class).dungeonID(TheBeyond.ID).create());
         //添加事件：LuLuEvent
         BaseMod.addEvent(new AddEventParams.Builder(LuLuEvent.ID, LuLuEvent.class).eventType(EventUtils.EventType.NORMAL).create());
+        //添加事件：精灵祝福
+        BaseMod.addEvent(new AddEventParams.Builder(FairyBlessingEvent.ID, FairyBlessingEvent.class).dungeonID(TheBeyond.ID).create());
         //BaseMod.addEvent(new AddEventParams.Builder(RestaurantTest.ID, RestaurantTest.class).dungeonID(TheCity.ID).create());
         //添加药水Escape
         BaseMod.addPotion(time.class, null, null, null, "time");
         BaseMod.addPotion(money.class, null, null, null, "money");
         BaseMod.addPotion(reborn.class, null, null, null, "reborn");
         BaseMod.addPotion(Escape.class, null, null, null, "Escape");
-
-
     }
 
     @Override
