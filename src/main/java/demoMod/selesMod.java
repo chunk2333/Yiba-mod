@@ -230,6 +230,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addRelic(new LuLu(), RelicType.SHARED); //LuLu
         BaseMod.addRelic(new Dog(), RelicType.SHARED); //狗狗
         BaseMod.addRelic(new FairyBlessing(), RelicType.SHARED); //精灵祝福
+        BaseMod.addRelic(new NonexistentSacrificialLance(), RelicType.SHARED); //不曾存在的祭礼枪
 
         //BaseMod.addPotion();
         //添加事件:会员制餐厅
