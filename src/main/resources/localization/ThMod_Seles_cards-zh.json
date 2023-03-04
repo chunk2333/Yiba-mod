@@ -154,5 +154,9 @@
   "EyesHeart": {
     "NAME": "心之眼",
     "DESCRIPTION": "每打出一张攻击牌，获得 !M! 点 格挡 。"
+  },
+  "ThunderstormVientiane": {
+    "NAME": "风雷万象",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 根据打出的上一张牌类型给予自身 不同效果 。"
   }
 }
