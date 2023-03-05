@@ -120,6 +120,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
     public void receiveEditKeywords() {
         BaseMod.addKeyword(new String[]{"诡谲状态"},"每回合：暂时将抽牌堆的所有技能牌降低 #b1 费，之后选一张加入手卡。当你打出任意一张牌时失效。");
         BaseMod.addKeyword(new String[]{"不同效果"},"#r攻击 ： #b1 点 力量 。 NL  #g技能 ： #b1 点 敏捷 。 NL  #b能力 ：获得 [E] 。");
+        BaseMod.addKeyword(new String[]{"移除"},"使用后从主牌库移除。");
 
     }
 
@@ -197,6 +198,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new ForesightAndInsight());//远见明察
         this.cardsToAdd.add(new EyesHeart());//心之眼
         this.cardsToAdd.add(new ThunderstormVientiane());//风雷万象
+        this.cardsToAdd.add(new TimeReversal());//时光倒流
     }
 
     @Override

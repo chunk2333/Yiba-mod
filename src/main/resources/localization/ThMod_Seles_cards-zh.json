@@ -158,5 +158,10 @@
   "ThunderstormVientiane": {
     "NAME": "风雷万象",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 根据打出的上一张牌类型给予自身 不同效果 。"
+  },
+  "TimeReversal": {
+    "NAME": "时光倒流",
+    "DESCRIPTION": "回复满自身生命，清除自身全部负面效果，回满 [E] 。 NL  消耗 。 NL  移除 。 NL  虚无 。",
+    "UPGRADE_DESCRIPTION":"回复满自身生命，清除自身全部负面效果，回满 [E] 。 NL  消耗 。 NL  移除 。"
   }
 }
