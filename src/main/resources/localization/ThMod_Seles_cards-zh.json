@@ -167,5 +167,9 @@
   "WuhuTakeOff": {
     "NAME": "芜湖～起飞！",
     "DESCRIPTION": "获得 !M! 层飞行。 NL  消耗 。"
+  },
+  "SpireScience": {
+    "NAME": "尖塔学",
+    "DESCRIPTION": "消耗一个随机数。 NL  消耗 。 NL 然后复制一张到你的手牌。"
   }
 }
