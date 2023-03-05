@@ -1,5 +1,5 @@
 Selfpowers.png
-size: 128, 1088
+size: 128, 1216
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -38,16 +38,23 @@ repeat: none
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/Rebound_MyPower
+48/ProvokePower
   rotate: false
   xy: 48, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TreacherousPower
+48/Rebound_MyPower
   rotate: false
   xy: 0, 144
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+48/TreacherousPower
+  rotate: false
+  xy: 48, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
@@ -87,16 +94,23 @@ repeat: none
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/Rebound_MyPower
+128/ProvokePower
   rotate: false
   xy: 0, 832
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/TreacherousPower
+128/Rebound_MyPower
   rotate: false
   xy: 0, 960
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/TreacherousPower
+  rotate: false
+  xy: 0, 1088
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
