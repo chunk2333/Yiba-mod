@@ -31,10 +31,8 @@ import relics.*;
 import potions.*;
 import events.*;
 import monsters.*;
-
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import basemod.helpers.RelicType;
 
@@ -56,7 +54,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
     private static final String MY_CHARACTER_BUTTON = "img/charSelect/SelesButton.png";
     private static final String MARISA_PORTRAIT = "img/charSelect/SelesPortrait.png";
     public static final Color SILVER = CardHelper.getColor(200, 200, 200);
-    private ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
     public static ArrayList<AbstractCard> recyclecards = new ArrayList<>();
 
     public selesMod() {
@@ -80,9 +78,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
     public void receiveEditCards() {
         //将卡牌批量添加
         loadCardsToAdd();
-        Iterator<AbstractCard> var1 = this.cardsToAdd.iterator();
-        while (var1.hasNext()) {
-            AbstractCard card = var1.next();
+        for (AbstractCard card : this.cardsToAdd) {
             BaseMod.addCard(card);
         }
     }
@@ -137,9 +133,8 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
             event = "localization/ThMod_Seles_events-zh.json";
             ui = "localization/ThMod_Seles_uis-zh.json";
             monster = "localization/ThMod_Seles_monsters-zh.json";
-        } else {
-            //其他语言配置的JSON
-        }
+        }  //其他语言配置的JSON
+
 
         String relicStrings = Gdx.files.internal(relic).readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
@@ -240,7 +235,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
 
         //BaseMod.addPotion();
         //添加事件:会员制餐厅
-        BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheBeyond.ID, Exordium.ID).create());
+        BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
         BaseMod.addEvent(new AddEventParams.Builder(SanHuanPi.ID, SanHuanPi.class).dungeonID(TheBeyond.ID).create());
         //添加事件：LuLuEvent
@@ -258,7 +253,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
     @Override
     public void receiveRelicGet(AbstractRelic relic) {
         //移除遗物,这里移除了小屋子，太垃圾了。
-        if (AbstractDungeon.player.name == "Seles") {
+        if (AbstractDungeon.player.name.equals("Seles")) {
             AbstractDungeon.shopRelicPool.remove("TinyHouse");
         }
     }
@@ -295,18 +290,13 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
     }
     @Override
     public void receivePostEnergyRecharge() {
-        Iterator<AbstractCard> var1 = recyclecards.iterator();
 
-        while (var1.hasNext()) {
-            AbstractCard c = var1.next();
+        for (AbstractCard c : recyclecards) {
             AbstractCard card = c.makeStatEquivalentCopy();
             AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, false, true, true));
         }
         recyclecards.clear();
     }
 
-    class Keywords {
-        Keyword[] keywords;
-    }
 }
 
