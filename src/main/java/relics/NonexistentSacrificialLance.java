@@ -34,7 +34,7 @@ public class NonexistentSacrificialLance extends CustomRelic {
         //判断打出的是否为能力牌
         int random;
         random = AbstractDungeon.relicRng.random(1,100); //随机数
-        if(card.type == AbstractCard.CardType.POWER && random<=80 && !card.purgeOnUse){
+        if(card.type == AbstractCard.CardType.POWER && random<=30 && !card.purgeOnUse){
             flash();
             addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractMonster m = null;
