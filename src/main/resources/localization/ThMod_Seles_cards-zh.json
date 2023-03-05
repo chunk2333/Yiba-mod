@@ -171,5 +171,10 @@
   "SpireScience": {
     "NAME": "尖塔学",
     "DESCRIPTION": "消耗一个随机数。 NL  消耗 。 NL 然后复制一张到你的手牌。"
+  },
+  "Provoke": {
+    "NAME": "挑衅",
+    "DESCRIPTION": "使一名敌人只能进行攻击宣言。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "使一名敌人只能进行攻击宣言。"
   }
 }

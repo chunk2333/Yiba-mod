@@ -56,7 +56,6 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
     public static final Color SILVER = CardHelper.getColor(200, 200, 200);
     private final ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
     public static ArrayList<AbstractCard> recyclecards = new ArrayList<>();
-
     public selesMod() {
         //构造方法，初始化各种参数
         BaseMod.subscribe(this);
@@ -197,6 +196,8 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new TimeReversal());//时光倒流
         this.cardsToAdd.add(new WuhuTakeOff());//芜湖～起飞！
         this.cardsToAdd.add(new SpireScience());//尖塔学
+        this.cardsToAdd.add(new Provoke());//挑衅
+
     }
 
     @Override
