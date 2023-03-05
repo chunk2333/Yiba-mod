@@ -163,5 +163,9 @@
     "NAME": "时光倒流",
     "DESCRIPTION": "回复满自身生命，清除自身全部负面效果，回满 [E] 。 NL  消耗 。 NL  移除 。 NL  虚无 。",
     "UPGRADE_DESCRIPTION":"回复满自身生命，清除自身全部负面效果，回满 [E] 。 NL  消耗 。 NL  移除 。"
+  },
+  "WuhuTakeOff": {
+    "NAME": "芜湖～起飞！",
+    "DESCRIPTION": "获得 !M! 层飞行。 NL  消耗 。"
   }
 }
