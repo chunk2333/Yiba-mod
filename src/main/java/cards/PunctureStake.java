@@ -36,7 +36,7 @@ public class PunctureStake extends CustomCard{
         //使用卡牌时触发的动作
 
         int random;
-        random = AbstractDungeon.relicRng.random(1,100); //随机数
+        random = AbstractDungeon.cardRandomRng.random(1,100); //随机数
         double monsterHP;
         double monsterLoseHP;
         double monsterMaxHP;

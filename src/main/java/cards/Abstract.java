@@ -42,7 +42,7 @@ public class Abstract extends CustomCard {
             //集中 FocusPower
             addToTop(new ApplyPowerAction(p, p, new FocusPower(p, -1), -1));
         }
-        random = AbstractDungeon.relicRng.random(1, 3); //随机数
+        random = AbstractDungeon.cardRandomRng.random(1, 3); //随机数
         if (random == 1) {
             //力量 StrengthPower
             addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
