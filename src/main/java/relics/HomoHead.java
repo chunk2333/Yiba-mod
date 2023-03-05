@@ -81,8 +81,8 @@ public class HomoHead extends CustomRelic {
     @Override
     public void atTurnStart() {
         //回合开始时触发
-        flash();
-        AbstractPlayer p = AbstractDungeon.player;
+        //flash();
+        //AbstractPlayer p = AbstractDungeon.player;
         //loseHP
         //addToBot(new LoseHPAction(p, p, 1));
     }
