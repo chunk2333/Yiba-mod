@@ -1,88 +1,102 @@
 Selfpowers.png
-size: 1536, 128
+size: 128, 1088
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-48/DoubleDamage
+48/CoffeeBeanPower
   rotate: false
   xy: 0, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
+48/DoubleDamage
+  rotate: false
+  xy: 48, 0
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
 48/EyesHeartPower
   rotate: false
-  xy: 128, 0
+  xy: 0, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/happyOldHomePower
   rotate: false
-  xy: 256, 0
+  xy: 48, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/HarmonyOfLightAndDustPower
   rotate: false
-  xy: 384, 0
+  xy: 0, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/Rebound_MyPower
   rotate: false
-  xy: 512, 0
+  xy: 48, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/TreacherousPower
   rotate: false
-  xy: 640, 0
+  xy: 0, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
+128/CoffeeBeanPower
+  rotate: false
+  xy: 0, 192
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
 128/DoubleDamage
   rotate: false
-  xy: 768, 0
+  xy: 0, 320
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/EyesHeartPower
   rotate: false
-  xy: 896, 0
+  xy: 0, 448
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/happyOldHomePower
   rotate: false
-  xy: 1024, 0
+  xy: 0, 576
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/HarmonyOfLightAndDustPower
   rotate: false
-  xy: 1152, 0
+  xy: 0, 704
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/Rebound_MyPower
   rotate: false
-  xy: 1280, 0
+  xy: 0, 832
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/TreacherousPower
   rotate: false
-  xy: 1408, 0
+  xy: 0, 960
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
