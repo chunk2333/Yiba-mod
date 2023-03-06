@@ -197,6 +197,8 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new WuhuTakeOff());//芜湖～起飞！
         this.cardsToAdd.add(new SpireScience());//尖塔学
         this.cardsToAdd.add(new Provoke());//挑衅
+        //this.cardsToAdd.add(new HydroCard());//水牌
+        //this.cardsToAdd.add(new PyroCard());//火牌
 
     }
 

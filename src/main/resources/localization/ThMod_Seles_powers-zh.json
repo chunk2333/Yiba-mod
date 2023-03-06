@@ -64,5 +64,24 @@
       "接下来的 #b",
       " 回合内造成的伤害为0。"
     ]
+  },
+  "MysteryPower": {
+    "NAME": "元素精通",
+    "DESCRIPTIONS": [
+      "当前元素精通： #b",
+      " 。"
+    ]
+  },
+  "HydroPower": {
+    "NAME": "水元素",
+    "DESCRIPTIONS": [
+      "该目标存在 #b水元素 。"
+    ]
+  },
+  "PyroPower": {
+    "NAME": "火元素",
+    "DESCRIPTIONS": [
+      "该目标存在 #r火元素 。"
+    ]
   }
 }

@@ -1,5 +1,5 @@
 Selfpowers.png
-size: 128, 1216
+size: 256, 736
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -19,98 +19,126 @@ repeat: none
   index: -1
 48/EyesHeartPower
   rotate: false
-  xy: 0, 48
+  xy: 96, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/happyOldHomePower
   rotate: false
-  xy: 48, 48
+  xy: 144, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/HarmonyOfLightAndDustPower
   rotate: false
-  xy: 0, 96
+  xy: 192, 0
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+48/HydroPower
+  rotate: false
+  xy: 0, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/ProvokePower
   rotate: false
-  xy: 48, 96
+  xy: 48, 48
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+48/PyroPower
+  rotate: false
+  xy: 96, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/Rebound_MyPower
   rotate: false
-  xy: 0, 144
+  xy: 144, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/TreacherousPower
   rotate: false
-  xy: 48, 144
+  xy: 192, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 128/CoffeeBeanPower
   rotate: false
-  xy: 0, 192
+  xy: 0, 96
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/DoubleDamage
   rotate: false
-  xy: 0, 320
+  xy: 128, 96
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/EyesHeartPower
   rotate: false
-  xy: 0, 448
+  xy: 0, 224
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/happyOldHomePower
   rotate: false
-  xy: 0, 576
+  xy: 128, 224
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/HarmonyOfLightAndDustPower
   rotate: false
-  xy: 0, 704
+  xy: 0, 352
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/HydroPower
+  rotate: false
+  xy: 128, 352
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/ProvokePower
   rotate: false
-  xy: 0, 832
+  xy: 0, 480
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/PyroPower
+  rotate: false
+  xy: 128, 480
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/Rebound_MyPower
   rotate: false
-  xy: 0, 960
+  xy: 0, 608
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/TreacherousPower
   rotate: false
-  xy: 0, 1088
+  xy: 128, 608
   size: 128, 128
   orig: 128, 128
   offset: 0, 0

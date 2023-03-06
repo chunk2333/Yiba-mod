@@ -176,5 +176,13 @@
     "NAME": "挑衅",
     "DESCRIPTION": "使一名敌人只能进行攻击宣言。 NL  消耗 。",
     "UPGRADE_DESCRIPTION": "使一名敌人只能进行攻击宣言。"
+  },
+  "HydroCard": {
+    "NAME": "水元素",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予水元素。"
+  },
+  "PyroCard": {
+    "NAME": "火元素",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予火元素。"
   }
 }
