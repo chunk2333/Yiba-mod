@@ -5,6 +5,11 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
 import cards.*;
+import cards.curse.DutifulSon;
+import cards.curse.Imprisonment;
+import cards.curse.desire;
+import cards.curse.snowman;
+import cards.element.*;
 import characters.seles;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -117,7 +122,10 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addKeyword(new String[]{"不同效果"},"#r攻击 ： #b1 点 力量 。 NL  #g技能 ： #b1 点 敏捷 。 NL  #b能力 ：获得 [E] 。");
         BaseMod.addKeyword(new String[]{"移除"},"使用后从主牌库移除。");
         BaseMod.addKeyword(new String[]{"亢奋"},"本回合你造成的伤害变为1.3倍。");
-
+        BaseMod.addKeyword(new String[]{"扩散"},"将指定目标的元素扩散到所有敌人身上。");
+        BaseMod.addKeyword(new String[]{"水元素"},"目标将被 #b水元素 附着。");
+        BaseMod.addKeyword(new String[]{"火元素"},"目标将被 #r火元素 附着。");
+        BaseMod.addKeyword(new String[]{"岩元素"},"目标将被 #y岩元素 附着。");
     }
 
     @Override
@@ -160,7 +168,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new Defend_Seles());
         this.cardsToAdd.add(new SavePower());
         this.cardsToAdd.add(new Printf());
-        this.cardsToAdd.add(new yiba());
+        //this.cardsToAdd.add(new yiba());
         this.cardsToAdd.add(new LeiPu());
         this.cardsToAdd.add(new goodtime());
         this.cardsToAdd.add(new power1());
@@ -197,8 +205,10 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new WuhuTakeOff());//芜湖～起飞！
         this.cardsToAdd.add(new SpireScience());//尖塔学
         this.cardsToAdd.add(new Provoke());//挑衅
-        //this.cardsToAdd.add(new HydroCard());//水牌
-        //this.cardsToAdd.add(new PyroCard());//火牌
+        this.cardsToAdd.add(new HydroCard());//水牌
+        this.cardsToAdd.add(new PyroCard());//火牌
+        this.cardsToAdd.add(new GeoCard());//岩牌
+        this.cardsToAdd.add(new AnemoCard());//风牌
 
     }
 
@@ -303,4 +313,3 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
     }
 
 }
-

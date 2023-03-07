@@ -1,4 +1,4 @@
-package cards;
+package cards.curse;
 //食雪汉
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,7 +17,6 @@ public class snowman extends CustomCard{
     public static final String IMG_PATH = "img/cards_Seles/snowman.png";
     private static final int COST = -2;
     public static final String ID = "snowman";
-    //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public snowman() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE);
         this.baseMagicNumber = 3;
@@ -34,7 +33,7 @@ public class snowman extends CustomCard{
         this.dontTriggerOnUseCard = true;
         AbstractPlayer p = AbstractDungeon.player;
         addToBot(new ApplyPowerAction(p, p, new PoisonPower(p,p,this.magicNumber), this.magicNumber));
-        UpdateStats.logger.info("开始中毒");
+        UpdateStats.logger.info("食雪汉开始中毒");
     }
     @Override
     public AbstractCard makeCopy() {

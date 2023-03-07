@@ -1,25 +1,18 @@
-package cards;
+package cards.element;
+
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pathes.AbstractCardEnum;
 
-/**
- * 创建人:谢文
- * 创建时间:2021/8/17 15:23
- * 备注: 基础的防御牌(初始牌)
- */
 public class Defend_Seles extends CustomCard
     {
-        //从.json文件中提取键名为Strike_Seles的信息
         private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Defend_Seles");
         public static final String NAME = cardStrings.NAME;
         public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -40,13 +33,13 @@ public class Defend_Seles extends CustomCard
         @Override
         public void use(AbstractPlayer p, AbstractMonster m) {
             //使用卡牌时触发的动作
-            AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new GainBlockAction((AbstractCreature)p, (AbstractCreature)p, this.block));
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         }
 
         @Override
         public AbstractCard makeCopy() {
             //复制卡牌时触发
-            return (AbstractCard)new Defend_Seles();
+            return new Defend_Seles();
         }
 
         @Override

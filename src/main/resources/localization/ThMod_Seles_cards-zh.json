@@ -136,7 +136,7 @@
   },
   "Imprisonment": {
     "NAME": "坐牢",
-    "DESCRIPTION": " 不能被打出 。 NL 被抽到时立即结束你的回合。"
+    "DESCRIPTION": " 不能被打出 。 NL 被抽到时立即结束你的回合。 NL  虚无 。"
   },
   "Rebound_My": {
     "NAME": "斗转星移",
@@ -179,10 +179,22 @@
   },
   "HydroCard": {
     "NAME": "水元素",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予水元素。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 水元素 。"
   },
   "PyroCard": {
     "NAME": "火元素",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予火元素。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 火元素 。"
+  },
+  "GeoCard": {
+    "NAME": "岩元素",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 岩元素 。"
+  },
+  "AnemoCard": {
+    "NAME": "风元素",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  扩散 。"
+  },
+  "YouAreOne_OneByOne": {
+    "NAME": "你是一个，一个一个",
+    "DESCRIPTION": " 不能被打出 。 NL 抽到后本回合无法抽卡。 NL  虚无 。"
   }
 }

@@ -1,9 +1,8 @@
 package events;
 
 import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
-import cards.desire;
-import cards.snowman;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import cards.curse.desire;
+import cards.curse.snowman;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -12,12 +11,9 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import relics.beef;
 
-import java.util.ArrayList;
 public class Restaurant extends AbstractImageEvent {
     public static final String ID = "Restaurant";
 

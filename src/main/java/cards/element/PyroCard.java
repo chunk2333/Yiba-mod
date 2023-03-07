@@ -1,5 +1,5 @@
-package cards;
-//水元素牌
+package cards.element;
+//火元素牌
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -11,18 +11,19 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import power.HydroPower;
-import power.ProvokePower;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import pathes.AbstractCardEnum;
+import power.PyroPower;
 
-public class HydroCard extends CustomCard{
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("HydroCard");
+public class PyroCard extends CustomCard{
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("PyroCard");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "img/cards_Seles/test.png";
     private static final int COST = 0;
-    public static final String ID = "HydroCard";
-    public HydroCard() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY);
+    public static final String ID = "PyroCard";
+    public PyroCard() {
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Seles_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         //添加基础攻击标签和将伤害设为6
         this.baseDamage = 8;
         this.damage = this.baseDamage;
@@ -31,8 +32,14 @@ public class HydroCard extends CustomCard{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
-        //给予水元素buff
-        addToBot(new ApplyPowerAction(m, m, new HydroPower(m, 0), 1));
+        int mystery = 0;
+        for(AbstractPower power:p.powers){
+            if(power.ID=="MysteryPower"){
+                mystery = power.amount;
+            }
+        }
+        //给予火元素buff
+        addToBot(new ApplyPowerAction(m, m, new PyroPower(m, 0), 1));
         //造成伤害
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
@@ -42,7 +49,7 @@ public class HydroCard extends CustomCard{
 
     public AbstractCard makeCopy() {
         //复制卡牌时触发
-        return new HydroCard();
+        return new PyroCard();
     }
 
     @Override

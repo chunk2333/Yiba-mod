@@ -29,6 +29,13 @@
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>StSLib</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>C:/mod/StSLib.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
             <artifactId>desktop-1.0</artifactId>
             <version>1.0</version>
             <scope>system</scope>

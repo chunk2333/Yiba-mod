@@ -83,5 +83,11 @@
     "DESCRIPTIONS": [
       "该目标存在 #r火元素 。"
     ]
+  },
+  "GeoPower": {
+    "NAME": "岩元素",
+    "DESCRIPTIONS": [
+      "该目标存在 #y岩元素 。"
+    ]
   }
 }
