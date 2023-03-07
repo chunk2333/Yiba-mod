@@ -222,5 +222,12 @@
     "DESCRIPTIONS": [
       "战斗开始时获得一层 亢奋 。"
     ]
+  },
+  "BottledAir": {
+    "NAME": "瓶装空气",
+    "FLAVOR": "这只是一瓶……空气？",
+    "DESCRIPTIONS": [
+      "回合结束时，可以选择一张牌 #y保留 。"
+    ]
   }
 }
