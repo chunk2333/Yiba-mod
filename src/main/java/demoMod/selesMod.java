@@ -5,10 +5,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
 import cards.*;
-import cards.curse.DutifulSon;
-import cards.curse.Imprisonment;
-import cards.curse.desire;
-import cards.curse.snowman;
+import cards.curse.*;
 import cards.element.*;
 import characters.seles;
 import com.badlogic.gdx.Gdx;
@@ -209,6 +206,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new PyroCard());//火牌
         this.cardsToAdd.add(new GeoCard());//岩牌
         this.cardsToAdd.add(new AnemoCard());//风牌
+        this.cardsToAdd.add(new YouAreOne_OneByOne());//风牌
 
     }
 
