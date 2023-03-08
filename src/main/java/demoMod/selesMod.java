@@ -118,7 +118,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addKeyword(new String[]{"诡谲状态"},"每回合：暂时将抽牌堆的所有技能牌降低 #b1 费，之后选一张加入手卡。当你打出任意一张牌时失效。");
         BaseMod.addKeyword(new String[]{"不同效果"},"#r攻击 ： #b1 点 力量 。 NL  #g技能 ： #b1 点 敏捷 。 NL  #b能力 ：获得 [E] 。");
         BaseMod.addKeyword(new String[]{"移除"},"使用后从主牌库移除。");
-        BaseMod.addKeyword(new String[]{"亢奋"},"本回合你造成的伤害变为1.3倍。");
+        BaseMod.addKeyword(new String[]{"亢奋"},"本回合你造成的伤害变为 #b1.3 倍。");
         BaseMod.addKeyword(new String[]{"扩散"},"将指定目标的元素扩散到所有敌人身上。");
         BaseMod.addKeyword(new String[]{"水元素"},"目标将被 #b水元素 附着。");
         BaseMod.addKeyword(new String[]{"火元素"},"目标将被 #r火元素 附着。");
