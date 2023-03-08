@@ -203,6 +203,6 @@
   },
   "ConjuredHealth": {
     "NAME": "皮糙肉厚",
-    "DESCRIPTION": "本回合有50%概率不会受到伤害。"
+    "DESCRIPTION": "本回合未被 格挡 的伤害有60%概率不会受到伤害。"
   }
 }

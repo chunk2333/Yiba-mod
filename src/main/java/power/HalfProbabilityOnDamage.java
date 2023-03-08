@@ -52,7 +52,7 @@ public class HalfProbabilityOnDamage extends AbstractPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         int random;
         random = AbstractDungeon.miscRng.random(1,100); //随机数
-        if(random>50){
+        if(random>60){
             return damageAmount;
         }
         flash();
