@@ -29,7 +29,7 @@
   },
   "power1": {
     "NAME": "让我康康！",
-    "DESCRIPTION": "每回合开始时回复2点生命值"
+    "DESCRIPTION": "每回合开始时回复2点生命值。"
   },
   "snowman": {
     "NAME": "食雪汉",
