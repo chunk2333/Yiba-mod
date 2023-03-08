@@ -1,5 +1,5 @@
 Selfpowers.png
-size: 128, 2000
+size: 256, 1040
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -19,168 +19,182 @@ repeat: none
   index: -1
 48/CryoPower
   rotate: false
-  xy: 0, 48
+  xy: 96, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/DoubleDamage
   rotate: false
-  xy: 48, 48
+  xy: 144, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/EyesHeartPower
   rotate: false
-  xy: 0, 96
+  xy: 192, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/GeoPower
   rotate: false
-  xy: 48, 96
+  xy: 0, 48
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+48/HalfProbabilityOnDamage
+  rotate: false
+  xy: 48, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/happyOldHomePower
   rotate: false
-  xy: 0, 144
+  xy: 96, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/HarmonyOfLightAndDustPower
   rotate: false
-  xy: 48, 144
+  xy: 144, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/HydroPower
   rotate: false
-  xy: 0, 192
+  xy: 192, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/ProvokePower
   rotate: false
-  xy: 48, 192
+  xy: 0, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/PyroPower
   rotate: false
-  xy: 0, 240
+  xy: 48, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/Rebound_MyPower
   rotate: false
-  xy: 48, 240
+  xy: 96, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/TreacherousPower
   rotate: false
-  xy: 0, 288
+  xy: 144, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 128/AnemoPower
   rotate: false
-  xy: 0, 336
+  xy: 0, 144
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/CoffeeBeanPower
   rotate: false
-  xy: 0, 464
+  xy: 128, 144
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/CryoPower
   rotate: false
-  xy: 0, 592
+  xy: 0, 272
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/DoubleDamage
   rotate: false
-  xy: 0, 720
+  xy: 128, 272
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/EyesHeartPower
   rotate: false
-  xy: 0, 848
+  xy: 0, 400
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/GeoPower
   rotate: false
-  xy: 0, 976
+  xy: 128, 400
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/HalfProbabilityOnDamage
+  rotate: false
+  xy: 0, 528
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/happyOldHomePower
   rotate: false
-  xy: 0, 1104
+  xy: 128, 528
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/HarmonyOfLightAndDustPower
   rotate: false
-  xy: 0, 1232
+  xy: 0, 656
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/HydroPower
   rotate: false
-  xy: 0, 1360
+  xy: 128, 656
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/ProvokePower
   rotate: false
-  xy: 0, 1488
+  xy: 0, 784
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/PyroPower
   rotate: false
-  xy: 0, 1616
+  xy: 128, 784
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/Rebound_MyPower
   rotate: false
-  xy: 0, 1744
+  xy: 0, 912
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/TreacherousPower
   rotate: false
-  xy: 0, 1872
+  xy: 128, 912
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
