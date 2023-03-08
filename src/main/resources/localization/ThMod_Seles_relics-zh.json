@@ -250,5 +250,12 @@
     "DESCRIPTIONS": [
       "每当你获得金币时额外获得 #b5 金币。"
     ]
+  },
+  "BottledCultistMask": {
+    "NAME": "瓶装异教徒头套",
+    "FLAVOR": "都说了是自己人，自己人！",
+    "DESCRIPTIONS": [
+      "每回合获得 [E] 。在战斗开始时，将 #b1 张随机 #r诅咒 牌放入你的抽牌堆。"
+    ]
   }
 }
