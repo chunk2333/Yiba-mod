@@ -268,6 +268,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addPotion(money.class, null, null, null, "money");
         BaseMod.addPotion(reborn.class, null, null, null, "reborn");
         BaseMod.addPotion(Escape.class, null, null, null, "Escape");
+        BaseMod.addPotion(SpacePotions.class, null, null, null, "SpacePotions");
     }
 
     @Override
