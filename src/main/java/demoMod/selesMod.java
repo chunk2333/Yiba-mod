@@ -247,6 +247,8 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addRelic(new CoffeeBean(), RelicType.SHARED); //咖啡豆
         BaseMod.addRelic(new BottledAir(), RelicType.SHARED); //瓶装空气
         BaseMod.addRelic(new BottledPoop(), RelicType.SHARED); //瓶装答辩
+        BaseMod.addRelic(new Time(), RelicType.SHARED); //”时“
+        BaseMod.addRelic(new RichTool(), RelicType.SHARED); //致富神器
         //BaseMod.addPotion();
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
