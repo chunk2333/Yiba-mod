@@ -89,5 +89,13 @@
     "DESCRIPTIONS": [
       "该目标存在 #y岩元素 。"
     ]
+  },
+  "HalfProbabilityOnDamage": {
+    "NAME": "结实耐用",
+    "DESCRIPTIONS": [
+      "本回合内有 #b50 %概率回受到伤害。",
+      "接下来的 #b",
+      " 回合内有 #b50 %概率会受到伤害。"
+    ]
   }
 }
