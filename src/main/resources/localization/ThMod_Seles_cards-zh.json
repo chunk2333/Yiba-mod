@@ -80,7 +80,7 @@
   },
   "MakeASurpriseAttack": {
     "NAME": "虚诱掩杀",
-    "DESCRIPTION": "造成 !D! 点伤害。你下1张攻击牌会造成双倍伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。你的下一张攻击牌会造成双倍伤害。"
   },
   "PunctureStake": {
     "NAME": "穿刺木桩",
