@@ -210,7 +210,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new YouAreOne_OneByOne());//风牌
         //this.cardsToAdd.add(new Evil());//恶德
         this.cardsToAdd.add(new ConjuredHealth());//皮糙肉厚
-
+        this.cardsToAdd.add(new HiddenEnergyInTheBack());//后背隐藏能源
     }
 
     @Override

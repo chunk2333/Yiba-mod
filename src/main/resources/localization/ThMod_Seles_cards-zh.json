@@ -204,5 +204,10 @@
   "ConjuredHealth": {
     "NAME": "皮糙肉厚",
     "DESCRIPTION": "本回合未被 格挡 的伤害有60%概率不会受到伤害。"
+  },
+  "HiddenEnergyInTheBack": {
+    "NAME": "后背隐藏能源",
+    "DESCRIPTION": "秒杀所有敌人。 NL 在下回合死亡。 NL  消耗 。 NL  移除 。",
+    "UPGRADE_DESCRIPTION":" 保留 。 NL 秒杀所有敌人。 NL 在下回合死亡。 NL  消耗 。 NL  移除 。"
   }
 }
