@@ -5,6 +5,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
 import cards.*;
+import cards.colorless.*;
 import cards.curse.*;
 import cards.element.*;
 import characters.seles;
@@ -254,7 +255,6 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addRelic(new BottledCultistMask(), RelicType.SHARED); //瓶装异教徒头套
         BaseMod.addRelic(new IntertwinedFate(), RelicType.SHARED); //纠缠之缘
         BaseMod.addRelic(new AcquaintFate(), RelicType.SHARED); //相遇之缘
-        //BaseMod.addPotion();
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
@@ -263,8 +263,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addEvent(new AddEventParams.Builder(LuLuEvent.ID, LuLuEvent.class).eventType(EventUtils.EventType.NORMAL).create());
         //添加事件：精灵祝福
         BaseMod.addEvent(new AddEventParams.Builder(FairyBlessingEvent.ID, FairyBlessingEvent.class).dungeonID(TheBeyond.ID).create());
-        //BaseMod.addEvent(new AddEventParams.Builder(RestaurantTest.ID, RestaurantTest.class).dungeonID(TheCity.ID).create());
-        //添加药水Escape
+        //添加药水
         BaseMod.addPotion(time.class, null, null, null, "time");
         BaseMod.addPotion(money.class, null, null, null, "money");
         BaseMod.addPotion(reborn.class, null, null, null, "reborn");
@@ -275,9 +274,9 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
     @Override
     public void receiveRelicGet(AbstractRelic relic) {
         //移除遗物,这里移除了小屋子，太垃圾了。
-        if (AbstractDungeon.player.name.equals("Seles")) {
-            AbstractDungeon.shopRelicPool.remove("TinyHouse");
-        }
+        //if (AbstractDungeon.player.name.equals("Seles")) {
+            //AbstractDungeon.shopRelicPool.remove("TinyHouse");
+        //}
     }
 
     @Override

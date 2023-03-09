@@ -1,4 +1,4 @@
-package cards;
+package cards.colorless;
 //尖塔学
 import basemod.abstracts.CustomCard;
 import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;

@@ -1,4 +1,4 @@
-package cards;
+package cards.colorless;
 //抽象
 
 import basemod.abstracts.CustomCard;

@@ -1,4 +1,4 @@
-package cards;
+package cards.colorless;
 //斗转星移
 import basemod.abstracts.CustomCard;
 import basemod.helpers.VfxBuilder;

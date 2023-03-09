@@ -1,4 +1,4 @@
-package cards;
+package cards.colorless;
 //挑衅
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
