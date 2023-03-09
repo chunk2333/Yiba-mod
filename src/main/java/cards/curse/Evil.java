@@ -46,22 +46,20 @@ public class Evil extends CustomCard{
     @Override
     public void triggerWhenCopied() {
         //复制时触发
-        //不能被打出
-        this.dontTriggerOnUseCard = true;
-        //虚无
-        this.isEthereal = true;
-        if(AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT){
-            UpdateStats.logger.info("恶德被复制，在战斗中，什么不触发。" );
-            return;
-        }
-        //塞诅咒到主牌堆
-        UpdateStats.logger.info("恶德被加入牌库，开始复制。" );
-        insertCurseCard();
+
 
     }
+
     @Override
-    public AbstractCard makeCopy() {
+    public CustomCard makeCopy() {
         //复制卡牌时触发
+        //if(AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT){
+            //UpdateStats.logger.info("恶德被复制，在战斗中，什么不触发。" );
+            //return new Evil();
+        //}
+        //塞诅咒到主牌堆
+        //UpdateStats.logger.info("恶德被加入牌库，开始复制。" );
+        //insertCurseCard();
         return new Evil();
     }
     @Override
