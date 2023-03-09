@@ -312,6 +312,11 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
                         new ZhouPi(-150F, -20),
                         new NongPi(-500F, -20)
                 }));
+        //迪奥·布兰度
+        BaseMod.addMonster(Dio.ID, Dio::new);
+        BaseMod.addBoss(TheCity.ID, Dio.ID,
+                "img/Ui_Seles/map/boss/Dio.png",
+                "img/Ui_Seles/map/bossOutline/Dio.png");
     }
     @Override
     public void receivePostEnergyRecharge() {
