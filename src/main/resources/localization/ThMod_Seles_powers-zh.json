@@ -103,5 +103,11 @@
     "DESCRIPTIONS": [
       "下回合立即死亡。"
     ]
+  },
+  "TimeStop": {
+    "NAME": "时间暂停",
+    "DESCRIPTIONS": [
+      "回合开始时立即结束回合。"
+    ]
   }
 }
