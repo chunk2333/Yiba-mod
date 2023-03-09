@@ -110,7 +110,8 @@
   },
   "HarmonyOfLightAndDust": {
     "NAME": "和光同尘",
-    "DESCRIPTION": "你每回合打出的第一张牌会返还所有费用。"
+    "DESCRIPTION": "你每回合打出的第一张牌会返还所有费用。",
+    "UPGRADE_DESCRIPTION":" 固有 。你每回合打出的第一张牌会返还所有费用。"
   },
   "SumUpExperience": {
     "NAME": "总结经验",
