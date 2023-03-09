@@ -1,4 +1,4 @@
-package cards;
+package cards.green;
 //寒音索绕
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;

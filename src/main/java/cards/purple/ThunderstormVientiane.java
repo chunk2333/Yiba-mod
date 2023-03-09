@@ -1,8 +1,5 @@
-package cards;
-
-//ThunderstormVientiane
+package cards.purple;
 //风雷万象
-
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -51,7 +48,7 @@ public class ThunderstormVientiane extends CustomCard {
             addToTop(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1));
         }
         if (lastPlayedCard.type == CardType.POWER) {
-            //给予1点能力
+            //给予1点能量
             p.gainEnergy(1);
         }
     }

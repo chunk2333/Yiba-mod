@@ -1,11 +1,8 @@
-package cards;
+package cards.element;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -17,13 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pathes.AbstractCardEnum;
 
-import java.sql.Savepoint;
 
-/**
- * 创建人:谢文
- * 创建时间:2021/8/30 20:24
- * 备注: 输出，（初始牌） 花费2点，对一名敌人造成8点伤害，将一张凝神加入手牌。升级后造成12点伤害，将一张升级后的凝神加入手牌
- */
 public class Printf extends CustomCard {
     //从.json文件中提取键名为Strike_Seles的信息
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Printf");
@@ -44,8 +35,8 @@ public class Printf extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
-        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)m, new DamageInfo((AbstractCreature)p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        addToBot((AbstractGameAction)new MakeTempCardInHandAction((AbstractCard)new SavePower(), 1));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        addToBot(new MakeTempCardInHandAction(new SavePower(), 1));
     }
 
     @Override

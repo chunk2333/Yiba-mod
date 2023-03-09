@@ -1,4 +1,4 @@
-package cards;
+package cards.green;
 //一时休战
 import basemod.abstracts.CustomCard;
 import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;

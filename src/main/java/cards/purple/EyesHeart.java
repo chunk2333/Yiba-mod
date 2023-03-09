@@ -1,4 +1,4 @@
-package cards;
+package cards.purple;
 //心之眼
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;

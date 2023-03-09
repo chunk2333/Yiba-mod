@@ -1,4 +1,4 @@
-package cards;
+package cards.green;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

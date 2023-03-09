@@ -4,10 +4,14 @@ import basemod.BaseMod;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
-import cards.*;
 import cards.colorless.*;
 import cards.curse.*;
 import cards.element.*;
+import cards.green.*;
+import cards.purple.*;
+import cards.red.LeiPu;
+import cards.red.LetMeSee;
+import cards.red.goodtime;
 import characters.seles;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -169,7 +173,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         //this.cardsToAdd.add(new yiba());
         this.cardsToAdd.add(new LeiPu());
         this.cardsToAdd.add(new goodtime());
-        this.cardsToAdd.add(new power1());
+        this.cardsToAdd.add(new LetMeSee());
         this.cardsToAdd.add(new snowman());
         this.cardsToAdd.add(new desire());//三大欲望
         this.cardsToAdd.add(new Hahaknife());//哈哈，刀！TM全是刀！

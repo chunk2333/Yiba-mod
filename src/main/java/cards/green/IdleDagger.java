@@ -1,5 +1,5 @@
 //IdleDagger
-package cards;
+package cards.green;
 
 import basemod.abstracts.CustomCard;
 import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;

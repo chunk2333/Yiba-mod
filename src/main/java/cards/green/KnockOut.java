@@ -1,12 +1,8 @@
-//KnockOut
+package cards.green;
 //最后一击
-
-package cards;
-
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.unique.DamagePerAttackPlayedAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -38,7 +34,6 @@ public class KnockOut extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
-        //addToBot(new DamagePerAttackPlayedAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         for (int i = 0; i < num; i++) {
             addToTop(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }

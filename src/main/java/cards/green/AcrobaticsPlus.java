@@ -1,4 +1,4 @@
-package cards;
+package cards.green;
 //技杂
 
 import basemod.abstracts.CustomCard;

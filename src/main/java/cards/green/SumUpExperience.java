@@ -1,6 +1,6 @@
 //SumUpExperience
 //总结经验
-package cards;
+package cards.green;
 import actions.UpgradeRadmoSkillCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;

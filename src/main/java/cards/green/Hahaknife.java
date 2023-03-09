@@ -1,9 +1,8 @@
 
 //Hahaknife
-package cards;
+package cards.green;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.CardModifierManager;
 import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,7 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
 public class Hahaknife extends CustomCard{
     //从.json文件中提取键名为LeiPu的信息
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Hahaknife");

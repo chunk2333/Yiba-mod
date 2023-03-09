@@ -1,66 +1,42 @@
-package cards;
-//人神共愤
-
+package cards.purple;
+//虚诱掩杀
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import power.DoubleDamage;
 
-public class PeopleAndGodsAreOutraged extends CustomCard {
-    public static final String IMG_PATH = "img/cards_Seles/PeopleAndGodsAreOutraged.png";
-    public static final String ID = "PeopleAndGodsAreOutraged";
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("PeopleAndGodsAreOutraged");
+public class MakeASurpriseAttack extends CustomCard{
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("MakeASurpriseAttack");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String IMG_PATH = "img/cards_Seles/MakeASurpriseAttack.png";
     private static final int COST = 1;
-
-    public PeopleAndGodsAreOutraged() {
+    public static final String ID = "MakeASurpriseAttack";
+    public MakeASurpriseAttack() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, CardColor.PURPLE, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        //添加基础攻击标签和将伤害设为6
-        this.baseDamage = 10;
-
+        this.baseDamage = 8;
         this.damage = this.baseDamage;
-
-        this.baseMagicNumber = 2;
-
-        this.magicNumber = this.baseMagicNumber;
-
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
-        //进入愤怒状态
-        addToBot(new ChangeStanceAction("Wrath"));
-        if (p.stance.ID.equals("Calm") || p.stance.ID.equals("Divinity") || p.stance.ID.equals("Neutral")) {
-            this.damage = this.damage * 2;
-        }
-        //给予伤害
+        addToBot(new ApplyPowerAction(p, p, new DoubleDamage(p, 1), 1));
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        //获得2点临时力量
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
-        if (this.upgraded) {
-            this.damage = 14;
-        } else {
-            this.damage = 10;
-        }
-
-
     }
 
     @Override
+
     public AbstractCard makeCopy() {
         //复制卡牌时触发
-        return new PeopleAndGodsAreOutraged();
+        return new MakeASurpriseAttack();
     }
 
     @Override
@@ -69,8 +45,7 @@ public class PeopleAndGodsAreOutraged extends CustomCard {
         if (!this.upgraded) {
             //更改名字和提高3点伤害
             upgradeName();
-            upgradeDamage(4);
-            upgradeMagicNumber(1);
+            upgradeDamage(3);
         }
     }
 }

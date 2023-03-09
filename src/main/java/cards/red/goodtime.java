@@ -1,5 +1,5 @@
-package cards;
-
+package cards.red;
+//好运时代来临力
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,32 +14,28 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.RegenPower;
+
 public class goodtime extends CustomCard{
-    //从.json文件中提取键名为LeiPu的信息
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("goodtime");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "img/cards_Seles/LeiPu.png";
     private static final int COST = 1;
     public static final String ID = "goodtime";
-    //public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public goodtime() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.RARE, CardTarget.SELF);
-        //添加基础攻击标签和将伤害设为6
         this.baseDamage=4;
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
-
-
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //使用卡牌时触发的动作
+        //永生不死特效
         addToBot(new VFXAction(new BorderFlashEffect(Color.CHARTREUSE, true)));
         addToBot(new VFXAction(p, new MiracleEffect(Color.CHARTREUSE, Color.LIME, "BLOCK_GAIN_1"), 1.0F));
+        //给多层护甲和再生buff
         addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RegenPower(AbstractDungeon.player, this.baseDamage), this.baseDamage));
     }
