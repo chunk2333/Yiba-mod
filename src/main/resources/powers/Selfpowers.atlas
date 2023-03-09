@@ -1,5 +1,5 @@
 Selfpowers.png
-size: 256, 1040
+size: 256, 1168
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -73,30 +73,37 @@ repeat: none
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/ProvokePower
+48/NextTurnDiePower
   rotate: false
   xy: 0, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/PyroPower
+48/ProvokePower
   rotate: false
   xy: 48, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/Rebound_MyPower
+48/PyroPower
   rotate: false
   xy: 96, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TreacherousPower
+48/Rebound_MyPower
   rotate: false
   xy: 144, 96
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+48/TreacherousPower
+  rotate: false
+  xy: 192, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
@@ -171,30 +178,37 @@ repeat: none
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/ProvokePower
+128/NextTurnDiePower
   rotate: false
   xy: 0, 784
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/PyroPower
+128/ProvokePower
   rotate: false
   xy: 128, 784
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/Rebound_MyPower
+128/PyroPower
   rotate: false
   xy: 0, 912
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/TreacherousPower
+128/Rebound_MyPower
   rotate: false
   xy: 128, 912
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/TreacherousPower
+  rotate: false
+  xy: 0, 1040
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
