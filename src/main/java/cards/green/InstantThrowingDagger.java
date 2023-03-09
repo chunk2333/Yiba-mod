@@ -1,5 +1,5 @@
 package cards.green;
-
+//瞬息飞刀
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
@@ -21,7 +21,7 @@ public class InstantThrowingDagger extends CustomCard{
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public InstantThrowingDagger() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.NONE);
-        this.baseDamage = 10;
+        this.baseDamage = 15;
         this.damage = this.baseDamage;
         this.dontTriggerOnUseCard = true;
     }
