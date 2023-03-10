@@ -128,6 +128,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addKeyword(new String[]{"水元素"},"目标将被 #b水元素 附着。");
         BaseMod.addKeyword(new String[]{"火元素"},"目标将被 #r火元素 附着。");
         BaseMod.addKeyword(new String[]{"岩元素"},"目标将被 #y岩元素 附着。");
+        BaseMod.addKeyword(new String[]{"剧毒"},"累计 #b3 层后造成大量伤害。");
     }
 
     @Override
@@ -215,6 +216,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         //this.cardsToAdd.add(new Evil());//恶德
         this.cardsToAdd.add(new ConjuredHealth());//皮糙肉厚
         this.cardsToAdd.add(new HiddenEnergyInTheBack());//后背隐藏能源
+        this.cardsToAdd.add(new PurplePoison());//幽鳞紫尘
     }
 
     @Override
