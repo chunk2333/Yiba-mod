@@ -214,5 +214,9 @@
   "PurplePoison": {
     "NAME": "幽鳞紫尘",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予一层 剧毒 。"
+  },
+  "WeirdThings": {
+    "NAME": "怪神乱力",
+    "DESCRIPTION": "暂时将本回合 力量 翻倍。"
   }
 }

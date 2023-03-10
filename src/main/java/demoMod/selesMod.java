@@ -217,6 +217,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new ConjuredHealth());//皮糙肉厚
         this.cardsToAdd.add(new HiddenEnergyInTheBack());//后背隐藏能源
         this.cardsToAdd.add(new PurplePoison());//幽鳞紫尘
+        this.cardsToAdd.add(new WeirdThings());//怪神乱力
     }
 
     @Override
