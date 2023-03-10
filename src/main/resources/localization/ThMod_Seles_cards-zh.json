@@ -218,5 +218,10 @@
   "WeirdThings": {
     "NAME": "怪神乱力",
     "DESCRIPTION": "暂时将本回合 力量 翻倍。"
+  },
+  "A_BeamOfLight": {
+    "NAME": "素景垂光",
+    "DESCRIPTION": "退出当前 姿态 ，获得 [W] 。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION":"退出当前 姿态 ，获得 [W] [W] 。"
   }
 }
