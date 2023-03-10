@@ -109,5 +109,11 @@
     "DESCRIPTIONS": [
       "回合开始时立即结束回合。"
     ]
+  },
+  "PoisonousPower": {
+    "NAME": "剧毒鳞粉",
+    "DESCRIPTIONS": [
+      "累计三层后造成大量伤害。"
+    ]
   }
 }

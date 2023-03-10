@@ -80,44 +80,51 @@ repeat: none
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/ProvokePower
+48/PoisonPower
   rotate: false
   xy: 48, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/PyroPower
+48/ProvokePower
   rotate: false
   xy: 96, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/Rebound_MyPower
+48/PyroPower
   rotate: false
   xy: 144, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TimeStop
+48/Rebound_MyPower
   rotate: false
   xy: 192, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TreacherousPower
+48/TimeStop
   rotate: false
   xy: 0, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-128/AnemoPower
+48/TreacherousPower
   rotate: false
   xy: 48, 144
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+128/AnemoPower
+  rotate: false
+  xy: 96, 144
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
@@ -192,37 +199,44 @@ repeat: none
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/ProvokePower
+128/PoisonPower
   rotate: false
   xy: 0, 912
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/PyroPower
+128/ProvokePower
   rotate: false
   xy: 128, 912
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/Rebound_MyPower
+128/PyroPower
   rotate: false
   xy: 0, 1040
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/TimeStop
+128/Rebound_MyPower
   rotate: false
   xy: 128, 1040
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/TreacherousPower
+128/TimeStop
   rotate: false
   xy: 0, 1168
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/TreacherousPower
+  rotate: false
+  xy: 128, 1168
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
