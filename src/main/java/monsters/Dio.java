@@ -66,9 +66,9 @@ public class Dio extends CustomMonster {
         //super(NAME, "Dio", 600, -8.0F, 10.0F, 230.0F, 240.0F, null, x, y);
         super(NAME, "Dio", 300, 0.0F, 0.0F, 270.0F, 400.0F, null, -50.0F, 0.0F);
         if (AbstractDungeon.ascensionLevel >= 7) {
-            setHp(300);
+            setHp(420);
         } else {
-            setHp(280);
+            setHp(400);
         }
         this.dialogX = -50.0F * Settings.scale;
         this.dialogY = 100.0F * Settings.scale;
