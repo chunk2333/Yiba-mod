@@ -36,7 +36,7 @@ public class RocoCoin extends CustomRelic {
         flash();
         int dmg;
         dmg = p.gold;
-        dmg = (int) Math.ceil(dmg*0.05);
+        dmg = (int) Math.ceil(dmg*0.02);
 
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToBot(new DamageAllEnemiesAction(null,
