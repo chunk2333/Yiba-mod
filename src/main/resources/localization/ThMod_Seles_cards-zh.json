@@ -228,5 +228,9 @@
     "NAME": "暗裔利刃",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时获得随机遗物。 NL  消耗 。 NL  虚无 。",
     "UPGRADE_DESCRIPTION":"造成 !D! 点伤害。 NL 斩杀 时获得随机遗物。 NL  消耗 。"
+  },
+  "TempSneckoEye": {
+    "NAME": "蛇眼体验卡",
+    "DESCRIPTION": "获得 混乱 能力。 NL 回合开始额外抽2张牌。"
   }
 }
