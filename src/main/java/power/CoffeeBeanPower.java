@@ -56,15 +56,19 @@ public class CoffeeBeanPower extends AbstractPower {
     }
     public void onUseCard(AbstractCard card, UseCardAction action) {
         //使用卡片时触发
+        if(card.type== AbstractCard.CardType.ATTACK){
+            flash();
+        }
 
     }
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
         //给予伤害时
         finalDamage = (int) Math.ceil(damage *1.3);
-        flash();
-        if (type == DamageInfo.DamageType.NORMAL)
+        if (type == DamageInfo.DamageType.NORMAL){
             return finalDamage;
+        }
+
         return damage;
     }
 }
