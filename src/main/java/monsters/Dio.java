@@ -18,7 +18,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
+import com.megacrit.cardcrawl.map.DungeonMap;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 
@@ -77,6 +79,8 @@ public class Dio extends CustomMonster {
         this.damage.add(new DamageInfo(this, 30));
         this.damage.add(new DamageInfo(this, 999));
         this.img = new Texture(Gdx.files.internal("img/monsters/Dio.png"));
+        //DungeonMap.boss = ImageMaster.loadImage("img/Ui_Seles/map/boss/Dio.png");
+        //DungeonMap.bossOutline = ImageMaster.loadImage("img/Ui_Seles/map/bossOutline/Dio.png");
     }
     public void takeTurn() {
         this.roundNum = this.roundNum + 1;

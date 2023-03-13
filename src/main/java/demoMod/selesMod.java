@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
@@ -327,9 +328,10 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
                 }));
         //迪奥·布兰度
         BaseMod.addMonster(Dio.ID, Dio::new);
+
         BaseMod.addBoss(TheCity.ID, Dio.ID,
-                "img/Ui_Seles/map/boss/Dio.png",
-                "img/Ui_Seles/map/bossOutline/Dio.png");
+                "map/boss/Dio.png",
+                "map/bossOutline/Dio.png");
     }
     @Override
     public void receivePostEnergyRecharge() {
