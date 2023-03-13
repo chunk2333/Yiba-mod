@@ -1,5 +1,5 @@
 Selfpowers.png
-size: 256, 1296
+size: 256, 1344
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -108,135 +108,149 @@ repeat: none
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TimeStop
+48/ThePeaceOfMindPower
   rotate: false
   xy: 0, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TreacherousPower
+48/TimeStop
   rotate: false
   xy: 48, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-128/AnemoPower
+48/TreacherousPower
   rotate: false
   xy: 96, 144
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+128/AnemoPower
+  rotate: false
+  xy: 0, 192
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/CoffeeBeanPower
   rotate: false
-  xy: 0, 272
+  xy: 128, 192
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/CryoPower
   rotate: false
-  xy: 128, 272
+  xy: 0, 320
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/DoubleDamage
   rotate: false
-  xy: 0, 400
+  xy: 128, 320
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/EyesHeartPower
   rotate: false
-  xy: 128, 400
+  xy: 0, 448
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/GeoPower
   rotate: false
-  xy: 0, 528
+  xy: 128, 448
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/HalfProbabilityOnDamage
   rotate: false
-  xy: 128, 528
+  xy: 0, 576
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/happyOldHomePower
   rotate: false
-  xy: 0, 656
+  xy: 128, 576
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/HarmonyOfLightAndDustPower
   rotate: false
-  xy: 128, 656
+  xy: 0, 704
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/HydroPower
   rotate: false
-  xy: 0, 784
+  xy: 128, 704
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/NextTurnDiePower
   rotate: false
-  xy: 128, 784
+  xy: 0, 832
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/PoisonPower
   rotate: false
-  xy: 0, 912
+  xy: 128, 832
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/ProvokePower
   rotate: false
-  xy: 128, 912
+  xy: 0, 960
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/PyroPower
   rotate: false
-  xy: 0, 1040
+  xy: 128, 960
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/Rebound_MyPower
   rotate: false
-  xy: 128, 1040
+  xy: 0, 1088
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/ThePeaceOfMindPower
+  rotate: false
+  xy: 128, 1088
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/TimeStop
   rotate: false
-  xy: 0, 1168
+  xy: 0, 1216
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/TreacherousPower
   rotate: false
-  xy: 128, 1168
+  xy: 128, 1216
   size: 128, 128
   orig: 128, 128
   offset: 0, 0

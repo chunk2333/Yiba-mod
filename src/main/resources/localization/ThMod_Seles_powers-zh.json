@@ -115,5 +115,14 @@
     "DESCRIPTIONS": [
       "累计三层后造成大量伤害。"
     ]
+  },
+  "ThePeaceOfMindPower": {
+    "NAME": "明镜止水",
+    "DESCRIPTIONS": [
+      "每当你进入 #y平静 时，抽 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+
   }
 }
