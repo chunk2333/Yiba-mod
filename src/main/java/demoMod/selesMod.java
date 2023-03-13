@@ -268,6 +268,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addRelic(new BottledCultistMask(), RelicType.SHARED); //瓶装异教徒头套
         BaseMod.addRelic(new IntertwinedFate(), RelicType.SHARED); //纠缠之缘
         BaseMod.addRelic(new AcquaintFate(), RelicType.SHARED); //相遇之缘
+        BaseMod.addRelic(new EntropyIncrease(), RelicType.SHARED); //熵增
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
