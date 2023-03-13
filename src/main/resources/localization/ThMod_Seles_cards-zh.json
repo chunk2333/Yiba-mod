@@ -25,7 +25,7 @@
   },
   "goodtime": {
     "NAME": "好时代来临力",
-    "DESCRIPTION": " 消耗 。 NL 给予自身5点多层护甲。 NL 4点 再生 。 "
+    "DESCRIPTION": " 消耗 。 NL 给予自身5层 *多层护甲 。 NL 4层 再生 。 "
   },
   "power1": {
     "NAME": "让我康康！",
@@ -33,7 +33,7 @@
   },
   "snowman": {
     "NAME": "食雪汉",
-    "DESCRIPTION": " 不能被打出 。 NL 回合结束给予自身三层 中毒 。 NL  虚无 。 "
+    "DESCRIPTION": " 不能被打出 。 NL 回合结束给予自身3层 中毒 。 NL  虚无 。 "
   },
   "desire": {
     "NAME": "三大欲望",
@@ -45,8 +45,8 @@
   },
   "rebornGun": {
     "NAME": "人生重来枪",
-    "DESCRIPTION": "选择任意数量手牌返回抽卡堆，之后抽出相同数量。 NL 视为丢弃。",
-    "UPGRADE_DESCRIPTION": "选择任意数量手牌返回抽卡堆，之后抽出相同数量。 NL 视为丢弃。 NL 额外抽 !M! 张。"
+    "DESCRIPTION": "选择任意数量手牌返回抽牌堆，之后抽出相同数量。 NL 视为丢弃。",
+    "UPGRADE_DESCRIPTION": "选择任意数量手牌返回抽牌堆，之后抽出相同数量。 NL 视为丢弃。 NL 额外抽 !M! 张。"
   },
   "happyOldHome": {
     "NAME": "出千",
@@ -137,7 +137,7 @@
   },
   "Imprisonment": {
     "NAME": "坐牢",
-    "DESCRIPTION": " 不能被打出 。 NL 被抽到时立即结束你的回合。 NL  虚无 。"
+    "DESCRIPTION": " 不能被打出 。 NL 当你抽到这张牌时立即结束你的回合。 NL  虚无 。"
   },
   "Rebound_My": {
     "NAME": "斗转星移",
@@ -171,7 +171,7 @@
   },
   "SpireScience": {
     "NAME": "尖塔学",
-    "DESCRIPTION": "消耗一个随机数。 NL  消耗 。 NL 然后复制一张到你的手牌。"
+    "DESCRIPTION": "消耗一个卡牌随机数。 NL  消耗 。 NL 然后复制一张到你的手牌。"
   },
   "Provoke": {
     "NAME": "挑衅",
@@ -196,7 +196,7 @@
   },
   "YouAreOne_OneByOne": {
     "NAME": "你是一个，一个一个",
-    "DESCRIPTION": " 不能被打出 。 NL 抽到后本回合无法抽卡。 NL  虚无 。"
+    "DESCRIPTION": " 不能被打出 。 NL 当你抽到这张牌时你本回合不能在抽任何牌。 NL  虚无 。"
   },
   "Evil": {
     "NAME": "恶德",
