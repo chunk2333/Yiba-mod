@@ -253,5 +253,9 @@
   "AllInOne": {
     "NAME": "知行合一",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 回复 !M! 点 生命。 NL 消耗"
+  },
+  "InstantaneousRage": {
+    "NAME": "一瞬狂暴",
+    "DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害。 NL  进入 愤怒 ，若已经处于 愤怒 ，则进入 平静 。"
   }
 }

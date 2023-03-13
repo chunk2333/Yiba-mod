@@ -228,6 +228,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new PiFace());//坐牢-批脸
         this.cardsToAdd.add(new KillGod());//弑神诛仙
         this.cardsToAdd.add(new AllInOne());//知行合一
+        this.cardsToAdd.add(new InstantaneousRage());//一瞬狂暴
     }
 
     @Override
