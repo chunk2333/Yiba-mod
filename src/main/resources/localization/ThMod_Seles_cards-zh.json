@@ -239,6 +239,6 @@
   },
   "FleshShock": {
     "NAME": "肉身震撼",
-    "DESCRIPTION": "造成 !D! 点伤害。"
+    "DESCRIPTION": "造成自身最大生命 !M! %点伤害。"
   }
 }

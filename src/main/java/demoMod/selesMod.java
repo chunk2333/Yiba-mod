@@ -9,6 +9,7 @@ import cards.curse.*;
 import cards.element.*;
 import cards.green.*;
 import cards.purple.*;
+import cards.red.FleshShock;
 import cards.red.LeiPu;
 import cards.red.LetMeSee;
 import cards.red.goodtime;
@@ -222,6 +223,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new BlackBlade());//暗裔利刃
         this.cardsToAdd.add(new TempSneckoEye());//蛇眼体验卡
         this.cardsToAdd.add(new ThePeaceOfMind());//明镜止水
+        this.cardsToAdd.add(new FleshShock());//肉身震撼
     }
 
     @Override
