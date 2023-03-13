@@ -236,5 +236,9 @@
   "ThePeaceOfMind": {
     "NAME": "明镜止水",
     "DESCRIPTION": "每当你进入 平静 时，抽 !M! 张牌。"
+  },
+  "FleshShock": {
+    "NAME": "肉身震撼",
+    "DESCRIPTION": "造成 !D! 点伤害。"
   }
 }
