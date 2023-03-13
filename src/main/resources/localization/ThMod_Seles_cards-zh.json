@@ -257,5 +257,9 @@
   "InstantaneousRage": {
     "NAME": "一瞬狂暴",
     "DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害。 NL  进入 愤怒 ，若已经处于 愤怒 ，则进入 平静 。"
+  },
+  "Joker": {
+    "NAME": "小丑",
+    "DESCRIPTION": "随机打出 !M! 张牌。"
   }
 }
