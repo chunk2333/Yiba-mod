@@ -54,6 +54,7 @@ public class Joker extends CustomCard {
                 }
             });
         }
+
     }
     @Override
     public AbstractCard makeCopy() {
