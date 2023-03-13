@@ -82,6 +82,11 @@ public class Dio extends CustomMonster {
         //DungeonMap.boss = ImageMaster.loadImage("img/Ui_Seles/map/boss/Dio.png");
         //DungeonMap.bossOutline = ImageMaster.loadImage("img/Ui_Seles/map/bossOutline/Dio.png");
     }
+    public void usePreBattleAction() {
+        CardCrawlGame.music.unsilenceBGM();
+        AbstractDungeon.scene.fadeOutAmbiance();
+        AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_CITY");
+    }
     public void takeTurn() {
         this.roundNum = this.roundNum + 1;
         String talkText;
