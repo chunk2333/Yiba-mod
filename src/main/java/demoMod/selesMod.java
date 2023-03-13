@@ -221,6 +221,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         this.cardsToAdd.add(new A_BeamOfLight());//素景垂光
         this.cardsToAdd.add(new BlackBlade());//暗裔利刃
         this.cardsToAdd.add(new TempSneckoEye());//蛇眼体验卡
+        this.cardsToAdd.add(new ThePeaceOfMind());//明镜止水
     }
 
     @Override
