@@ -1,26 +1,19 @@
 package relics;
+//一血传奇
 import basemod.abstracts.CustomRelic;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
-
 
 public class kakaa extends CustomRelic {
     public static final String ID = "Kakaa";
@@ -35,7 +28,6 @@ public class kakaa extends CustomRelic {
     @Override
     public void atBattleStart() {
         //在战斗开始时触发
-        this.counter = 0;
     }
 
     @Override
@@ -73,7 +65,6 @@ public class kakaa extends CustomRelic {
     @Override
     public void onVictory() {
         //在胜利时触发
-        this.counter = -1;
     }
 
     @Override
