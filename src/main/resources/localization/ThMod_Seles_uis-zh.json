@@ -8,5 +8,10 @@
     "TEXT": [
       "我已经打出过 #r攻击牌 了。"
     ]
+  },
+  "CantRemoveFromeMastDeck": {
+    "TEXT": [
+      "你感到被困在某地……"
+    ]
   }
 }

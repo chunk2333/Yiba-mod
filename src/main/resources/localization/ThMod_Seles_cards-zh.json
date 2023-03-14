@@ -261,5 +261,9 @@
   "Joker": {
     "NAME": "小丑",
     "DESCRIPTION": " 保留 。 NL 随机打出 !M! 张牌。"
+  },
+  "LavawalkersTorment": {
+    "NAME": "渡火者的煎熬",
+    "DESCRIPTION": "从牌组中移除时，添加一张复制品到你的牌组。 NL  消耗 。"
   }
 }
