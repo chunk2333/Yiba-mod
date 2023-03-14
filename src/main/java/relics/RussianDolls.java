@@ -26,6 +26,8 @@ public class RussianDolls extends CustomRelic {
     public RussianDolls() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.FLAT);
         wasLoad = false;
+        isGive = false;
+        UpdateStats.logger.info("构造函数被触发是否已载入：" + wasLoad + "是否可额外获得!" + isGive);
     }
 
     @SpirePatch(cls = "com.megacrit.cardcrawl.dungeons.AbstractDungeon", method = "generateMap")
@@ -42,9 +44,9 @@ public class RussianDolls extends CustomRelic {
                 e.printStackTrace();
             }
 
-            wasLoad = true;
-
             if(p.hasRelic("RussianDolls")){
+
+                wasLoad = true;
                 UpdateStats.logger.info("俄罗斯套娃：玩家已完全载入");
             }
         }
@@ -53,6 +55,7 @@ public class RussianDolls extends CustomRelic {
     @SpireInsertPatch(loc = 2522, localvars = {"r"})
     public static void Insert(AbstractRelic r){
         AbstractPlayer p = AbstractDungeon.player;
+        UpdateStats.logger.info("是否已载入：" + wasLoad + "是否可额外获得!" + isGive);
 
         if(!wasLoad){
             //UpdateStats.logger.info("俄罗斯套娃触发，还未完全载入");
@@ -80,9 +83,11 @@ public class RussianDolls extends CustomRelic {
 
         if(isGive) {
             isGive = false;
+            wasLoad = true;
         }else {
             if(p.hasRelic("RussianDolls")){
                 isGive = true;
+                wasLoad = true;
                 //给随机遗物
                 RussianDolls rd = new RussianDolls();
                 rd.flash();
@@ -93,6 +98,7 @@ public class RussianDolls extends CustomRelic {
 
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain(p.drawX, p.drawY, abstractRelic);
                 UpdateStats.logger.info("俄罗斯套娃触发，额外获得：" +  abstractRelic.relicId);
+                wasLoad = true;
             }
         }
 
