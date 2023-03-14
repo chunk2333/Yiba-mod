@@ -47,6 +47,42 @@ public abstract class GetRadomPower {
             //死亡律动
             return new BeatOfDeathPower(owner,newAmount);
         }
+        if(radom==10){
+            //狂暴
+            return new BerserkPower(owner,newAmount);
+        }
+        if(radom==11){
+            //偏差（机器人的每回合下降1集中）
+            return new BiasPower(owner,newAmount);
+        }
+        if(radom==12){
+            //残影
+            return new BlurPower(owner,newAmount);
+        }
+        if(radom==13){
+            //残暴
+            return new BrutalityPower(owner,newAmount);
+        }
+        if(radom==14){
+            //缓冲
+            return new BufferPower(owner,newAmount);
+        }
+        if(radom==15){
+            //爆发
+            return new BurstPower(owner,newAmount);
+        }
+        if(radom==16){
+            //勒脖
+            return new ChokePower(owner,newAmount);
+        }
+        if(radom==17){
+            //收集
+            return new CollectPower(owner,newAmount);
+        }
+        if(radom==18){
+            //自然
+            return new CombustPower(owner,newAmount,newAmount);
+        }
 
 
 

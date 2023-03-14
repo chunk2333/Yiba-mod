@@ -292,5 +292,12 @@
     "DESCRIPTIONS": [
       "每 #b3 场战斗掉落一瓶药水 。"
     ]
+  },
+  "TrashFish": {
+    "NAME": "杂～鱼～",
+    "FLAVOR": "硬了，拳头硬了。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时获得 #b3 层 生气。"
+    ]
   }
 }
