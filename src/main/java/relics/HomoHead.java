@@ -35,7 +35,7 @@ public class HomoHead extends CustomRelic {
         //在战斗开始时触发
         AbstractCard card;
         int random;
-        random = AbstractDungeon.relicRng.random(1,4); //随机数
+        random = AbstractDungeon.relicRng.random(1,3); //随机数
         UpdateStats.logger.info("homo头随机数：" + random);
         switch (random){
             case 1 :
@@ -45,9 +45,6 @@ public class HomoHead extends CustomRelic {
                 card = new desire();
                 break;
             case 3:
-                card = new DutifulSon();
-                break;
-            case 4:
                 card = new YouAreOne_OneByOne();
                 break;
             default :
