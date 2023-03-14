@@ -42,6 +42,9 @@ public class PlayRandomCardAction extends AbstractGameAction {
                 }
 
                 AbstractCard card = randomCard;
+                if (AbstractDungeon.player.hasPower("MasterRealityPower")){
+                    card.upgrade();
+                }
 
                 card.exhaustOnUseOnce = true;
                 card.current_y = -200.0F * Settings.scale;
