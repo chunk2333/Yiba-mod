@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
+import java.util.concurrent.TimeUnit;
+
 @SpirePatch(cls = "basemod.BaseMod", method = "publishRelicGet")
 public class RussianDolls extends CustomRelic {
     public static final String ID = "RussianDolls";
@@ -23,6 +25,7 @@ public class RussianDolls extends CustomRelic {
 
     public RussianDolls() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.FLAT);
+        wasLoad = false;
     }
 
     @SpirePatch(cls = "com.megacrit.cardcrawl.dungeons.AbstractDungeon", method = "generateMap")
@@ -31,8 +34,16 @@ public class RussianDolls extends CustomRelic {
         @SpireInsertPatch(loc = 611)
         public static void Insert(){
             //玩家已初始化完毕
-            wasLoad = true;
             AbstractPlayer p = AbstractDungeon.player;
+
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            wasLoad = true;
+
             if(p.hasRelic("RussianDolls")){
                 UpdateStats.logger.info("俄罗斯套娃：玩家已完全载入");
             }
