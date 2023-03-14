@@ -25,7 +25,6 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
@@ -34,16 +33,16 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
-import pathes.AbstractCardEnum;
-import pathes.ThmodClassEnum;
+import pathes.*;
 import relics.*;
+import relics.ClickRelic.*;
 import potions.*;
 import events.*;
 import monsters.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-
 import basemod.helpers.RelicType;
+
 
 @SpireInitializer
 public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, PostExhaustSubscriber, PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber, PostEnergyRechargeSubscriber {
@@ -275,6 +274,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addRelic(new IntertwinedFate(), RelicType.SHARED); //纠缠之缘
         BaseMod.addRelic(new AcquaintFate(), RelicType.SHARED); //相遇之缘
         BaseMod.addRelic(new EntropyIncrease(), RelicType.SHARED); //熵增
+        BaseMod.addRelic(new ScatterCoins(), RelicType.SHARED); //撒币
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
