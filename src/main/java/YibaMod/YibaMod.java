@@ -229,6 +229,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new AllInOne());//知行合一
         this.cardsToAdd.add(new InstantaneousRage());//一瞬狂暴
         this.cardsToAdd.add(new Joker());//小丑
+        this.cardsToAdd.add(new LavawalkersTorment());//诅咒-渡火者的煎熬
     }
 
     @Override
@@ -278,6 +279,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new BrewingStand(), RelicType.SHARED); //酿造台
         BaseMod.addRelic(new TrashFish(), RelicType.SHARED); //杂鱼
         BaseMod.addRelic(new RussianDolls(), RelicType.SHARED); //俄罗斯套娃
+        BaseMod.addRelic(new WitchsScorchingHat(), RelicType.SHARED); //焦灼的魔女帽
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
