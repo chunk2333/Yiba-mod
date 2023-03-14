@@ -1,4 +1,4 @@
-package demoMod;
+package YibaMod;
 
 import basemod.BaseMod;
 import basemod.eventUtil.AddEventParams;
@@ -45,7 +45,7 @@ import basemod.helpers.RelicType;
 
 
 @SpireInitializer
-public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, PostExhaustSubscriber, PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber, PostEnergyRechargeSubscriber {
+public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, PostExhaustSubscriber, PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber, PostEnergyRechargeSubscriber {
     private static final String MOD_BADGE = "img/ui/badge.png";
     //攻击、技能、能力牌的背景图片(512)
     private static final String ATTACK_CC = "img/512/bg_attack_SELES_s.png";
@@ -64,7 +64,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
     public static final Color SILVER = CardHelper.getColor(200, 200, 200);
     private final ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
     public static ArrayList<AbstractCard> recyclecards = new ArrayList<>();
-    public selesMod() {
+    public YibaMod() {
         //构造方法，初始化各种参数
         BaseMod.subscribe(this);
         BaseMod.addColor(AbstractCardEnum.Seles_COLOR, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, ATTACK_CC, SKILL_CC, POWER_CC, ENERGY_ORB_CC, ATTACK_CC_PORTRAIT, SKILL_CC_PORTRAIT, POWER_CC_PORTRAIT, ENERGY_ORB_CC_PORTRAIT, CARD_ENERGY_ORB);
@@ -78,7 +78,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
 
     //初始化整个MOD,一定不能删
     public static void initialize() {
-        new selesMod();
+        new YibaMod();
     }
 
     @Override
@@ -275,6 +275,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
         BaseMod.addRelic(new AcquaintFate(), RelicType.SHARED); //相遇之缘
         BaseMod.addRelic(new EntropyIncrease(), RelicType.SHARED); //熵增
         BaseMod.addRelic(new ScatterCoins(), RelicType.SHARED); //撒币
+        BaseMod.addRelic(new BrewingStand(), RelicType.SHARED); //酿造台
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批

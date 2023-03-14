@@ -14,9 +14,9 @@ public class ScatterCoins extends ClickableRelic {
 
     public static final String ID = "ScatterCoins";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/ScatterCoins.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/ScatterCoins.png";
 
     public ScatterCoins() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.COMMON, LandingSound.SOLID);
