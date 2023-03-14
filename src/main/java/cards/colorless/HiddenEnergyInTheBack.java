@@ -33,6 +33,8 @@ public class HiddenEnergyInTheBack extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.RARE, CardTarget.ALL_ENEMY);
         //添加消耗
         this.exhaust = true;
+        //添加 HEALING 标签 使其无法在战斗中出现
+        this.tags.add(AbstractCard.CardTags.HEALING);
     }
 
     @Override

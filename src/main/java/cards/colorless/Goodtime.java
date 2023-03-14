@@ -1,4 +1,4 @@
-package cards.red;
+package cards.colorless;
 //好运时代来临力
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,19 +15,21 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.RegenPower;
 
-public class goodtime extends CustomCard{
+public class Goodtime extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("goodtime");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "img/cards/LeiPu.png";
     private static final int COST = 1;
     public static final String ID = "goodtime";
-    public goodtime() {
+    public Goodtime() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.RARE, CardTarget.SELF);
         this.baseDamage=4;
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
+        //添加 HEALING 标签 使其无法在战斗中出现
+        this.tags.add(AbstractCard.CardTags.HEALING);
     }
 
     @Override
@@ -44,7 +46,7 @@ public class goodtime extends CustomCard{
 
     public AbstractCard makeCopy() {
         //复制卡牌时触发
-        return new goodtime();
+        return new Goodtime();
     }
     @Override
     public void upgrade() {

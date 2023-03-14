@@ -24,6 +24,8 @@ public class TimeReversal extends CustomCard{
         this.exhaust = true;
         //虚无
         this.isEthereal = true;
+        //添加 HEALING 标签 使其无法在战斗中出现
+        this.tags.add(AbstractCard.CardTags.HEALING);
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
