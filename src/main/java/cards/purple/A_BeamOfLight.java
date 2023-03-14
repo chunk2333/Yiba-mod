@@ -16,7 +16,7 @@ public class A_BeamOfLight extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("A_BeamOfLight");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/A_BeamOfLight.png";
+    public static final String IMG_PATH = "img/cards/A_BeamOfLight.png";
     private static final int COST = 1;
     public static final String ID = "A_BeamOfLight";
 

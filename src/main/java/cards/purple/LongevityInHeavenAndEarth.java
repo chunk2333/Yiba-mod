@@ -15,7 +15,7 @@ public class LongevityInHeavenAndEarth extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("LongevityInHeavenAndEarth");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/LongevityInHeavenAndEarth.png";
+    public static final String IMG_PATH = "img/cards/LongevityInHeavenAndEarth.png";
     private static final int COST = 4;
     public static final String ID = "LongevityInHeavenAndEarth";
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

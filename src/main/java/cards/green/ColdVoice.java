@@ -15,7 +15,7 @@ public class ColdVoice extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("ColdVoice");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/ColdVoice.png";
+    public static final String IMG_PATH = "img/cards/ColdVoice.png";
     private static final int COST = 2;
     public static final String ID = "ColdVoice";
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

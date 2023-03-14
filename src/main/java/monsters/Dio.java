@@ -79,8 +79,8 @@ public class Dio extends CustomMonster {
         this.damage.add(new DamageInfo(this, 30));
         this.damage.add(new DamageInfo(this, 999));
         this.img = new Texture(Gdx.files.internal("img/monsters/Dio.png"));
-        //DungeonMap.boss = ImageMaster.loadImage("img/Ui_Seles/map/boss/Dio.png");
-        //DungeonMap.bossOutline = ImageMaster.loadImage("img/Ui_Seles/map/bossOutline/Dio.png");
+        //DungeonMap.boss = ImageMaster.loadImage("img/ui/map/boss/Dio.png");
+        //DungeonMap.bossOutline = ImageMaster.loadImage("img/ui/map/bossOutline/Dio.png");
     }
     public void usePreBattleAction() {
         CardCrawlGame.music.unsilenceBGM();

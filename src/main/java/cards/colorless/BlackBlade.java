@@ -18,7 +18,7 @@ public class BlackBlade extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("BlackBlade");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/BlackBlade.png";
+    public static final String IMG_PATH = "img/cards/BlackBlade.png";
     private static final int COST = 2;
     public static final String ID = "BlackBlade";
 

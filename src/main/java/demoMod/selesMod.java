@@ -46,7 +46,7 @@ import basemod.helpers.RelicType;
 
 @SpireInitializer
 public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, PostExhaustSubscriber, PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber, PostEnergyRechargeSubscriber {
-    private static final String MOD_BADGE = "img/UI_Seles/badge.png";
+    private static final String MOD_BADGE = "img/ui/badge.png";
     //攻击、技能、能力牌的背景图片(512)
     private static final String ATTACK_CC = "img/512/bg_attack_SELES_s.png";
     private static final String SKILL_CC = "img/512/bg_skill_SELES_s.png";
@@ -57,7 +57,7 @@ public class selesMod implements RelicGetSubscriber, PostPowerApplySubscriber, P
     private static final String SKILL_CC_PORTRAIT = "img/1024/bg_skill_SELES.png";
     private static final String POWER_CC_PORTRAIT = "img/1024/bg_power_SELES.png";
     private static final String ENERGY_ORB_CC_PORTRAIT = "img/1024/SELESOrb.png";
-    public static final String CARD_ENERGY_ORB = "img/UI_Seles/energyOrb.png";
+    public static final String CARD_ENERGY_ORB = "img/ui/energyOrb.png";
     //选英雄界面的角色图标、选英雄时的背景图片
     private static final String MY_CHARACTER_BUTTON = "img/charSelect/SelesButton.png";
     private static final String MARISA_PORTRAIT = "img/charSelect/SelesPortrait.png";

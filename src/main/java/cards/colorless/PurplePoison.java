@@ -25,7 +25,7 @@ public class PurplePoison extends CustomCard {
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards_Seles/PurplePoison.png";
+    public static final String IMG_PATH = "img/cards/PurplePoison.png";
 
     private static final int COST = 1;
 

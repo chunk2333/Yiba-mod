@@ -17,7 +17,7 @@ public class LeiPu extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("LeiPu");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/LeiPu.png";
+    public static final String IMG_PATH = "img/cards/LeiPu.png";
     private static final int COST = 2;
     private static final int ATTACK_DMG = 11;
     public static final String ID = "LeiPu";

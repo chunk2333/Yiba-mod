@@ -20,7 +20,7 @@ public class Defend_Seles extends CustomCard
         private static final int BLOCK_AMT = 5;
         private static final int UPGRADE_PLUS_BLOCK = 3;
         public static final String ID = "Defend_Seles";
-        public static final String IMG_PATH = "img/cards_Seles/Defend.png";
+        public static final String IMG_PATH = "img/cards/Defend.png";
 
         //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
         public Defend_Seles() {

@@ -19,7 +19,7 @@ public class HydroCard extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("HydroCard");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/test.png";
+    public static final String IMG_PATH = "img/cards/test.png";
     private static final int COST = 0;
     public static final String ID = "HydroCard";
     public HydroCard() {

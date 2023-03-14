@@ -17,7 +17,7 @@ public class Joker extends CustomCard {
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards_Seles/Joker.png";
+    public static final String IMG_PATH = "img/cards/Joker.png";
 
     private static final int COST = 1;
 

@@ -13,7 +13,7 @@ public class EyesHeart extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("EyesHeart");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/EyesHeart.png";
+    public static final String IMG_PATH = "img/cards/EyesHeart.png";
     private static final int COST = 1;
     public static final String ID = "EyesHeart";
     public EyesHeart() {

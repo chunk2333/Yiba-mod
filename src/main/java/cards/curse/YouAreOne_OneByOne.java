@@ -16,7 +16,7 @@ public class YouAreOne_OneByOne extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("YouAreOne_OneByOne");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/YouAreOne_OneByOne.png";
+    public static final String IMG_PATH = "img/cards/YouAreOne_OneByOne.png";
     private static final int COST = -2;
     public static final String ID = "YouAreOne_OneByOne";
     public YouAreOne_OneByOne() {

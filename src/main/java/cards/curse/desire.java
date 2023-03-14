@@ -16,7 +16,7 @@ public class desire extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("desire");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/desire.png";
+    public static final String IMG_PATH = "img/cards/desire.png";
     private static final int COST = -2;
     public static final String ID = "desire";
     //public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class Seals extends CustomRelic {
     public static final String ID = "Seals";
-    private static final String IMG = "img/relics_Seles/Seals.png";
-    private static final String IMG_OTL = "img/relics_Seles/outline/Seals.png";
+    private static final String IMG = "img/relics/Seals.png";
+    private static final String IMG_OTL = "img/relics/outline/Seals.png";
 
     public Seals() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.MAGICAL);

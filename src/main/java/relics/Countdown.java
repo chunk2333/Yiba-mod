@@ -23,8 +23,8 @@ import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateSt
 
 public class Countdown extends CustomRelic {
     public static final String ID = "Countdown";
-    private static final String IMG = "img/relics_Seles/Countdown.png";
-    private static final String IMG_OTL = "img/relics_Seles/outline/Countdown.png";
+    private static final String IMG = "img/relics/Countdown.png";
+    private static final String IMG_OTL = "img/relics/outline/Countdown.png";
     //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
     public Countdown() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.UNCOMMON, LandingSound.SOLID);

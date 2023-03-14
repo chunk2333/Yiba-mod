@@ -11,7 +11,7 @@ public class DutifulSon extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("DutifulSon");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/DutifulSon.png";
+    public static final String IMG_PATH = "img/cards/DutifulSon.png";
     private static final int COST = -2;
     public static final String ID = "DutifulSon";
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)

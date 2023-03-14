@@ -14,7 +14,7 @@ public class WeirdThings extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("WeirdThings");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/WeirdThings.png";
+    public static final String IMG_PATH = "img/cards/WeirdThings.png";
     private static final int COST = 1;
     public static final String ID = "WeirdThings";
 

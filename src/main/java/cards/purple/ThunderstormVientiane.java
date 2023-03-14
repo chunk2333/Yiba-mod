@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
 public class ThunderstormVientiane extends CustomCard {
-    public static final String IMG_PATH = "img/cards_Seles/ThunderstormVientiane.png";
+    public static final String IMG_PATH = "img/cards/ThunderstormVientiane.png";
     public static final String ID = "ThunderstormVientiane";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("ThunderstormVientiane");
     public static final String NAME = cardStrings.NAME;

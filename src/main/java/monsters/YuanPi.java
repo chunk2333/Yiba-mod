@@ -40,7 +40,7 @@ public class YuanPi extends CustomMonster {
 
     public YuanPi(float x, float y) {
         super(NAME, "YuanPi", 600, -8.0F, 10.0F, 230.0F, 240.0F, null, x, y);
-        //"img/cards_Seles/desire_p.png"
+        //"img/cards/desire_p.png"
         if (AbstractDungeon.ascensionLevel >= 7) {
             setHp(80, 86);
         } else {

@@ -21,8 +21,8 @@ import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateSt
 
 public class muli extends CustomRelic {
     public static final String ID = "muli";
-    private static final String IMG = "img/relics_Seles/muli.png";
-    private static final String IMG_OTL = "img/relics_Seles/outline/muli.png";
+    private static final String IMG = "img/relics/muli.png";
+    private static final String IMG_OTL = "img/relics/outline/muli.png";
     boolean isActive;
     //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
     public muli() {

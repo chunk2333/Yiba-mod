@@ -17,7 +17,7 @@ public class PiFace extends CustomCard{
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards_Seles/PiFace.png";
+    public static final String IMG_PATH = "img/cards/PiFace.png";
 
     private static final int COST = -2;
 

@@ -13,7 +13,7 @@ public class ThePeaceOfMind extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("ThePeaceOfMind");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/ThePeaceOfMind.png";
+    public static final String IMG_PATH = "img/cards/ThePeaceOfMind.png";
     private static final int COST = 1;
     public static final String ID = "ThePeaceOfMind";
     public ThePeaceOfMind() {

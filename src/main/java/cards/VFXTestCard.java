@@ -32,7 +32,7 @@ public class VFXTestCard extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("VFXTestCard");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/Rebound_My.png";
+    public static final String IMG_PATH = "img/cards/Rebound_My.png";
     private static final int COST = 0;
     public static final String ID = "VFXTestCard";
 

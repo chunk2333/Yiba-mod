@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class ForesightAndInsight extends CustomCard {
 
-    public static final String IMG_PATH = "img/cards_Seles/ForesightAndInsight.png";
+    public static final String IMG_PATH = "img/cards/ForesightAndInsight.png";
 
     public static final String ID = "ForesightAndInsight";
 

@@ -15,8 +15,8 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class RocoCoin extends CustomRelic {
     public static final String ID = "RocoCoin";
-    private static final String IMG = "img/relics_Seles/RocoCoin.png";
-    private static final String IMG_OTL = "img/relics_Seles/outline/RocoCoin.png";
+    private static final String IMG = "img/relics/RocoCoin.png";
+    private static final String IMG_OTL = "img/relics/outline/RocoCoin.png";
 
     //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
     public RocoCoin() {

@@ -13,7 +13,7 @@ public class happyOldHome extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("happyOldHome");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/happyOldHome.png";
+    public static final String IMG_PATH = "img/cards/happyOldHome.png";
     private static final int COST = 3;
     public static final String ID = "happyOldHome";
     //public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

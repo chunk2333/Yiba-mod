@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class 类名 extends CustomRelic {
     public static final String ID = "类名";
-    private static final String IMG = "img/relics_Seles/类名.png";
-    private static final String IMG_OTL = "img/relics_Seles/outline/类名.png";
+    private static final String IMG = "img/relics/类名.png";
+    private static final String IMG_OTL = "img/relics/outline/类名.png";
     //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
     public 类名() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.COMMON, AbstractRelic.LandingSound.CLINK);

@@ -12,7 +12,7 @@ public class Imprisonment extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Imprisonment");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/Imprisonment.png";
+    public static final String IMG_PATH = "img/cards/Imprisonment.png";
     private static final int COST = -2;
     public static final String ID = "Imprisonment";
     public Imprisonment() {

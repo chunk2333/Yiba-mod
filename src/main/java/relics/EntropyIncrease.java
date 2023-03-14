@@ -21,8 +21,8 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 @SpirePatch(cls = "com.megacrit.cardcrawl.ui.panels.EnergyPanel", method = "addEnergy")
 public class EntropyIncrease extends CustomRelic{
     public static final String ID = "EntropyIncrease";
-    private static final String IMG = "img/relics_Seles/EntropyIncrease.png";
-    private static final String IMG_OTL = "img/relics_Seles/outline/EntropyIncrease.png";
+    private static final String IMG = "img/relics/EntropyIncrease.png";
+    private static final String IMG_OTL = "img/relics/outline/EntropyIncrease.png";
     //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
     private static boolean isGive = false;
 

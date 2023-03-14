@@ -23,7 +23,7 @@ public class HiddenEnergyInTheBack extends CustomCard {
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards_Seles/HiddenEnergyInTheBack.png";
+    public static final String IMG_PATH = "img/cards/HiddenEnergyInTheBack.png";
 
     private static final int COST = 3;
 

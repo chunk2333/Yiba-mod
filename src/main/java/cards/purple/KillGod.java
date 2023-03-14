@@ -18,7 +18,7 @@ public class KillGod extends CustomCard{
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards_Seles/KillGod.png";
+    public static final String IMG_PATH = "img/cards/KillGod.png";
 
     private static final int COST = 3;
 

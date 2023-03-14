@@ -26,8 +26,8 @@ public class seles extends CustomPlayer {
     private static final String SELES_CORPSE = "img/char_Seles/fallen.png";
     private static final String SELES_STAND = "img/char_Seles/Seles.png";
     //各种素材，不是很懂
-    private static final String[] ORB_TEXTURES = new String[] { "img/UI_Seles/EPanel/layer5.png", "img/UI_Seles/EPanel/layer4.png", "img/UI_Seles/EPanel/layer3.png", "img/UI_Seles/EPanel/layer2.png", "img/UI_Seles/EPanel/layer1.png", "img/UI_Seles/EPanel/layer0.png", "img/UI_Seles/EPanel/layer5d.png", "img/UI_Seles/EPanel/layer4d.png", "img/UI_Seles/EPanel/layer3d.png", "img/UI_Seles/EPanel/layer2d.png", "img/UI_Seles/EPanel/layer1d.png" };
-    private static final String ORB_VFX = "img/UI_Seles/energyBlueVFX.png";
+    private static final String[] ORB_TEXTURES = new String[] { "img/ui/EPanel/layer5.png", "img/ui/EPanel/layer4.png", "img/ui/EPanel/layer3.png", "img/ui/EPanel/layer2.png", "img/ui/EPanel/layer1.png", "img/ui/EPanel/layer0.png", "img/ui/EPanel/layer5d.png", "img/ui/EPanel/layer4d.png", "img/ui/EPanel/layer3d.png", "img/ui/EPanel/layer2d.png", "img/ui/EPanel/layer1d.png" };
+    private static final String ORB_VFX = "img/ui/energyBlueVFX.png";
     private static final float[] LAYER_SPEED = new float[] { -40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F };
     //初始生命，最大生命，初始金币,初始的充能球栏位（机器人）,最后一个应该是进阶14时的最大生命值下降
     private static final int STARTING_HP = 75;

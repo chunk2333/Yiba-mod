@@ -14,7 +14,7 @@ public class KnockOut extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("KnockOut");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards_Seles/KnockOut.png";
+    public static final String IMG_PATH = "img/cards/KnockOut.png";
     private static final int COST = 0;
     public static final String ID = "KnockOut";
     private int num = 0;

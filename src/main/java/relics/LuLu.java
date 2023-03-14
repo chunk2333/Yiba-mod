@@ -35,8 +35,8 @@ import org.apache.logging.log4j.Logger;
 
 public class LuLu extends CustomRelic {
     public static final String ID = "LuLu";
-    private static final String IMG = "img/relics_Seles/LuLu.png";
-    private static final String IMG_OTL = "img/relics_Seles/outline/LuLu.png";
+    private static final String IMG = "img/relics/LuLu.png";
+    private static final String IMG_OTL = "img/relics/outline/LuLu.png";
     private boolean used;
     private boolean getInShop;
     //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)

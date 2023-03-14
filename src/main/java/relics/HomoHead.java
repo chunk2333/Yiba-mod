@@ -18,8 +18,8 @@ import pathes.SoundPlay;
 
 public class HomoHead extends CustomRelic {
     public static final String ID = "HomoHead";
-    private static final String IMG = "img/relics_Seles/HomoHead.png";
-    private static final String IMG_OTL = "img/relics_Seles/outline/HomoHead.png";
+    private static final String IMG = "img/relics/HomoHead.png";
+    private static final String IMG_OTL = "img/relics/outline/HomoHead.png";
     SoundPlay s =new SoundPlay();
 
 

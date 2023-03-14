@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
 public class PeopleAndGodsAreOutraged extends CustomCard {
-    public static final String IMG_PATH = "img/cards_Seles/PeopleAndGodsAreOutraged.png";
+    public static final String IMG_PATH = "img/cards/PeopleAndGodsAreOutraged.png";
     public static final String ID = "PeopleAndGodsAreOutraged";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("PeopleAndGodsAreOutraged");
     public static final String NAME = cardStrings.NAME;
