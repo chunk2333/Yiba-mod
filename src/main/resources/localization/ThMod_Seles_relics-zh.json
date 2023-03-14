@@ -299,5 +299,12 @@
     "DESCRIPTIONS": [
       "每场战斗开始时获得 #b3 层 生气。"
     ]
+  },
+  "RussianDolls": {
+    "NAME": "俄罗斯套娃",
+    "FLAVOR": "套娃中的套娃。",
+    "DESCRIPTIONS": [
+      "每当你获得遗物时额外获得随机一个遗物。"
+    ]
   }
 }
