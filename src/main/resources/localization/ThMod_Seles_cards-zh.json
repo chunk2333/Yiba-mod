@@ -265,5 +265,9 @@
   "LavawalkersTorment": {
     "NAME": "渡火者的煎熬",
     "DESCRIPTION": "从牌组中移除时，添加一张复制品到你的牌组。 NL  消耗 。"
+  },
+  "VR": {
+    "NAME": "虚拟现实",
+    "DESCRIPTION": "每回合开始时获得 [E] 。"
   }
 }

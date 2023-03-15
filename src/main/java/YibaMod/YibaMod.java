@@ -230,6 +230,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new InstantaneousRage());//一瞬狂暴
         this.cardsToAdd.add(new Joker());//小丑
         this.cardsToAdd.add(new LavawalkersTorment());//诅咒-渡火者的煎熬
+        this.cardsToAdd.add(new VR());//虚拟现实
     }
 
     @Override
