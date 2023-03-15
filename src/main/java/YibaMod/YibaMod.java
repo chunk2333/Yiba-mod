@@ -297,6 +297,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new SacrificialSword(), RelicType.SHARED); //祭礼剑
         BaseMod.addRelic(new SacrificialFragments(), RelicType.SHARED); //祭礼残章
         BaseMod.addRelic(new SacrificialBow(), RelicType.SHARED); //祭礼弓
+        BaseMod.addRelic(new Amber(), RelicType.SHARED); //琥珀
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
