@@ -90,8 +90,7 @@ public class RussianDolls extends CustomRelic {
                 wasLoad = true;
                 //给随机遗物
                 RussianDolls rd = new RussianDolls();
-                rd.flash();
-                rd.update();
+                AbstractDungeon.player.getRelic("RussianDolls").flash();
                 AbstractRelic abstractRelic = AbstractDungeon.returnRandomScreenlessRelic(
                         AbstractDungeon.returnRandomRelicTier());
                 UpdateStats.logger.info("俄罗斯套有遗物获取：" +  r.relicId + "额外给的：" + abstractRelic.relicId);
