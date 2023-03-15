@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
 public class Homa extends CustomRelic {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("omoRelicActiveText");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("HomoRelicActiveText");
 
     public static final String ID = "homa";
 
