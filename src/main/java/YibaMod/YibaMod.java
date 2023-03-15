@@ -287,6 +287,8 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new TrashFish(), RelicType.SHARED); //杂鱼
         BaseMod.addRelic(new RussianDolls(), RelicType.SHARED); //俄罗斯套娃
         BaseMod.addRelic(new WitchsScorchingHat(), RelicType.SHARED); //焦灼的魔女帽
+        BaseMod.addRelic(new Lance(), RelicType.SHARED); //极霸矛
+        BaseMod.addRelic(new GrandVilla(), RelicType.SHARED); //大别墅
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
