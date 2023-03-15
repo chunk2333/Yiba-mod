@@ -273,6 +273,10 @@
   "ChoseMiracle": {
     "NAME": "天若有情",
     "DESCRIPTION": "获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION":"获得 [E] [E] [E]。"
+    "UPGRADE_DESCRIPTION":"获得 [E] [E] [E] 。"
+  },
+  "ReturnGoodForEvil": {
+    "NAME": "以德报怨",
+    "DESCRIPTION": "每当你转换 姿态 时抽一张牌。"
   }
 }
