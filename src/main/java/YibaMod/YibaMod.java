@@ -17,6 +17,7 @@ import characters.seles;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
@@ -39,8 +40,10 @@ import relics.ClickRelic.*;
 import potions.*;
 import events.*;
 import monsters.*;
+
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+
 import basemod.helpers.RelicType;
 
 
@@ -64,6 +67,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     public static final Color SILVER = CardHelper.getColor(200, 200, 200);
     private final ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
     public static ArrayList<AbstractCard> recyclecards = new ArrayList<>();
+
     public YibaMod() {
         //构造方法，初始化各种参数
         BaseMod.subscribe(this);
@@ -121,32 +125,34 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
 
     @Override
     public void receiveEditKeywords() {
-        BaseMod.addKeyword(new String[]{"诡谲状态"},"每回合：暂时将抽牌堆的所有技能牌降低 #b1 费，之后选一张加入手牌。当你打出任意一张牌时失效。");
-        BaseMod.addKeyword(new String[]{"不同效果"},"#r攻击 ： #b1 点 力量 。 NL  #g技能 ： #b1 点 敏捷 。 NL  #b能力 ：获得 [E] 。");
-        BaseMod.addKeyword(new String[]{"移除"},"使用后从主牌库移除。");
-        BaseMod.addKeyword(new String[]{"亢奋"},"本回合你造成的伤害变为 #b1.3 倍。");
-        BaseMod.addKeyword(new String[]{"扩散"},"将指定目标的元素扩散到所有敌人身上。");
-        BaseMod.addKeyword(new String[]{"水元素"},"目标将被 #b水元素 附着。");
-        BaseMod.addKeyword(new String[]{"火元素"},"目标将被 #r火元素 附着。");
-        BaseMod.addKeyword(new String[]{"岩元素"},"目标将被 #y岩元素 附着。");
-        BaseMod.addKeyword(new String[]{"剧毒"},"累计 #b3 层后造成大量伤害。");
+        //加载关键词
+        String key_WorldFilePatch = "";
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+            //zhs
+            key_WorldFilePatch = "localization/keywords-zh.json";
+        }
+        Gson gson = new Gson();
+        String json = Gdx.files.internal(key_WorldFilePatch).readString(String.valueOf(StandardCharsets.UTF_8));
+        Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+        if (keywords != null)
+            for (Keyword keyword : keywords) {
+                BaseMod.addKeyword(keyword.NAMES, keyword.DESCRIPTION);
+            }
     }
 
     @Override
     public void receiveEditStrings() {
         //读取遗物，卡牌，能力，药水，事件的JSON文本
-
         String relic = "", card = "", power = "", potion = "", event = "", ui = "", monster = "";
         if (Settings.language == Settings.GameLanguage.ZHS) {
-            card = "localization/ThMod_Seles_cards-zh.json";
-            relic = "localization/ThMod_Seles_relics-zh.json";
-            power = "localization/ThMod_Seles_powers-zh.json";
-            potion = "localization/ThMod_Seles_potions-zh.json";
-            event = "localization/ThMod_Seles_events-zh.json";
-            ui = "localization/ThMod_Seles_uis-zh.json";
-            monster = "localization/ThMod_Seles_monsters-zh.json";
+            card = "localization/cards-zh.json";
+            relic = "localization/relics-zh.json";
+            power = "localization/powers-zh.json";
+            potion = "localization/potions-zh.json";
+            event = "localization/events-zh.json";
+            ui = "localization/uis-zh.json";
+            monster = "localization/monsters-zh.json";
         }  //其他语言配置的JSON
-
 
         String relicStrings = Gdx.files.internal(relic).readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
@@ -301,7 +307,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     public void receiveRelicGet(AbstractRelic relic) {
         //移除遗物,这里移除了小屋子，太垃圾了。
         //if (AbstractDungeon.player.name.equals("Seles")) {
-            //AbstractDungeon.shopRelicPool.remove("TinyHouse");
+        //AbstractDungeon.shopRelicPool.remove("TinyHouse");
         //}
     }
 
@@ -341,6 +347,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
                 "map/boss/Dio.png",
                 "map/bossOutline/Dio.png");
     }
+
     @Override
     public void receivePostEnergyRecharge() {
 
@@ -350,5 +357,4 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         }
         recyclecards.clear();
     }
-
 }
