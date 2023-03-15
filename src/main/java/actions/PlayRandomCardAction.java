@@ -52,7 +52,7 @@ public class PlayRandomCardAction extends AbstractGameAction {
                 card.target_y = Settings.HEIGHT / 2.0F;
                 card.targetAngle = 0.0F;
                 card.lighten(false);
-                card.drawScale = 0.12F;
+                card.drawScale = 0.4F;
                 card.targetDrawScale = 0.75F;
                 card.applyPowers();
                 addToTop(new NewQueueCardAction(card, this.target, false, true));
