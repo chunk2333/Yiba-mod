@@ -27,7 +27,7 @@ public class RussianDolls extends CustomRelic {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.FLAT);
         wasLoad = false;
         isGive = false;
-        UpdateStats.logger.info("构造函数被触发是否已载入：" + wasLoad + "是否可额外获得!" + isGive);
+        //UpdateStats.logger.info("构造函数被触发是否已载入：" + wasLoad + "是否可额外获得!" + isGive);
     }
 
     @SpirePatch(cls = "com.megacrit.cardcrawl.dungeons.AbstractDungeon", method = "setEmeraldElite")
@@ -55,7 +55,7 @@ public class RussianDolls extends CustomRelic {
     @SpireInsertPatch(loc = 2522, localvars = {"r"})
     public static void Insert(AbstractRelic r){
         AbstractPlayer p = AbstractDungeon.player;
-        UpdateStats.logger.info("是否已载入：" + wasLoad + "是否可额外获得!" + isGive);
+        //UpdateStats.logger.info("是否已载入：" + wasLoad + "是否可额外获得!" + isGive);
 
         if(!wasLoad){
             //UpdateStats.logger.info("俄罗斯套娃触发，还未完全载入");
