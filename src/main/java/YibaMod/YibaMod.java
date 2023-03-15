@@ -239,6 +239,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new VR());//虚拟现实
         this.cardsToAdd.add(new ChoseMiracle());//天若有情
         this.cardsToAdd.add(new ReturnGoodForEvil());//以德报怨
+        this.cardsToAdd.add(new StrongPhysique());//强健体魄
     }
 
     @Override

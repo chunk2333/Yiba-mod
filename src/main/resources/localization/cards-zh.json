@@ -278,5 +278,9 @@
   "ReturnGoodForEvil": {
     "NAME": "以德报怨",
     "DESCRIPTION": "每当你转换 姿态 时抽一张牌。"
+  },
+  "StrongPhysique": {
+    "NAME": "强健体魄",
+    "DESCRIPTION": "获得 !M! 点 力量 和 敏捷 。"
   }
 }
