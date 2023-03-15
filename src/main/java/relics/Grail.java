@@ -35,7 +35,6 @@ public class Grail extends CustomRelic {
         stanceChoices.add(new FameAndFortune());
         stanceChoices.add(new LiveForever());
         AbstractCard Miracle = new ChoseMiracle();
-        Miracle.upgrade();
         stanceChoices.add(Miracle);
         addToBot(new ChooseOneAction(stanceChoices));
         flash();
