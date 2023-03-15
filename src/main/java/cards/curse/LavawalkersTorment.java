@@ -1,7 +1,11 @@
 package cards.curse;
 //渡火者的煎熬
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -13,6 +17,7 @@ import com.megacrit.cardcrawl.vfx.NecronomicurseEffect;
 
 public class LavawalkersTorment extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("LavawalkersTorment");
+
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("CantRemoveFromeMastDeck");
 
     public static final String NAME = cardStrings.NAME;
@@ -44,6 +49,17 @@ public class LavawalkersTorment extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
+        this.exhaust = true;
+        if (this.dontTriggerOnUseCard){
+            this.exhaust = false;
+            addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 4, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        }
+    }
+
+    @Override
+    public void triggerOnEndOfTurnForPlayingCard() {
+        this.dontTriggerOnUseCard = true;
+        AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
     @Override

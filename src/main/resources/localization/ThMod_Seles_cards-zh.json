@@ -264,7 +264,7 @@
   },
   "LavawalkersTorment": {
     "NAME": "渡火者的煎熬",
-    "DESCRIPTION": "从牌组中移除时，添加一张复制品到你的牌组。 NL  消耗 。"
+    "DESCRIPTION": "从牌组中移除时，添加一张复制品到你的牌组。 NL 在你回合结束时受到4点伤害。 NL  消耗 。"
   },
   "VR": {
     "NAME": "虚拟现实",
