@@ -123,6 +123,14 @@
       " 张牌。",
       " 张牌。"
     ]
-
+  },
+  "AtTurnStartGiveEnegryPower": {
+    "NAME": "能量提升",
+    "DESCRIPTIONS": [
+      "每回合获得额外 #b",
+      " [E] 。",
+      " [E] 。",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+    ]
   }
 }
