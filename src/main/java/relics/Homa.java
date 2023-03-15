@@ -1,5 +1,5 @@
 package relics;
-
+//homo之杖
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
@@ -13,17 +13,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
-public class homa extends CustomRelic {
+public class Homa extends CustomRelic {
     public static final String ID = "homa";
     private static final String IMG = "img/relics/homa.png";
     private static final String IMG_OTL = "img/relics/outline/homa.png";
     private boolean isActive = false;
 
     //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
-    public homa() {
+    public Homa() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, AbstractRelic.LandingSound.CLINK);
     }
 
@@ -35,7 +33,7 @@ public class homa extends CustomRelic {
         AbstractPlayer p = AbstractDungeon.player;
         int maxhp = p.maxHealth;
         double per_maxhp;
-        per_maxhp =  Math.ceil(maxhp* 0.1);
+        per_maxhp =  Math.ceil(maxhp* 0.05);
         int num;
         //转换到整数
         num = Double.valueOf(per_maxhp).intValue();
@@ -60,7 +58,7 @@ public class homa extends CustomRelic {
         double per_maxhp;
         int num;
         //转换到整数
-        per_maxhp =  Math.ceil(maxhp* 0.5);
+        per_maxhp =  Math.ceil(maxhp* 0.25);
         num = Double.valueOf(per_maxhp).intValue();
         //addToBot(new TalkAction(true, String.valueOf(p.maxHealth), 1.0F, 2.0F));
         //判断当前血量是否小于50%最大生命上限
@@ -68,7 +66,7 @@ public class homa extends CustomRelic {
             int power;
             flash();
             isActive = true;
-            per_maxhp =  Math.ceil(p.maxHealth* 0.1);
+            per_maxhp =  Math.ceil(p.maxHealth* 0.05);
             power = Double.valueOf(per_maxhp).intValue();
 
 
@@ -124,6 +122,6 @@ public class homa extends CustomRelic {
     }
     @Override
     public AbstractRelic makeCopy() {
-        return new homa();
+        return new Homa();
     }
 }
