@@ -1,6 +1,8 @@
 package relics;
 //homo之杖
 import basemod.abstracts.CustomRelic;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -13,6 +15,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
 public class Homa extends CustomRelic {
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("omoRelicActiveText");
 
     public static final String ID = "homa";
 
@@ -74,7 +77,7 @@ public class Homa extends CustomRelic {
             //kakaa面具说话代码
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             addToBot(new SFXAction("VO_CULTIST_1A"));
-            addToBot(new TalkAction(true, "哼哼 哼~！", 1.0F, 2.0F));
+            addToBot(new TalkAction(true, uiStrings.TEXT[0], 1.0F, 2.0F));
             //持续闪烁
             this.pulse = true;
 
