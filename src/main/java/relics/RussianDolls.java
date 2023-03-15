@@ -30,19 +30,19 @@ public class RussianDolls extends CustomRelic {
         UpdateStats.logger.info("构造函数被触发是否已载入：" + wasLoad + "是否可额外获得!" + isGive);
     }
 
-    @SpirePatch(cls = "com.megacrit.cardcrawl.dungeons.AbstractDungeon", method = "generateMap")
+    @SpirePatch(cls = "com.megacrit.cardcrawl.dungeons.AbstractDungeon", method = "setEmeraldElite")
     public static class isload{
 
-        @SpireInsertPatch(loc = 611)
+        @SpireInsertPatch(loc = 683)
         public static void Insert(){
             //玩家已初始化完毕
             AbstractPlayer p = AbstractDungeon.player;
 
-            try {
-                TimeUnit.SECONDS.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                TimeUnit.SECONDS.sleep(1);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
 
             if(p.hasRelic("RussianDolls")){
 
@@ -122,7 +122,8 @@ public class RussianDolls extends CustomRelic {
 
     @Override
     public void onEquip() {
-
+        isGive = false;
+        wasLoad = true;
     }
 
     @Override
