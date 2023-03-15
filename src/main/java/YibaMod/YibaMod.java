@@ -237,6 +237,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new Joker());//小丑
         this.cardsToAdd.add(new LavawalkersTorment());//诅咒-渡火者的煎熬
         this.cardsToAdd.add(new VR());//虚拟现实
+        this.cardsToAdd.add(new ChoseMiracle());//天若有情
     }
 
     @Override
@@ -289,6 +290,8 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new WitchsScorchingHat(), RelicType.SHARED); //焦灼的魔女帽
         BaseMod.addRelic(new Lance(), RelicType.SHARED); //极霸矛
         BaseMod.addRelic(new GrandVilla(), RelicType.SHARED); //大别墅
+        BaseMod.addRelic(new Grail(), RelicType.SHARED); //圣杯
+        BaseMod.addRelic(new DragonTooth(), RelicType.SHARED); //龙牙
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
