@@ -4,9 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,9 +13,13 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
 public class Homa extends CustomRelic {
+
     public static final String ID = "homa";
+
     private static final String IMG = "img/relics/homa.png";
+
     private static final String IMG_OTL = "img/relics/outline/homa.png";
+
     private boolean isActive = false;
 
     //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
@@ -60,7 +62,6 @@ public class Homa extends CustomRelic {
         //转换到整数
         per_maxhp =  Math.ceil(maxhp* 0.25);
         num = Double.valueOf(per_maxhp).intValue();
-        //addToBot(new TalkAction(true, String.valueOf(p.maxHealth), 1.0F, 2.0F));
         //判断当前血量是否小于50%最大生命上限
         if((p.currentHealth - damageAmount) <= num && !isActive){
             int power;
@@ -68,29 +69,24 @@ public class Homa extends CustomRelic {
             isActive = true;
             per_maxhp =  Math.ceil(p.maxHealth* 0.05);
             power = Double.valueOf(per_maxhp).intValue();
-
-
             //同判断之前的添加力量代码
             addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, power), power));
-            //addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             //kakaa面具说话代码
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             addToBot(new SFXAction("VO_CULTIST_1A"));
             addToBot(new TalkAction(true, "哼哼 哼~！", 1.0F, 2.0F));
+            //持续闪烁
+            this.pulse = true;
 
         }}
-    }
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //在用户使用牌时触发
-
     }
 
     @Override
     public void onVictory() {
-        //在胜利时触发:清楚激活
+        //在胜利时触发 清除激活
         this.isActive = false;
-
+        //取消持续闪烁
+        this.pulse = false;
     }
 
     @Override
@@ -113,13 +109,14 @@ public class Homa extends CustomRelic {
         return num;
     }
 
-
     @Override
-    //拾取时触发
+
     public void onEquip() {
+        //拾取时触发
         int num = getMaxHp();
         AbstractDungeon.player.increaseMaxHp(num, true);
     }
+
     @Override
     public AbstractRelic makeCopy() {
         return new Homa();
