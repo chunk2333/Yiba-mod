@@ -132,5 +132,12 @@
       " [E] 。",
       " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
     ]
+  },
+  "ReturnGoodForEvilPower": {
+    "NAME": "空灵",
+    "DESCRIPTIONS": [
+      "每转换一次 #y姿态 就抽 #b",
+      " 张牌。"
+    ]
   }
 }
