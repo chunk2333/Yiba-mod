@@ -269,5 +269,10 @@
   "VR": {
     "NAME": "虚拟现实",
     "DESCRIPTION": "每回合开始时获得 [E] 。"
+  },
+  "ChoseMiracle": {
+    "NAME": "天若有情",
+    "DESCRIPTION": "获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION":"获得 [E] [E] [E]。"
   }
 }
