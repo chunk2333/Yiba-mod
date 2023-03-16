@@ -1,4 +1,4 @@
-package actions;
+package power;
 
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -38,8 +38,8 @@ public class MyFlightPower extends AbstractPower {
     }
 
     public void atStartOfTurn() {
-        this.amount = this.storedAmount;
-        updateDescription();
+        //this.amount = this.storedAmount;
+        //updateDescription();
     }
 
     public float atDamageFinalReceive(float damage, DamageInfo.DamageType type) {

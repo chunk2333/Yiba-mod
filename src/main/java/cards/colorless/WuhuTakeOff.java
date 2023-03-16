@@ -1,7 +1,7 @@
 package cards.colorless;
 //芜湖～起飞！
 
-import actions.MyFlightPower;
+import power.MyFlightPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
