@@ -282,5 +282,9 @@
   "StrongPhysique": {
     "NAME": "强健体魄",
     "DESCRIPTION": "获得 !M! 点 力量 和 敏捷 。"
+  },
+  "Scapegoat": {
+    "NAME": "火中取栗",
+    "DESCRIPTION": "选择一张已 消耗 的牌，将其放入你的手牌。 NL 消耗 。"
   }
 }

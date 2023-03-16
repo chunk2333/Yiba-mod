@@ -6,10 +6,9 @@ package cards.element;
 
 //public class GeoCard {
 //岩元素牌
-import actions.AnemoActions;
+import actions.AnemoAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -20,7 +19,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import pathes.AbstractCardEnum;
-import power.GeoPower;
 
 public class AnemoCard extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("AnemoCard");
@@ -45,7 +43,7 @@ public class AnemoCard extends CustomCard{
             }
         }
         //给予扩散动作
-        addToBot(new AnemoActions(m));
+        addToBot(new AnemoAction(m));
         //造成伤害
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }

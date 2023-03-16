@@ -11,11 +11,11 @@ import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import power.HydroPower;
 import power.PyroPower;
 
-public class AnemoActions extends AbstractGameAction {
+public class AnemoAction extends AbstractGameAction {
     private AbstractPlayer p;
 
     AbstractMonster m;
-    public AnemoActions(AbstractMonster m) {
+    public AnemoAction(AbstractMonster m) {
         this.m = m;
         this.actionType = ActionType.POWER;
     }
