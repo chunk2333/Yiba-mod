@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-import java.util.concurrent.TimeUnit;
-
 @SpirePatch(cls = "basemod.BaseMod", method = "publishRelicGet")
 public class RussianDolls extends CustomRelic {
     public static final String ID = "RussianDolls";
@@ -27,17 +25,16 @@ public class RussianDolls extends CustomRelic {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.FLAT);
         wasLoad = false;
         isGive = false;
-        //UpdateStats.logger.info("构造函数被触发是否已载入：" + wasLoad + "是否可额外获得!" + isGive);
+        UpdateStats.logger.info("构造函数被触发是否已载入：" + wasLoad + "是否可额外获得!" + isGive);
     }
 
-    @SpirePatch(cls = "com.megacrit.cardcrawl.dungeons.AbstractDungeon", method = "setEmeraldElite")
+    @SpirePatch(cls = "com.megacrit.cardcrawl.dungeons.AbstractDungeon", method = "loadSeeds")
     public static class isload{
 
-        @SpireInsertPatch(loc = 683)
+        @SpireInsertPatch(loc = 511)
         public static void Insert(){
             //玩家已初始化完毕
             AbstractPlayer p = AbstractDungeon.player;
-
 //            try {
 //                TimeUnit.SECONDS.sleep(1);
 //            } catch (InterruptedException e) {
@@ -49,6 +46,15 @@ public class RussianDolls extends CustomRelic {
                 wasLoad = true;
                 UpdateStats.logger.info("俄罗斯套娃：玩家已完全载入");
             }
+            for(AbstractRelic re : p.relics){
+                if(re.relicId.equals("RussianDolls")){
+                    wasLoad = true;
+                    UpdateStats.logger.info("俄罗斯套娃：玩家已完全载入");
+                    break;
+                }
+            }
+            UpdateStats.logger.info("SL(loadSeeds)：玩家已完全载入");
+
         }
     }
 
