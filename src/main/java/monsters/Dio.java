@@ -1,35 +1,25 @@
 package monsters;
-
-//public class Dio {
-
-
+//迪奥·布兰度
 import basemod.abstracts.CustomMonster;
-import cards.curse.DutifulSon;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
-import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
-import com.megacrit.cardcrawl.map.DungeonMap;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.BloodShotEffect;
 import power.TimeStop;
 
@@ -38,6 +28,8 @@ public class Dio extends CustomMonster {
 
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("Dio");
 
+    UIStrings GetIntoDioRoom = CardCrawlGame.languagePack.getUIString("GetIntoDioRoom");
+
     public static final String NAME = monsterStrings.NAME;
 
     public static final String[] MOVES = monsterStrings.MOVES;
@@ -45,10 +37,6 @@ public class Dio extends CustomMonster {
     private static final String TheWorld_Power_Name = MOVES[0];
 
     public static final String[] DIALOG = monsterStrings.DIALOG;
-
-    private static final String SPLIT_NAME = MOVES[1];
-
-    private static final String WEAK_NAME = MOVES[2];
 
     private static final String The_World = DIALOG[0];
 
@@ -64,13 +52,20 @@ public class Dio extends CustomMonster {
 
     private int roundNum = 1 ;
 
+    private final int bellowBlock;
+
+    private final int forgeAmt;
+
     public Dio() {
-        //super(NAME, "Dio", 600, -8.0F, 10.0F, 230.0F, 240.0F, null, x, y);
         super(NAME, "Dio", 300, 0.0F, 0.0F, 270.0F, 400.0F, null, -50.0F, 0.0F);
         if (AbstractDungeon.ascensionLevel >= 7) {
             setHp(420);
+            this.bellowBlock = 25;
+            this.forgeAmt = 15;
         } else {
             setHp(400);
+            this.bellowBlock = 20;
+            this.forgeAmt = 12;
         }
         this.dialogX = -50.0F * Settings.scale;
         this.dialogY = 100.0F * Settings.scale;
@@ -79,13 +74,14 @@ public class Dio extends CustomMonster {
         this.damage.add(new DamageInfo(this, 30));
         this.damage.add(new DamageInfo(this, 999));
         this.img = new Texture(Gdx.files.internal("img/monsters/Dio.png"));
-        //DungeonMap.boss = ImageMaster.loadImage("img/ui/map/boss/Dio.png");
-        //DungeonMap.bossOutline = ImageMaster.loadImage("img/ui/map/bossOutline/Dio.png");
+        this.type = AbstractMonster.EnemyType.BOSS;
     }
     public void usePreBattleAction() {
         CardCrawlGame.music.unsilenceBGM();
         AbstractDungeon.scene.fadeOutAmbiance();
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_CITY");
+        AbstractPlayer p = AbstractDungeon.player;
+        AbstractDungeon.actionManager.addToBottom(new TalkAction(true, GetIntoDioRoom.TEXT[0], 1.0F, 2.0F));
     }
     public void takeTurn() {
         this.roundNum = this.roundNum + 1;
@@ -106,6 +102,8 @@ public class Dio extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
                 //说话：木大...
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MuDa));
+                //获得25格挡
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.bellowBlock));
                 //造成3*5
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new BloodShotEffect(this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 5), 0.25F));
 
@@ -129,10 +127,16 @@ public class Dio extends CustomMonster {
                 //说话：xx回合过去了
                 talkText = this.roundNum + Round_Pass;
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this, talkText));
+                if(this.roundNum==9){
+                    //获得格挡  第8回合
+                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.bellowBlock + 10));
+                }
                 getMove(999);
                 break;
             case 5:
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
+                //获得金属化
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MetallicizePower(this, this.forgeAmt), this.forgeAmt));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage
                         .get(2), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
                 getMove(999);
@@ -164,20 +168,20 @@ public class Dio extends CustomMonster {
             this.roundNum = random;
         }
         if(this.roundNum==1){
-            setMove(TheWorld_Power_Name, (byte)1, Intent.DEBUFF);
+            setMove(TheWorld_Power_Name, (byte)1, Intent.STRONG_DEBUFF);
         }
         if(this.roundNum==2){
-            setMove((byte)2, Intent.ATTACK_DEBUFF, this.damage.get(0).base, 5, true);
+            setMove((byte)2, Intent.ATTACK_DEFEND, this.damage.get(0).base, 5, true);
         }
         if(this.roundNum==3){
-            //强化或者打人
+            //25%强化  75%打人
 
-            random = AbstractDungeon.monsterRng.random(1,2); //怪物随机数
+            random = AbstractDungeon.monsterRng.random(1,4); //怪物随机数
             if(random==1){
                 //强化
                 setMove((byte)123, Intent.BUFF);
             }
-            if(random==2){
+            if(random>1){
                 //攻击
                 setMove((byte)3, Intent.ATTACK,this.damage.get(1).base);
             }
@@ -202,7 +206,7 @@ public class Dio extends CustomMonster {
             setMove((byte)4, Intent.BUFF);
         }
         if(this.roundNum==7){
-            setMove((byte)5, Intent.ATTACK,this.damage.get(2).base);
+            setMove((byte)5, Intent.ATTACK_BUFF,this.damage.get(2).base);
         }
         if(this.roundNum==8){
             setMove((byte)4, Intent.BUFF);
@@ -222,6 +226,10 @@ public class Dio extends CustomMonster {
         useFastShakeAnimation(5.0F);
         CardCrawlGame.screenShake.rumble(4.0F);
         super.die();
+        AbstractPlayer p = AbstractDungeon.player;
+        AbstractDungeon.actionManager.addToBottom(new TalkAction(true, GetIntoDioRoom.TEXT[1], 1.0F, 2.0F));
+
+
         if (MathUtils.randomBoolean()) {
             CardCrawlGame.sound.play("VO_CHAMP_3A");
         } else {
@@ -230,5 +238,4 @@ public class Dio extends CustomMonster {
         AbstractDungeon.scene.fadeInAmbiance();
         onBossVictoryLogic();
     }
-
 }

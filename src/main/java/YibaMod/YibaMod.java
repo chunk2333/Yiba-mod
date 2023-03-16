@@ -9,17 +9,17 @@ import cards.curse.*;
 import cards.element.*;
 import cards.green.*;
 import cards.purple.*;
-import cards.red.FleshShock;
-import cards.red.LeiPu;
-import cards.red.LetMeSee;
-import cards.colorless.Goodtime;
+import cards.red.*;
 import characters.seles;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
@@ -40,10 +40,8 @@ import relics.ClickRelic.*;
 import potions.*;
 import events.*;
 import monsters.*;
-
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-
 import basemod.helpers.RelicType;
 
 
@@ -179,15 +177,15 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new SavePower());
         this.cardsToAdd.add(new Printf());
         //this.cardsToAdd.add(new yiba());
-        this.cardsToAdd.add(new LeiPu());
-        this.cardsToAdd.add(new Goodtime());
-        this.cardsToAdd.add(new LetMeSee());
-        this.cardsToAdd.add(new snowman());
+        this.cardsToAdd.add(new LeiPu());//雷普
+        this.cardsToAdd.add(new Goodtime());//好时代来临力
+        this.cardsToAdd.add(new LetMeSee());//让我康康
+        this.cardsToAdd.add(new snowman());//食雪汉
         this.cardsToAdd.add(new desire());//三大欲望
         this.cardsToAdd.add(new Hahaknife());//哈哈，刀！TM全是刀！
         this.cardsToAdd.add(new rebornGun());//人生重来枪
-        this.cardsToAdd.add(new happyOldHome());//快乐老家
-        this.cardsToAdd.add(new Truce());//一时休战D
+        this.cardsToAdd.add(new happyOldHome());//出千
+        this.cardsToAdd.add(new Truce());//一时休战
         this.cardsToAdd.add(new DutifulSon());//孝子
         //this.cardsToAdd.add(new Baa());//大咩 - 未完成
         this.cardsToAdd.add(new AcrobaticsPlus());//技杂
