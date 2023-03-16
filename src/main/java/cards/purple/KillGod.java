@@ -29,7 +29,7 @@ public class KillGod extends CustomCard{
     public KillGod() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.RARE, CardTarget.SELF);
         //设置 magicNumber
-        this.baseMagicNumber = 5;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
     }
@@ -58,11 +58,12 @@ public class KillGod extends CustomCard{
             //更改名字和费用
             upgradeName();
             upgradeMagicNumber(2);
-            this.exhaust = false;
+            upgradeBaseCost(2);
+            //this.exhaust = false;
             //读取升级后的描述
-            this.rawDescription = UPGRADE_DESCRIPTION;
+            //this.rawDescription = UPGRADE_DESCRIPTION;
             //重载描述
-            initializeDescription();
+            //initializeDescription();
         }
     }
 }
