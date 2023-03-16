@@ -17,10 +17,11 @@ import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
 public class kakaa extends CustomRelic {
     public static final String ID = "Kakaa";
+
     private static final String IMG = "img/relics/kakaa.png";
+
     private static final String IMG_OTL = "img/relics/outline/kakaa.png";
-    private boolean isActive = false;
-    //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
+
     public kakaa() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, AbstractRelic.LandingSound.CLINK);
     }
@@ -49,6 +50,16 @@ public class kakaa extends CustomRelic {
             p.heal(p.maxHealth);
         }
     }
+
+    @Override
+    public void onLoseHp(int damageAmount) {
+        onBloodied();
+    }
+    @Override
+    public void onNotBloodied(){
+        onBloodied();
+    }
+
     public void killAllMonsters(boolean isKillAllMode) {
         if (AbstractDungeon.getMonsters() == null)
             return;
@@ -62,6 +73,7 @@ public class kakaa extends CustomRelic {
             }
         }
     }
+
     @Override
     public void onVictory() {
         //在胜利时触发
@@ -71,10 +83,12 @@ public class kakaa extends CustomRelic {
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
+
     @Override
-    //拾取时触发
     public void onEquip() {
+        //拾取时触发
     }
+
     @Override
     public AbstractRelic makeCopy() {
         return new kakaa();
