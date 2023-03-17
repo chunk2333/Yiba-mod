@@ -13,14 +13,14 @@ import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import YibaMod.YibaMod;
 
-public class widsith extends CustomRelic {
+public class Widsith extends CustomRelic {
     public static final String ID = "widsith";
 
     private static final String IMG = "img/relics/widsith.png";
 
     private static final String IMG_OTL = "img/relics/outline/widsith.png";
 
-    public widsith() {
+    public Widsith() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.COMMON, LandingSound.FLAT);
     }
 
@@ -75,6 +75,6 @@ public class widsith extends CustomRelic {
 
     @Override
     public AbstractRelic makeCopy() {
-        return new widsith();
+        return new Widsith();
     }
 }

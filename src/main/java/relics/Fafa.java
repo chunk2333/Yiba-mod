@@ -1,5 +1,5 @@
 package relics;
-
+//悲伤小花
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -12,12 +12,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import YibaMod.YibaMod;
 
-public class fafa extends CustomRelic {
+public class Fafa extends CustomRelic {
     public static final String ID = "fafa";
+
     private static final String IMG = "img/relics/fafa.png";
+
     private static final String IMG_OTL = "img/relics/outline/fafa.png";
-    //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
-    public fafa() {
+
+    public Fafa() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.BOSS, LandingSound.HEAVY);
     }
 
@@ -34,7 +36,7 @@ public class fafa extends CustomRelic {
             flash();
             AbstractPlayer p = AbstractDungeon.player;
             YibaMod.logger.info("fafa触发：失去1费");
-            addToBot((AbstractGameAction)new LoseEnergyAction(1));
+            addToBot(new LoseEnergyAction(1));
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this)); //头顶出现遗物特效
             this.counter=0;
         }
@@ -48,23 +50,26 @@ public class fafa extends CustomRelic {
         //在胜利时触发
         this.counter=0;
     }
+
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
+
     @Override
-    //拾取时触发
     public void onEquip() {
         //拾取时触发
         AbstractDungeon.player.energy.energyMaster++;
     }
+
     @Override
     public void onUnequip() {
         //丢弃时触发
         AbstractDungeon.player.energy.energyMaster--;
     }
+
     @Override
     public AbstractRelic makeCopy() {
-        return new fafa();
+        return new Fafa();
     }
 }
