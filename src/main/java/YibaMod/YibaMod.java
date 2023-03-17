@@ -1,9 +1,11 @@
 package YibaMod;
 
+import Tools.YiBaHelper;
 import basemod.BaseMod;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
+import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
 import cards.colorless.*;
 import cards.curse.*;
 import cards.element.*;
@@ -31,6 +33,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import pathes.*;
 import relics.*;
 import relics.ClickRelic.*;
@@ -43,7 +47,7 @@ import basemod.helpers.RelicType;
 
 
 @SpireInitializer
-public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, PostExhaustSubscriber, PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber, PostEnergyRechargeSubscriber {
+public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, PostExhaustSubscriber, PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber, PostEnergyRechargeSubscriber, AddAudioSubscriber {
     private static final String MOD_BADGE = "img/ui/badge.png";
     //攻击、技能、能力牌的背景图片(512)
     private static final String ATTACK_CC = "img/512/bg_attack_SELES_s.png";
@@ -62,6 +66,8 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     public static final Color SILVER = CardHelper.getColor(200, 200, 200);
     private final ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
     public static ArrayList<AbstractCard> recyclecards = new ArrayList<>();
+
+    public static final Logger logger = LogManager.getLogger(YibaMod.class.getName());
 
     public YibaMod() {
         //构造方法，初始化各种参数
@@ -353,6 +359,15 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addBoss(TheCity.ID, Dio.ID,
                 "map/boss/Dio.png",
                 "map/bossOutline/Dio.png");
+    }
+
+    @Override
+    public void receiveAddAudio() {
+        //添加音频
+        //logger.info("YiBaMod:loading audio....");
+        BaseMod.addAudio(YiBaHelper.MakeSoundPath("HomoVoice"),"sound/HomoVoice.ogg");
+        //logger.info("YiBaMod:loading audio done.");
+
     }
 
     @Override

@@ -1,13 +1,14 @@
 package relics;
 
+import Tools.YiBaHelper;
 import basemod.abstracts.CustomRelic;
 import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
-import cards.curse.DutifulSon;
 import cards.curse.YouAreOne_OneByOne;
 import cards.curse.desire;
 import cards.curse.snowman;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,7 +21,7 @@ public class HomoHead extends CustomRelic {
     public static final String ID = "HomoHead";
     private static final String IMG = "img/relics/HomoHead.png";
     private static final String IMG_OTL = "img/relics/outline/HomoHead.png";
-    SoundPlay s =new SoundPlay();
+    SoundPlay s = new SoundPlay();
 
 
     //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
@@ -56,15 +57,19 @@ public class HomoHead extends CustomRelic {
         int random_play;
         random_play = AbstractDungeon.relicRng.random(1,100); //随机数
         if(random_play<=5){
-            s.play("HomoVoice",true);
+            //s.play("HomoVoice",true);
+            addToBot(new SFXAction(YiBaHelper.MakeSoundPath("HomoVoice")));
             addToBot(new TalkAction(true, "哼！哼！哼！啊啊啊啊啊啊啊啊啊啊啊啊！！！！", 1.0F, 2.0F));
         }
         if(random_play>5 && random_play<=10){
-            s.play("HomoVoice",true);
+            //s.play("HomoVoice",true);
+            addToBot(new SFXAction(YiBaHelper.MakeSoundPath("HomoVoice")));
             addToBot(new TalkAction(true, "哼！哼！哼！啊啊啊啊啊啊啊啊啊啊啊啊！！！！", 1.0F, 2.0F));
         }
         //往抽牌堆里塞一张“食雪汉”诅咒
         addToBot(new MakeTempCardInDrawPileAction(card, 1, true, true));
+
+
 
     }
 
