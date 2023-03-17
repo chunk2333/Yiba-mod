@@ -1,5 +1,6 @@
 package monsters;
 //迪奥·布兰度
+import Tools.YiBaHelper;
 import basemod.abstracts.CustomMonster;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -93,6 +95,16 @@ public class Dio extends CustomMonster {
                 //说话
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this, The_World));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new TimeStop(AbstractDungeon.player)));
+                //时停声音
+                int randomNum;
+                randomNum = AbstractDungeon.monsterRng.random(1,2);
+                if(randomNum == 1){
+                    addToBot(new SFXAction(YiBaHelper.MakeSoundPath("Dio_The_World_Voice01")));
+                }
+                if(randomNum == 2){
+                    addToBot(new SFXAction(YiBaHelper.MakeSoundPath("Dio_The_World_Voice02")));
+                }
+
                 //行动
                 getMove(999);
                 break;
