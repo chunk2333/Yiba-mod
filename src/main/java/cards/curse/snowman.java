@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 public class snowman extends CustomCard{
@@ -33,7 +33,7 @@ public class snowman extends CustomCard{
         this.dontTriggerOnUseCard = true;
         AbstractPlayer p = AbstractDungeon.player;
         addToBot(new ApplyPowerAction(p, p, new PoisonPower(p,p,this.magicNumber), this.magicNumber));
-        UpdateStats.logger.info("食雪汉开始中毒");
+        YibaMod.logger.info("食雪汉开始中毒");
     }
     @Override
     public AbstractCard makeCopy() {

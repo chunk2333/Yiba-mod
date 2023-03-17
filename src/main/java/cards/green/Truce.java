@@ -1,7 +1,7 @@
 package cards.green;
 //一时休战
 import basemod.abstracts.CustomCard;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -60,8 +60,8 @@ public class Truce extends CustomCard{
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
-        UpdateStats.logger.info("能否打出："+canUse);
-        UpdateStats.logger.info("能否打出-自身："+canUse_self);
+        YibaMod.logger.info("能否打出："+canUse);
+        YibaMod.logger.info("能否打出-自身："+canUse_self);
         if (!canUse)
             return false;
             if (!canUse_self) {

@@ -3,7 +3,7 @@ package events;
 //public class SanHuanPi {
 
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -47,7 +47,7 @@ public class SanHuanPi extends AbstractImageEvent {
     public SanHuanPi() {
         super(NAME, INTRO_MSG, "img/events/SanHuanPi.png");
         //this.noCardsInRewards = true;
-        UpdateStats.logger.info("进入事件：三幻批");
+        YibaMod.logger.info("进入事件：三幻批");
         this.imageEventText.clearRemainingOptions();
         this.imageEventText.setDialogOption(FRIGHT);
         this.imageEventText.setDialogOption(LEAVE);
@@ -60,7 +60,7 @@ public class SanHuanPi extends AbstractImageEvent {
             case INTRO:
                 if (buttonPressed == 0){
                     //TODO:进入战斗
-                    UpdateStats.logger.info("选择进入战斗");
+                    YibaMod.logger.info("选择进入战斗");
                     //设置怪物
                     (AbstractDungeon.getCurrRoom()).rewardAllowed = false;
                     (AbstractDungeon.getCurrRoom()).monsters = MonsterHelper.getEncounter("SanHuanPi");
@@ -76,7 +76,7 @@ public class SanHuanPi extends AbstractImageEvent {
                 }
                 if (buttonPressed == 1){
                     //TODO：离开
-                    UpdateStats.logger.info("选择离开");
+                    YibaMod.logger.info("选择离开");
                     //清除事件所有描述文本
                     this.imageEventText.clearAllDialogs();
                     //清除事件所有选项
@@ -93,7 +93,7 @@ public class SanHuanPi extends AbstractImageEvent {
             case END_FIGHT:
                 (AbstractDungeon.getCurrRoom()).rewardAllowed = true;
 
-                UpdateStats.logger.info("拾取奖励");
+                YibaMod.logger.info("拾取奖励");
 
                 //添加奖励：金币
                 AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(100, 300));
@@ -129,7 +129,7 @@ public class SanHuanPi extends AbstractImageEvent {
             case END:
                 this.imageEventText.updateDialogOption(0,"离开");
                 openMap();
-                UpdateStats.logger.info("整个事件结束。打开地图了。");
+                YibaMod.logger.info("整个事件结束。打开地图了。");
                 break;
         }
     }
@@ -140,7 +140,7 @@ public class SanHuanPi extends AbstractImageEvent {
             AbstractDungeon.player.drawX = Settings.WIDTH * 0.25F;
             AbstractDungeon.player.preBattlePrep();
             enterImageFromCombat();
-            UpdateStats.logger.info("战斗结束，进入拾取奖励界面");
+            YibaMod.logger.info("战斗结束，进入拾取奖励界面");
             this.imageEventText.clearAllDialogs();
             //清除事件所有选项
             this.imageEventText.clearRemainingOptions();

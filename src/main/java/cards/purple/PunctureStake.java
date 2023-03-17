@@ -1,7 +1,7 @@
 package cards.purple;
 //穿刺木桩
 import basemod.abstracts.CustomCard;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -42,19 +42,19 @@ public class PunctureStake extends CustomCard{
         monsterMaxHP = m.maxHealth;
         monsterHP = m.currentHealth;
         monsterLoseHP = monsterMaxHP - monsterHP;
-        UpdateStats.logger.info("怪物剩余最大血量：" + monsterMaxHP  +"当前血量："+monsterHP);
-        UpdateStats.logger.info("怪物已损失血量：" + monsterLoseHP );
+        YibaMod.logger.info("怪物剩余最大血量：" + monsterMaxHP  +"当前血量："+monsterHP);
+        YibaMod.logger.info("怪物已损失血量：" + monsterLoseHP );
 
         PR = (monsterLoseHP / monsterMaxHP) * 100;
         PR = Math.toIntExact(Math.round(PR));
         PR= PR * this.magicNumber * 0.1;
-        UpdateStats.logger.info("怪物已损失血量百分比：" + PR);
-        UpdateStats.logger.info("怪物剩余血量：" + monsterHP );
+        YibaMod.logger.info("怪物已损失血量百分比：" + PR);
+        YibaMod.logger.info("怪物剩余血量：" + monsterHP );
         PR = PR + this.magicNumber;//加上基础斩杀概率
 
-        UpdateStats.logger.info("穿刺木桩斩杀概率：" + PR + "随机数："+ random);
+        YibaMod.logger.info("穿刺木桩斩杀概率：" + PR + "随机数："+ random);
         if(random<=PR){
-            UpdateStats.logger.info("触发斩杀");
+            YibaMod.logger.info("触发斩杀");
             this.damage = 9999999;
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));

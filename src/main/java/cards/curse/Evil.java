@@ -1,7 +1,7 @@
 package cards.curse;
 //恶德
 import basemod.abstracts.CustomCard;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -54,11 +54,11 @@ public class Evil extends CustomCard{
     public CustomCard makeCopy() {
         //复制卡牌时触发
         //if(AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT){
-            //UpdateStats.logger.info("恶德被复制，在战斗中，什么不触发。" );
+            //YibaMod.logger.info("恶德被复制，在战斗中，什么不触发。" );
             //return new Evil();
         //}
         //塞诅咒到主牌堆
-        //UpdateStats.logger.info("恶德被加入牌库，开始复制。" );
+        //YibaMod.logger.info("恶德被加入牌库，开始复制。" );
         //insertCurseCard();
         return new Evil();
     }

@@ -5,7 +5,7 @@ package cards;
 import VFX.SteamBarrierEffect;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.VfxBuilder;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -44,10 +44,10 @@ public class VFXTestCard extends CustomCard{
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
         //AbstractDungeon.effectsQueue.add(new SteamBarrierEffect(p.drawX, p.drawY));
-        UpdateStats.logger.info("p.drawX:"+p.drawX);
-        UpdateStats.logger.info("m.drawY:"+m.drawY);
-        UpdateStats.logger.info("m.hb.y:"+m.hb.y);
-        UpdateStats.logger.info("m.hb.cY:"+m.hb.cY);
+        YibaMod.logger.info("p.drawX:"+p.drawX);
+        YibaMod.logger.info("m.drawY:"+m.drawY);
+        YibaMod.logger.info("m.hb.y:"+m.hb.y);
+        YibaMod.logger.info("m.hb.cY:"+m.hb.cY);
         Texture ballTexture;
 
         ballTexture = new Texture(Gdx.files.internal("img/VFX/c2.png"));

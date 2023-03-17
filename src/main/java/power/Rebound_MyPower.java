@@ -1,6 +1,6 @@
 package power;
 //斗转星移
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -45,7 +45,7 @@ public class Rebound_MyPower extends AbstractPower {
         }
     }
     public int onAttacked(DamageInfo info, int damageAmount) {
-        UpdateStats.logger.info("斗转星移受到伤害："+damageAmount);
+        YibaMod.logger.info("斗转星移受到伤害："+damageAmount);
         if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != this.owner) {
             flash();
             addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, damageAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));

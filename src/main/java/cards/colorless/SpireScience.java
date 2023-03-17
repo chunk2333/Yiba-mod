@@ -1,7 +1,7 @@
 package cards.colorless;
 //尖塔学
 import basemod.abstracts.CustomCard;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,7 +31,7 @@ public class SpireScience extends CustomCard {
         //使用卡牌时触发的动作
         int random;
         random = AbstractDungeon.cardRandomRng.random(999);
-        UpdateStats.logger.info("消耗随机数："+ random);
+        YibaMod.logger.info("消耗随机数："+ random);
         //添加自身到手牌
         addToTop(new MakeTempCardInHandAction(makeStatEquivalentCopy()));
     }

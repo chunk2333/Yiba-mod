@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 
 public class yadan extends CustomRelic {

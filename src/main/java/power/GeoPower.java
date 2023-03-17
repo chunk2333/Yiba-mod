@@ -7,7 +7,7 @@ package power;
 
 
 
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
@@ -91,7 +91,7 @@ public class GeoPower extends AbstractPower {
                 addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "PyroPower"));
                 addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
                 AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "熔岩", Color.GOLD.cpy()));
-                UpdateStats.logger.info("触发熔岩：" + damageAmount * 3 + this.mystery);
+                YibaMod.logger.info("触发熔岩：" + damageAmount * 3 + this.mystery);
                 //抽1卡
                 addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                 AbstractDungeon.player.gainEnergy(1);

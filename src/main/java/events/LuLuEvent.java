@@ -3,7 +3,7 @@ package events;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -43,7 +43,7 @@ public class LuLuEvent extends AbstractImageEvent {
     public LuLuEvent() {
         super(NAME, INTRO_MSG, "img/events/LuLuEvent.png");
         //this.noCardsInRewards = true;
-        UpdateStats.logger.info("进入事件：LuLu");
+        YibaMod.logger.info("进入事件：LuLu");
         this.imageEventText.clearRemainingOptions();
         if(AbstractDungeon.player.hasRelic("RocoCoin")){
             this.imageEventText.setDialogOption(Change);
@@ -128,7 +128,7 @@ public class LuLuEvent extends AbstractImageEvent {
                 this.imageEventText.removeDialogOption(2);
                 this.imageEventText.removeDialogOption(3);
                 openMap();
-                UpdateStats.logger.info("整个事件结束。打开地图了。");
+                YibaMod.logger.info("整个事件结束。打开地图了。");
                 break;
         }
     }

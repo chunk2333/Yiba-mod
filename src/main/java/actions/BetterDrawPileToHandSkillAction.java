@@ -1,6 +1,6 @@
 package actions;
 
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -59,11 +59,11 @@ public class BetterDrawPileToHandSkillAction extends AbstractGameAction {
                     }
                 temp.sortAlphabetically(true);
                 temp.sortByRarityPlusStatusCardType(false);
-                UpdateStats.logger.info("欲选择卡牌数："+this.numberOfCards+" 当前可以选择卡牌数："+cardsToReset.size());
+                YibaMod.logger.info("欲选择卡牌数："+this.numberOfCards+" 当前可以选择卡牌数："+cardsToReset.size());
                 if(this.numberOfCards > cardsToReset.size()){
                     this.numberOfCards = cardsToReset.size();
                 }
-                UpdateStats.logger.info("打开卡牌选择界面");
+                YibaMod.logger.info("打开卡牌选择界面");
                 if (this.numberOfCards == 1) {
                     if (this.optional) {
                         AbstractDungeon.gridSelectScreen.open(temp, this.numberOfCards, true, TEXT[0]);

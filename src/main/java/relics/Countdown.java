@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 
 public class Countdown extends CustomRelic {
     public static final String ID = "Countdown";
@@ -44,7 +44,7 @@ public class Countdown extends CustomRelic {
         if(this.counter>=12){
             flash();
             //调试出到控制台的内容
-            UpdateStats.logger.info("终焉倒计时触发：对所有怪物造成int类型上限伤害");
+            YibaMod.logger.info("终焉倒计时触发：对所有怪物造成int类型上限伤害");
             //遗物触发特效
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this)); //头顶出现遗物特效
             //人物说话气泡

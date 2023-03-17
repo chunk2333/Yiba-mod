@@ -1,6 +1,6 @@
 //package pathes;
 //
-//import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+//import YibaMod.YibaMod;
 //import com.evacipated.cardcrawl.modthespire.lib.*;
 //
 //@SpirePatch(cls = "com.megacrit.cardcrawl.ui.panels.EnergyPanel", method = "addEnergy")
@@ -10,6 +10,6 @@
 //            localvars={"e"}
 //    )
 //    public static void Insert(int e){
-//        UpdateStats.logger.info("WhenAddEngry触发：addEnergy");
+//        YibaMod.logger.info("WhenAddEngry触发：addEnergy");
 //    }
 //}

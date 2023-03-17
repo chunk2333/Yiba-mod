@@ -4,7 +4,7 @@ package cards;
 
 import actions.*;
 import basemod.abstracts.CustomCard;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.actions.common.PutOnBottomOfDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -77,7 +77,7 @@ public class Baa extends CustomCard{
         addToBot(new RollMoveAction(m));
         //m.state.setAnimation(0, "Hit", false);
         //m.state.addAnimation(0, "Idle", true, 0.0F);
-        UpdateStats.logger.info("随机意图" );
+        YibaMod.logger.info("随机意图" );
 
     }
     @Override

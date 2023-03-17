@@ -4,7 +4,7 @@ package cards.green;
 
 import actions.*;
 import basemod.abstracts.CustomCard;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -43,7 +43,7 @@ public class rebornGun extends CustomCard{
         //cardnum_hand = AbstractDungeon.player.hand.size();
         cardnum_hand = p.hand.size();
         //cardnum_add = 10 - cardnum_hand;
-        UpdateStats.logger.info("当前手牌："+ cardnum_hand);
+        YibaMod.logger.info("当前手牌："+ cardnum_hand);
         addToBot((AbstractGameAction)new rebornGunAction(AbstractDungeon.player));
         if(this.upgraded){
             addToBot(new DrawCardAction(p, this.magicNumber));

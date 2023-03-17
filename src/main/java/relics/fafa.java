@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 
 public class fafa extends CustomRelic {
     public static final String ID = "fafa";
@@ -33,7 +33,7 @@ public class fafa extends CustomRelic {
         if(this.counter==4){
             flash();
             AbstractPlayer p = AbstractDungeon.player;
-            UpdateStats.logger.info("fafa触发：失去1费");
+            YibaMod.logger.info("fafa触发：失去1费");
             addToBot((AbstractGameAction)new LoseEnergyAction(1));
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this)); //头顶出现遗物特效
             this.counter=0;

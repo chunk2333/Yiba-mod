@@ -1,6 +1,6 @@
 package power;
 //水元素
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -104,7 +104,7 @@ public class HydroPower extends AbstractPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if(!isActive){
-            UpdateStats.logger.info("触发2.0蒸发的未增幅伤害："+ damageAmount );
+            YibaMod.logger.info("触发2.0蒸发的未增幅伤害："+ damageAmount );
             for(AbstractPower power:this.owner.powers){
                 if(power.ID.equals("GeoPower")){
                     hasGeo = true;
@@ -122,7 +122,7 @@ public class HydroPower extends AbstractPower {
                     addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "PyroPower"));
                     addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
                     AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
-                    UpdateStats.logger.info("触发2.0蒸发："+ (damageAmount * 2 + this.mystery));
+                    YibaMod.logger.info("触发2.0蒸发："+ (damageAmount * 2 + this.mystery));
                     //给虚弱
                     addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 1, false), 1));
                     //抽1卡

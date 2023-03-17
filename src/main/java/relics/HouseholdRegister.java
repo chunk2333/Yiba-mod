@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.actions.unique.GainEnergyIfDiscardAction;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 
 public class HouseholdRegister extends CustomRelic {
     public static final String ID = "HouseholdRegister";

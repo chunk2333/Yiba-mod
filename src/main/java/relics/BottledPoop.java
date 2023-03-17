@@ -1,7 +1,7 @@
 package relics;
 //瓶装答辩
 import basemod.abstracts.CustomRelic;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -36,7 +36,7 @@ public class BottledPoop extends CustomRelic {
                 list.add(c);
             }
         }
-        UpdateStats.logger.info("全部诅咒牌数："+ (list.size() - 1));
+        YibaMod.logger.info("全部诅咒牌数："+ (list.size() - 1));
         return list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
     }
     @Override

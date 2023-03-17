@@ -3,7 +3,7 @@
 package cards.green;
 
 import basemod.abstracts.CustomCard;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -38,7 +38,7 @@ public class Hahaknife extends CustomCard{
         //cardnum_hand = AbstractDungeon.player.hand.size();
         cardnum_hand = p.hand.size();
         cardnum_add = 10 - cardnum_hand;
-        UpdateStats.logger.info("添加剩余手牌数量的小刀："+String.valueOf(cardnum_add));
+        YibaMod.logger.info("添加剩余手牌数量的小刀："+String.valueOf(cardnum_add));
         //取小刀卡的对象
         AbstractCard s = (new Shiv()).makeCopy();
         //添加指定手牌数量的小刀卡           //添加剩余手牌数的小刀到手牌

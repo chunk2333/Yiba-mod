@@ -1,6 +1,6 @@
 package power;
 //火元素
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -91,7 +91,7 @@ public class PyroPower extends AbstractPower {
             }
         }
         if(this.hasPyro && this.hasHydro){
-            UpdateStats.logger.info("触发裸蒸发");
+            YibaMod.logger.info("触发裸蒸发");
             triggerElementreaction();
         }
 
@@ -102,7 +102,7 @@ public class PyroPower extends AbstractPower {
             isActive = false;
         }
         if(!this.isActive){
-            UpdateStats.logger.info("触发1.5蒸发的未增幅伤害："+ damageAmount );
+            YibaMod.logger.info("触发1.5蒸发的未增幅伤害："+ damageAmount );
             for(AbstractPower power:this.owner.powers){
                 if(power.ID.equals("PyroPower")){
                     this.hasPyro = true;
@@ -119,7 +119,7 @@ public class PyroPower extends AbstractPower {
                     addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "HydroPower"));
                     addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
                     AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
-                    UpdateStats.logger.info("触发1.5蒸发："+ (damageAmount * 1.5 + this.mystery));
+                    YibaMod.logger.info("触发1.5蒸发："+ (damageAmount * 1.5 + this.mystery));
                     //抽1卡
                     addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                     AbstractDungeon.player.gainEnergy(1);

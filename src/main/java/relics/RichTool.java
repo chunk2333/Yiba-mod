@@ -5,7 +5,7 @@
 package relics;
 //”时“
 import basemod.abstracts.CustomRelic;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -33,7 +33,7 @@ public class RichTool extends CustomRelic {
             flash();
             AbstractPlayer p = AbstractDungeon.player;
             p.gainGold(5);
-            UpdateStats.logger.info("触发致富神器，获得5金币。");
+            YibaMod.logger.info("触发致富神器，获得5金币。");
         }
     }
     @Override

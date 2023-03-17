@@ -1,6 +1,6 @@
 package events;
 
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import cards.curse.desire;
 import cards.curse.snowman;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -66,12 +66,12 @@ public class Restaurant extends AbstractImageEvent {
         super(NAME, INTRO_MSG, "img/events/Restaurant.png");
         this.noCardsInRewards = true;
         //初次进入
-        UpdateStats.logger.info("进入事件：餐厅");
+        YibaMod.logger.info("进入事件：餐厅");
         //进入事件
         this.imageEventText.setDialogOption("[进入] #r快点端上来罢 ！");
         //离开事件
         this.imageEventText.setDialogOption(LEAVE_NO_DRINK);
-        UpdateStats.logger.info("设置开场白");
+        YibaMod.logger.info("设置开场白");
 
     }
     public void leave(){
@@ -81,7 +81,7 @@ public class Restaurant extends AbstractImageEvent {
         this.imageEventText.removeDialogOption(1);
         //打开地图
         openMap();
-        UpdateStats.logger.info("整个事件结束。打开地图了。");
+        YibaMod.logger.info("整个事件结束。打开地图了。");
     }
     //按下按钮
     protected void buttonEffect(int buttonPressed) {
@@ -94,21 +94,21 @@ public class Restaurant extends AbstractImageEvent {
                     break;
                 }
                 if (buttonPressed == 0) {
-                    UpdateStats.logger.info("选择端上来");
+                    YibaMod.logger.info("选择端上来");
                     this.imageEventText.clearAllDialogs();
-                    UpdateStats.logger.info("设置喝酒的信息");
+                    YibaMod.logger.info("设置喝酒的信息");
                     this.imageEventText.updateBodyText("“咳，先生，这是我们的 #y迎宾酒 ” NL 你看着面前这杯 #y@泛黄浮着泡沫的酒@ ，你的选择是？");
                     this.imageEventText.clearRemainingOptions();
                     this.imageEventText.setDialogOption(DRINK);
                     this.imageEventText.updateDialogOption(0,DRINK);
                     this.imageEventText.setDialogOption(LEAVE_NO_DRINK);
                     this.imageEventText.updateDialogOption(1,LEAVE_NO_DRINK);
-                    UpdateStats.logger.info("准备进入HeJiu");
+                    YibaMod.logger.info("准备进入HeJiu");
                     this.screen=CurScreen.HeJiu;
                     break;
                 }else {
                     //离开事件
-                    UpdateStats.logger.info("选择离开");
+                    YibaMod.logger.info("选择离开");
                     this.imageEventText.updateBodyText("你无视了眼前的景象");
                     this.screen = CurScreen.END;
                     leave();
@@ -123,25 +123,25 @@ public class Restaurant extends AbstractImageEvent {
                 this.imageEventText.clearAllDialogs();
                 if (buttonPressed == 0) {
                     //喝下酒
-                    UpdateStats.logger.info("选择喝下酒");
+                    YibaMod.logger.info("选择喝下酒");
                     CardCrawlGame.sound.play("EVENT_TOME");
                     this.imageEventText.clearAllDialogs();
                     //设置喝下选项
                     //更新喝下后的文本
                     this.imageEventText.updateBodyText(Drink_MSG);
                     //给予玩家10点伤害
-                    UpdateStats.logger.info("喝下酒：受到 10 点伤害");
+                    YibaMod.logger.info("喝下酒：受到 10 点伤害");
                     AbstractDungeon.player.damage(new DamageInfo(null, 10, DamageInfo.DamageType.HP_LOSS));
                     this.imageEventText.clearAllDialogs();
                     this.imageEventText.setDialogOption("继续");
                     isIn=true;
-                    UpdateStats.logger.info("设置接下来为：PAGE_1");
+                    YibaMod.logger.info("设置接下来为：PAGE_1");
                     this.screen = Restaurant.CurScreen.PAGE_1;
                     break;
                 }
             case PAGE_1:
                 //喝下之后触发的
-                UpdateStats.logger.info("进入PAGE_1:喝下酒后");
+                YibaMod.logger.info("进入PAGE_1:喝下酒后");
                 //CardCrawlGame.sound.play("EVENT_TOME");
                 this.imageEventText.clearAllDialogs();
                 this.imageEventText.clearRemainingOptions();
@@ -159,11 +159,11 @@ public class Restaurant extends AbstractImageEvent {
                 if(buttonPressed==0){
                     isIn=true;
                     //继续，前往第二页，触发吃下的剧情
-                    UpdateStats.logger.info("选择吃下");
+                    YibaMod.logger.info("选择吃下");
                     //更新文本-准备吃面
                     CardCrawlGame.sound.play("EVENT_TOME");
                     //受到15点伤害
-                    UpdateStats.logger.info("吃下：受到15点伤害");
+                    YibaMod.logger.info("吃下：受到15点伤害");
                     AbstractDungeon.player.damage(new DamageInfo(null, 15, DamageInfo.DamageType.HP_LOSS));
                     //this.damageTaken += 2;
                     this.imageEventText.clearAllDialogs();
@@ -175,13 +175,13 @@ public class Restaurant extends AbstractImageEvent {
                     this.imageEventText.clearRemainingOptions();
                     this.imageEventText.setDialogOption("继续");
 
-                    UpdateStats.logger.info("前往PAGE_3");
+                    YibaMod.logger.info("前往PAGE_3");
                     this.screen = Restaurant.CurScreen.PAGE_3;
                     break;
                 }else {
                     isIn=true;
                     //更新文本提示。
-                    UpdateStats.logger.info("[离开] #r被诅咒-食雪汉。");
+                    YibaMod.logger.info("[离开] #r被诅咒-食雪汉。");
                     this.imageEventText.updateBodyText("服务员看起来非常的#y~沮丧~。。。");
                     //清除选项
                     this.imageEventText.clearRemainingOptions();
@@ -198,7 +198,7 @@ public class Restaurant extends AbstractImageEvent {
                 }
             case PAGE_3:
                 //评价
-                UpdateStats.logger.info("进入PAGE_3");
+                YibaMod.logger.info("进入PAGE_3");
                 this.imageEventText.clearAllDialogs();
                 this.imageEventText.clearRemainingOptions();
                 this.imageEventText.setDialogOption(Evaluate_GOOD);
@@ -212,7 +212,7 @@ public class Restaurant extends AbstractImageEvent {
                 isIn=true;
                 if(buttonPressed==0) {
                     //好评
-                    UpdateStats.logger.info("好评");
+                    YibaMod.logger.info("好评");
                     this.imageEventText.clearAllDialogs();
                     this.imageEventText.updateBodyText(Evaluate_GOOD_MSG);
                     //给牛排
@@ -226,7 +226,7 @@ public class Restaurant extends AbstractImageEvent {
 
                 }else {
                     //不予置评
-                    UpdateStats.logger.info("不予置评");
+                    YibaMod.logger.info("不予置评");
                     this.imageEventText.clearAllDialogs();
                     this.imageEventText.updateBodyText(Evaluate_NO_MSG);
                     //被诅咒-三大欲望

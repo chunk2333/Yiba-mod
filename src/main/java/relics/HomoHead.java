@@ -1,8 +1,8 @@
 package relics;
-
+//homo头(田所浩二的头)
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomRelic;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
 import cards.curse.YouAreOne_OneByOne;
 import cards.curse.desire;
 import cards.curse.snowman;
@@ -37,7 +37,7 @@ public class HomoHead extends CustomRelic {
         AbstractCard card;
         int random;
         random = AbstractDungeon.relicRng.random(1,3); //随机数
-        UpdateStats.logger.info("homo头随机数：" + random);
+        YibaMod.logger.info("homo头随机数：" + random);
         switch (random){
             case 1 :
                 card = new snowman();

@@ -2,7 +2,7 @@ package events;
 
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -44,7 +44,7 @@ public class FairyBlessingEvent extends AbstractImageEvent {
     public FairyBlessingEvent() {
         super(NAME, INTRO_MSG, "img/events/FairyBlessingEvent.png");
         //this.noCardsInRewards = true;
-        UpdateStats.logger.info("进入事件：FairyBlessingEvent");
+        YibaMod.logger.info("进入事件：FairyBlessingEvent");
         this.imageEventText.clearRemainingOptions();
         for (AbstractPotion potion : AbstractDungeon.player.potions) {
             if (potion.ID.equals("FairyPotion")) {
@@ -91,7 +91,7 @@ public class FairyBlessingEvent extends AbstractImageEvent {
                 this.imageEventText.updateDialogOption(0, "离开");
                 this.imageEventText.removeDialogOption(1);
                 openMap();
-                UpdateStats.logger.info("整个事件结束。打开地图了。");
+                YibaMod.logger.info("整个事件结束。打开地图了。");
                 break;
         }
     }

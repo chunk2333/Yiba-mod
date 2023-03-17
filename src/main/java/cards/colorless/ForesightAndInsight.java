@@ -1,7 +1,7 @@
 package cards.colorless;
 //远见明察
 import basemod.abstracts.CustomCard;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -53,7 +53,7 @@ public class ForesightAndInsight extends CustomCard {
         //使用卡牌时触发的动作
         ArrayList<AbstractPower> power = m.powers;
         for (AbstractPower po : power) {
-            UpdateStats.logger.info("目标buff：" + po.ID);
+            YibaMod.logger.info("目标buff：" + po.ID);
             this.buffNum = this.buffNum + 1;
             //移除对应buff
             addToBot(new RemoveSpecificPowerAction(m, m, po.ID));

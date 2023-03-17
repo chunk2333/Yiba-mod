@@ -1,6 +1,6 @@
 package power;
 //剧毒鳞粉
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -45,7 +45,7 @@ public class PoisonousPower extends AbstractPower {
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if(power.ID.equals(this.ID)){
-            UpdateStats.logger.info("剧毒鳞粉层数：" + this.amount);
+            YibaMod.logger.info("剧毒鳞粉层数：" + this.amount);
             if (this.amount==2){
                 if ((AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT &&
                         !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {

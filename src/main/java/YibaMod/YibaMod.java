@@ -5,7 +5,6 @@ import basemod.BaseMod;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
 import cards.colorless.*;
 import cards.curse.*;
 import cards.element.*;

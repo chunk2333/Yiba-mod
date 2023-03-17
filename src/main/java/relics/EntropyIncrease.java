@@ -1,7 +1,7 @@
 package relics;
 //熵增
 import basemod.abstracts.CustomRelic;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -38,7 +38,7 @@ public class EntropyIncrease extends CustomRelic{
                 AbstractDungeon.player.getRelic("EntropyIncrease").flash();
                 en.addToTop(new RelicAboveCreatureAction(p, en));
                 p.gainEnergy(1);
-                UpdateStats.logger.info("熵增触发：addEnergy");
+                YibaMod.logger.info("熵增触发：addEnergy");
             }
         }
     }

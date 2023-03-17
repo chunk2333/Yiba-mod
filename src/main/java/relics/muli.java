@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 
 public class muli extends CustomRelic {
     public static final String ID = "muli";
@@ -42,7 +42,7 @@ public class muli extends CustomRelic {
             if(this.counter==4){
                 flash();
                 //AbstractPlayer p = AbstractDungeon.player;
-                UpdateStats.logger.info("muli触发：获得1层缓冲");
+                YibaMod.logger.info("muli触发：获得1层缓冲");
                 //获得缓冲效果
                 addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, (AbstractPower)new BufferPower(AbstractDungeon.player, 1), 1));
                 //遗物特效

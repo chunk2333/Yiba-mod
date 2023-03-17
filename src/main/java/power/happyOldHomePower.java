@@ -2,7 +2,7 @@
 //happyOldHomePower
 package power;
 
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -42,7 +42,7 @@ public class happyOldHomePower extends AbstractPower {
 
     public happyOldHomePower(AbstractCreature owner, int amt) {
         super();
-        UpdateStats.logger.info("暗箱操作被载入");
+        YibaMod.logger.info("暗箱操作被载入");
         atlas_self = new TextureAtlas(Gdx.files.internal("powers/Selfpowers.atlas"));
         this.name = NAME;
         this.description = DESCRIPTIONS[0]+ amt + DESCRIPTIONS[1];
@@ -51,7 +51,7 @@ public class happyOldHomePower extends AbstractPower {
         this.amount = amt;
         updateDescription();
         //this.img = ImageMaster.loadImage("img/powers/happyOldHomePower.png");
-        UpdateStats.logger.info("载入暗箱操作的图标");
+        YibaMod.logger.info("载入暗箱操作的图标");
         this.region48 = atlas_self.findRegion("48/happyOldHomePower");
         this.region128 = atlas_self.findRegion("128/happyOldHomePower");
         this.type = AbstractPower.PowerType.BUFF;

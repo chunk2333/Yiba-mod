@@ -44,7 +44,7 @@ public class desire extends CustomCard{
         addToBot(new ApplyPowerAction(p, p, new WeakPower(p,4,false)));
         addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, -1), -1));
         addToTop(new ApplyPowerAction(p, p, new DexterityPower(p, -1), -1));
-        //UpdateStats.logger.info("");
+        //YibaMod.logger.info("");
         //AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
         //addToBot(new ApplyPowerAction(p, p, new PoisonPower((AbstractCreature)p, this.magicNumber));
     }

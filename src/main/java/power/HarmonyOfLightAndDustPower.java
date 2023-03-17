@@ -1,6 +1,6 @@
 package power;
 //HarmonyOfLightAndDustPower
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -53,14 +53,14 @@ public class HarmonyOfLightAndDustPower extends AbstractPower {
     }
     public void onUseCard(AbstractCard card, UseCardAction action) {
         //使用卡片时触发
-        UpdateStats.logger.info("和光同尘：当前回合打出的牌数：" + AbstractDungeon.actionManager.cardsPlayedThisTurn.size());
-        UpdateStats.logger.info("和光同尘：已经触发次数：" + this.useNum);
+        YibaMod.logger.info("和光同尘：当前回合打出的牌数：" + AbstractDungeon.actionManager.cardsPlayedThisTurn.size());
+        YibaMod.logger.info("和光同尘：已经触发次数：" + this.useNum);
         if (!card.purgeOnUse && this.amount > 0 && this.useNum <= this.amount){
             this.useNum = this.useNum + 1;
             flash();
             //返回费用
             addToTop(new GainEnergyAction(card.cost));
-            UpdateStats.logger.info("和光同尘触发，返回费用");
+            YibaMod.logger.info("和光同尘触发，返回费用");
         }
     }
 }

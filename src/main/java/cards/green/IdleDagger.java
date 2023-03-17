@@ -2,7 +2,7 @@
 package cards.green;
 
 import basemod.abstracts.CustomCard;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
@@ -37,7 +37,7 @@ public class IdleDagger extends CustomCard{
     public void didDiscard() {
         //每当有牌丢弃时触发
         //将自己从弃牌堆放回手牌
-        UpdateStats.logger.info("闲置匕首抽到手牌效果触发");
+        YibaMod.logger.info("闲置匕首抽到手牌效果触发");
         addToBot(new DiscardToHandAction(this));
     }
     @Override

@@ -2,7 +2,7 @@ package relics;
 //FairyBlessing
 //精灵祝福
 import basemod.abstracts.CustomRelic;
-import basemod.patches.com.megacrit.cardcrawl.screens.stats.StatsScreen.UpdateStats;
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -47,7 +47,7 @@ public class FairyBlessing extends CustomRelic {
         if(damageAmount>p.currentHealth && !isActive ){
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player,this));
-            UpdateStats.logger.info("精灵祝福触发，受到的伤害：" + damageAmount);
+            YibaMod.logger.info("精灵祝福触发，受到的伤害：" + damageAmount);
             this.isActive=true;
             this.grayscale = true;
             return 0;
