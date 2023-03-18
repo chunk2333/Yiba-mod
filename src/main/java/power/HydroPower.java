@@ -24,6 +24,8 @@ import com.badlogic.gdx.files.FileHandle;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import pathes.AbstractPower_Self;
+import relics.abstracrt.ArrayElementRelic;
+import relics.abstracrt.ElementRelic;
 
 public class HydroPower extends AbstractPower {
     public static final String POWER_ID = "HydroPower";
@@ -85,6 +87,11 @@ public class HydroPower extends AbstractPower {
             AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(m, this.owner));
             //m.setMove((byte) 999,AbstractMonster.Intent.STUN);
             AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "粘土", Color.BLUE.cpy()));
+            if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                    r.triggerElement("粘土-水岩");
+                }
+            }
         }
         for(AbstractPower power_:this.owner.powers){
             if(power_.ID == "GeoPower"){
@@ -104,7 +111,7 @@ public class HydroPower extends AbstractPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if(!isActive){
-            YibaMod.logger.info("触发2.0蒸发的未增幅伤害："+ damageAmount );
+            //YibaMod.logger.info("触发2.0蒸发的未增幅伤害："+ damageAmount );
             for(AbstractPower power:this.owner.powers){
                 if(power.ID.equals("GeoPower")){
                     hasGeo = true;
@@ -129,6 +136,11 @@ public class HydroPower extends AbstractPower {
                     addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                     //回复1能量
                     AbstractDungeon.player.gainEnergy(1);
+                    if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                        for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                            r.triggerElement("2.0蒸发");
+                        }
+                    }
                     return damageAmount * 2 + this.mystery;
                 }
             }

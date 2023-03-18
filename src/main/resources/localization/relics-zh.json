@@ -371,5 +371,12 @@
     "DESCRIPTIONS": [
       "非BOSS和精英战斗中的敌人生命减少 #b25% 。"
     ]
+  },
+  "TestTriggerElement": {
+    "NAME": "测试触发元素反应的遗物",
+    "FLAVOR": "java.lang.NullPointerException",
+    "DESCRIPTIONS": [
+      "每次触发元素反应都会输出对应触发的类型。"
+    ]
   }
 }

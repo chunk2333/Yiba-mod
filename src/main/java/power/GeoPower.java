@@ -8,31 +8,28 @@ package power;
 
 
 import YibaMod.YibaMod;
-import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.badlogic.gdx.files.FileHandle;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
-import pathes.AbstractPower_Self;
+import relics.TestTriggerElement;
+import relics.abstracrt.ArrayElementRelic;
+import relics.abstracrt.ElementRelic;
+
+import java.util.ArrayList;
 
 public class GeoPower extends AbstractPower {
     public static final String POWER_ID = "GeoPower";
@@ -60,16 +57,21 @@ public class GeoPower extends AbstractPower {
         this.type = AbstractPower.PowerType.BUFF;
     }
 
+    @Override
     public void atStartOfTurn(){
         //回合开始时
     }
+
+    @Override
     public void updateDescription() {
         this.description = powerStrings.DESCRIPTIONS[0];
     }
+    @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        //使用卡片时触发
+        //使用卡牌时触发
 
     }
+
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if(power.ID=="HydroPower"){
@@ -80,8 +82,14 @@ public class GeoPower extends AbstractPower {
             AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(m, this.owner));
             //m.setMove((byte) 999,AbstractMonster.Intent.STUN);
             AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "粘土", Color.BLUE.cpy()));
+            if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                    r.triggerElement("粘土-岩水");
+                }
+            }
         }
     }
+
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         for(AbstractPower power:this.owner.powers){
@@ -92,9 +100,14 @@ public class GeoPower extends AbstractPower {
                 addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
                 AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "熔岩", Color.GOLD.cpy()));
                 YibaMod.logger.info("触发熔岩：" + damageAmount * 3 + this.mystery);
-                //抽1卡
+                //抽1牌
                 addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                 AbstractDungeon.player.gainEnergy(1);
+                if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                    for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                        r.triggerElement("熔岩-岩火");
+                    }
+                }
                 return damageAmount * 3 + this.mystery;
             }
 

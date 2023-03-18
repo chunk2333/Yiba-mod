@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import power.HydroPower;
 import power.PyroPower;
+import relics.abstracrt.ArrayElementRelic;
+import relics.abstracrt.ElementRelic;
 
 public class AnemoAction extends AbstractGameAction {
     private AbstractPlayer p;
@@ -28,6 +30,11 @@ public class AnemoAction extends AbstractGameAction {
                 }
                 AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(m.drawX, m.drawY, "扩散", Color.GREEN.cpy()));
                 tickDuration();
+                if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                    for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                        r.triggerElement("扩散-火");
+                    }
+                }
                 return;
             }
             if(power.ID.equals("HydroPower")){
@@ -36,6 +43,11 @@ public class AnemoAction extends AbstractGameAction {
                 }
                 AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(m.drawX, m.drawY, "扩散", Color.GREEN.cpy()));
                 tickDuration();
+                if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                    for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                        r.triggerElement("扩散-水");
+                    }
+                }
                 return;
             }
         }

@@ -23,6 +23,8 @@ import com.badlogic.gdx.files.FileHandle;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import pathes.AbstractPower_Self;
+import relics.abstracrt.ArrayElementRelic;
+import relics.abstracrt.ElementRelic;
 
 public class PyroPower extends AbstractPower {
     public static final String POWER_ID = "PyroPower";
@@ -93,6 +95,11 @@ public class PyroPower extends AbstractPower {
         if(this.hasPyro && this.hasHydro){
             YibaMod.logger.info("触发裸蒸发");
             triggerElementreaction();
+            if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                    r.triggerElement("裸蒸发");
+                }
+            }
         }
 
     }
@@ -123,6 +130,11 @@ public class PyroPower extends AbstractPower {
                     //抽1卡
                     addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                     AbstractDungeon.player.gainEnergy(1);
+                    if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                        for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                            r.triggerElement("1.5蒸发");
+                        }
+                    }
                     return (int) (damageAmount * 1.5 + this.mystery);
                 }
 
