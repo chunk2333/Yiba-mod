@@ -299,5 +299,9 @@
   "StepDown": {
     "NAME": "降压",
     "DESCRIPTION": "获得 !M! 点 集中 ，随机失去1点 力量 或 敏捷 。"
+  },
+  "Luck": {
+    "NAME": "运气",
+    "DESCRIPTION": "对随机敌人造成随机至多 !D! 点 至多 !M! 次伤害。"
   }
 }
