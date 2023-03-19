@@ -29,7 +29,7 @@ public class Abstract extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
         int random;
-        random = AbstractDungeon.relicRng.random(1, 3); //随机数
+        random = AbstractDungeon.cardRandomRng.random(1, 3); //随机数
         if (random == 1) {
             //力量 StrengthPower
             addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, -1), -1));
