@@ -286,5 +286,14 @@
   "Scapegoat": {
     "NAME": "火中取栗",
     "DESCRIPTION": "选择一张已 消耗 的牌，将其放入你的手牌。 NL 消耗 。"
+  },
+  "ThunderStorm": {
+    "NAME": "雷雨交加",
+    "DESCRIPTION": "对所有敌人造成你在本场战斗中 生成 过的 闪电 和 冰霜 充能球总数的 !M! 倍伤害。",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [
+      " NL （造成 !D! 点伤害。）",
+      ""
+      ]
   }
 }
