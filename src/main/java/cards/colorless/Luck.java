@@ -38,6 +38,7 @@ public class Luck extends CustomCard {
         int randomDamage;
         int randomMagicNumber;
         randomDamage = AbstractDungeon.cardRandomRng.random(0, this.damage);
+        YibaMod.logger.info("[运气]：最大点伤害：" + this.damage);
         randomMagicNumber = AbstractDungeon.cardRandomRng.random(0, this.magicNumber);
         YibaMod.logger.info("[运气]：造成" + randomDamage + "点" + randomMagicNumber + "次");
         for (int i = 0; i < randomMagicNumber; i++){
