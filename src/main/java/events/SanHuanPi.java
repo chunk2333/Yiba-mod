@@ -2,12 +2,14 @@ package events;
 
 //public class SanHuanPi {
 
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -17,6 +19,8 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import potions.reborn;
+
+import java.util.ArrayList;
 
 public class SanHuanPi extends AbstractImageEvent {
     public static final String ID = "SanHuanPi";
@@ -110,14 +114,23 @@ public class SanHuanPi extends AbstractImageEvent {
                 //添加奖励：遗物-普通
                 AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.COMMON);
                 //初始化卡片奖励
-                RewardItem r = new RewardItem();
+                RewardItem cardReward = new RewardItem();
                 //卡片奖励清空。
-                r.cards.clear();
-                //添加随机三张金卡
-                r.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,random));
-                r.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,random));
-                r.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,random));
-                AbstractDungeon.getCurrRoom().addCardReward(r);
+                cardReward.cards.clear();
+                //添加金卡
+                AbstractPlayer player = AbstractDungeon.player;
+
+                int numCards = 3;
+                for (AbstractRelic r : player.relics)
+                    numCards = r.changeNumberOfCardsInReward(numCards);
+                if (ModHelper.isModEnabled("Binary"))
+                    numCards--;
+                YibaMod.logger.info("掉落卡牌数：" + numCards);
+                for (int i = 0; i < numCards; i++) {
+                    cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,random));
+                }
+
+                AbstractDungeon.getCurrRoom().addCardReward(cardReward);
                 //AbstractDungeon.getCurrRoom().addCardToRewards();
                 //置房间为完成
                 (AbstractDungeon.getCurrRoom()).phase = AbstractRoom.RoomPhase.COMPLETE;
