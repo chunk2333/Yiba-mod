@@ -7,8 +7,11 @@
   ],
   "description": "添加了N个遗物、卡牌、事件、药水、角色。由依巴与天宇共同完成。看起来bug很少。",
   "dependencies": [
-    "basemod"
+    "basemod",
+    "stslib"
   ],
   "version": "1.1.4",
-  "sts_version": "12-18-2022"
+  "credits": "图一乐即可，玩得开心才是最重要的！",
+  "sts_version": "12-18-2022",
+  "mts_version": "3.24.0"
 }
