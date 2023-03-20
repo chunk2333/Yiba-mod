@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 public class DeadLeaves extends CustomRelic {
     public static final String ID = "DeadLeaves";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/DeadLeaves.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/DeadLeaves.png";
 
     public DeadLeaves() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.BOSS, LandingSound.HEAVY);
