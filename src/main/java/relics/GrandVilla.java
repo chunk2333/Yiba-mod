@@ -63,7 +63,6 @@ public class GrandVilla extends CustomRelic {
                 upgradableCards.add(c);
         }
         Collections.shuffle(upgradableCards, new Random(AbstractDungeon.miscRng.randomLong()));
-        //Collections.shuffle(upgradableCards, new Random(AbstractDungeon.miscRng.randomLong()));
         if (!upgradableCards.isEmpty())
             if (upgradableCards.size() == 1) {
                 upgradableCards.get(0).upgrade();
