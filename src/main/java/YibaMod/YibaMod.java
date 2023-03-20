@@ -306,7 +306,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         //BaseMod.addRelic(new TestTriggerElement(), RelicType.SHARED); //元素反应测试遗物
         BaseMod.addRelic(new DeadLeaves(), RelicType.SHARED); //腐朽枯叶
         BaseMod.addRelic(new SolarPanels(), RelicType.BLUE); //太阳能电路板
-        BaseMod.addRelic(new RedPants(), RelicType.RED); //太阳能电路板
+        BaseMod.addRelic(new RedPants(), RelicType.RED); //红裤衩
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批

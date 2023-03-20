@@ -61,11 +61,6 @@ public class HomoHead extends CustomRelic {
             addToBot(new SFXAction(YiBaHelper.MakeSoundPath("HomoVoice")));
             addToBot(new TalkAction(true, "哼！哼！哼！啊啊啊啊啊啊啊啊啊啊啊啊！！！！", 1.0F, 2.0F));
         }
-        if(random_play>5 && random_play<=10){
-            //s.play("HomoVoice",true);
-            addToBot(new SFXAction(YiBaHelper.MakeSoundPath("HomoVoice")));
-            addToBot(new TalkAction(true, "哼！哼！哼！啊啊啊啊啊啊啊啊啊啊啊啊！！！！", 1.0F, 2.0F));
-        }
         //往抽牌堆里塞一张“食雪汉”诅咒
         addToBot(new MakeTempCardInDrawPileAction(card, 1, true, true));
 
