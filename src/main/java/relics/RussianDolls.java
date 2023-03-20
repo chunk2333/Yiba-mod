@@ -1,5 +1,6 @@
 package relics;
 //俄罗斯套娃
+import Tools.YiBaHelper;
 import basemod.abstracts.CustomRelic;
 import YibaMod.YibaMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
@@ -25,7 +26,8 @@ public class RussianDolls extends CustomRelic {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.FLAT);
         wasLoad = false;
         isGive = false;
-        YibaMod.logger.info("构造函数被触发是否已载入：" + wasLoad + "是否可额外获得!" + isGive);
+        //YibaMod.logger.info("构造函数被触发是否已载入：" + wasLoad + "是否可额外获得!" + isGive);
+        YibaMod.logger.info("[RussianDolls]:spireTogether: " + YiBaHelper.hasMod("spireTogether"));
     }
 
     @SpirePatch(cls = "com.megacrit.cardcrawl.dungeons.AbstractDungeon", method = "loadSeeds")
@@ -118,6 +120,11 @@ public class RussianDolls extends CustomRelic {
     @Override
     public void onVictory() {
 
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return !YiBaHelper.hasMod("spireTogether");
     }
 
     @Override
