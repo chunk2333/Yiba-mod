@@ -108,30 +108,37 @@ repeat: none
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/ReturnGoodForEvilPower
+48/RedPantsPower
   rotate: false
   xy: 0, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/ThePeaceOfMindPower
+48/ReturnGoodForEvilPower
   rotate: false
   xy: 48, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TimeStop
+48/ThePeaceOfMindPower
   rotate: false
   xy: 96, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TreacherousPower
+48/TimeStop
   rotate: false
   xy: 144, 144
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+48/TreacherousPower
+  rotate: false
+  xy: 192, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
@@ -241,30 +248,37 @@ repeat: none
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/ReturnGoodForEvilPower
+128/RedPantsPower
   rotate: false
   xy: 128, 1088
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/ThePeaceOfMindPower
+128/ReturnGoodForEvilPower
   rotate: false
   xy: 0, 1216
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/TimeStop
+128/ThePeaceOfMindPower
   rotate: false
   xy: 128, 1216
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/TreacherousPower
+128/TimeStop
   rotate: false
   xy: 0, 1344
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/TreacherousPower
+  rotate: false
+  xy: 128, 1344
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
