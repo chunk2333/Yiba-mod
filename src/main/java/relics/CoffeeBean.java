@@ -24,6 +24,7 @@ public class CoffeeBean extends CustomRelic {
     public void atBattleStart() {
         AbstractPlayer p = AbstractDungeon.player;
         //在战斗开始时触发
+        flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this)); //头顶出现遗物特效
         //给予亢奋能力
         addToBot(new ApplyPowerAction(p, p, new CoffeeBeanPower(p, 1), 1));
