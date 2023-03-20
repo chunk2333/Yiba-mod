@@ -381,9 +381,23 @@
   },
   "DeadLeaves": {
     "NAME": "腐朽枯叶",
-    "FLAVOR": "还木有描述捏...",
+    "FLAVOR": "传闻是某颗参天大树上腐朽的树叶。",
     "DESCRIPTIONS": [
       "每当有卡牌 #y消耗 时，获得 [E] 。"
+    ]
+  },
+  "SolarPanels": {
+    "NAME": "太阳能电路板",
+    "FLAVOR": "塔里有太阳？",
+    "DESCRIPTIONS": [
+      "回合结束时回复 #b2 生命。"
+    ]
+  },
+  "RedPants": {
+    "NAME": "红裤衩",
+    "FLAVOR": "只是一条红色的苦茶子。",
+    "DESCRIPTIONS": [
+      "免疫一切负面效果。"
     ]
   }
 }
