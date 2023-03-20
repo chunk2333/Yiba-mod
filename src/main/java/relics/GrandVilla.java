@@ -1,11 +1,14 @@
 package relics;
 //大别墅
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
@@ -82,20 +85,26 @@ public class GrandVilla extends CustomRelic {
                 AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
             }
         //初始化卡片奖励
-        RewardItem r = new RewardItem();
+        RewardItem cardReward = new RewardItem();
         //卡片奖励清空。
-        r.cards.clear();
-        //添加随机三张金卡
-        r.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,AbstractDungeon.relicRng));
-        r.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,AbstractDungeon.relicRng));
-        r.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,AbstractDungeon.relicRng));
+        cardReward.cards.clear();
+        //添加金卡
+        AbstractPlayer player = AbstractDungeon.player;
 
-
+        int numCards = 3;
+        for (AbstractRelic r : player.relics)
+            numCards = r.changeNumberOfCardsInReward(numCards);
+        if (ModHelper.isModEnabled("Binary"))
+            numCards--;
+        YibaMod.logger.info("掉落卡牌数：" + numCards);
+        for (int i = 0; i < numCards; i++) {
+            cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,AbstractDungeon.relicRng));
+        }
         AbstractDungeon.player.increaseMaxHp(10, true);
         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
         AbstractDungeon.getCurrRoom().addPotionToRewards(PotionHelper.getRandomPotion(AbstractDungeon.miscRng));
         AbstractDungeon.getCurrRoom().addPotionToRewards(PotionHelper.getRandomPotion(AbstractDungeon.miscRng));
-        AbstractDungeon.getCurrRoom().addCardReward(r);
+        AbstractDungeon.getCurrRoom().addCardReward(cardReward);
         AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[1]);
         (AbstractDungeon.getCurrRoom()).rewardPopOutTimer = 0.0F;
 
