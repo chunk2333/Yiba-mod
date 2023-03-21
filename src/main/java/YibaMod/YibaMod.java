@@ -175,10 +175,19 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     private void loadCardsToAdd() {
         //将自定义的卡牌添加到这里
         this.cardsToAdd.clear();
-        this.cardsToAdd.add(new Strike_Seles());
-        this.cardsToAdd.add(new Defend_Seles());
-        this.cardsToAdd.add(new SavePower());
-        this.cardsToAdd.add(new Printf());
+        //---------------魔女卡-----------------------
+        this.cardsToAdd.add(new Strike_Seles());//基础打击
+        this.cardsToAdd.add(new Defend_Seles());//基础防御
+        this.cardsToAdd.add(new FireBall());//火球术
+        this.cardsToAdd.add(new WaterWaveTechnique());//水波术
+        this.cardsToAdd.add(new MeleeAttack());//近身攻击
+        this.cardsToAdd.add(new Explosion());//爆裂魔法
+        this.cardsToAdd.add(new Clumsy_My());//弄巧成拙
+        //this.cardsToAdd.add(new SavePower());
+        //this.cardsToAdd.add(new Printf());
+
+        //---------------魔女卡-----------------------
+
         //this.cardsToAdd.add(new yiba());
         //this.cardsToAdd.add(new LeiPu());//雷普
         this.cardsToAdd.add(new Goodtime());//好时代来临力
