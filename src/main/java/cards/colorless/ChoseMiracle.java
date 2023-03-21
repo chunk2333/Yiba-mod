@@ -1,5 +1,5 @@
 package cards.colorless;
-
+//天若有情
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;

@@ -1,10 +1,5 @@
-//package cards;
-
-//public class ConjuredHealth {
-
-//皮糙肉厚
-
 package cards.colorless;
+//皮糙肉厚
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
