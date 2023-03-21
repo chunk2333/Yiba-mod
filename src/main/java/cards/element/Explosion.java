@@ -13,9 +13,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AngryPower;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import pathes.AbstractCardEnum;
 import power.GeoPower;
+import power.NextTurnCanNotPlayAttackCardPower;
 
 public class Explosion extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Explosion");
@@ -49,6 +51,7 @@ public class Explosion extends CustomCard {
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
 
         //给予下回合开始时触发丢网效果
+        addToTop(new ApplyPowerAction(p, p, new NextTurnCanNotPlayAttackCardPower(p), 1));
 
 
 
