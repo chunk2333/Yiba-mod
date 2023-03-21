@@ -17,7 +17,7 @@ import pathes.ThmodClassEnum;
 import pathes.AbstractCardEnum;
 import java.util.ArrayList;
 
-public class seles extends CustomPlayer {
+public class Witch extends CustomPlayer {
     //初始能量
     private static final int ENERGY_PER_TURN = 3;
     //以下图片依次作用为[篝火休息处的角色背影2，篝火休息处的角色背影1，角色死亡后倒下的图片，角色平常站立时的图片]
@@ -38,7 +38,7 @@ public class seles extends CustomPlayer {
     //返回一个颜色
     public static final Color SILVER = CardHelper.getColor(200, 200, 200);
 
-    public seles(String name) {
+    public Witch(String name) {
         //构造方法，初始化参数
         super(name, ThmodClassEnum.Seles_CLASS, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, (String)null, (String)null);
         this.dialogX = this.drawX + 0.0F * Settings.scale;
@@ -56,11 +56,12 @@ public class seles extends CustomPlayer {
         retVal.add("Strike_Seles");
         retVal.add("Strike_Seles");
         retVal.add("Strike_Seles");
+        retVal.add("Strike_Seles");
         retVal.add("Defend_Seles");
         retVal.add("Defend_Seles");
         retVal.add("Defend_Seles");
         retVal.add("Defend_Seles");
-        retVal.add("Printf");
+        //retVal.add("Printf");
         return retVal;
     }
 
@@ -79,8 +80,8 @@ public class seles extends CustomPlayer {
         String title="";
         String flavor="";
         if (Settings.language == Settings.GameLanguage.ZHS) {
-            title = "莎莉丝";
-            flavor = "初出茅庐的程序员， NL 每天要面对各种数不清的加班和改需求。";
+            title = "魔女";
+            flavor = "来自符文之地的天才魔女，前来攀登这座高塔，其可以运用元素之力造成伤害。";
         } else if (Settings.language == Settings.GameLanguage.ZHT) {
             //当设定为中国台湾省，title和flavor为繁体描述
         } else {
@@ -96,11 +97,11 @@ public class seles extends CustomPlayer {
         //应该是进游戏后左上角的角色名
         String title="";
         if (Settings.language == Settings.GameLanguage.ZHS) {
-            title = "莎莉丝";
+            title = "魔女";
         } else if (Settings.language == Settings.GameLanguage.ZHT) {
-            title = "莎莉絲";
+            title = "魔女";
         } else {
-            title = "Seles";
+            title = "魔女";
         }
 
         return title;
@@ -154,18 +155,18 @@ public class seles extends CustomPlayer {
     public String getLocalizedCharacterName() {
         String char_name;
         if (Settings.language == Settings.GameLanguage.ZHS) {
-            char_name = "莎莉丝";
+            char_name = "魔女";
         } else if (Settings.language == Settings.GameLanguage.ZHT) {
-            char_name = "莎莉絲";
+            char_name = "魔女";
         } else {
-            char_name = "Seles";
+            char_name = "魔女";
         }
         return char_name;
     }
 
     @Override
     public AbstractPlayer newInstance() {
-        return (AbstractPlayer)new seles(this.name);
+        return new Witch(this.name);
     }
 
     @Override

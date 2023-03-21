@@ -12,7 +12,7 @@ import cards.element.*;
 import cards.green.*;
 import cards.purple.*;
 import cards.red.*;
-import characters.seles;
+import characters.Witch;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -78,7 +78,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     @Override
     public void receiveEditCharacters() {
         //添加角色到MOD中
-        BaseMod.addCharacter(new seles("Seles"), MY_CHARACTER_BUTTON, MARISA_PORTRAIT, ThmodClassEnum.Seles_CLASS);
+        BaseMod.addCharacter(new Witch("Witch"), MY_CHARACTER_BUTTON, MARISA_PORTRAIT, ThmodClassEnum.Seles_CLASS);
     }
 
     //初始化整个MOD,一定不能删
