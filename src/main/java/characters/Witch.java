@@ -61,6 +61,8 @@ public class Witch extends CustomPlayer {
         retVal.add("Defend_Seles");
         retVal.add("Defend_Seles");
         retVal.add("Defend_Seles");
+        retVal.add("FireBall");
+        retVal.add("WaterWaveTechnique");
         //retVal.add("Printf");
         return retVal;
     }
