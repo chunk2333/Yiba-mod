@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class SolarPanels extends CustomRelic {
+
     public static final String ID = "SolarPanels";
 
     private static final String IMG = "img/relics/SolarPanels.png";

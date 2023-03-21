@@ -12,17 +12,15 @@ import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.SpotlightPlayerEffect;
 
 public class AcquaintFate extends CustomRelic {
+
     public static final String ID = "AcquaintFate";
+
     private static final String IMG = "img/relics/AcquaintFate.png";
+
     private static final String IMG_OTL = "img/relics/outline/IntertwinedFate.png";
-    //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
+
     public AcquaintFate() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.UNCOMMON, LandingSound.HEAVY);
-    }
-
-    @Override
-    public void atTurnStart(){
-        //每回合开始时触发
     }
 
     @Override
@@ -33,27 +31,19 @@ public class AcquaintFate extends CustomRelic {
         AbstractPlayer p = AbstractDungeon.player;
         if(random<=6){
             flash();
+            //头顶遗物特效
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             //名利双收掉金币动画
             AbstractDungeon.effectList.add(new RainingGoldEffect(333, true));
             AbstractDungeon.effectsQueue.add(new SpotlightPlayerEffect());
+            //获得金币
             p.gainGold(333);
         }
     }
 
     @Override
-    public void onVictory() {
-        //在胜利时触发
-    }
-
-    @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
-    }
-
-    @Override
-    //拾取时触发
-    public void onEquip() {
     }
 
     @Override

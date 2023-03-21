@@ -62,12 +62,8 @@ public class Lance extends CustomRelic {
     }
 
     @Override
-    public void onEquip() {
-        //拾取时触发
-
-    }
-    @Override
     public AbstractRelic makeCopy() {
         return new Lance();
     }
+
 }

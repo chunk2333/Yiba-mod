@@ -1,5 +1,5 @@
 package relics;
-
+//祭礼残章
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-//祭礼残章
 public class SacrificialFragments extends CustomRelic {
+
     public static final String ID = "SacrificialFragments";
 
     private static final String IMG = "img/relics/SacrificialFragments.png";
@@ -27,7 +27,6 @@ public class SacrificialFragments extends CustomRelic {
     public void atBattleStart() {
         this.isActive = false;
         beginLongPulse(); //长时间闪烁
-
     }
 
     @Override
@@ -66,4 +65,5 @@ public class SacrificialFragments extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new SacrificialFragments();
     }
+
 }

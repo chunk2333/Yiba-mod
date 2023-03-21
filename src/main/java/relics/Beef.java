@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class Beef extends CustomRelic {
+
     public static final String ID = "beef";
 
     private static final String IMG = "img/relics/beef.png";
@@ -18,11 +19,6 @@ public class Beef extends CustomRelic {
 
     public Beef() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.SPECIAL, AbstractRelic.LandingSound.CLINK);
-    }
-
-    @Override
-    public void atBattleStart() {
-        //在战斗开始时触发
     }
 
     @Override
@@ -36,21 +32,13 @@ public class Beef extends CustomRelic {
     }
 
     @Override
-    public void onVictory() {
-        //在胜利时触发
-    }
-
-    @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
 
     @Override
-    public void onEquip() {
-        //拾取时触发
-    }
-    @Override
     public AbstractRelic makeCopy() {
         return new Beef();
     }
+
 }

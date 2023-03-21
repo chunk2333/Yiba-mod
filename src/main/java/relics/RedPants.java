@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import power.RedPantsPower;
 
 public class RedPants extends CustomRelic {
+
     public static final String ID = "RedPants";
 
     private static final String IMG = "img/relics/RedPants.png";
@@ -42,4 +43,5 @@ public class RedPants extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new RedPants();
     }
+
 }

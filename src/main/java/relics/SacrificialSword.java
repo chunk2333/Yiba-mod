@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class SacrificialSword extends CustomRelic {
+
     public static final String ID = "SacrificialSword";
 
     private static final String IMG = "img/relics/SacrificialSword.png";
@@ -26,7 +27,6 @@ public class SacrificialSword extends CustomRelic {
     public void atBattleStart() {
         this.isActive = false;
         beginLongPulse(); //长时间闪烁
-
     }
 
     @Override
@@ -65,4 +65,5 @@ public class SacrificialSword extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new SacrificialSword();
     }
+
 }

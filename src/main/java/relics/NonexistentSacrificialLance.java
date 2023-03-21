@@ -1,6 +1,5 @@
 package relics;
 //不曾存在的祭礼枪
-//NonexistentSacrificialLance
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -13,21 +12,17 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class NonexistentSacrificialLance extends CustomRelic {
+
     public static final String ID = "NonexistentSacrificialLance";
+
     private static final String IMG = "img/relics/NonexistentSacrificialLance.png";
+
     private static final String IMG_OTL = "img/relics/outline/NonexistentSacrificialLance.png";
-    private boolean isActive;
-    //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
+
     public NonexistentSacrificialLance() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.HEAVY);
     }
-    @Override
-    public void atBattleStart() {
-        //在战斗开始时触发
-    }
-    @Override
-    public void atTurnStart(){
-    }
+
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         //在用户使用牌时触发
@@ -52,20 +47,15 @@ public class NonexistentSacrificialLance extends CustomRelic {
             AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
         }
     }
-    @Override
-    public void onVictory() {
-        //在胜利时触发
-    }
+
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
-    @Override
-    public void onEquip() {
-        //拾取时触发
-    }
+
     @Override
     public AbstractRelic makeCopy() {
         return new NonexistentSacrificialLance();
     }
+
 }

@@ -1,11 +1,8 @@
 package relics;
 //悲伤小花
 import basemod.abstracts.CustomRelic;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,6 +10,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import YibaMod.YibaMod;
 
 public class Fafa extends CustomRelic {
+
     public static final String ID = "fafa";
 
     private static final String IMG = "img/relics/fafa.png";
@@ -23,11 +21,6 @@ public class Fafa extends CustomRelic {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.BOSS, LandingSound.HEAVY);
     }
 
-    @Override
-    public void atBattleStart() {
-        //在战斗开始时触发
-
-    }
     @Override
     public void atTurnStart(){
         //每回合开始时触发
@@ -41,10 +34,7 @@ public class Fafa extends CustomRelic {
             this.counter=0;
         }
     }
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //在用户使用牌时触发
-    }
+
     @Override
     public void onVictory() {
         //在胜利时触发
@@ -72,4 +62,5 @@ public class Fafa extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new Fafa();
     }
+
 }

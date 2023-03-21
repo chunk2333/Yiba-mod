@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class WitchsScorchingHat extends CustomRelic {
+
     public static final String ID = "WitchsScorchingHat";
 
     private static final String IMG = "img/relics/WitchsScorchingHat.png";
@@ -44,4 +45,5 @@ public class WitchsScorchingHat extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new WitchsScorchingHat();
     }
+
 }

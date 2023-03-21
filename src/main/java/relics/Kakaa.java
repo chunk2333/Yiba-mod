@@ -5,9 +5,7 @@ import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -15,27 +13,17 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
-public class kakaa extends CustomRelic {
+public class Kakaa extends CustomRelic {
     public static final String ID = "Kakaa";
 
     private static final String IMG = "img/relics/kakaa.png";
 
     private static final String IMG_OTL = "img/relics/outline/kakaa.png";
 
-    public kakaa() {
+    public Kakaa() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, AbstractRelic.LandingSound.CLINK);
     }
 
-    @Override
-    public void atBattleStart() {
-        //在战斗开始时触发
-    }
-
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //在用户使用牌时触发
-
-    }
     @Override
     public void onBloodied() {
         AbstractPlayer p = AbstractDungeon.player;
@@ -55,6 +43,7 @@ public class kakaa extends CustomRelic {
     public void onLoseHp(int damageAmount) {
         onBloodied();
     }
+
     @Override
     public void onNotBloodied(){
         onBloodied();
@@ -75,22 +64,13 @@ public class kakaa extends CustomRelic {
     }
 
     @Override
-    public void onVictory() {
-        //在胜利时触发
-    }
-
-    @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
 
     @Override
-    public void onEquip() {
-        //拾取时触发
+    public AbstractRelic makeCopy() {
+        return new Kakaa();
     }
 
-    @Override
-    public AbstractRelic makeCopy() {
-        return new kakaa();
-    }
 }

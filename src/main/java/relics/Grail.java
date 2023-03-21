@@ -3,7 +3,6 @@ package relics;
 import basemod.abstracts.CustomRelic;
 import cards.colorless.ChoseMiracle;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.optionCards.BecomeAlmighty;
@@ -15,8 +14,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import java.util.ArrayList;
 
-
 public class Grail extends CustomRelic {
+
     public static final String ID = "Grail";
 
     private static final String IMG = "img/relics/Grail.png";
@@ -42,28 +41,13 @@ public class Grail extends CustomRelic {
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //在用户使用牌时触发
-    }
-
-    @Override
-    public void onVictory() {
-        //在胜利时触发
-    }
-
-    @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
-    }
-
-    @Override
-    public void onEquip() {
-        //拾取时触发
-
     }
 
     @Override
     public AbstractRelic makeCopy() {
         return new Grail();
     }
+
 }

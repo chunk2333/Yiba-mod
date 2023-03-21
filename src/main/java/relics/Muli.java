@@ -1,8 +1,6 @@
 package relics;
 //牡蛎
 import basemod.abstracts.CustomRelic;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -27,8 +25,9 @@ public class Muli extends CustomRelic {
     @Override
     public void atBattleStart() {
         //在战斗开始时触发
-        boolean isActive = false;
+        this.isActive = false;
     }
+
     @Override
     public void atTurnStart(){
         //每回合开始时触发
@@ -45,12 +44,8 @@ public class Muli extends CustomRelic {
                 isActive=true;
             }
         }
+    }
 
-    }
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //在用户使用牌时触发
-    }
     @Override
     public void onVictory() {
         //在胜利时触发
@@ -69,12 +64,8 @@ public class Muli extends CustomRelic {
     }
 
     @Override
-    public void onUnequip() {
-        //丢弃时触发
-    }
-
-    @Override
     public AbstractRelic makeCopy() {
         return new Muli();
     }
+
 }

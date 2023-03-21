@@ -1,5 +1,5 @@
 package relics;
-
+//祭礼弓
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class SacrificialBow extends CustomRelic {
+
     public static final String ID = "SacrificialBow";
 
     private static final String IMG = "img/relics/SacrificialBow.png";
@@ -26,7 +27,6 @@ public class SacrificialBow extends CustomRelic {
     public void atBattleStart() {
         this.isActive = false;
         beginLongPulse(); //长时间闪烁
-
     }
 
     @Override
@@ -52,7 +52,6 @@ public class SacrificialBow extends CustomRelic {
     public void onVictory() {
         this.isActive = false;
         this.grayscale = false;
-
     }
 
     @Override
@@ -65,4 +64,5 @@ public class SacrificialBow extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new SacrificialBow();
     }
+
 }

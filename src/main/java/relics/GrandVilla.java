@@ -2,7 +2,6 @@ package relics;
 //大别墅
 import YibaMod.YibaMod;
 import basemod.abstracts.CustomRelic;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -14,38 +13,20 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-
 public class GrandVilla extends CustomRelic {
+
     public static final String ID = "GrandVilla";
 
     private static final String IMG = "img/relics/GrandVilla.png";
 
     private static final String IMG_OTL = "img/relics/outline/GrandVilla.png";
 
-    public boolean isUse = false;
-
     public GrandVilla() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.BOSS, LandingSound.SOLID);
-    }
-
-    @Override
-    public void atBattleStart() {
-
-    }
-
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //在用户使用牌时触发
-    }
-
-    @Override
-    public void onVictory() {
-        //在胜利时触发
     }
 
     @Override
@@ -108,8 +89,10 @@ public class GrandVilla extends CustomRelic {
         (AbstractDungeon.getCurrRoom()).rewardPopOutTimer = 0.0F;
 
     }
+
     @Override
     public AbstractRelic makeCopy() {
         return new GrandVilla();
     }
+
 }

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class BrewingStand extends CustomRelic {
+
     public static final String ID = "BrewingStand";
 
     private static final String IMG = "img/relics/BrewingStand.png";
@@ -15,6 +16,7 @@ public class BrewingStand extends CustomRelic {
     public BrewingStand() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.COMMON, LandingSound.CLINK);
     }
+
     @Override
     public void atBattleStart() {
         this.counter += 1;
@@ -44,4 +46,5 @@ public class BrewingStand extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new BrewingStand();
     }
+
 }

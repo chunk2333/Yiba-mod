@@ -44,21 +44,6 @@ public class BottledCultistMask extends CustomRelic {
     }
 
     @Override
-    public void atTurnStart(){
-        //每回合开始时触发
-    }
-
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //在用户使用牌时触发
-    }
-
-    @Override
-    public void onVictory() {
-        //在胜利时触发
-    }
-
-    @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }

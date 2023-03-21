@@ -1,12 +1,7 @@
 package relics;
 //琥珀
 import basemod.abstracts.CustomRelic;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -20,9 +15,6 @@ public class Amber extends CustomRelic {
     private static final String IMG = "img/relics/Amber.png";
 
     private static final String IMG_OTL = "img/relics/outline/Amber.png";
-
-    private float MODIFIER_AMT = 0.25F;
-
 
     public Amber() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.UNCOMMON, LandingSound.CLINK);
@@ -44,8 +36,9 @@ public class Amber extends CustomRelic {
         if (!isBoss && !isElite) {
             flash();
             for (AbstractMonster m : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
-                if (m.currentHealth > (int)(m.maxHealth * (1.0F - this.MODIFIER_AMT))) {
-                    m.currentHealth = (int)(m.maxHealth * (1.0F - this.MODIFIER_AMT));
+                float MODIFIER_AMT = 0.25F;
+                if (m.currentHealth > (int)(m.maxHealth * (1.0F - MODIFIER_AMT))) {
+                    m.currentHealth = (int)(m.maxHealth * (1.0F - MODIFIER_AMT));
                     m.healthBarUpdatedEvent();
                 }
             }
@@ -58,15 +51,9 @@ public class Amber extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-
     @Override
     public boolean canSpawn() {
         return (Settings.isEndless || AbstractDungeon.floorNum <= 48);
-    }
-
-    @Override
-    public void onEquip() {
-        //拾取时触发
     }
 
     @Override

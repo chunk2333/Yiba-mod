@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class DragonTooth extends CustomRelic {
+
     public static final String ID = "DragonTooth";
 
     private static final String IMG = "img/relics/DragonTooth.png";
@@ -47,4 +48,5 @@ public class DragonTooth extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new DragonTooth();
     }
+
 }

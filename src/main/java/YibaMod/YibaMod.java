@@ -251,10 +251,10 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     public void receiveEditRelics() {
         //将自定义的遗物添加到这里
         BaseMod.addRelicToCustomPool(new cLanguageProgramBegin(), AbstractCardEnum.Seles_COLOR);
-        BaseMod.addRelic(new kakaa(), RelicType.SHARED);    //kakaa镰刀
+        BaseMod.addRelic(new Kakaa(), RelicType.SHARED);    //kakaa镰刀
         BaseMod.addRelic(new Beef(), RelicType.SHARED);     //牛排
         BaseMod.addRelic(new Homa(), RelicType.SHARED);     //护摩之杖
-        BaseMod.addRelic(new hedron20(), RelicType.SHARED); //符文20面体
+        BaseMod.addRelic(new Hedron20(), RelicType.SHARED); //符文20面体
         BaseMod.addRelic(new Widsith(), RelicType.SHARED);  //流浪乐章
         BaseMod.addRelic(new Fafa(), RelicType.SHARED);  //悲伤小花
         BaseMod.addRelic(new Muli(), RelicType.SHARED);  //鸭蛋

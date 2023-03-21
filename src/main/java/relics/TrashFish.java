@@ -1,5 +1,5 @@
 package relics;
-//杂鱼
+//杂~鱼~
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.powers.AngryPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class TrashFish extends CustomRelic {
+
     public static final String ID = "TrashFish";
 
     private static final String IMG = "img/relics/TrashFish.png";
@@ -19,6 +20,7 @@ public class TrashFish extends CustomRelic {
     public TrashFish() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.UNCOMMON, LandingSound.HEAVY);
     }
+
     @Override
     public void atBattleStart() {
         //战斗开始给予三层生气
@@ -38,4 +40,5 @@ public class TrashFish extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new TrashFish();
     }
+
 }

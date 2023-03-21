@@ -1,15 +1,9 @@
-
-
-//LuLu
-
 package relics;
-
+//LuLu
 import power.MyFlightPower;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -19,12 +13,17 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 
 public class LuLu extends CustomRelic {
+
     public static final String ID = "LuLu";
+
     private static final String IMG = "img/relics/LuLu.png";
+
     private static final String IMG_OTL = "img/relics/outline/LuLu.png";
+
     private boolean used;
+
     private boolean getInShop;
-    //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
+
     public LuLu() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.SPECIAL, LandingSound.CLINK);
         this.used = false;
@@ -42,32 +41,26 @@ public class LuLu extends CustomRelic {
         //给予自身1层飞行
         addToTop(new ApplyPowerAction(p, p, new MyFlightPower(p, 1), 1));
     }
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //在用户使用牌时触发
 
-    }
-    @Override
-    public void onVictory() {
-        //在胜利时触发:清楚激活
-
-    }
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
+
     @Override
-    //拾取时触发
     public void onEquip() {
+        //拾取时触发
         AbstractPlayer p = AbstractDungeon.player;
         //回满血
         p.heal(p.maxHealth);
     }
+
     @Override
     public AbstractRelic makeCopy() {
         return new LuLu();
     }
 
+    @Override
     public void update() {
         super.update();
         if (AbstractDungeon.currMapNode != null &&
@@ -79,4 +72,5 @@ public class LuLu extends CustomRelic {
             this.getInShop = false;
         }
     }
+
 }

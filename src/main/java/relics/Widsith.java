@@ -2,8 +2,6 @@ package relics;
 //流浪乐章
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,6 +12,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import YibaMod.YibaMod;
 
 public class Widsith extends CustomRelic {
+
     public static final String ID = "widsith";
 
     private static final String IMG = "img/relics/widsith.png";
@@ -49,32 +48,13 @@ public class Widsith extends CustomRelic {
     }
 
     @Override
-    public void atTurnStart(){
-        //每回合开始时触发
-    }
-
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //在用户使用牌时触发
-    }
-
-    @Override
-    public void onVictory() {
-        //在胜利时触发
-    }
-
-    @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
-    }
-
-    @Override
-    public void onEquip() {
-        //拾取时触发
     }
 
     @Override
     public AbstractRelic makeCopy() {
         return new Widsith();
     }
+
 }

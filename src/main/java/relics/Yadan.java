@@ -1,7 +1,6 @@
 package relics;
 //鸭蛋
 import basemod.abstracts.CustomRelic;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,26 +17,6 @@ public class Yadan extends CustomRelic {
 
     public Yadan() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.COMMON, LandingSound.MAGICAL);
-    }
-
-    @Override
-    public void atBattleStart() {
-        //在战斗开始时触发
-    }
-
-    @Override
-    public void atTurnStart(){
-        //每回合开始时触发
-    }
-
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //在用户使用牌时触发
-    }
-
-    @Override
-    public void onVictory() {
-        //在胜利时触发
     }
 
     @Override
@@ -64,10 +43,10 @@ public class Yadan extends CustomRelic {
 
     @Override
     public void onObtainCard(AbstractCard c) {
-        //获得卡时
-        //判断卡片的颜色，若是无色，将其升级
+        //获得卡牌时
+        //判断卡牌的颜色，若是无色，将其升级
         if (c.color == AbstractCard.CardColor.COLORLESS && c.canUpgrade() && !c.upgraded)
-            //卡片升级
+            //卡牌升级
             c.upgrade();
     }
 
@@ -78,12 +57,8 @@ public class Yadan extends CustomRelic {
     }
 
     @Override
-    public void onUnequip() {
-        //丢弃时触发
-    }
-
-    @Override
     public AbstractRelic makeCopy() {
         return new Yadan();
     }
+
 }

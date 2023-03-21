@@ -37,4 +37,5 @@ public class DeadLeaves extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new DeadLeaves();
     }
+
 }

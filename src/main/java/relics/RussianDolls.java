@@ -111,17 +111,6 @@ public class RussianDolls extends CustomRelic {
 
     }
 
-
-    @Override
-    public void atBattleStart() {
-
-    }
-
-    @Override
-    public void onVictory() {
-
-    }
-
     @Override
     public boolean canSpawn() {
         return !YiBaHelper.hasMod("spireTogether");
@@ -142,4 +131,5 @@ public class RussianDolls extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new RussianDolls();
     }
+
 }

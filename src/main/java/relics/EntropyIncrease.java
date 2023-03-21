@@ -5,8 +5,6 @@ import YibaMod.YibaMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -42,9 +40,6 @@ public class EntropyIncrease extends CustomRelic{
             }
         }
     }
-    public void myFlash(){
-        flash();
-    }
 
     @Override
     public void atBattleStart() {
@@ -65,31 +60,13 @@ public class EntropyIncrease extends CustomRelic{
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //在用户使用牌时触发
-    }
-
-    @Override
-    public void onVictory() {
-        //在胜利时触发
-    }
-
-    @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
 
     @Override
-    //拾取时触发
-    public void onEquip() {
-        //拾取时触发
-    }
-    @Override
-    public void onUnequip() {
-        //丢弃时触发
-    }
-    @Override
     public AbstractRelic makeCopy() {
         return new EntropyIncrease();
     }
+
 }

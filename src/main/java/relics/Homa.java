@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
 public class Homa extends CustomRelic {
+
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("HomoRelicActiveText");
 
     public static final String ID = "homa";
@@ -25,7 +26,6 @@ public class Homa extends CustomRelic {
 
     private boolean isActive = false;
 
-    //调用父类的构造方法，传参为super(遗物ID,遗物全图，遗物白底图，遗物稀有度，获得遗物时的音效)
     public Homa() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, AbstractRelic.LandingSound.CLINK);
     }
@@ -38,7 +38,7 @@ public class Homa extends CustomRelic {
         AbstractPlayer p = AbstractDungeon.player;
         int maxhp = p.maxHealth;
         double per_maxhp;
-        per_maxhp =  Math.ceil(maxhp* 0.05);
+        per_maxhp = Math.ceil(maxhp * 0.05);
         int num;
         //转换到整数
         num = Double.valueOf(per_maxhp).intValue();
@@ -50,38 +50,38 @@ public class Homa extends CustomRelic {
         addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         //触发一次掉血效果
         wasHPLost(0);
-        }
-
+    }
 
     @Override
-    //掉血时触发
-    public void wasHPLost(int damageAmount){
+    public void wasHPLost(int damageAmount) {
+        //掉血时触发
         //判断是否在战斗中掉血
-        if ((AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT){
-        AbstractPlayer p = AbstractDungeon.player;
-        int maxhp = p.maxHealth;
-        double per_maxhp;
-        int num;
-        //转换到整数
-        per_maxhp =  Math.ceil(maxhp* 0.25);
-        num = Double.valueOf(per_maxhp).intValue();
-        //判断当前血量是否小于50%最大生命上限
-        if((p.currentHealth - damageAmount) <= num && !isActive){
-            int power;
-            flash();
-            isActive = true;
-            per_maxhp =  Math.ceil(p.maxHealth* 0.05);
-            power = Double.valueOf(per_maxhp).intValue();
-            //同判断之前的添加力量代码
-            addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, power), power));
-            //kakaa面具说话代码
-            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToBot(new SFXAction("VO_CULTIST_1A"));
-            addToBot(new TalkAction(true, uiStrings.TEXT[0], 1.0F, 2.0F));
-            //持续闪烁
-            this.pulse = true;
+        if ((AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT) {
+            AbstractPlayer p = AbstractDungeon.player;
+            int maxhp = p.maxHealth;
+            double per_maxhp;
+            int num;
+            //转换到整数
+            per_maxhp = Math.ceil(maxhp * 0.25);
+            num = Double.valueOf(per_maxhp).intValue();
+            //判断当前血量是否小于50%最大生命上限
+            if ((p.currentHealth - damageAmount) <= num && !isActive) {
+                int power;
+                flash();
+                isActive = true;
+                per_maxhp = Math.ceil(p.maxHealth * 0.05);
+                power = Double.valueOf(per_maxhp).intValue();
+                //同判断之前的添加力量代码
+                addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, power), power));
+                //kakaa面具说话代码
+                addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                addToBot(new SFXAction("VO_CULTIST_1A"));
+                addToBot(new TalkAction(true, uiStrings.TEXT[0], 1.0F, 2.0F));
+                //持续闪烁
+                this.pulse = true;
 
-        }}
+            }
+        }
     }
 
     @Override
@@ -97,15 +97,15 @@ public class Homa extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    //取玩家当前最大生命值上限
-    public int getMaxHp(){
-        //赋值玩家指针
+
+    public int getMaxHp() {
+        //取玩家当前最大生命值上限
         AbstractPlayer p = AbstractDungeon.player;
         //取最大生命
         int maxhp = p.maxHealth;
         double per_maxhp;
         //向上取整20%最大生命值
-        per_maxhp =  Math.ceil( maxhp* 0.2 );
+        per_maxhp = Math.ceil(maxhp * 0.2);
         int num;
         //转换到整数
         num = Double.valueOf(per_maxhp).intValue();
@@ -113,7 +113,6 @@ public class Homa extends CustomRelic {
     }
 
     @Override
-
     public void onEquip() {
         //拾取时触发
         int num = getMaxHp();
@@ -124,4 +123,5 @@ public class Homa extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new Homa();
     }
+
 }
