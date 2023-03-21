@@ -23,7 +23,7 @@ public class PyroCard extends CustomCard{
     private static final int COST = 0;
     public static final String ID = "PyroCard";
     public PyroCard() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Seles_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         //添加基础攻击标签和将伤害设为6
         this.baseDamage = 8;
         this.damage = this.baseDamage;

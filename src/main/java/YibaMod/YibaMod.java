@@ -72,13 +72,13 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     public YibaMod() {
         //构造方法，初始化各种参数
         BaseMod.subscribe(this);
-        BaseMod.addColor(AbstractCardEnum.Seles_COLOR, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, ATTACK_CC, SKILL_CC, POWER_CC, ENERGY_ORB_CC, ATTACK_CC_PORTRAIT, SKILL_CC_PORTRAIT, POWER_CC_PORTRAIT, ENERGY_ORB_CC_PORTRAIT, CARD_ENERGY_ORB);
+        BaseMod.addColor(AbstractCardEnum.Witch_COLOR, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, ATTACK_CC, SKILL_CC, POWER_CC, ENERGY_ORB_CC, ATTACK_CC_PORTRAIT, SKILL_CC_PORTRAIT, POWER_CC_PORTRAIT, ENERGY_ORB_CC_PORTRAIT, CARD_ENERGY_ORB);
     }
 
     @Override
     public void receiveEditCharacters() {
         //添加角色到MOD中
-        BaseMod.addCharacter(new Witch("Witch"), MY_CHARACTER_BUTTON, MARISA_PORTRAIT, ThmodClassEnum.Seles_CLASS);
+        BaseMod.addCharacter(new Witch("Witch"), MY_CHARACTER_BUTTON, MARISA_PORTRAIT, ThmodClassEnum.Witch_CLASS);
     }
 
     //初始化整个MOD,一定不能删
@@ -253,7 +253,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     @Override
     public void receiveEditRelics() {
         //将自定义的遗物添加到这里
-        BaseMod.addRelicToCustomPool(new cLanguageProgramBegin(), AbstractCardEnum.Seles_COLOR);
+        BaseMod.addRelicToCustomPool(new cLanguageProgramBegin(), AbstractCardEnum.Witch_COLOR);
         BaseMod.addRelic(new Kakaa(), RelicType.SHARED);    //kakaa镰刀
         BaseMod.addRelic(new Beef(), RelicType.SHARED);     //牛排
         BaseMod.addRelic(new Homa(), RelicType.SHARED);     //护摩之杖

@@ -40,7 +40,7 @@ public class Witch extends CustomPlayer {
 
     public Witch(String name) {
         //构造方法，初始化参数
-        super(name, ThmodClassEnum.Seles_CLASS, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, (String)null, (String)null);
+        super(name, ThmodClassEnum.Witch_CLASS, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, null, null);
         this.dialogX = this.drawX + 0.0F * Settings.scale;
         this.dialogY = this.drawY + 220.0F * Settings.scale;
         initializeClass(SELES_STAND, SELES_SHOULDER_2, SELES_SHOULDER_1, SELES_CORPSE,
@@ -95,7 +95,7 @@ public class Witch extends CustomPlayer {
     @Override
     public String getTitle(PlayerClass playerClass) {
         //应该是进游戏后左上角的角色名
-        String title="";
+        String title;
         if (Settings.language == Settings.GameLanguage.ZHS) {
             title = "魔女";
         } else if (Settings.language == Settings.GameLanguage.ZHT) {
@@ -111,7 +111,7 @@ public class Witch extends CustomPlayer {
 
     public AbstractCard.CardColor getCardColor() {
         //选择卡牌颜色
-        return AbstractCardEnum.Seles_COLOR;
+        return AbstractCardEnum.Witch_COLOR;
     }
 
     @Override

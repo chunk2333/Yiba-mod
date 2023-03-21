@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 
 public class LibraryTypeEnum {
   @SpireEnum
-  public static CardLibrary.LibraryType Seles_COLOR;
+  public static CardLibrary.LibraryType Witch_COLOR;
 }
 
 

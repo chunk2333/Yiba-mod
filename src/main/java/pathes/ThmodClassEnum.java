@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 public class ThmodClassEnum {
 
     @SpireEnum
-    public static AbstractPlayer.PlayerClass Seles_CLASS;
+    public static AbstractPlayer.PlayerClass Witch_CLASS;
 
 
 }
