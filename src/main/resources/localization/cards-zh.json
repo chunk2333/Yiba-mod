@@ -307,5 +307,14 @@
   "Rally": {
     "NAME": "重振旗鼓",
     "DESCRIPTION": "消耗 手牌中所有非技能牌，每张获得 !B! 点 格挡 。"
+  },
+  "BluePill": {
+    "NAME": "蓝色药丸",
+    "DESCRIPTION": "对所有敌人造成 *突然一拳 的效果。",
+    "UPGRADE_DESCRIPTION":"对所有敌人造成 *突然一拳+ 的效果。"
+  },
+  "RedPill": {
+    "NAME": "红色药丸",
+    "DESCRIPTION": "失去 !D! 点生命值，获得 !M! 点 力量 、 敏捷 和 集中 。 NL  消耗 。"
   }
 }
