@@ -145,5 +145,11 @@
     "DESCRIPTIONS": [
       "你不会受到任何负面增益。"
     ]
+  },
+  "NextTurnCanNotPlayAttackCardPower": {
+    "NAME": "乏力",
+    "DESCRIPTIONS": [
+      "下回合你无法打出任何攻击牌。"
+    ]
   }
 }
