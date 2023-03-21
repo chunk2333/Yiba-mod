@@ -1,6 +1,4 @@
 package cards.element;
-
-//public class GeoCard {
 //岩元素牌
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -28,6 +26,7 @@ public class GeoCard extends CustomCard{
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Seles_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 8;
         this.damage = this.baseDamage;
+        this.exhaust = true;
     }
 
     @Override
@@ -35,11 +34,11 @@ public class GeoCard extends CustomCard{
         //使用卡牌时触发的动作
         int mystery = 0;
         for(AbstractPower power:p.powers){
-            if(power.ID=="MysteryPower"){
+            if(power.ID.equals("MysteryPower")){
                 mystery = power.amount;
             }
         }
-        //给予火元素buff
+        //给予岩元素buff
         addToBot(new ApplyPowerAction(m, m, new GeoPower(m, mystery), 1));
         //造成伤害
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));

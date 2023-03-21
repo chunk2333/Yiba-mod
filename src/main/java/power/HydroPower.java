@@ -84,6 +84,7 @@ public class HydroPower extends AbstractPower {
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "GeoPower"));
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
             AbstractMonster m = (AbstractMonster) this.owner;
+            //击晕
             AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(m, this.owner));
             //m.setMove((byte) 999,AbstractMonster.Intent.STUN);
             AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "粘土", Color.BLUE.cpy()));

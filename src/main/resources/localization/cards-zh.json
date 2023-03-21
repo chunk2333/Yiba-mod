@@ -188,7 +188,7 @@
   },
   "GeoCard": {
     "NAME": "岩元素",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 岩元素 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 岩元素 。 NL  消耗 。"
   },
   "AnemoCard": {
     "NAME": "风元素",
