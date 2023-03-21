@@ -324,5 +324,17 @@
   "FireBall": {
     "NAME": "火球术",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 火元素 。"
+  },
+  "MeleeAttack": {
+    "NAME": "近身攻击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 生气 。"
+  },
+  "Explosion": {
+    "NAME": "爆裂魔法",
+    "DESCRIPTION": "给予 岩元素 。 NL 。造成 !D! 点伤害。 NL 你下回合无法打出攻击牌。"
+  },
+  "Clumsy": {
+    "NAME": "弄巧成拙",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 失去2点 元素精通 。"
   }
 }
