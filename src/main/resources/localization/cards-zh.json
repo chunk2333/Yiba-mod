@@ -216,7 +216,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予一层 剧毒 。"
   },
   "WeirdThings": {
-    "NAME": "怪神乱力",
+    "NAME": "怪力乱神",
     "DESCRIPTION": "暂时将本回合 力量 翻倍。"
   },
   "A_BeamOfLight": {
@@ -316,5 +316,13 @@
   "RedPill": {
     "NAME": "红色药丸",
     "DESCRIPTION": "失去 !D! 点生命值，获得 !M! 点 力量 、 敏捷 和 集中 。 NL  消耗 。"
+  },
+  "WaterWaveTechnique": {
+    "NAME": "水波术",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 给予 水元素 。"
+  },
+  "FireBall": {
+    "NAME": "火球术",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 火元素 。"
   }
 }

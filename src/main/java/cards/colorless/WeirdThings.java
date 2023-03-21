@@ -1,6 +1,5 @@
 package cards.colorless;
-//怪神乱力
-
+//怪力乱神
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
