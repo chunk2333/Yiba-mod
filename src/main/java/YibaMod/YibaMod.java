@@ -245,6 +245,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new ThunderStorm());//雷雨交加
         this.cardsToAdd.add(new StepDown());//降压
         this.cardsToAdd.add(new Luck());//运气
+        this.cardsToAdd.add(new Rally());//重振旗鼓
     }
 
     @Override
