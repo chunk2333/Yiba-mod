@@ -2,25 +2,20 @@ package cards.element;
 //弄巧成拙
 import Tools.YiBaHelper;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import pathes.AbstractCardEnum;
 import power.GeoPower;
+import power.MysteryPower;
 
-public class Clumsy extends CustomCard {
+public class Clumsy_My extends CustomCard {
 
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Clumsy");
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Clumsy_My");
 
     public static final String NAME = cardStrings.NAME;
 
@@ -30,9 +25,9 @@ public class Clumsy extends CustomCard {
 
     private static final int COST = 1;
 
-    public static final String ID = "Clumsy";
+    public static final String ID = "Clumsy_My";
 
-    public Clumsy() {
+    public Clumsy_My() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
@@ -44,13 +39,14 @@ public class Clumsy extends CustomCard {
         //抽牌
         addToBot(new DrawCardAction(p, this.magicNumber));
         //失去元素精通
+        addToBot(new ApplyPowerAction(p, p, new MysteryPower(p, -2), -2));
 
     }
 
     @Override
     public AbstractCard makeCopy() {
         //复制卡牌时触发
-        return new Clumsy();
+        return new Clumsy_My();
     }
 
     @Override
