@@ -1,16 +1,21 @@
 package characters;
 
+import Tools.YiBaHelper;
 import basemod.abstracts.CustomPlayer;
+import cards.element.FireBall;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import pathes.ThmodClassEnum;
@@ -81,14 +86,10 @@ public class Witch extends CustomPlayer {
         //选英雄界面的文字描述
         String title="";
         String flavor="";
-        if (Settings.language == Settings.GameLanguage.ZHS) {
-            title = "魔女";
-            flavor = "来自符文之地的天才魔女，前来攀登这座高塔，其可以运用元素之力造成伤害。";
-        } else if (Settings.language == Settings.GameLanguage.ZHT) {
-            //当设定为中国台湾省，title和flavor为繁体描述
-        } else {
-            //其他用英文替代
-        }
+
+        title = "魔女";
+        flavor = "来自符文之地的天才魔女，前来攀登这座高塔，其可以运用元素之力造成伤害。";
+
 
         return new CharSelectInfo(title, flavor, STARTING_HP, MAX_HP,HAND_SIZE , STARTING_GOLD, ASCENSION_MAX_HP_LOSS, this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -98,14 +99,7 @@ public class Witch extends CustomPlayer {
     public String getTitle(PlayerClass playerClass) {
         //应该是进游戏后左上角的角色名
         String title;
-        if (Settings.language == Settings.GameLanguage.ZHS) {
-            title = "魔女";
-        } else if (Settings.language == Settings.GameLanguage.ZHT) {
-            title = "魔女";
-        } else {
-            title = "魔女";
-        }
-
+        title = "魔女";
         return title;
     }
 
@@ -123,7 +117,7 @@ public class Witch extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return null;
+        return new FireBall();
     }
 
     @Override
@@ -145,14 +139,19 @@ public class Witch extends CustomPlayer {
     public void doCharSelectScreenSelectEffect() {
         //角色选中时触发
 
+        CardCrawlGame.sound.playA(YiBaHelper.MakeSoundPath("DaMie"), 0.0F);
+        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, true);
+
     }
+
     public void updateOrb(int orbCount) {
         this.energyOrb.updateOrb(orbCount);
     }
+
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
         //选中音效
-        return null;
+        return YiBaHelper.MakeSoundPath("DaMie");
     }
 
     @Override
@@ -184,15 +183,17 @@ public class Witch extends CustomPlayer {
     }
 
     @Override
-    public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[0];
+    public String getVampireText() {
+
+        return Vampires.DESCRIPTIONS[1];
     }
 
     @Override
-    public String getVampireText() {
-
-        return null;
+    public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect(){
+        return new AbstractGameAction.AttackEffect[] { AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL };
     }
+
+    @Override
     public void applyEndOfTurnTriggers() {
         super.applyEndOfTurnTriggers();
     }
