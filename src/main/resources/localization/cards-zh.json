@@ -400,5 +400,9 @@
   "MagicLoop": {
     "NAME": "魔力循环",
     "DESCRIPTION": "每次触发 元素反应 就抽 !M! 张牌。"
+  },
+  "SpiritualDomination": {
+    "NAME": "精神支配",
+    "DESCRIPTION": "敌人的攻击会攻击自己。 NL 持续 !M! 回合。"
   }
 }

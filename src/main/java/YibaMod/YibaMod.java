@@ -199,6 +199,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new FlamingStorm());//烈焰风暴
         this.cardsToAdd.add(new FlamingHoard());//烈焰囤积
         this.cardsToAdd.add(new MagicLoop());//魔力循环
+        this.cardsToAdd.add(new SpiritualDomination());//精神支配
         //this.cardsToAdd.add(new SavePower());
         //this.cardsToAdd.add(new Printf());
 
@@ -408,6 +409,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addAudio(YiBaHelper.MakeSoundPath("HomoVoice"),"sound/HomoVoice.ogg");
         BaseMod.addAudio(YiBaHelper.MakeSoundPath("Dio_The_World_Voice01"),"sound/Dio_The_World_Voice01.mp3");
         BaseMod.addAudio(YiBaHelper.MakeSoundPath("Dio_The_World_Voice02"),"sound/Dio_The_World_Voice02.mp3");
+        BaseMod.addAudio(YiBaHelper.MakeSoundPath("DaMie"),"sound/AatroxR.ogg");
         //logger.info("YiBaMod:loading audio done.");
 
     }
