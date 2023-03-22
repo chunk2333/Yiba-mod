@@ -352,5 +352,9 @@
   "DeathComes": {
     "NAME": "死神降临",
     "DESCRIPTION": "给予所有敌人 !M! 层 易伤 。 NL  消耗 。"
+  },
+  "InflammationOfTheWheel": {
+    "NAME": "转轮之炎",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 火元素 。 NL 这张牌每被打出一次，它在本场战斗中的耗能减少 !M! 。"
   }
 }
