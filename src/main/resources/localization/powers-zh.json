@@ -157,5 +157,19 @@
     "DESCRIPTIONS": [
       "测试是否能触发元素反应后被调用。"
     ]
+  },
+  "LandJurisdictionPower": {
+    "NAME": "大地管辖",
+    "DESCRIPTIONS": [
+      "回合开始时给予所有敌人 #y岩元素 。"
+    ]
+  },
+  "NextTurnCanNotLossHp": {
+    "NAME": "魔法护盾",
+    "DESCRIPTIONS": [
+      "本回合无法受到任何伤害",
+      "接下来的 #b",
+      " 回合内无法受到任何伤害。"
+    ]
   }
 }
