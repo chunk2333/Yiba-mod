@@ -368,5 +368,13 @@
   "FlamingCharge": {
     "NAME": "烈焰冲锋",
     "DESCRIPTION": "给予 火元素 。 NL 获得 !M! 点 力量 。 NL  消耗 。"
+  },
+  "FastFire": {
+    "NAME": "快速火焰",
+    "DESCRIPTION": " 保留 。 NL 给予 火元素 。 NL  消耗 。"
+  },
+  "FastWater": {
+    "NAME": "快速水纹",
+    "DESCRIPTION": " 保留 。 NL 给予 水元素 。 NL  消耗 。"
   }
 }
