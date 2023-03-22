@@ -178,5 +178,12 @@
       "每触发一次 #y元素反应 就抽 #b",
       " 张牌。"
     ]
+  },
+  "SpiritualDominationPower": {
+    "NAME": "精神支配",
+    "DESCRIPTIONS": [
+      "接下来的 #b",
+      " 回合内受到自己的攻击。"
+    ]
   }
 }

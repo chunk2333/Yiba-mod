@@ -1,340 +1,410 @@
 Selfpowers.png
-size: 256, 1776
+size: 1024, 560
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-48/AnemoPower
+48/AffinityMorphologyPower
   rotate: false
   xy: 0, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/CoffeeBeanPower
+48/AnemoPower
   rotate: false
   xy: 48, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/CryoPower
+48/CoffeeBeanPower
   rotate: false
   xy: 96, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/DoubleDamage
+48/CryoPower
   rotate: false
   xy: 144, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/EyesHeartPower
+48/DoubleDamage
   rotate: false
   xy: 192, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
+48/EyesHeartPower
+  rotate: false
+  xy: 240, 0
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
 48/GeoPower
   rotate: false
-  xy: 0, 48
+  xy: 288, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/HalfProbabilityOnDamage
   rotate: false
-  xy: 48, 48
+  xy: 336, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/happyOldHomePower
   rotate: false
-  xy: 96, 48
+  xy: 384, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/HarmonyOfLightAndDustPower
   rotate: false
-  xy: 144, 48
+  xy: 432, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/HydroPower
   rotate: false
-  xy: 192, 48
+  xy: 480, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/LandJurisdictionPower
   rotate: false
-  xy: 0, 96
+  xy: 528, 0
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+48/MagicalProgressPower
+  rotate: false
+  xy: 576, 0
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+48/MagicFeedbackPower
+  rotate: false
+  xy: 624, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/MagicLoopPower
   rotate: false
-  xy: 48, 96
+  xy: 672, 0
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+48/MagicReservePower
+  rotate: false
+  xy: 720, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/MysteryPower
   rotate: false
-  xy: 96, 96
+  xy: 768, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/NextTurnCanNotLossHp
   rotate: false
-  xy: 144, 96
+  xy: 816, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/NextTurnDiePower
   rotate: false
-  xy: 192, 96
+  xy: 864, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/PoisonPower
   rotate: false
-  xy: 0, 144
+  xy: 912, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/ProvokePower
   rotate: false
-  xy: 48, 144
+  xy: 960, 0
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/PyroPower
   rotate: false
-  xy: 96, 144
+  xy: 0, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/Rebound_MyPower
   rotate: false
-  xy: 144, 144
+  xy: 48, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/RedPantsPower
   rotate: false
-  xy: 192, 144
+  xy: 96, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/ReturnGoodForEvilPower
   rotate: false
-  xy: 0, 192
+  xy: 144, 48
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+48/SpiritualDominationPower
+  rotate: false
+  xy: 192, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/ThePeaceOfMindPower
   rotate: false
-  xy: 48, 192
+  xy: 240, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/TimeStop
   rotate: false
-  xy: 96, 192
+  xy: 288, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 48/TreacherousPower
   rotate: false
-  xy: 144, 192
+  xy: 336, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
+128/AffinityMorphologyPower
+  rotate: false
+  xy: 384, 48
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
 128/AnemoPower
   rotate: false
-  xy: 0, 240
+  xy: 512, 48
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/CoffeeBeanPower
   rotate: false
-  xy: 128, 240
+  xy: 640, 48
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/CryoPower
   rotate: false
-  xy: 0, 368
+  xy: 768, 48
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/DoubleDamage
   rotate: false
-  xy: 128, 368
+  xy: 896, 48
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/EyesHeartPower
   rotate: false
-  xy: 0, 496
+  xy: 0, 176
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/GeoPower
   rotate: false
-  xy: 128, 496
+  xy: 128, 176
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/HalfProbabilityOnDamage
   rotate: false
-  xy: 0, 624
+  xy: 256, 176
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/happyOldHomePower
   rotate: false
-  xy: 128, 624
+  xy: 384, 176
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/HarmonyOfLightAndDustPower
   rotate: false
-  xy: 0, 752
+  xy: 512, 176
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/HydroPower
   rotate: false
-  xy: 128, 752
+  xy: 640, 176
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/LandJurisdictionPower
   rotate: false
-  xy: 0, 880
+  xy: 768, 176
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/MagicalProgressPower
+  rotate: false
+  xy: 896, 176
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/MagicFeedbackPower
+  rotate: false
+  xy: 0, 304
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/MagicLoopPower
   rotate: false
-  xy: 128, 880
+  xy: 128, 304
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/MagicReservePower
+  rotate: false
+  xy: 256, 304
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/MysteryPower
   rotate: false
-  xy: 0, 1008
+  xy: 384, 304
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/NextTurnCanNotLossHp
   rotate: false
-  xy: 128, 1008
+  xy: 512, 304
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/NextTurnDiePower
   rotate: false
-  xy: 0, 1136
+  xy: 640, 304
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/PoisonPower
   rotate: false
-  xy: 128, 1136
+  xy: 768, 304
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/ProvokePower
   rotate: false
-  xy: 0, 1264
+  xy: 896, 304
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/PyroPower
   rotate: false
-  xy: 128, 1264
+  xy: 0, 432
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/Rebound_MyPower
   rotate: false
-  xy: 0, 1392
+  xy: 128, 432
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/RedPantsPower
   rotate: false
-  xy: 128, 1392
+  xy: 256, 432
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/ReturnGoodForEvilPower
   rotate: false
-  xy: 0, 1520
+  xy: 384, 432
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/SpiritualDominationPower
+  rotate: false
+  xy: 512, 432
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/ThePeaceOfMindPower
   rotate: false
-  xy: 128, 1520
+  xy: 640, 432
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/TimeStop
   rotate: false
-  xy: 0, 1648
+  xy: 768, 432
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/TreacherousPower
   rotate: false
-  xy: 128, 1648
+  xy: 896, 432
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
