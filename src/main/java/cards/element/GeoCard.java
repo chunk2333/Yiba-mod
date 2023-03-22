@@ -1,5 +1,6 @@
 package cards.element;
 //岩元素牌
+import Tools.YiBaHelper;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -32,14 +33,8 @@ public class GeoCard extends CustomCard{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
-        int mystery = 0;
-        for(AbstractPower power:p.powers){
-            if(power.ID.equals("MysteryPower")){
-                mystery = power.amount;
-            }
-        }
         //给予岩元素buff
-        addToBot(new ApplyPowerAction(m, m, new GeoPower(m, mystery), 1));
+        addToBot(new ApplyPowerAction(m, m, new GeoPower(m, YiBaHelper.getPlayerMystery()), 1));
         //造成伤害
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }

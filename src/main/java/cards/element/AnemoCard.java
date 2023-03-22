@@ -36,12 +36,6 @@ public class AnemoCard extends CustomCard{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
-        int mystery = 0;
-        for(AbstractPower power:p.powers){
-            if(power.ID=="MysteryPower"){
-                mystery = power.amount;
-            }
-        }
         //给予扩散动作
         addToBot(new AnemoAction(m));
         //造成伤害
