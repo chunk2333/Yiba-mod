@@ -380,5 +380,13 @@
   "PotentialLiberation": {
     "NAME": "潜能解放",
     "DESCRIPTION": "获得自身 元素精通 !M! % 点 元素精通 。"
+  },
+  "LandJurisdiction": {
+    "NAME": "大地管辖",
+    "DESCRIPTION": "每回合开始给予全体敌人 岩元素 。"
+  },
+  "MagicShield": {
+    "NAME": "魔法护盾",
+    "DESCRIPTION": "免疫本回合伤害。 NL  消耗 。"
   }
 }
