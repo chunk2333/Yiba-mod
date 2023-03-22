@@ -167,7 +167,7 @@
   },
   "WuhuTakeOff": {
     "NAME": "芜湖～起飞！",
-    "DESCRIPTION": "获得 !M! 层飞行。 NL  消耗 。"
+    "DESCRIPTION": "获得 !M! 层 飞行 。 NL  消耗 。"
   },
   "SpireScience": {
     "NAME": "尖塔学",
@@ -412,5 +412,9 @@
   "MagicPress": {
     "NAME": "魔力压榨",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张随机 诅咒 牌加入你的手牌。"
+  },
+  "TransformingFeatherIntoSpirit": {
+    "NAME": "化羽为灵",
+    "DESCRIPTION": "获得 !M! 层 飞行 。 NL 扩散 。 NL  消耗 。"
   }
 }
