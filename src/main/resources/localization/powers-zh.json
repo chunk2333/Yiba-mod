@@ -185,5 +185,12 @@
       "接下来的 #b",
       " 回合内受到自己的攻击。"
     ]
+  },
+  "AffinityMorphologyPower": {
+    "NAME": "亲和形态",
+    "DESCRIPTIONS": [
+      "每回合开始时获得 #b",
+      " 点 #y元素精通。"
+    ]
   }
 }
