@@ -143,6 +143,7 @@ public class Witch extends CustomPlayer {
 
     @Override
     public void doCharSelectScreenSelectEffect() {
+        //角色选中时触发
 
     }
     public void updateOrb(int orbCount) {
@@ -150,6 +151,7 @@ public class Witch extends CustomPlayer {
     }
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
+        //选中音效
         return null;
     }
 

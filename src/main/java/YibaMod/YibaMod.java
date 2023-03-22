@@ -262,6 +262,11 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     @Override
     public void receiveEditRelics() {
         //将自定义的遗物添加到这里
+
+        //---------------魔女遗物-----------------------
+        BaseMod.addRelicToCustomPool(new TestTriggerElement(), AbstractCardEnum.Witch_COLOR);//元素反应测试遗物
+        //---------------魔女遗物-----------------------
+
         BaseMod.addRelicToCustomPool(new cLanguageProgramBegin(), AbstractCardEnum.Witch_COLOR);
         BaseMod.addRelic(new Kakaa(), RelicType.SHARED);    //kakaa镰刀
         BaseMod.addRelic(new Beef(), RelicType.SHARED);     //牛排
@@ -315,7 +320,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new SacrificialFragments(), RelicType.SHARED); //祭礼残章
         BaseMod.addRelic(new SacrificialBow(), RelicType.SHARED); //祭礼弓
         BaseMod.addRelic(new Amber(), RelicType.SHARED); //琥珀
-        //BaseMod.addRelic(new TestTriggerElement(), RelicType.SHARED); //元素反应测试遗物
+
         BaseMod.addRelic(new DeadLeaves(), RelicType.RED); //腐朽枯叶
         BaseMod.addRelic(new SolarPanels(), RelicType.BLUE); //太阳能电路板
         BaseMod.addRelic(new RedPants(), RelicType.RED); //红裤衩

@@ -151,5 +151,11 @@
     "DESCRIPTIONS": [
       "下回合你无法打出任何攻击牌。"
     ]
+  },
+  "TestElementPower": {
+    "NAME": "测试元素反应能力",
+    "DESCRIPTIONS": [
+      "测试是否能触发元素反应后被调用。"
+    ]
   }
 }

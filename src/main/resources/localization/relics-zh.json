@@ -376,7 +376,7 @@
     "NAME": "测试触发元素反应的遗物",
     "FLAVOR": "java.lang.NullPointerException",
     "DESCRIPTIONS": [
-      "每次触发元素反应都会输出对应触发的类型。"
+      "每次触发 #y元素反应 都会输出对应触发的类型。"
     ]
   },
   "DeadLeaves": {

@@ -1,7 +1,10 @@
 package relics;
 
 import YibaMod.YibaMod;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.localization.KeywordStrings;
 import relics.abstracrt.ElementRelic;
 
 public class TestTriggerElement extends ElementRelic {
@@ -12,6 +15,7 @@ public class TestTriggerElement extends ElementRelic {
 
     private static final String IMG_OTL = "img/relics/outline/test.png";
 
+
     public TestTriggerElement() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.COMMON, LandingSound.HEAVY);
     }
@@ -20,5 +24,10 @@ public class TestTriggerElement extends ElementRelic {
     public void triggerElement(String reactionName){
         show();
         YibaMod.logger.info("[triggerElement] 有元素反应触发：" + reactionName);
+    }
+
+    @Override
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0];
     }
 }
