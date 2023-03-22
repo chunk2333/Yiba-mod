@@ -376,5 +376,9 @@
   "FastWater": {
     "NAME": "快速水纹",
     "DESCRIPTION": " 保留 。 NL 给予 水元素 。 NL  消耗 。"
+  },
+  "PotentialLiberation": {
+    "NAME": "潜能解放",
+    "DESCRIPTION": "获得自身 元素精通 !M! % 点 元素精通 。"
   }
 }
