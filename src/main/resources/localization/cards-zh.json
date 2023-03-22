@@ -388,5 +388,13 @@
   "MagicShield": {
     "NAME": "魔法护盾",
     "DESCRIPTION": "免疫本回合伤害。 NL  消耗 。"
+  },
+  "FlamingStorm": {
+    "NAME": "烈焰风暴",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害，然后给予所有敌人 火元素 。"
+  },
+  "FlamingHoard": {
+    "NAME": "烈焰囤积",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 给予 火元素 。 NL 这张牌每打出一次基础伤害增加1。"
   }
 }
