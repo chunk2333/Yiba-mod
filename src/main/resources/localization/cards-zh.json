@@ -327,7 +327,7 @@
   },
   "MeleeAttack": {
     "NAME": "近身攻击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 生气 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 *生气 。"
   },
   "Explosion": {
     "NAME": "爆裂魔法",
@@ -344,5 +344,9 @@
   "NairaDescends": {
     "NAME": "奈落降临",
     "DESCRIPTION": "对所有敌人给予 岩元素 。 NL  消耗 。"
+  },
+  "LookingGlass": {
+    "NAME": "镜花水月",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 抽 !M! 张牌。"
   }
 }
