@@ -408,5 +408,9 @@
   "AffinityMorphology": {
     "NAME": "亲和形态",
     "DESCRIPTION": "每回合获得 !M! 点 元素精通 。"
+  },
+  "MagicPress": {
+    "NAME": "魔力压榨",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张随机 诅咒 牌加入你的手牌。"
   }
 }
