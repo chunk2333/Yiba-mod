@@ -360,5 +360,9 @@
   "Relearn": {
     "NAME": "重修",
     "DESCRIPTION": "失去 !D! 点 元素精通 。 NL 获得 !M! 点 力量 和 敏捷 。"
+  },
+  "WaterProficiency": {
+    "NAME": "水精通",
+    "DESCRIPTION": "给予 水元素 。 NL 获得 !M! 点 元素精通 。 NL  消耗 。"
   }
 }
