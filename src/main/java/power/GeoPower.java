@@ -6,6 +6,8 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,6 +36,10 @@ public class GeoPower extends AbstractPower {
 
     private final int mystery;
 
+    private boolean isMultiple = false;
+
+    private boolean isMultipleActive = false;
+
     public GeoPower(AbstractCreature owner, int mystery) {
         super();
         this.mystery=mystery;
@@ -53,6 +59,7 @@ public class GeoPower extends AbstractPower {
         this.description = powerStrings.DESCRIPTIONS[0];
     }
 
+    
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if(power.ID.equals("HydroPower")){
@@ -83,29 +90,56 @@ public class GeoPower extends AbstractPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         for(AbstractPower power:this.owner.powers){
             if(power.ID.equals("PyroPower")){
-                //给予易伤
-                addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 2, false), 2));
+                this.isMultiple = power.canGoNegative;
+                YibaMod.logger.info("触发熔岩，是否是多段伤害：" + this.isMultiple + "是否已经触发了一次多段：" + this.isMultipleActive);
+
                 //移除火元素
                 addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "PyroPower"));
                 //移除岩元素，即自身
                 addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
                 //怪物头顶显示元素反应类型
                 AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "熔岩", Color.GOLD.cpy()));
-                YibaMod.logger.info("触发熔岩：" + damageAmount * 3 + this.mystery);
-                //抽1牌
-                addToBot(new DrawCardAction(AbstractDungeon.player, 1));
-                //获得1费
-                AbstractDungeon.player.gainEnergy(1);
-                //通知元素反应遗物
-                if(!ArrayElementRelic.getElementRelic().isEmpty()){
-                    for (ElementRelic r : ArrayElementRelic.getElementRelic()){
-                        r.triggerElement("熔岩-岩火");
+                YibaMod.logger.info("触发熔岩：" + damageAmount * 3 + "额外伤害："+ this.mystery);
+                if(this.isMultiple && !this.isMultipleActive){
+                    //给予易伤
+                    addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 2, false), 2));
+                    //抽1牌
+                    addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                    //获得1费
+                    AbstractDungeon.player.gainEnergy(1);
+                    this.isMultipleActive = true;
+                    //通知元素反应遗物
+                    if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                        for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                            r.triggerElement("熔岩-岩火");
+                        }
                     }
+                    //通知元素反应能力
+                    if(!ArrayElementPower.getElementPower().isEmpty()){
+                        for (ElementPower powers : ArrayElementPower.getElementPower()){
+                            powers.triggerElement("熔岩-岩火");
+                        }
+                    }
+                    return damageAmount * 3 + this.mystery;
                 }
-                //通知元素反应能力
-                if(!ArrayElementPower.getElementPower().isEmpty()){
-                    for (ElementPower powers : ArrayElementPower.getElementPower()){
-                        powers.triggerElement("熔岩-岩火");
+                if(!this.isMultiple) {
+                    //给予易伤
+                    addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 2, false), 2));
+                    //抽1牌
+                    addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                    //获得1费
+                    AbstractDungeon.player.gainEnergy(1);
+                    //通知元素反应遗物
+                    if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                        for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                            r.triggerElement("熔岩-岩火");
+                        }
+                    }
+                    //通知元素反应能力
+                    if(!ArrayElementPower.getElementPower().isEmpty()){
+                        for (ElementPower powers : ArrayElementPower.getElementPower()){
+                            powers.triggerElement("熔岩-岩火");
+                        }
                     }
                 }
                 return damageAmount * 3 + this.mystery;
@@ -113,6 +147,16 @@ public class GeoPower extends AbstractPower {
 
         }
         return damageAmount;
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        this.isMultipleActive = false;
+    }
+
+    @Override
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        this.isMultipleActive = false;
     }
 
 }

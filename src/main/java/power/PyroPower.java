@@ -5,11 +5,13 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import power.abstracrt.ArrayElementPower;
@@ -39,9 +41,29 @@ public class PyroPower extends AbstractPower {
 
     boolean hasHydro = false;
 
+    private boolean isMultiple = false;
+
+    private boolean isMultipleActive = false;
+
     public PyroPower(AbstractCreature owner, int mystery) {
         super();
-        this.mystery=mystery;
+        this.mystery = mystery;
+        atlas_self = new TextureAtlas(Gdx.files.internal("powers/Selfpowers.atlas"));
+        this.name = NAME;
+        updateDescription();
+        this.ID = POWER_ID;
+        this.owner = owner;
+        updateDescription();
+        this.region48 = atlas_self.findRegion("48/PyroPower");
+        this.region128 = atlas_self.findRegion("128/PyroPower");
+        this.type = AbstractPower.PowerType.BUFF;
+    }
+
+    public PyroPower(AbstractCreature owner, int mystery, boolean isMultiple) {
+        super();
+        this.mystery = mystery;
+        this.canGoNegative = isMultiple;
+        this.isMultiple = isMultiple;
         atlas_self = new TextureAtlas(Gdx.files.internal("powers/Selfpowers.atlas"));
         this.name = NAME;
         updateDescription();
@@ -110,7 +132,6 @@ public class PyroPower extends AbstractPower {
             isActive = false;
         }
         if(!this.isActive){
-            YibaMod.logger.info("触发1.5蒸发的未增幅伤害："+ damageAmount );
             for(AbstractPower power:this.owner.powers){
                 if(power.ID.equals("PyroPower")){
                     this.hasPyro = true;
@@ -125,22 +146,46 @@ public class PyroPower extends AbstractPower {
                     }
                     addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "HydroPower"));
                     addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
-                    AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
-                    YibaMod.logger.info("触发1.5蒸发："+ (damageAmount * 1.5 + this.mystery));
-                    //抽1卡
-                    addToBot(new DrawCardAction(AbstractDungeon.player, 1));
-                    //回1费
-                    AbstractDungeon.player.gainEnergy(1);
-                    //通知元素反应遗物
-                    if(!ArrayElementRelic.getElementRelic().isEmpty()){
-                        for (ElementRelic r : ArrayElementRelic.getElementRelic()){
-                            r.triggerElement("1.5蒸发");
+                    if(this.isMultiple && !this.isMultipleActive){
+                        AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
+                        YibaMod.logger.info("触发1.5蒸发："+ (damageAmount * 1.5 + this.mystery));
+                        //抽1卡
+                        addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                        //回1费
+                        AbstractDungeon.player.gainEnergy(1);
+                        this.isMultipleActive = true;
+                        //通知元素反应遗物
+                        if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                            for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                                r.triggerElement("1.5蒸发");
+                            }
                         }
+                        //通知元素反应能力
+                        if(!ArrayElementPower.getElementPower().isEmpty()){
+                            for (ElementPower powers : ArrayElementPower.getElementPower()){
+                                powers.triggerElement("1.5蒸发");
+                            }
+                        }
+                        return (int) (damageAmount * 1.5 + this.mystery);
                     }
-                    //通知元素反应能力
-                    if(!ArrayElementPower.getElementPower().isEmpty()){
-                        for (ElementPower powers : ArrayElementPower.getElementPower()){
-                            powers.triggerElement("1.5蒸发");
+                    if(!this.isMultiple) {
+                        AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
+                        YibaMod.logger.info("触发1.5蒸发："+ (damageAmount * 1.5 + this.mystery));
+                        //抽1卡
+                        addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                        //回1费
+                        AbstractDungeon.player.gainEnergy(1);
+                        //通知元素反应遗物
+                        if(!ArrayElementRelic.getElementRelic().isEmpty()){
+                            for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+                                r.triggerElement("1.5蒸发");
+                            }
+                        }
+                        //通知元素反应能力
+                        if(!ArrayElementPower.getElementPower().isEmpty()){
+                            for (ElementPower powers : ArrayElementPower.getElementPower()){
+                                powers.triggerElement("1.5蒸发");
+                            }
                         }
                     }
                     return (int) (damageAmount * 1.5 + this.mystery);
@@ -150,4 +195,6 @@ public class PyroPower extends AbstractPower {
         }
         return damageAmount;
     }
+
+
 }
