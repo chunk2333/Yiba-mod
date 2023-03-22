@@ -364,5 +364,9 @@
   "WaterProficiency": {
     "NAME": "水精通",
     "DESCRIPTION": "给予 水元素 。 NL 获得 !M! 点 元素精通 。 NL  消耗 。"
+  },
+  "FlamingCharge": {
+    "NAME": "烈焰冲锋",
+    "DESCRIPTION": "给予 火元素 。 NL 获得 !M! 点 力量 。 NL  消耗 。"
   }
 }
