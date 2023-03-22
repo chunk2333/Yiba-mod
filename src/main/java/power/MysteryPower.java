@@ -36,8 +36,8 @@ public class MysteryPower extends AbstractPower {
             this.amount = -999;
         }
         updateDescription();
-        this.region48 = atlas_self.findRegion("48/DoubleDamage");
-        this.region128 = atlas_self.findRegion("128/DoubleDamage");
+        this.region48 = atlas_self.findRegion("48/MysteryPower");
+        this.region128 = atlas_self.findRegion("128/MysteryPower");
         this.canGoNegative = true;
     }
 
@@ -50,10 +50,6 @@ public class MysteryPower extends AbstractPower {
         this.amount += stackAmount;
         if (this.amount == 0) {
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
-        }
-
-        if (this.amount >= 50 && this.owner == AbstractDungeon.player) {
-            //UnlockTracker.unlockAchievement("JAXXED");
         }
 
         if (this.amount >= 999) {
