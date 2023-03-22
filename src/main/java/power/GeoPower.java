@@ -1,37 +1,27 @@
-
-
-//public class GeoPower {
-
 package power;
-
-
-
-
+//岩元素
 import YibaMod.YibaMod;
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
-import relics.TestTriggerElement;
+import power.abstracrt.ArrayElementPower;
+import power.abstracrt.ElementPower;
 import relics.abstracrt.ArrayElementRelic;
 import relics.abstracrt.ElementRelic;
 
-import java.util.ArrayList;
-
 public class GeoPower extends AbstractPower {
+
     public static final String POWER_ID = "GeoPower";
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("GeoPower");
@@ -39,10 +29,11 @@ public class GeoPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
 
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static TextureAtlas atlas;
+
     public static TextureAtlas atlas_self;
-    private boolean isActive;
-    private int mystery;
+
+    private final int mystery;
+
     public GeoPower(AbstractCreature owner, int mystery) {
         super();
         this.mystery=mystery;
@@ -58,34 +49,31 @@ public class GeoPower extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurn(){
-        //回合开始时
-    }
-
-    @Override
     public void updateDescription() {
         this.description = powerStrings.DESCRIPTIONS[0];
-    }
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //使用卡牌时触发
-
     }
 
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if(power.ID=="HydroPower"){
+        if(power.ID.equals("HydroPower")){
             //粘土
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "HydroPower"));
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
             AbstractMonster m = (AbstractMonster) this.owner;
             //击晕
             AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(m, this.owner));
-            //m.setMove((byte) 999,AbstractMonster.Intent.STUN);
+            //怪物头顶显示xxx字
             AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "粘土", Color.BLUE.cpy()));
+            //通知元素反应遗物
             if(!ArrayElementRelic.getElementRelic().isEmpty()){
                 for (ElementRelic r : ArrayElementRelic.getElementRelic()){
                     r.triggerElement("粘土-岩水");
+                }
+            }
+            //通知元素反应能力
+            if(!ArrayElementPower.getElementPower().isEmpty()){
+                for (ElementPower powers : ArrayElementPower.getElementPower()){
+                    powers.triggerElement("粘土-岩水");
                 }
             }
         }
@@ -94,19 +82,30 @@ public class GeoPower extends AbstractPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         for(AbstractPower power:this.owner.powers){
-            if(power.ID=="PyroPower"){
+            if(power.ID.equals("PyroPower")){
                 //给予易伤
                 addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 2, false), 2));
+                //移除火元素
                 addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "PyroPower"));
+                //移除岩元素，即自身
                 addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+                //怪物头顶显示元素反应类型
                 AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "熔岩", Color.GOLD.cpy()));
                 YibaMod.logger.info("触发熔岩：" + damageAmount * 3 + this.mystery);
                 //抽1牌
                 addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                //获得1费
                 AbstractDungeon.player.gainEnergy(1);
+                //通知元素反应遗物
                 if(!ArrayElementRelic.getElementRelic().isEmpty()){
                     for (ElementRelic r : ArrayElementRelic.getElementRelic()){
                         r.triggerElement("熔岩-岩火");
+                    }
+                }
+                //通知元素反应能力
+                if(!ArrayElementPower.getElementPower().isEmpty()){
+                    for (ElementPower powers : ArrayElementPower.getElementPower()){
+                        powers.triggerElement("熔岩-岩火");
                     }
                 }
                 return damageAmount * 3 + this.mystery;

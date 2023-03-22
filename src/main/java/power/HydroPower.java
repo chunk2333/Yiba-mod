@@ -1,33 +1,27 @@
 package power;
 //水元素
 import YibaMod.YibaMod;
-import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.badlogic.gdx.files.FileHandle;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
-import pathes.AbstractPower_Self;
+import power.abstracrt.ArrayElementPower;
+import power.abstracrt.ElementPower;
 import relics.abstracrt.ArrayElementRelic;
 import relics.abstracrt.ElementRelic;
 
 public class HydroPower extends AbstractPower {
+
     public static final String POWER_ID = "HydroPower";
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("HydroPower");
@@ -35,13 +29,19 @@ public class HydroPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
 
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static TextureAtlas atlas;
+
     public static TextureAtlas atlas_self;
+
     private boolean isActive;
-    private int mystery;
+
+    private final int mystery;
+
     boolean hasPyro = false;
+
     boolean hasGeo = false;
+
     boolean hasHydro = false;
+
     public HydroPower(AbstractCreature owner, int mystery) {
         super();
         this.mystery=mystery;
@@ -56,28 +56,24 @@ public class HydroPower extends AbstractPower {
         this.type = AbstractPower.PowerType.BUFF;
     }
 
-    public void atStartOfTurn(){
-        //回合开始时
-    }
     public void triggerElementreaction(){
+        //单蒸发
         addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "HydroPower"));
         addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
     }
+
+    @Override
     public void updateDescription() {
         this.description = powerStrings.DESCRIPTIONS[0];
     }
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        //使用卡片时触发
 
-    }
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if(power.ID=="PyroPower"){
-            //蒸发  移除水火元素，头顶显示 ”蒸发“
+        if(power.ID.equals("PyroPower")){
             isActive = true;
         }
-        if(power.ID=="GeoPower"){
+        if(power.ID.equals("GeoPower")){
             //粘土
             hasGeo = true;
             isActive = true;
@@ -88,27 +84,37 @@ public class HydroPower extends AbstractPower {
             AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(m, this.owner));
             //m.setMove((byte) 999,AbstractMonster.Intent.STUN);
             AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "粘土", Color.BLUE.cpy()));
+            //通知元素反应遗物
             if(!ArrayElementRelic.getElementRelic().isEmpty()){
                 for (ElementRelic r : ArrayElementRelic.getElementRelic()){
                     r.triggerElement("粘土-水岩");
                 }
             }
+            //通知元素反应能力
+            if(!ArrayElementPower.getElementPower().isEmpty()){
+                for (ElementPower powers : ArrayElementPower.getElementPower()){
+                    powers.triggerElement("粘土-水岩");
+                }
+            }
         }
+
         for(AbstractPower power_:this.owner.powers){
-            if(power_.ID == "GeoPower"){
+            if(power_.ID.equals("GeoPower")){
                 this.hasGeo = true;
             }
-            if(power_.ID == "PyroPower"){
+            if(power_.ID.equals("PyroPower")){
                 this.hasPyro = true;
             }
-            if(power_.ID == "HydroPower"){
+            if(power_.ID.equals("HydroPower")){
                 this.hasHydro = true;
             }
         }
         if(this.hasPyro && this.hasHydro){
+            //单蒸发
             triggerElementreaction();
         }
     }
+
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if(!isActive){
@@ -137,9 +143,16 @@ public class HydroPower extends AbstractPower {
                     addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                     //回复1能量
                     AbstractDungeon.player.gainEnergy(1);
+                    //通知元素反应遗物
                     if(!ArrayElementRelic.getElementRelic().isEmpty()){
                         for (ElementRelic r : ArrayElementRelic.getElementRelic()){
                             r.triggerElement("2.0蒸发");
+                        }
+                    }
+                    //通知元素反应能力
+                    if(!ArrayElementPower.getElementPower().isEmpty()){
+                        for (ElementPower powers : ArrayElementPower.getElementPower()){
+                            powers.triggerElement("2.0蒸发");
                         }
                     }
                     return damageAmount * 2 + this.mystery;

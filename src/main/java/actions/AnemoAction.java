@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import power.HydroPower;
 import power.PyroPower;
+import power.abstracrt.ArrayElementPower;
+import power.abstracrt.ElementPower;
 import relics.abstracrt.ArrayElementRelic;
 import relics.abstracrt.ElementRelic;
 
@@ -35,6 +37,11 @@ public class AnemoAction extends AbstractGameAction {
                         r.triggerElement("扩散-火");
                     }
                 }
+                if(!ArrayElementPower.getElementPower().isEmpty()){
+                    for (ElementPower powers : ArrayElementPower.getElementPower()){
+                        powers.triggerElement("扩散-火");
+                    }
+                }
                 return;
             }
             if(power.ID.equals("HydroPower")){
@@ -46,6 +53,12 @@ public class AnemoAction extends AbstractGameAction {
                 if(!ArrayElementRelic.getElementRelic().isEmpty()){
                     for (ElementRelic r : ArrayElementRelic.getElementRelic()){
                         r.triggerElement("扩散-水");
+                    }
+                }
+                //通知元素反应能力
+                if(!ArrayElementPower.getElementPower().isEmpty()){
+                    for (ElementPower powers : ArrayElementPower.getElementPower()){
+                        powers.triggerElement("扩散-水");
                     }
                 }
                 return;
