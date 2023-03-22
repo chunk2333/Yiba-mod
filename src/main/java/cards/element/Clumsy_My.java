@@ -1,6 +1,5 @@
 package cards.element;
 //弄巧成拙
-import Tools.YiBaHelper;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -10,7 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pathes.AbstractCardEnum;
-import power.GeoPower;
 import power.MysteryPower;
 
 public class Clumsy_My extends CustomCard {
@@ -21,7 +19,7 @@ public class Clumsy_My extends CustomCard {
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards/witch/test.png";
+    public static final String IMG_PATH = "img/cards/witch/Clumsy_My.png";
 
     private static final int COST = 1;
 
