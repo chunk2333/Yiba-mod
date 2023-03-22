@@ -2,7 +2,7 @@ package power.abstracrt;
 
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import power.TestElementPower;
+import power.*;
 import relics.abstracrt.ElementRelic;
 
 import java.util.ArrayList;
@@ -16,6 +16,10 @@ public class ArrayElementPower {
         for (AbstractPower power : AbstractDungeon.player.powers){
             if(power.ID.equals("TestElementPower")){
                 relics.add(new TestElementPower(AbstractDungeon.player,power.amount));
+            }
+            //魔力循环 能力
+            if(power.ID.equals("MagicLoopPower")){
+                relics.add(new MagicLoopPower(AbstractDungeon.player,power.amount));
             }
         }
         return relics;

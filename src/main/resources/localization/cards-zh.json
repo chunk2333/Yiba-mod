@@ -396,5 +396,9 @@
   "FlamingHoard": {
     "NAME": "烈焰囤积",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 给予 火元素 。 NL 这张牌每打出一次基础伤害增加1。"
+  },
+  "MagicLoop": {
+    "NAME": "魔力循环",
+    "DESCRIPTION": "每次触发 元素反应 就抽 !M! 张牌。"
   }
 }
