@@ -340,5 +340,9 @@
   "WaterMirror": {
     "NAME": "水镜",
     "DESCRIPTION": "获得 !M! 点 元素精通 。"
+  },
+  "NairaDescends": {
+    "NAME": "奈落降临",
+    "DESCRIPTION": "对所有敌人给予 岩元素 。 NL  消耗 。"
   }
 }
