@@ -331,7 +331,7 @@
   },
   "Explosion": {
     "NAME": "爆裂魔法",
-    "DESCRIPTION": "给予 岩元素 。 NL 。造成 !D! 点伤害。 NL 你下回合无法打出攻击牌。"
+    "DESCRIPTION": "给予 岩元素 。 NL 造成 !D! 点伤害。 NL 你下回合无法打出攻击牌。"
   },
   "Clumsy_My": {
     "NAME": "弄巧成拙",
@@ -404,5 +404,9 @@
   "SpiritualDomination": {
     "NAME": "精神支配",
     "DESCRIPTION": "敌人的攻击会攻击自己。 NL 持续 !M! 回合。"
+  },
+  "AffinityMorphology": {
+    "NAME": "亲和形态",
+    "DESCRIPTION": "每回合获得 !M! 点 元素精通 。"
   }
 }

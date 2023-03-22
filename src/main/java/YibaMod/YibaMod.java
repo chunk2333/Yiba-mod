@@ -200,6 +200,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new FlamingHoard());//烈焰囤积
         this.cardsToAdd.add(new MagicLoop());//魔力循环
         this.cardsToAdd.add(new SpiritualDomination());//精神支配
+        this.cardsToAdd.add(new AffinityMorphology());//亲和形态
         //this.cardsToAdd.add(new SavePower());
         //this.cardsToAdd.add(new Printf());
 
