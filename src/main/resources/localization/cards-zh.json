@@ -416,5 +416,9 @@
   "TransformingFeatherIntoSpirit": {
     "NAME": "化羽为灵",
     "DESCRIPTION": "获得 !M! 层 飞行 。 NL 扩散 。 NL  消耗 。"
+  },
+  "Chant": {
+    "NAME": "吟唱",
+    "DESCRIPTION": "将一张随机 元素 牌加入到你的手牌。 NL  消耗 。"
   }
 }

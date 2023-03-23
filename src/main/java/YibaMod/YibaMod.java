@@ -214,6 +214,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new AffinityMorphology());//亲和形态
         this.cardsToAdd.add(new MagicPress());//魔力压榨
         this.cardsToAdd.add(new TransformingFeatherIntoSpirit());//化羽为灵
+        this.cardsToAdd.add(new Chant());//Chant
         //this.cardsToAdd.add(new SavePower());
         //this.cardsToAdd.add(new Printf());
 
