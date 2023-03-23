@@ -445,5 +445,9 @@
   "PenetrationWaterGun": {
     "NAME": "贯穿水枪",
     "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果触发了 水元素 相关 元素反应 ，则放回抽牌堆。 NL 给予 水元素 。"
+  },
+  "MagicFeedback": {
+    "NAME": "魔力反馈",
+    "DESCRIPTION": "回合开始时，对所有敌人给予随机 元素 附着。"
   }
 }
