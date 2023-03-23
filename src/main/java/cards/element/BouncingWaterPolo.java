@@ -1,5 +1,5 @@
 package cards.element;
-//弹跳水球
+//弹跳水球  bug： 有时候不上水元素和不造成伤害，即没效果 3怪死1怪的情况下
 import Tools.YiBaHelper;
 import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
@@ -46,28 +46,48 @@ public class BouncingWaterPolo extends CustomCard {
         AbstractMonster tempMonster;
         int tempMonsterNum;
         tempMonsterNum = AbstractDungeon.getCurrRoom().monsters.monsters.size();
-        ArrayList<AbstractMonster> list = new ArrayList<>((AbstractDungeon.getCurrRoom()).monsters.monsters);
-        if(list.size() == 1){
+        ArrayList<AbstractMonster> list = new ArrayList();
+        for(AbstractMonster mo :AbstractDungeon.getCurrRoom().monsters.monsters){
+            if(!mo.isDead){
+                list.add(mo);
+            }
+        }
+        YibaMod.logger.info("当前怪物数量：" + list.size());
+
+        int range;
+        range = list.size() - 1;
+        if(range == 0) {
+            YibaMod.logger.info("伤害当前怪物：" + list.get(0).id);
             tempMonster = list.get(0);
         }else {
-            tempMonster = list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
+            tempMonster = list.get(AbstractDungeon.cardRandomRng.random(0,range));
         }
-
         //造成伤害
         //addToTop(new SFXAction("ORB_LIGHTNING_EVOKE", 0.1F));
         //addToTop(new VFXAction(new LightningEffect(tempMonster.hb.cX, tempMonster.hb.cY)));
         addToTop(new DamageAction(tempMonster, new DamageInfo(p, tempMonsterNum, this.damageTypeForTurn), AbstractGameAction.AttackEffect.LIGHTNING));
         //给予水元素
-        for(int i = 0; i < this.magicNumber; i++){
-            int random;
-            if(list.size() == 1){
-                random = 0;
-            }else {
-                random = AbstractDungeon.cardRandomRng.random(list.size() - 1);
+        list.clear();
+        for(AbstractMonster mo :AbstractDungeon.getCurrRoom().monsters.monsters){
+            if(!mo.isDead){
+                list.add(mo);
             }
+        }
+        YibaMod.logger.info("当前怪物数量：" + list.size());
+        for(int i = 0; i < this.magicNumber; i++){
+            int random = 0;
+            range = list.size() - 1;
 
-            tempMonster = list.get(random);
-            list.remove(random);
+            if(range == 0) {
+                YibaMod.logger.info("元素当前怪物：" + list.get(0).id);
+                tempMonster = list.get(0);
+
+            }
+            if((list.size() - 1) > 0){
+                random = AbstractDungeon.cardRandomRng.random(0,range);
+                tempMonster = list.get(random);
+                list.remove(random);
+            }
             addToBot(new ApplyPowerAction(tempMonster, tempMonster, new HydroPower(tempMonster, YiBaHelper.getPlayerMystery()), 1));
         }
     }
