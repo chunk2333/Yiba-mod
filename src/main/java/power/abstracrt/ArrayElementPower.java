@@ -12,16 +12,20 @@ public class ArrayElementPower {
     public static ArrayList<ElementRelic> powers;
 
     public static ArrayList<ElementPower> getElementPower(){
-        ArrayList<ElementPower> relics = new ArrayList<>();
+        ArrayList<ElementPower> list = new ArrayList<>();
         for (AbstractPower power : AbstractDungeon.player.powers){
             if(power.ID.equals("TestElementPower")){
-                relics.add(new TestElementPower(AbstractDungeon.player,power.amount));
+                list.add(new TestElementPower(AbstractDungeon.player,power.amount));
             }
             //魔力循环 能力
             if(power.ID.equals("MagicLoopPower")){
-                relics.add(new MagicLoopPower(AbstractDungeon.player,power.amount));
+                list.add(new MagicLoopPower(AbstractDungeon.player,power.amount));
+            }
+            //魔力精进 能力
+            if(power.ID.equals("MagicalProgressPower")){
+                list.add(new MagicalProgressPower(AbstractDungeon.player,power.amount));
             }
         }
-        return relics;
+        return list;
     }
 }

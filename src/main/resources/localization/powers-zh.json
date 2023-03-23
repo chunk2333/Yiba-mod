@@ -192,5 +192,12 @@
       "每回合开始时获得 #b",
       " 点 #y元素精通。"
     ]
+  },
+  "MagicalProgressPower": {
+    "NAME": "魔力精进",
+    "DESCRIPTIONS": [
+      "每触发一次 #y元素反应 就获得 #b",
+      " 点 #y格挡 。"
+    ]
   }
 }
