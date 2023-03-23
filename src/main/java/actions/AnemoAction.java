@@ -3,6 +3,7 @@ package actions;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -42,6 +43,7 @@ public class AnemoAction extends AbstractGameAction {
                         powers.triggerElement("扩散-火");
                     }
                 }
+                addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                 return;
             }
             if(power.ID.equals("HydroPower")){
@@ -61,6 +63,7 @@ public class AnemoAction extends AbstractGameAction {
                         powers.triggerElement("扩散-水");
                     }
                 }
+                addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                 return;
             }
         }
