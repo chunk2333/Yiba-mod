@@ -56,7 +56,6 @@ public class PotentialLiberation extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
             upgradeMagicNumber(50);
         }
     }
