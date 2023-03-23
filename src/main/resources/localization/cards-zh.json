@@ -420,5 +420,13 @@
   "Chant": {
     "NAME": "吟唱",
     "DESCRIPTION": "将一张随机 元素 牌加入到你的手牌。 NL  消耗 。"
+  },
+  "GaleSpell": {
+    "NAME": "疾风术",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL  扩散 。"
+  },
+  "BladeOfWind": {
+    "NAME": "风刃剑术",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  扩散 。"
   }
 }

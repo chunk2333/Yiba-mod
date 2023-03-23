@@ -4,14 +4,18 @@ import Tools.YiBaHelper;
 import basemod.BaseMod;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import cards.blue.*;
+import cards.blue.StepDown;
+import cards.blue.ThunderStorm;
 import cards.colorless.*;
 import cards.curse.*;
 import cards.element.*;
 import cards.green.*;
 import cards.purple.*;
-import cards.red.*;
+import cards.red.FleshShock;
+import cards.red.LetMeSee;
+import cards.red.Rally;
 import characters.Witch;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -34,17 +38,24 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
+import events.FairyBlessingEvent;
+import events.LuLuEvent;
+import events.Restaurant;
+import events.SanHuanPi;
+import monsters.Dio;
+import monsters.NongPi;
+import monsters.YuanPi;
+import monsters.ZhouPi;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import pathes.*;
-import relics.*;
-import relics.ClickRelic.*;
+import pathes.AbstractCardEnum;
+import pathes.ThmodClassEnum;
 import potions.*;
-import events.*;
-import monsters.*;
+import relics.*;
+import relics.ClickRelic.ScatterCoins;
+
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import basemod.helpers.RelicType;
 
 
 @SpireInitializer
@@ -214,7 +225,9 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new AffinityMorphology());//亲和形态
         this.cardsToAdd.add(new MagicPress());//魔力压榨
         this.cardsToAdd.add(new TransformingFeatherIntoSpirit());//化羽为灵
-        this.cardsToAdd.add(new Chant());//Chant
+        this.cardsToAdd.add(new Chant());//吟唱
+        this.cardsToAdd.add(new GaleSpell());//疾风术
+        this.cardsToAdd.add(new BladeOfWind());//风刃剑术
         //this.cardsToAdd.add(new SavePower());
         //this.cardsToAdd.add(new Printf());
 
@@ -426,6 +439,8 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addAudio(YiBaHelper.MakeSoundPath("Dio_The_World_Voice02"),"sound/Dio_The_World_Voice02.mp3");
         BaseMod.addAudio(YiBaHelper.MakeSoundPath("DaMie"),"sound/AatroxR.ogg");
         //logger.info("YiBaMod:loading audio done.");
+
+
 
     }
 
