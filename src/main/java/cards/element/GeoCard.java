@@ -20,7 +20,7 @@ public class GeoCard extends CustomCard{
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "img/cards/witch/GeoCard.png";
-    private static final int COST = 0;
+    private static final int COST = 1;
     public static final String ID = "GeoCard";
     public GeoCard() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY);
