@@ -23,7 +23,7 @@ public class NairaDescends extends CustomCard {
 
     public static final String IMG_PATH = "img/cards/witch/NairaDescends.png";
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     public static final String ID = "NairaDescends";
 
@@ -54,7 +54,7 @@ public class NairaDescends extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeBaseCost(1);
         }
     }
 
