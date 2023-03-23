@@ -47,14 +47,25 @@ public class BouncingWaterPolo extends CustomCard {
         int tempMonsterNum;
         tempMonsterNum = AbstractDungeon.getCurrRoom().monsters.monsters.size();
         ArrayList<AbstractMonster> list = new ArrayList<>((AbstractDungeon.getCurrRoom()).monsters.monsters);
-        tempMonster = list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
+        if(list.size() == 1){
+            tempMonster = list.get(0);
+        }else {
+            tempMonster = list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
+        }
+
         //造成伤害
         //addToTop(new SFXAction("ORB_LIGHTNING_EVOKE", 0.1F));
         //addToTop(new VFXAction(new LightningEffect(tempMonster.hb.cX, tempMonster.hb.cY)));
         addToTop(new DamageAction(tempMonster, new DamageInfo(p, tempMonsterNum, this.damageTypeForTurn), AbstractGameAction.AttackEffect.LIGHTNING));
         //给予水元素
         for(int i = 0; i < this.magicNumber; i++){
-            int random = AbstractDungeon.cardRandomRng.random(list.size() - 1);
+            int random;
+            if(list.size() == 1){
+                random = 0;
+            }else {
+                random = AbstractDungeon.cardRandomRng.random(list.size() - 1);
+            }
+
             tempMonster = list.get(random);
             list.remove(random);
             addToBot(new ApplyPowerAction(tempMonster, tempMonster, new HydroPower(tempMonster, YiBaHelper.getPlayerMystery()), 1));
