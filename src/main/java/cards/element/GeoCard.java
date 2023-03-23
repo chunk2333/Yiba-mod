@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import pathes.AbstractCardEnum;
 import power.GeoPower;
 
 public class GeoCard extends CustomCard{
@@ -24,7 +23,7 @@ public class GeoCard extends CustomCard{
     private static final int COST = 0;
     public static final String ID = "GeoCard";
     public GeoCard() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY);
         this.baseDamage = 8;
         this.damage = this.baseDamage;
         this.exhaust = true;
