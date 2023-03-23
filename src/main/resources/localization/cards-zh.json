@@ -436,5 +436,14 @@
   "BouncingWaterPolo": {
     "NAME": "弹跳水球",
     "DESCRIPTION": "对随机敌人造成敌人数量的伤害，然后随机给予至多 !M! 位怪物 水元素 。"
+  },
+  "WindFeatherLightFeather": {
+    "NAME": "风翎光羽",
+    "DESCRIPTION": " 扩散 。 NL 抽 !M! 张牌。 NL 如果成功 扩散 则额外抽 !D! 张牌。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION":" 扩散 。 NL 抽 !M! 张牌。 NL 如果成功 扩散 则额外抽 !D! 张牌。"
+  },
+  "PenetrationWaterGun": {
+    "NAME": "贯穿水枪",
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果触发了 水元素 相关 元素反应 ，则放回抽牌堆。 NL 给予 水元素 。"
   }
 }

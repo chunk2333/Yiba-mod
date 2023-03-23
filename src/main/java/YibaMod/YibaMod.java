@@ -230,6 +230,8 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new BladeOfWind());//风刃剑术
         this.cardsToAdd.add(new MagicalProgress());//魔力精进
         this.cardsToAdd.add(new BouncingWaterPolo());//弹跳水球
+        this.cardsToAdd.add(new WindFeatherLightFeather());//风翎光羽
+        this.cardsToAdd.add(new PenetrationWaterGun());//贯穿水枪
         //this.cardsToAdd.add(new SavePower());
         //this.cardsToAdd.add(new Printf());
 
