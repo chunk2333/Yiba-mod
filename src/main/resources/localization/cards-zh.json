@@ -432,5 +432,9 @@
   "MagicalProgress": {
     "NAME": "魔力精进",
     "DESCRIPTION": "每当你触发 元素反应 时获得 !M! 点 格挡 。"
+  },
+  "BouncingWaterPolo": {
+    "NAME": "弹跳水球",
+    "DESCRIPTION": "对随机敌人造成敌人数量的伤害，然后随机给予至多 !M! 位怪物 水元素 。"
   }
 }
