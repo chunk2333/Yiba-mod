@@ -28,7 +28,7 @@ public class WaterProficiency extends CustomCard {
 
     public WaterProficiency() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.SELF_AND_ENEMY);
-        this.baseMagicNumber = 5;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
         this.tags.add(YibaMod.ELEMENT);
@@ -58,7 +58,7 @@ public class WaterProficiency extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(5);
         }
     }
 }
