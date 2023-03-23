@@ -1,6 +1,7 @@
 package cards.element;
 //转轮之炎
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -35,6 +36,8 @@ public class InflammationOfTheWheel extends CustomCard {
         this.baseDamage = 12;
         this.magicNumber = this.baseMagicNumber;
         this.damage = this.baseDamage;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.PYRO);
 
     }
 

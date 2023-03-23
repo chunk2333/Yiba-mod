@@ -1,5 +1,6 @@
 package cards.element;
 //大地管辖
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,6 +27,8 @@ public class LandJurisdiction extends CustomCard {
 
     public LandJurisdiction() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.SELF);
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.GEO);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package cards.element;
 //快速水纹
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -29,6 +30,8 @@ public class FastWater extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.exhaust = true;
         this.selfRetain = true;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.HYDRO);
     }
 
     @Override

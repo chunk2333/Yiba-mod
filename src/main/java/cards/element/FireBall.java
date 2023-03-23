@@ -1,6 +1,7 @@
 package cards.element;
 //火球术
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -32,6 +33,8 @@ public class FireBall extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.BASIC, CardTarget.ENEMY);
         this.baseDamage = 8;
         this.damage = this.baseDamage;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.PYRO);
     }
 
     @Override

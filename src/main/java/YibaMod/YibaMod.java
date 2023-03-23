@@ -15,6 +15,7 @@ import cards.red.*;
 import characters.Witch;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -68,6 +69,16 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     public static ArrayList<AbstractCard> recyclecards = new ArrayList<>();
 
     public static final Logger logger = LogManager.getLogger(YibaMod.class.getName());
+
+    @SpireEnum public static AbstractCard.CardTags ELEMENT;
+
+    @SpireEnum public static AbstractCard.CardTags ANEMO;
+
+    @SpireEnum public static AbstractCard.CardTags GEO;
+
+    @SpireEnum public static AbstractCard.CardTags HYDRO;
+
+    @SpireEnum public static AbstractCard.CardTags PYRO;
 
     public YibaMod() {
         //构造方法，初始化各种参数
@@ -426,4 +437,5 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         }
         recyclecards.clear();
     }
+
 }

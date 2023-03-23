@@ -1,6 +1,7 @@
 package cards.element;
 //水波术
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -36,6 +37,8 @@ public class WaterWaveTechnique extends CustomCard {
         this.damage = this.baseDamage;
         this.baseBlock = 4;
         this.block = this.baseBlock;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.HYDRO);
     }
 
     @Override

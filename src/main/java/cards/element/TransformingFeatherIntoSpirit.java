@@ -1,5 +1,6 @@
 package cards.element;
 //化羽为灵
+import YibaMod.YibaMod;
 import actions.AnemoAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -30,6 +31,8 @@ public class TransformingFeatherIntoSpirit extends CustomCard {
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.ANEMO);
     }
 
     @Override

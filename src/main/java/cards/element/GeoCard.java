@@ -1,6 +1,7 @@
 package cards.element;
 //岩元素牌
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -27,6 +28,8 @@ public class GeoCard extends CustomCard{
         this.baseDamage = 8;
         this.damage = this.baseDamage;
         this.exhaust = true;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.GEO);
     }
 
     @Override

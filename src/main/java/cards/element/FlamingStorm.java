@@ -1,6 +1,7 @@
 package cards.element;
 //烈焰风暴
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -36,6 +37,8 @@ public class FlamingStorm extends CustomCard {
         this.isMultiDamage = true;
         this.baseDamage = 5;
         this.damage = this.baseDamage;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.PYRO);
     }
 
     @Override

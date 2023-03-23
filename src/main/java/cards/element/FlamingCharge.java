@@ -1,6 +1,7 @@
 package cards.element;
 //烈焰冲锋
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,6 +32,8 @@ public class FlamingCharge extends CustomCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.PYRO);
     }
 
     @Override

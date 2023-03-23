@@ -1,6 +1,7 @@
 package cards.element;
 //爆裂魔法
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -20,6 +21,7 @@ import power.GeoPower;
 import power.NextTurnCanNotPlayAttackCardPower;
 
 public class Explosion extends CustomCard {
+
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Explosion");
 
     public static final String NAME = cardStrings.NAME;
@@ -36,6 +38,8 @@ public class Explosion extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 30;
         this.damage = this.baseDamage;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.GEO);
     }
 
     @Override

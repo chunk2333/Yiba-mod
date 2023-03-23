@@ -1,11 +1,6 @@
-
-
-//public class AnemoCard {
-
 package cards.element;
-
-//public class GeoCard {
 //岩元素牌
+import YibaMod.YibaMod;
 import actions.AnemoAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -21,16 +16,25 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import pathes.AbstractCardEnum;
 
 public class AnemoCard extends CustomCard{
+
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("AnemoCard");
+
     public static final String NAME = cardStrings.NAME;
+
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+
     public static final String IMG_PATH = "img/cards/test.png";
+
     private static final int COST = 0;
+
     public static final String ID = "AnemoCard";
+
     public AnemoCard() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 8;
         this.damage = this.baseDamage;
+        this.tags.add(YibaMod.ANEMO);
+        this.tags.add(YibaMod.ELEMENT);
     }
 
     @Override

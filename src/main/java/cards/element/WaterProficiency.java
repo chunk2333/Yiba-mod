@@ -1,6 +1,7 @@
 package cards.element;
 //水精通
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -30,6 +31,8 @@ public class WaterProficiency extends CustomCard {
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.HYDRO);
     }
 
     @Override

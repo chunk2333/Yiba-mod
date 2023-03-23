@@ -1,6 +1,7 @@
 package cards.element;
 //水元素牌
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -28,6 +29,8 @@ public class HydroCard extends CustomCard{
         //添加基础攻击标签和将伤害设为6
         this.baseDamage = 8;
         this.damage = this.baseDamage;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.HYDRO);
     }
 
     @Override

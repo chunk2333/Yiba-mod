@@ -1,6 +1,7 @@
 package cards.element;
 //奈落降临
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -29,6 +30,8 @@ public class NairaDescends extends CustomCard {
     public NairaDescends() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.exhaust = true;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.GEO);
     }
 
     @Override

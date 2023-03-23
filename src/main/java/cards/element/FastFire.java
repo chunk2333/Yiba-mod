@@ -1,6 +1,7 @@
 package cards.element;
 //快速火焰
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,8 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pathes.AbstractCardEnum;
 import power.PyroPower;
 
-
 public class FastFire extends CustomCard {
+
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("FastFire");
 
     public static final String NAME = cardStrings.NAME;
@@ -29,6 +30,8 @@ public class FastFire extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.exhaust = true;
         this.selfRetain = true;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.PYRO);
     }
 
     @Override
