@@ -428,5 +428,9 @@
   "BladeOfWind": {
     "NAME": "风刃剑术",
     "DESCRIPTION": "造成 !D! 点伤害。 NL  扩散 。"
+  },
+  "MagicalProgress": {
+    "NAME": "魔力精进",
+    "DESCRIPTION": "每当你触发 元素反应 时获得 !M! 点 格挡 。"
   }
 }
