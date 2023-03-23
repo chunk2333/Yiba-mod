@@ -147,7 +147,7 @@ public class HydroPower extends AbstractPower {
                         //给虚弱
                         addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 1, false), 1));
                         //抽1卡
-                        addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                        //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                         //回复1能量
                         AbstractDungeon.player.gainEnergy(1);
                         this.isMultipleActive = true;
@@ -171,7 +171,7 @@ public class HydroPower extends AbstractPower {
                         //给虚弱
                         addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 1, false), 1));
                         //抽1卡
-                        addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                        //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                         //回复1能量
                         AbstractDungeon.player.gainEnergy(1);
                         //通知元素反应遗物

@@ -104,7 +104,7 @@ public class GeoPower extends AbstractPower {
                     //给予易伤
                     addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 2, false), 2));
                     //抽1牌
-                    addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                    //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                     //获得1费
                     AbstractDungeon.player.gainEnergy(1);
                     this.isMultipleActive = true;
@@ -126,7 +126,7 @@ public class GeoPower extends AbstractPower {
                     //给予易伤
                     addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 2, false), 2));
                     //抽1牌
-                    addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                    //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                     //获得1费
                     AbstractDungeon.player.gainEnergy(1);
                     //通知元素反应遗物

@@ -150,7 +150,7 @@ public class PyroPower extends AbstractPower {
                         AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
                         YibaMod.logger.info("触发1.5蒸发："+ (damageAmount * 1.5 + this.mystery));
                         //抽1卡
-                        addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                        //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                         //回1费
                         AbstractDungeon.player.gainEnergy(1);
                         this.isMultipleActive = true;
@@ -172,7 +172,7 @@ public class PyroPower extends AbstractPower {
                         AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
                         YibaMod.logger.info("触发1.5蒸发："+ (damageAmount * 1.5 + this.mystery));
                         //抽1卡
-                        addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                        //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                         //回1费
                         AbstractDungeon.player.gainEnergy(1);
                         //通知元素反应遗物
