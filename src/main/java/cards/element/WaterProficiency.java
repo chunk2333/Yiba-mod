@@ -58,7 +58,7 @@ public class WaterProficiency extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(5);
+            upgradeMagicNumber(2);
         }
     }
 }
