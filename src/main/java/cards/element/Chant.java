@@ -1,5 +1,5 @@
 package cards.element;
-
+//吟唱
 import Tools.YiBaHelper;
 import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
@@ -33,7 +33,9 @@ public class Chant extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new MakeTempCardInHandAction(YiBaHelper.getRandomElementCard(), 1, false));
+        AbstractCard rec = YiBaHelper.getRandomElementCard();
+        rec.costForTurn = 0;
+        addToBot(new MakeTempCardInHandAction(rec, 1, false));
 
     }
 

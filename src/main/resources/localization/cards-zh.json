@@ -419,7 +419,7 @@
   },
   "Chant": {
     "NAME": "吟唱",
-    "DESCRIPTION": "将一张随机 元素 牌加入到你的手牌。 NL  消耗 。"
+    "DESCRIPTION": "将一张随机 元素 牌加入到你的手牌，其本回合耗能为0。 NL  消耗 。"
   },
   "GaleSpell": {
     "NAME": "疾风术",
