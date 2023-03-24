@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import pathes.AbstractCardEnum;
 
@@ -19,6 +20,8 @@ public class YiBaHelper {
     public static Boolean hasMod(String modId){
         return Loader.isModLoadedOrSideloaded(modId);
     }
+
+    public static Boolean isDone = false;
 
     public static int getPlayerMystery(){
         int mystery = 0;
@@ -71,5 +74,45 @@ public class YiBaHelper {
             }
         }
         return list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
+    }
+
+    public static int getTagsCardNum(AbstractCard.CardTags tags){
+        ArrayList<AbstractCard> list = new ArrayList<>();
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if(c.hasTag(tags)){
+                list.add(c);
+            }
+        }
+        return list.size();
+    }
+
+    public static boolean canTriggerElement(AbstractMonster m, String ElementName){
+        if(ElementName.equals("HydroPower")){
+            if(m.hasPower("PyroPower")){
+                return true;
+            }
+            return m.hasPower("GeoPower");
+        }
+        if(ElementName.equals("PyroPower")){
+            if(m.hasPower("HydroPower")){
+                return true;
+            }
+            return m.hasPower("GeoPower");
+        }
+        if(ElementName.equals("GeoPower")){
+            if(m.hasPower("HydroPower")){
+                return true;
+            }
+            return m.hasPower("PyroPower");
+        }
+        return false;
+    }
+
+    public static void SetOverElement(Boolean isOver){
+        isDone = isOver;
+    }
+
+    public static boolean isOverElement(){
+        return isDone;
     }
 }

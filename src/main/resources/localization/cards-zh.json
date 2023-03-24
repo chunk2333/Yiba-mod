@@ -449,5 +449,13 @@
   "MagicFeedback": {
     "NAME": "魔力反馈",
     "DESCRIPTION": "回合开始时，对所有敌人给予随机 元素 附着。"
+  },
+  "AngrySea": {
+    "NAME": "怒海狂涛",
+    "DESCRIPTION": "对全体敌人造成8*水元素 牌数量点伤害。 NL 给予 水元素 。 NL 若触发 元素反应 则再给予 水元素 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （当前有",
+      "张 水元素 牌。）"
+    ]
   }
 }
