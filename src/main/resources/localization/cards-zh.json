@@ -188,7 +188,7 @@
   },
   "GeoCard": {
     "NAME": "岩元素",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 岩元素 。 NL  消耗 。"
+    "DESCRIPTION": " 保留 。 NL 给予 岩元素 。 NL 每过一回合耗能就减少1。 NL  消耗 。"
   },
   "AnemoCard": {
     "NAME": "风元素",
@@ -452,7 +452,7 @@
   },
   "AngrySea": {
     "NAME": "怒海狂涛",
-    "DESCRIPTION": "对全体敌人造成8*水元素 牌数量点伤害。 NL 给予 水元素 。 NL 若触发 元素反应 则再给予 水元素 。",
+    "DESCRIPTION": "对全体敌人造成 !M! *水元素 牌数量点伤害。 NL 给予 水元素 。 NL 若触发 元素反应 则再给予 水元素 。",
     "EXTENDED_DESCRIPTION": [
       " NL （当前有",
       "张 水元素 牌。）"

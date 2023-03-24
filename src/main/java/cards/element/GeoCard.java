@@ -20,15 +20,14 @@ public class GeoCard extends CustomCard{
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "img/cards/witch/GeoCard.png";
-    private static final int COST = 1;
+    private static final int COST = 2;
     public static final String ID = "GeoCard";
     public GeoCard() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY);
-        this.baseDamage = 8;
-        this.damage = this.baseDamage;
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY);
         this.exhaust = true;
         this.tags.add(YibaMod.ELEMENT);
         this.tags.add(YibaMod.GEO);
+        this.selfRetain = true;
     }
 
     @Override
@@ -37,11 +36,15 @@ public class GeoCard extends CustomCard{
         //给予岩元素buff
         addToBot(new ApplyPowerAction(m, m, new GeoPower(m, YiBaHelper.getPlayerMystery()), 1));
         //造成伤害
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        //AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 
     @Override
+    public void onRetained() {
+        this.modifyCostForCombat(-1);
+    }
 
+    @Override
     public AbstractCard makeCopy() {
         //复制卡牌时触发
         return new GeoCard();
@@ -52,7 +55,7 @@ public class GeoCard extends CustomCard{
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeBaseCost(1);
         }
     }
 }
