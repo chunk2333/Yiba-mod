@@ -26,7 +26,7 @@ public class SpiritualDomination extends CustomCard {
 
     public SpiritualDomination() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.ENEMY);
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
     }
@@ -48,7 +48,8 @@ public class SpiritualDomination extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            //upgradeBaseCost(2);
+            upgradeMagicNumber(1);
         }
     }
 }
