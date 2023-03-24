@@ -27,7 +27,7 @@ public class MagicPress extends CustomCard {
 
     public MagicPress() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseBlock = 13;
+        this.baseBlock = 15;
         this.block = this.baseBlock;
     }
 
@@ -50,7 +50,7 @@ public class MagicPress extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(4);
+            upgradeBlock(5);
         }
     }
 }
