@@ -403,7 +403,7 @@
   },
   "SpiritualDomination": {
     "NAME": "精神支配",
-    "DESCRIPTION": "敌人的攻击会攻击自己。 NL 持续 !M! 回合。"
+    "DESCRIPTION": "敌人的攻击会攻击自己。 NL 持续 !M! 回合。 NL  消耗 。"
   },
   "AffinityMorphology": {
     "NAME": "亲和形态",
