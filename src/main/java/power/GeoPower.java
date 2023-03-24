@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -68,7 +69,11 @@ public class GeoPower extends AbstractPower {
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
             AbstractMonster m = (AbstractMonster) this.owner;
             //击晕
-            AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(m, this.owner));
+            //AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(m, this.owner));
+
+            //给予格挡
+            addToBot(new GainBlockAction(AbstractDungeon.player, 15 + this.mystery, Settings.FAST_MODE));
+
             //怪物头顶显示xxx字
             AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "粘土", Color.BLUE.cpy()));
             //通知元素反应遗物
