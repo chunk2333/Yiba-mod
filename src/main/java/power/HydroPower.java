@@ -1,5 +1,6 @@
 package power;
 //水元素
+
 import YibaMod.YibaMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -50,7 +51,7 @@ public class HydroPower extends AbstractPower {
 
     public HydroPower(AbstractCreature owner, int mystery) {
         super();
-        this.mystery=mystery;
+        this.mystery = mystery;
         atlas_self = new TextureAtlas(Gdx.files.internal("powers/Selfpowers.atlas"));
         this.name = NAME;
         updateDescription();
@@ -62,11 +63,24 @@ public class HydroPower extends AbstractPower {
         this.type = AbstractPower.PowerType.BUFF;
     }
 
-    public void triggerElementreaction(){
+    public void triggerElementreaction() {
         //单蒸发
         addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "HydroPower"));
         addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
+        YibaMod.logger.info("触发裸蒸发");
+        //通知元素反应遗物
+        if (!ArrayElementRelic.getElementRelic().isEmpty()) {
+            for (ElementRelic r : ArrayElementRelic.getElementRelic()) {
+                r.triggerElement("裸蒸发");
+            }
+        }
+        //通知元素反应能力
+        if (!ArrayElementPower.getElementPower().isEmpty()) {
+            for (ElementPower powers : ArrayElementPower.getElementPower()) {
+                powers.triggerElement("裸蒸发");
+            }
+        }
     }
 
     @Override
@@ -76,10 +90,10 @@ public class HydroPower extends AbstractPower {
 
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if(power.ID.equals("PyroPower")){
+        if (power.ID.equals("PyroPower")) {
             isActive = true;
         }
-        if(power.ID.equals("GeoPower")){
+        if (power.ID.equals("GeoPower")) {
             //粘土
             hasGeo = true;
             isActive = true;
@@ -95,31 +109,31 @@ public class HydroPower extends AbstractPower {
             //m.setMove((byte) 999,AbstractMonster.Intent.STUN);
             AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "粘土", Color.BLUE.cpy()));
             //通知元素反应遗物
-            if(!ArrayElementRelic.getElementRelic().isEmpty()){
-                for (ElementRelic r : ArrayElementRelic.getElementRelic()){
+            if (!ArrayElementRelic.getElementRelic().isEmpty()) {
+                for (ElementRelic r : ArrayElementRelic.getElementRelic()) {
                     r.triggerElement("粘土-水岩");
                 }
             }
             //通知元素反应能力
-            if(!ArrayElementPower.getElementPower().isEmpty()){
-                for (ElementPower powers : ArrayElementPower.getElementPower()){
+            if (!ArrayElementPower.getElementPower().isEmpty()) {
+                for (ElementPower powers : ArrayElementPower.getElementPower()) {
                     powers.triggerElement("粘土-水岩");
                 }
             }
         }
 
-        for(AbstractPower power_:this.owner.powers){
-            if(power_.ID.equals("GeoPower")){
+        for (AbstractPower power_ : this.owner.powers) {
+            if (power_.ID.equals("GeoPower")) {
                 this.hasGeo = true;
             }
-            if(power_.ID.equals("PyroPower")){
+            if (power_.ID.equals("PyroPower")) {
                 this.hasPyro = true;
             }
-            if(power_.ID.equals("HydroPower")){
+            if (power_.ID.equals("HydroPower")) {
                 this.hasHydro = true;
             }
         }
-        if(this.hasPyro && this.hasHydro){
+        if (this.hasPyro && this.hasHydro) {
             //单蒸发
             triggerElementreaction();
         }
@@ -127,75 +141,85 @@ public class HydroPower extends AbstractPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if(!isActive){
+        if (!isActive) {
             //YibaMod.logger.info("触发2.0蒸发的未增幅伤害："+ damageAmount );
-            for(AbstractPower power:this.owner.powers){
-                if(power.ID.equals("GeoPower")){
-                    hasGeo = true;
+            for (AbstractPower power : this.owner.powers) {
+                if (power.ID.equals("GeoPower")) {
+                    this.hasGeo = true;
                 }
-                if(power.ID.equals("HydroPower")) {
-                    hasHydro = true;
+                if (power.ID.equals("HydroPower")) {
+                    this.hasHydro = true;
                 }
-                if(power.ID.equals("PyroPower")){
-                    if(hasHydro && hasGeo){
-                        return 0;
-                    }
-                    if(this.hasHydro){
-                        return 0;
-                    }
+                if (power.ID.equals("PyroPower")) {
+                    this.hasPyro = true;
                     this.isMultiple = power.canGoNegative;
+                }
+            }
+
+            if (this.hasPyro) {
+
+                if (this.hasGeo) {
                     addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "PyroPower"));
                     addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+                    return damageAmount;
+                }
+                if (this.hasHydro) {
+                    //triggerElementreaction();
+                    return 0;
+                }
+
+                addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "PyroPower"));
+                addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
 
 
-                    if(this.isMultiple && !this.isMultipleActive){
-                        //给虚弱
-                        addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 1, false), 1));
-                        //抽1卡
-                        //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
-                        //回复1能量
-                        AbstractDungeon.player.gainEnergy(1);
-                        this.isMultipleActive = true;
-                        //通知元素反应遗物
-                        if(!ArrayElementRelic.getElementRelic().isEmpty()){
-                            for (ElementRelic r : ArrayElementRelic.getElementRelic()){
-                                r.triggerElement("2.0蒸发");
-                            }
+                if (this.isMultiple && !this.isMultipleActive) {
+                    //给虚弱
+                    addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 1, false), 1));
+                    //抽1卡
+                    //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                    //回复1能量
+                    AbstractDungeon.player.gainEnergy(1);
+                    this.isMultipleActive = true;
+                    //通知元素反应遗物
+                    if (!ArrayElementRelic.getElementRelic().isEmpty()) {
+                        for (ElementRelic r : ArrayElementRelic.getElementRelic()) {
+                            r.triggerElement("2.0蒸发");
                         }
-                        //通知元素反应能力
-                        if(!ArrayElementPower.getElementPower().isEmpty()){
-                            for (ElementPower powers : ArrayElementPower.getElementPower()){
-                                powers.triggerElement("2.0蒸发");
-                            }
-                        }
-                        AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
-                        YibaMod.logger.info("触发2.0蒸发："+ (damageAmount * 2 + this.mystery));
-                        return damageAmount * 2 + this.mystery;
                     }
-                    if(!this.isMultiple) {
-                        //给虚弱
-                        addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 1, false), 1));
-                        //抽1卡
-                        //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
-                        //回复1能量
-                        AbstractDungeon.player.gainEnergy(1);
-                        //通知元素反应遗物
-                        if(!ArrayElementRelic.getElementRelic().isEmpty()){
-                            for (ElementRelic r : ArrayElementRelic.getElementRelic()){
-                                r.triggerElement("2.0蒸发");
-                            }
+                    //通知元素反应能力
+                    if (!ArrayElementPower.getElementPower().isEmpty()) {
+                        for (ElementPower powers : ArrayElementPower.getElementPower()) {
+                            powers.triggerElement("2.0蒸发");
                         }
-                        //通知元素反应能力
-                        if(!ArrayElementPower.getElementPower().isEmpty()){
-                            for (ElementPower powers : ArrayElementPower.getElementPower()){
-                                powers.triggerElement("2.0蒸发");
-                            }
-                        }
-                        AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
-                        YibaMod.logger.info("触发2.0蒸发："+ (damageAmount * 2 + this.mystery));
                     }
+                    AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
+                    YibaMod.logger.info("触发2.0蒸发：" + (damageAmount * 2 + this.mystery));
                     return damageAmount * 2 + this.mystery;
                 }
+                if (!this.isMultiple) {
+                    //给虚弱
+                    addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 1, false), 1));
+                    //抽1卡
+                    //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+                    //回复1能量
+                    AbstractDungeon.player.gainEnergy(1);
+                    //通知元素反应遗物
+                    if (!ArrayElementRelic.getElementRelic().isEmpty()) {
+                        for (ElementRelic r : ArrayElementRelic.getElementRelic()) {
+                            r.triggerElement("2.0蒸发");
+                        }
+                    }
+                    //通知元素反应能力
+                    if (!ArrayElementPower.getElementPower().isEmpty()) {
+                        for (ElementPower powers : ArrayElementPower.getElementPower()) {
+                            powers.triggerElement("2.0蒸发");
+                        }
+                    }
+                    AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
+                    YibaMod.logger.info("触发2.0蒸发：" + (damageAmount * 2 + this.mystery));
+                }
+                return damageAmount * 2 + this.mystery;
+
             }
         }
         return damageAmount;
