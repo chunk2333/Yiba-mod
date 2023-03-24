@@ -37,7 +37,7 @@ public class AngrySea extends CustomCard {
 
     public AngrySea() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        this.baseDamage = 8;
+        this.baseDamage = 5;
         this.isMultiDamage = true;
         this.tags.add(YibaMod.ELEMENT);
         this.tags.add(YibaMod.HYDRO);
@@ -91,7 +91,7 @@ public class AngrySea extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeDamage(2);
         }
     }
 
