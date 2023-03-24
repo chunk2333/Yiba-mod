@@ -36,7 +36,7 @@ public class Explosion extends CustomCard {
 
     public Explosion() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.ENEMY);
-        this.baseDamage = 30;
+        this.baseDamage = 20;
         this.damage = this.baseDamage;
         this.tags.add(YibaMod.ELEMENT);
         this.tags.add(YibaMod.GEO);
