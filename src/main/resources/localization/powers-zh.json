@@ -205,5 +205,13 @@
     "DESCRIPTIONS": [
       "回合开始时给予所有敌人随机 #y元素 附着。"
     ]
+  },
+  "NextTurnCanNotDrawCard": {
+    "NAME": "下回合不能抽牌",
+    "DESCRIPTIONS": [
+      "下回合不能额外抽牌。",
+      "接下来的 #b",
+      " 回合内无法额外抽牌。"
+    ]
   }
 }
