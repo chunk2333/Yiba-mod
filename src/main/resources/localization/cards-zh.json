@@ -465,5 +465,10 @@
   "ElementPunch": {
     "NAME": "元素拳",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人存在 元素 则获得 [E] 。"
+  },
+  "DancingFireAndFlowingWind": {
+    "NAME": "舞火流风",
+    "DESCRIPTION": "给予 火元素 ，并立即触发一次 扩散 。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION":"给予 火元素 ，并立即触发一次 扩散 。"
   }
 }
