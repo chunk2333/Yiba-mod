@@ -180,11 +180,11 @@
   },
   "HydroCard": {
     "NAME": "水元素",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 水元素 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 水元素 。 NL  消耗 。"
   },
   "PyroCard": {
     "NAME": "火元素",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 火元素 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 火元素 。 NL  消耗 。"
   },
   "GeoCard": {
     "NAME": "岩元素",
@@ -192,7 +192,7 @@
   },
   "AnemoCard": {
     "NAME": "风元素",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL  扩散 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  扩散 。 NL  消耗 。"
   },
   "YouAreOne_OneByOne": {
     "NAME": "你是一个，一个一个",
@@ -444,7 +444,7 @@
   },
   "PenetrationWaterGun": {
     "NAME": "贯穿水枪",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果触发了 水元素 相关 元素反应 ，则放回抽牌堆。 NL 给予 水元素 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果触发了 水元素 相关 元素反应 ，则放回抽牌堆。 NL 给予 水元素 。"
   },
   "MagicFeedback": {
     "NAME": "魔力反馈",
@@ -461,5 +461,9 @@
   "ExercisePatience": {
     "NAME": "忍耐",
     "DESCRIPTION": "抽 !M! 张牌。 NL 下回合无法抽牌。"
+  },
+  "ElementPunch": {
+    "NAME": "元素拳",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人存在 元素 则获得 [E] 。"
   }
 }
