@@ -36,6 +36,7 @@ public class HydroCard extends CustomCard{
         this.damage = this.baseDamage;
         this.tags.add(YibaMod.ELEMENT);
         this.tags.add(YibaMod.HYDRO);
+        this.exhaust = true;
     }
 
     @Override

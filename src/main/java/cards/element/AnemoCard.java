@@ -35,6 +35,7 @@ public class AnemoCard extends CustomCard{
         this.damage = this.baseDamage;
         this.tags.add(YibaMod.ANEMO);
         this.tags.add(YibaMod.ELEMENT);
+        this.exhaust = true;
     }
 
     @Override
