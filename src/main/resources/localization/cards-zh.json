@@ -457,5 +457,9 @@
       " NL （当前有",
       "张 水元素 牌。）"
     ]
+  },
+  "ExercisePatience": {
+    "NAME": "忍耐",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 下回合无法抽牌。"
   }
 }
