@@ -1,5 +1,6 @@
 package relics;
 
+import Tools.YiBaHelper;
 import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -24,6 +25,11 @@ public class TestTriggerElement extends ElementRelic {
     public void triggerElement(String reactionName){
         show();
         YibaMod.logger.info("[triggerElement] 有元素反应触发：" + reactionName);
+        if(YiBaHelper.getLastTriggerElementName() != null){
+            YibaMod.logger.info("[triggerElement] 上次触发的元素反应：：" + YiBaHelper.getLastTriggerElementName());
+            YibaMod.logger.info("[triggerElement] 上次触发的完整元素反应：：" + YiBaHelper.getLastTriggerElementFinalName());
+        }
+
     }
 
     @Override

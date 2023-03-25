@@ -19,6 +19,10 @@ public class YiBaHelper {
         return Loader.isModLoadedOrSideloaded(modId);
     }
 
+    private static String lastTriggerElementName;
+
+    private static String lastTriggerElementFinalName;
+
     public static int getPlayerMystery(){
         int mystery = 0;
         AbstractPlayer p = AbstractDungeon.player;
@@ -102,5 +106,17 @@ public class YiBaHelper {
             return m.hasPower("PyroPower");
         }
         return false;
+    }
+
+    public static void setLastTriggerElement(String name, String finalName){
+        lastTriggerElementName = name;
+        lastTriggerElementFinalName = finalName;
+    }
+
+    public static String getLastTriggerElementName(){
+        return lastTriggerElementName;
+    }
+    public static String getLastTriggerElementFinalName(){
+        return lastTriggerElementFinalName;
     }
 }

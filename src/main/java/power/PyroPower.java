@@ -1,6 +1,7 @@
 package power;
 //火元素
 
+import Tools.YiBaHelper;
 import YibaMod.YibaMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -92,6 +93,7 @@ public class PyroPower extends AbstractPower {
                 powers.triggerElement("裸蒸发");
             }
         }
+        YiBaHelper.setLastTriggerElement("蒸发", "裸蒸发");
         AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
     }
 
@@ -178,6 +180,7 @@ public class PyroPower extends AbstractPower {
                         powers.triggerElement("1.5蒸发");
                     }
                 }
+                YiBaHelper.setLastTriggerElement("蒸发", "1.5蒸发");
                 return (int) (damageAmount * 1.5 + this.mystery);
             }
             if (!this.isMultiple) {
@@ -199,6 +202,7 @@ public class PyroPower extends AbstractPower {
                         powers.triggerElement("1.5蒸发");
                     }
                 }
+                YiBaHelper.setLastTriggerElement("蒸发", "1.5蒸发");
             }
             return (int) (damageAmount * 1.5 + this.mystery);
 

@@ -1,6 +1,7 @@
 package power;
 //水元素
 
+import Tools.YiBaHelper;
 import YibaMod.YibaMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -81,6 +82,7 @@ public class HydroPower extends AbstractPower {
                 powers.triggerElement("裸蒸发");
             }
         }
+        YiBaHelper.setLastTriggerElement("蒸发", "裸蒸发");
     }
 
     @Override
@@ -120,6 +122,7 @@ public class HydroPower extends AbstractPower {
                     powers.triggerElement("粘土-水岩");
                 }
             }
+            YiBaHelper.setLastTriggerElement("粘土", "水岩");
         }
 
         for (AbstractPower power_ : this.owner.powers) {
@@ -194,6 +197,7 @@ public class HydroPower extends AbstractPower {
                     }
                     AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
                     YibaMod.logger.info("触发2.0蒸发：" + (damageAmount * 2 + this.mystery));
+                    YiBaHelper.setLastTriggerElement("蒸发", "2.0蒸发");
                     return damageAmount * 2 + this.mystery;
                 }
                 if (!this.isMultiple) {
@@ -217,6 +221,7 @@ public class HydroPower extends AbstractPower {
                     }
                     AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
                     YibaMod.logger.info("触发2.0蒸发：" + (damageAmount * 2 + this.mystery));
+                    YiBaHelper.setLastTriggerElement("蒸发", "2.0蒸发");
                 }
                 return damageAmount * 2 + this.mystery;
 

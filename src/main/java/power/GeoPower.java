@@ -1,5 +1,6 @@
 package power;
 //岩元素
+import Tools.YiBaHelper;
 import YibaMod.YibaMod;
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
@@ -88,6 +89,7 @@ public class GeoPower extends AbstractPower {
                     powers.triggerElement("粘土-岩水");
                 }
             }
+            YiBaHelper.setLastTriggerElement("粘土", "粘土-岩水");
         }
     }
 
@@ -125,6 +127,7 @@ public class GeoPower extends AbstractPower {
                             powers.triggerElement("熔岩-岩火");
                         }
                     }
+                    YiBaHelper.setLastTriggerElement("熔岩", "熔岩-岩火");
                     return damageAmount * 3 + this.mystery;
                 }
                 if(!this.isMultiple) {
@@ -146,6 +149,7 @@ public class GeoPower extends AbstractPower {
                             powers.triggerElement("熔岩-岩火");
                         }
                     }
+                    YiBaHelper.setLastTriggerElement("熔岩", "熔岩-岩火");
                 }
                 return damageAmount * 3 + this.mystery;
             }
