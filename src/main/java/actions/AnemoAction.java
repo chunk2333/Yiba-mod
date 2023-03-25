@@ -1,5 +1,6 @@
 package actions;
 
+import Tools.YiBaHelper;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -43,6 +44,7 @@ public class AnemoAction extends AbstractGameAction {
                         powers.triggerElement("扩散-火");
                     }
                 }
+                YiBaHelper.setLastTriggerElement("扩散", "扩散-火");
                 addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                 return;
             }
@@ -63,6 +65,7 @@ public class AnemoAction extends AbstractGameAction {
                         powers.triggerElement("扩散-水");
                     }
                 }
+                YiBaHelper.setLastTriggerElement("扩散", "扩散-水");
                 addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                 return;
             }
