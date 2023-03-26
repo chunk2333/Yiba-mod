@@ -109,7 +109,7 @@ public class GeoPower extends AbstractPower {
                 YibaMod.logger.info("触发熔岩：" + damageAmount * 3 + "额外伤害："+ this.mystery);
                 if(this.isMultiple && !this.isMultipleActive){
                     //给予易伤
-                    addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 1, false), 2));
+                    addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 1, false), 1));
                     //抽1牌
                     //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                     //获得1费

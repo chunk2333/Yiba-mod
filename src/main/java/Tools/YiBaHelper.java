@@ -119,4 +119,19 @@ public class YiBaHelper {
     public static String getLastTriggerElementFinalName(){
         return lastTriggerElementFinalName;
     }
+
+    public static Boolean hasElement(AbstractMonster m){
+        for(AbstractPower power : m.powers){
+            if(power.ID.equals("HydroPower")){
+                return true;
+            }
+            if(power.ID.equals("PyroPower")){
+                return true;
+            }
+            if(power.ID.equals("GeoPower")){
+                return true;
+            }
+        }
+        return false;
+    }
 }

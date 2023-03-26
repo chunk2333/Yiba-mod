@@ -478,5 +478,10 @@
   "SimpleMagic": {
     "NAME": "简易魔法",
     "DESCRIPTION": "给予随机 元素 。 NL 获得 [E] [E] 。"
+  },
+  "LiquidFire": {
+    "NAME": "液态火",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标不存在任何 元素，则立刻触发一次随机 蒸发 反应。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION":"造成 !D! 点伤害。 NL 若目标不存在任何 元素，则立刻触发一次随机 蒸发 反应。"
   }
 }
