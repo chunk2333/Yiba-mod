@@ -473,7 +473,7 @@
   },
   "TheSage": {
     "NAME": "贤者",
-    "DESCRIPTION": " 保留 。 NL 获得 !M! 点 元素精通 。 NL 下回合死亡。"
+    "DESCRIPTION": " 保留 。 NL 获得 !M! 点 元素精通 。 NL 下回合死亡。 NL  消耗 。"
   },
   "SimpleMagic": {
     "NAME": "简易魔法",
