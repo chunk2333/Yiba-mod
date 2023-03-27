@@ -23,7 +23,7 @@ public class AnemoCard extends CustomCard{
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards/test.png";
+    public static final String IMG_PATH = "img/cards/witch/AnemoCard.png";
 
     private static final int COST = 0;
 
