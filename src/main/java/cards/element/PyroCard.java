@@ -21,7 +21,7 @@ public class PyroCard extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("PyroCard");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards/test.png";
+    public static final String IMG_PATH = "img/cards/witch/PyroCard.png";
     private static final int COST = 0;
     public static final String ID = "PyroCard";
     public PyroCard() {
