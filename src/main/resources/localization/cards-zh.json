@@ -491,5 +491,9 @@
   "SoftWaterShield": {
     "NAME": "柔水盾",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果目标敌人的意图是攻击，则给予 水元素 。"
+  },
+  "OrangeRoad": {
+    "NAME": "古灵精怪",
+    "DESCRIPTION": " 固有 。 NL 每回合开始时获得 !M! 点 随机加成 。 NL 失去1点 随机加成 。"
   }
 }
