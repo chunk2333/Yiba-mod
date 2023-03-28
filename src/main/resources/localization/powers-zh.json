@@ -219,5 +219,12 @@
     "DESCRIPTIONS": [
       "回合开始时立即死亡。"
     ]
+  },
+  "PleaseKeepBackPower": {
+    "NAME": "请退后",
+    "DESCRIPTIONS": [
+      "每次给予 #y元素 时获得 #b",
+      " 点 格挡 。"
+    ]
   }
 }
