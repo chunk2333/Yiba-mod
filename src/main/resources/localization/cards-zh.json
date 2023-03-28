@@ -483,5 +483,13 @@
     "NAME": "液态火",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标不存在任何 元素，则立刻触发一次随机 蒸发 反应。 NL  消耗 。",
     "UPGRADE_DESCRIPTION":"造成 !D! 点伤害。 NL 若目标不存在任何 元素，则立刻触发一次随机 蒸发 反应。"
+  },
+  "PleaseKeepBack": {
+    "NAME": "生人勿近",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每次对目标附着元素时获得 !M! 点 格挡 。 NL  消耗 。"
+  },
+  "SoftWaterShield": {
+    "NAME": "柔水盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果目标敌人的意图是攻击，则给予 水元素 。"
   }
 }
