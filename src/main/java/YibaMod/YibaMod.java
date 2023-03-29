@@ -52,8 +52,7 @@ import pathes.AbstractCardEnum;
 import pathes.ThmodClassEnum;
 import potions.*;
 import relics.*;
-import relics.ClickRelic.ScatterCoins;
-
+import relics.ClickRelic.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
@@ -381,10 +380,10 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new SacrificialFragments(), RelicType.SHARED); //祭礼残章
         BaseMod.addRelic(new SacrificialBow(), RelicType.SHARED); //祭礼弓
         BaseMod.addRelic(new Amber(), RelicType.SHARED); //琥珀
-
         BaseMod.addRelic(new DeadLeaves(), RelicType.RED); //腐朽枯叶
         BaseMod.addRelic(new SolarPanels(), RelicType.BLUE); //太阳能电路板
         BaseMod.addRelic(new RedPants(), RelicType.RED); //红裤衩
+        BaseMod.addRelic(new TheKeyToHeaven(), RelicType.SHARED); //通往天堂的钥匙
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
