@@ -495,5 +495,9 @@
   "OrangeRoad": {
     "NAME": "古灵精怪",
     "DESCRIPTION": " 固有 。 NL 每回合开始时获得 !M! 点 随机加成 。 NL 失去1点 随机加成 。"
+  },
+  "StealthFogColor": {
+    "NAME": "隐身雾色",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若上次触发的元素反应为蒸发则额外获得 !M!  格挡 。"
   }
 }
