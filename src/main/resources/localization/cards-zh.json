@@ -499,5 +499,9 @@
   "StealthFogColor": {
     "NAME": "隐身雾色",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若上次触发的元素反应为蒸发则额外获得 !M!  格挡 。"
+  },
+  "TheRoarOfAHurricane": {
+    "NAME": "飓风呼啸",
+    "DESCRIPTION": " 扩散 。 NL 场上每存活一位的敌人就获得 !B! 点 格挡 。"
   }
 }
