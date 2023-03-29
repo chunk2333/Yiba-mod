@@ -328,7 +328,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         //---------------魔女遗物-----------------------
 
         BaseMod.addRelicToCustomPool(new cLanguageProgramBegin(), AbstractCardEnum.Witch_COLOR);
-        BaseMod.addRelic(new Kakaa(), RelicType.SHARED);    //kakaa镰刀
+        BaseMod.addRelic(new Kakaa(), RelicType.SHARED);    //一血传奇
         BaseMod.addRelic(new Beef(), RelicType.SHARED);     //牛排
         BaseMod.addRelic(new Homa(), RelicType.SHARED);     //护摩之杖
         BaseMod.addRelic(new Hedron20(), RelicType.SHARED); //符文20面体
@@ -385,7 +385,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new RedPants(), RelicType.RED); //红裤衩
         BaseMod.addRelic(new TheKeyToHeaven(), RelicType.SHARED); //通往天堂的钥匙
         //添加事件:会员制餐厅
-        BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.NORMAL).dungeonIDs(TheCity.ID, Exordium.ID).create());
+        BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
         BaseMod.addEvent(new AddEventParams.Builder(SanHuanPi.ID, SanHuanPi.class).dungeonID(TheBeyond.ID).create());
         //添加事件：LuLuEvent
