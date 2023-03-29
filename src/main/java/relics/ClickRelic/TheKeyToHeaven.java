@@ -17,9 +17,9 @@ public class TheKeyToHeaven extends ClickableRelic {
 
     public static final String ID = "TheKeyToHeaven";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/TheKeyToHeaven.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/TheKeyToHeaven.png";
 
     public TheKeyToHeaven() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.FLAT);
