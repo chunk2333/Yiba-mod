@@ -503,5 +503,9 @@
   "TheRoarOfAHurricane": {
     "NAME": "飓风呼啸",
     "DESCRIPTION": " 扩散 。 NL 场上每存活一位的敌人就获得 !B! 点 格挡 。"
+  },
+  "ShakeTheWorld": {
+    "NAME": "掀天揭地",
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 给予 岩元素 。 NL  消耗 。"
   }
 }
