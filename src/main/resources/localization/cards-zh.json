@@ -507,5 +507,9 @@
   "ShakeTheWorld": {
     "NAME": "掀天揭地",
     "DESCRIPTION": "造成 !D! 点伤害X次。 NL 给予 岩元素 。 NL  消耗 。"
+  },
+  "ThousandCragMyriadRavine": {
+    "NAME": "千岩万壑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 然后给予 岩元素 。 NL  消耗 。"
   }
 }
