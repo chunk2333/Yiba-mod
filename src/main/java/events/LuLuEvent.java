@@ -95,7 +95,7 @@ public class LuLuEvent extends AbstractImageEvent {
                 if (buttonPressed == 2){
                     //偷
                     //(int) (AbstractDungeon.player.maxHealth*0.3)
-                    AbstractDungeon.player.damage(new DamageInfo(null, 35, DamageInfo.DamageType.HP_LOSS));
+                    AbstractDungeon.player.damage(new DamageInfo(null, 50, DamageInfo.DamageType.HP_LOSS));
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain((Settings.WIDTH / 2), (Settings.HEIGHT / 2), new LuLu());
                     this.imageEventText.clearRemainingOptions();
                     this.imageEventText.clearAllDialogs();
