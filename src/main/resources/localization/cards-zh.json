@@ -511,5 +511,10 @@
   "ThousandCragMyriadRavine": {
     "NAME": "千岩万壑",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 然后给予 岩元素 。 NL  消耗 。"
+  },
+  "RussianTurntable": {
+    "NAME": "俄罗斯转盘",
+    "DESCRIPTION": "16.6%概率立即死亡。 NL 获得300金币。 NL  消耗 。 NL  虚无 。 NL  移除 。",
+    "UPGRADE_DESCRIPTION":"16.6%概率立即死亡。 NL 获得300金币。 NL  消耗 。 NL  虚无 。"
   }
 }
