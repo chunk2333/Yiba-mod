@@ -1,6 +1,7 @@
 package Tools;
 
 import YibaMod.YibaMod;
+import cards.element.AnemoCard;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -72,6 +73,9 @@ public class YiBaHelper {
             if(c.hasTag(YibaMod.ELEMENT)){
                 list.add(c);
             }
+        }
+        if(list.size() == 0){
+            return new AnemoCard();
         }
         return list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
     }
