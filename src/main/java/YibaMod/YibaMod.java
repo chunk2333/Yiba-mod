@@ -53,6 +53,8 @@ import pathes.ThmodClassEnum;
 import potions.*;
 import relics.*;
 import relics.ClickRelic.*;
+import relics.Witch.HighLevelMagicBook;
+
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
@@ -388,6 +390,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new SolarPanels(), RelicType.BLUE); //太阳能电路板
         BaseMod.addRelic(new RedPants(), RelicType.RED); //红裤衩
         BaseMod.addRelic(new TheKeyToHeaven(), RelicType.SHARED); //通往天堂的钥匙
+        BaseMod.addRelicToCustomPool(new HighLevelMagicBook(), AbstractCardEnum.Witch_COLOR); //很高级的魔导书----魔女专属Boss遗物
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
