@@ -248,6 +248,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new TheRoarOfAHurricane());//飓风呼啸
         this.cardsToAdd.add(new ShakeTheWorld());//掀天揭地
         this.cardsToAdd.add(new ThousandCragMyriadRavine());//千岩万壑
+        this.cardsToAdd.add(new Penetrate());//识破
         //this.cardsToAdd.add(new SavePower());
         //this.cardsToAdd.add(new Printf());
 
@@ -331,6 +332,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
 
         //---------------魔女遗物-----------------------
         BaseMod.addRelicToCustomPool(new TestTriggerElement(), AbstractCardEnum.Witch_COLOR);//元素反应测试遗物
+        BaseMod.addRelicToCustomPool(new HighLevelMagicBook(), AbstractCardEnum.Witch_COLOR); //很高级的魔导书----魔女专属Boss遗物
         //---------------魔女遗物-----------------------
 
         BaseMod.addRelicToCustomPool(new cLanguageProgramBegin(), AbstractCardEnum.Witch_COLOR);
@@ -390,7 +392,6 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new SolarPanels(), RelicType.BLUE); //太阳能电路板
         BaseMod.addRelic(new RedPants(), RelicType.RED); //红裤衩
         BaseMod.addRelic(new TheKeyToHeaven(), RelicType.SHARED); //通往天堂的钥匙
-        BaseMod.addRelicToCustomPool(new HighLevelMagicBook(), AbstractCardEnum.Witch_COLOR); //很高级的魔导书----魔女专属Boss遗物
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批

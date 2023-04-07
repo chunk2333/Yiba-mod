@@ -516,5 +516,9 @@
     "NAME": "俄罗斯转盘",
     "DESCRIPTION": "16.6%概率立即死亡。 NL 获得300金币。 NL  消耗 。 NL  虚无 。 NL  移除 。",
     "UPGRADE_DESCRIPTION":"16.6%概率立即死亡。 NL 获得300金币。 NL  消耗 。 NL  虚无 。"
+  },
+  "Penetrate": {
+    "NAME": "识破",
+    "DESCRIPTION": "场上每有一命敌人被元素附着，就获得 [E] 。"
   }
 }
