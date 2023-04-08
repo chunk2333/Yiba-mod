@@ -532,5 +532,9 @@
   "PositiveFeedback": {
     "NAME": "正反馈",
     "DESCRIPTION": "每次触发 元素反应 就获得 [E] 。"
+  },
+  "Annihilate": {
+    "NAME": "湮灭",
+    "DESCRIPTION": "每给予一次元素就抽 !M! 张牌。"
   }
 }
