@@ -545,5 +545,9 @@
   "MagicOverflow": {
     "NAME": "魔力溢出",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 立即触发一次 粘土反应 。"
+  },
+  "CrazyHurricaneCut": {
+    "NAME": "狂飓切裂",
+    "DESCRIPTION": "对全部敌人造成 !D! 点伤害。 NL  扩散 。 NL 如果 扩散 成功则额外造成 !D! 点伤害。"
   }
 }
