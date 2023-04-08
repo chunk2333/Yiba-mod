@@ -528,5 +528,9 @@
   "InstantKill": {
     "NAME": "瞬杀",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 只有敌人身上没有 元素 时才能造成伤害。"
+  },
+  "PositiveFeedback": {
+    "NAME": "正反馈",
+    "DESCRIPTION": "每次触发 元素反应 就获得 [E] 。"
   }
 }
