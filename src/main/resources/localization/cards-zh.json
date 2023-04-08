@@ -520,5 +520,13 @@
   "Penetrate": {
     "NAME": "识破",
     "DESCRIPTION": "场上每有一命敌人被元素附着，就获得 [E] 。"
+  },
+  "FranticAndChaotic": {
+    "NAME": "手忙脚乱",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "InstantKill": {
+    "NAME": "瞬杀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 只有敌人身上没有 元素 时才能造成伤害。"
   }
 }
