@@ -25,6 +25,10 @@ public class ArrayElementPower {
             if(power.ID.equals("MagicalProgressPower")){
                 list.add(new MagicalProgressPower(AbstractDungeon.player,power.amount));
             }
+            //正反馈 能力
+            if(power.ID.equals("PositiveFeedbackPower")){
+                list.add(new PositiveFeedbackPower(AbstractDungeon.player,power.amount));
+            }
         }
         return list;
     }

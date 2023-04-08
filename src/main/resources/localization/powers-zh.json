@@ -235,5 +235,12 @@
       "失去 #b",
       "点 #y随机加成 。"
     ]
+  },
+  "PositiveFeedbackPower": {
+    "NAME": "正反馈",
+    "DESCRIPTIONS": [
+      "每触发一次 #y元素反应 就获得 #b",
+      " 点 能量 。"
+    ]
   }
 }
