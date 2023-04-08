@@ -33,7 +33,7 @@ public class PositiveFeedbackPower extends ElementPower {
         updateDescription();
         this.region48 = atlas_self.findRegion("48/MagicLoopPower");
         this.region128 = atlas_self.findRegion("128/MagicLoopPower");
-        this.type = AbstractPower.PowerType.BUFF;
+        this.type = AbstractPower.PowerType.DEBUFF;
     }
 
     @Override
