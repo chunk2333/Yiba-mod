@@ -531,7 +531,7 @@
   },
   "PositiveFeedback": {
     "NAME": "正反馈",
-    "DESCRIPTION": "每次触发 元素反应 就获得 [E] 。"
+    "DESCRIPTION": "每次触发 元素反应 就获得 [E] 。 NL  消耗 。"
   },
   "Annihilate": {
     "NAME": "湮灭",
