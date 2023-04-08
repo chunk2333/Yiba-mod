@@ -249,6 +249,8 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new ShakeTheWorld());//掀天揭地
         this.cardsToAdd.add(new ThousandCragMyriadRavine());//千岩万壑
         this.cardsToAdd.add(new Penetrate());//识破
+        this.cardsToAdd.add(new FranticAndChaotic());//手忙脚乱
+        this.cardsToAdd.add(new InstantKill());//瞬杀
         //this.cardsToAdd.add(new SavePower());
         //this.cardsToAdd.add(new Printf());
 
