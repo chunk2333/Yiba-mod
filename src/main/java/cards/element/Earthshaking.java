@@ -1,6 +1,7 @@
 package cards.element;
 //石破天惊
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -31,6 +32,8 @@ public class Earthshaking extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         this.baseMagicNumber = 3;
         this.baseDamage = 3;
+        this.tags.add(YibaMod.ELEMENT);
+        this.tags.add(YibaMod.GEO);
     }
 
     @Override
