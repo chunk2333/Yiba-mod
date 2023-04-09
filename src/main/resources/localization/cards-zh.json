@@ -557,6 +557,6 @@
   },
   "Earthshaking": {
     "NAME": "石破天惊",
-    "DESCRIPTION": "对全部敌人造成 !D! 点伤害。 NL  扩散 。 NL 如果 扩散 成功则额外造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点 !M! 次。 NL 给予 岩元素 。 NL 多次触发 。"
   }
 }
