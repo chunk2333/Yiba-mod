@@ -23,7 +23,7 @@ public class FranticAndChaotic extends CustomCard {
     public static final String IMG_PATH = "img/cards/witch/test.png";
 
     public FranticAndChaotic() {
-        super(ID, NAME, IMG_PATH, 1, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, NAME, IMG_PATH, 0, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = 4;
     }
 
