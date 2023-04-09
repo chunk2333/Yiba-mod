@@ -535,7 +535,7 @@
   },
   "Annihilate": {
     "NAME": "湮灭",
-    "DESCRIPTION": "每给予一次 元素 就抽 !M! 张牌。"
+    "DESCRIPTION": "每给予一次 元素 就抽 !M! 张牌。 NL  消耗 。"
   },
   "HyperElements": {
     "NAME": "高浓度元素",
@@ -554,5 +554,9 @@
     "NAME": "深信不疑",
     "DESCRIPTION": "抽 !M! 张牌。 NL 如果抽上来的是 元素牌 则获得 [E] [E] 。 NL  消耗 。",
     "UPGRADE_DESCRIPTION":"抽 !M! 张牌。 NL 如果抽上来的是 元素牌 则获得 [E] [E] 。"
+  },
+  "Earthshaking": {
+    "NAME": "石破天惊",
+    "DESCRIPTION": "对全部敌人造成 !D! 点伤害。 NL  扩散 。 NL 如果 扩散 成功则额外造成 !D! 点伤害。"
   }
 }
