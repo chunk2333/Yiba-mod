@@ -257,6 +257,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new MagicOverflow());//魔力溢出
         this.cardsToAdd.add(new CrazyHurricaneCut());//狂飓切裂
         this.cardsToAdd.add(new BelieveFirmly());//深信不疑
+        this.cardsToAdd.add(new Earthshaking());//石破天惊
         //this.cardsToAdd.add(new SavePower());
         //this.cardsToAdd.add(new Printf());
 
@@ -382,7 +383,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new BottledCultistMask(), RelicType.SHARED); //瓶装异教徒头套
         BaseMod.addRelic(new IntertwinedFate(), RelicType.SHARED); //纠缠之缘
         BaseMod.addRelic(new AcquaintFate(), RelicType.SHARED); //相遇之缘
-        BaseMod.addRelic(new EntropyIncrease(), RelicType.SHARED); //熵增
+        BaseMod.addRelic(new EntropyIncrease(), RelicType.RED); //熵增
         BaseMod.addRelic(new ScatterCoins(), RelicType.SHARED); //撒币
         BaseMod.addRelic(new BrewingStand(), RelicType.SHARED); //酿造台
         BaseMod.addRelic(new TrashFish(), RelicType.SHARED); //杂鱼
