@@ -1,8 +1,10 @@
 package relics.Witch;
 //很高级的魔导书
+import YibaMod.YibaMod;
 import actions.HighLevelMagicBookAction;
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
@@ -18,6 +20,11 @@ public class HighLevelMagicBook extends CustomRelic {
 
     public HighLevelMagicBook() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.BOSS, LandingSound.HEAVY);
+    }
+
+    @Override
+    public void atBattleStart() {
+
     }
 
     @Override
@@ -38,19 +45,7 @@ public class HighLevelMagicBook extends CustomRelic {
 
     @Override
     public void onEquip() {
-        //删除自身
-        AbstractDungeon.player.loseRelic("HighLevelMagicBook");
-        //替换初始遗物
-        int relicAtIndex = 0;
-        for (int i = 0; i < AbstractDungeon.player.relics.size(); i++) {
-            if (AbstractDungeon.player.relics.get(i).relicId.equals("cLanguageProgramBegin")) {
-                relicAtIndex = i;
-                break;
-            }
-        }
-        AbstractDungeon.player.relics.get(relicAtIndex).onUnequip();
-        AbstractRelic bloodyIdol = RelicLibrary.getRelic("HighLevelMagicBook").makeCopy();
-        bloodyIdol.instantObtain(AbstractDungeon.player, relicAtIndex, false);
+
     }
 
     @Override

@@ -1,4 +1,5 @@
 package relics;
+//魔导书
 import basemod.abstracts.CustomRelic;
 import cards.element.GeoCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -34,4 +35,5 @@ public class cLanguageProgramBegin extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new cLanguageProgramBegin();
     }
+
 }
