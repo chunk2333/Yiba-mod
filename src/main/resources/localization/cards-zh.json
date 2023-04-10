@@ -579,5 +579,9 @@
   "InstantCutting": {
     "NAME": "瞬身切割",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 抽 !M! 张牌。"
+  },
+  "BeAlmostWipedOut": {
+    "NAME": "殆尽",
+    "DESCRIPTION": "只有当手牌中没有 元素牌 时才能打出。 NL 造成 !D! 点伤害。"
   }
 }
