@@ -567,5 +567,13 @@
     "NAME": "现学",
     "DESCRIPTION": "在本场战斗中 升级 手牌中的一张牌。 NL  扩散 。",
     "UPGRADE_DESCRIPTION":"在本场战斗中 升级 手牌中的所有牌。 NL  扩散 。"
+  },
+  "WandStrike": {
+    "NAME": "魔杖敲击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
+  },
+  "SuddenKick": {
+    "NAME": "突然一jio",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
   }
 }
