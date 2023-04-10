@@ -575,5 +575,9 @@
   "SuddenKick": {
     "NAME": "突然一jio",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
+  },
+  "InstantCutting": {
+    "NAME": "瞬身切割",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 抽 !M! 张牌。"
   }
 }
