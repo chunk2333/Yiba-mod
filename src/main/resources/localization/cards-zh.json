@@ -588,5 +588,9 @@
     "NAME": "全能全知",
     "DESCRIPTION": "在本场战斗中 升级 你的所有牌。 NL 每回合失去 [E] [E] 。",
     "UPGRADE_DESCRIPTION":"在本场战斗中 升级 你的所有牌。 NL 每回合失去 [E] 。"
+  },
+  "RegardMoneyAsFate": {
+    "NAME": "视金如命",
+    "DESCRIPTION": "获得 !B! ~ 最大金币数 点 格挡 。 NL  虚无 。"
   }
 }
