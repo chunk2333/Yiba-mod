@@ -583,5 +583,10 @@
   "BeAlmostWipedOut": {
     "NAME": "殆尽",
     "DESCRIPTION": "只有当手牌中没有 元素牌 时才能打出。 NL 造成 !D! 点伤害。"
+  },
+  "OmnipotentAndOmniscient": {
+    "NAME": "全能全知",
+    "DESCRIPTION": "在本场战斗中 升级 你的所有牌。 NL 每回合失去 [E] [E] 。",
+    "UPGRADE_DESCRIPTION":"在本场战斗中 升级 你的所有牌。 NL 每回合失去 [E] 。"
   }
 }
