@@ -23,6 +23,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -91,6 +92,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     @SpireEnum public static AbstractCard.CardTags HYDRO;
 
     @SpireEnum public static AbstractCard.CardTags PYRO;
+    private AbstractPlayer.PlayerClass Witch;
 
     public YibaMod() {
         //构造方法，初始化各种参数
@@ -423,6 +425,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addPotion(reborn.class, null, null, null, "reborn");
         BaseMod.addPotion(Escape.class, null, null, null, "Escape");
         BaseMod.addPotion(SpacePotions.class, null, null, null, "SpacePotions");
+        BaseMod.addPotion(ElementPotions.class, null, null, null, "ElementPotions", Witch);
     }
 
     @Override
