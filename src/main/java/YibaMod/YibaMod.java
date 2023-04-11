@@ -92,7 +92,6 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     @SpireEnum public static AbstractCard.CardTags HYDRO;
 
     @SpireEnum public static AbstractCard.CardTags PYRO;
-    private AbstractPlayer.PlayerClass Witch;
 
     public YibaMod() {
         //构造方法，初始化各种参数
@@ -425,8 +424,8 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addPotion(reborn.class, null, null, null, "reborn");
         BaseMod.addPotion(Escape.class, null, null, null, "Escape");
         BaseMod.addPotion(SpacePotions.class, null, null, null, "SpacePotions");
-        BaseMod.addPotion(ElementPotions.class, null, null, null, "ElementPotions", Witch);
-        BaseMod.addPotion(ElementCardPotions.class, null, null, null, "ElementCardPotions", Witch);
+        BaseMod.addPotion(ElementPotions.class, null, null, null, "ElementPotions", ThmodClassEnum.Witch_CLASS);
+        BaseMod.addPotion(ElementCardPotions.class, null, null, null, "ElementCardPotions", ThmodClassEnum.Witch_CLASS);
     }
 
     @Override
