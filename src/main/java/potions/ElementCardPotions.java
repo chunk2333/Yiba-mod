@@ -1,6 +1,7 @@
 package potions;
 //元素牌药水
 import actions.ElementCardPotionsAction;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,6 +22,7 @@ public class ElementCardPotions extends AbstractPotion {
     public ElementCardPotions() {
         super(NAME, POTION_ID, PotionRarity.COMMON, AbstractPotion.PotionSize.CARD, PotionColor.ENERGY);
         this.isThrown = false;
+        this.labOutlineColor = Color.WHITE.cpy();
     }
 
     public void use(AbstractCreature target) {
