@@ -426,6 +426,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addPotion(Escape.class, null, null, null, "Escape");
         BaseMod.addPotion(SpacePotions.class, null, null, null, "SpacePotions");
         BaseMod.addPotion(ElementPotions.class, null, null, null, "ElementPotions", Witch);
+        BaseMod.addPotion(ElementCardPotions.class, null, null, null, "ElementCardPotions", Witch);
     }
 
     @Override
