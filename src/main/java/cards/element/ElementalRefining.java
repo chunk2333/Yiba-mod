@@ -28,6 +28,7 @@ public class ElementalRefining extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 8;
         this.exhaust = true;
+        this.isEthereal = true;
     }
 
     @Override
@@ -48,7 +49,10 @@ public class ElementalRefining extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(4);
+            this.isEthereal = false;
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

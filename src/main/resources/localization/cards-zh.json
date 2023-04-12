@@ -561,7 +561,8 @@
   },
   "ElementalRefining": {
     "NAME": "元素精炼",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL  斩杀 时随机 升级 一张 元素牌 。 NL  消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  斩杀 时随机 升级 一张 元素牌 。 NL  消耗 。 NL  虚无 。",
+    "UPGRADE_DESCRIPTION":"造成 !D! 点伤害。 NL  斩杀 时随机 升级 一张 元素牌 。 NL  消耗 。"
   },
   "Learn": {
     "NAME": "现学",
