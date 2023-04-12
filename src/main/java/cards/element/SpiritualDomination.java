@@ -29,6 +29,7 @@ public class SpiritualDomination extends CustomCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
+        this.isEthereal = true;
     }
 
     @Override
