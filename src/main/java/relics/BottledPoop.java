@@ -18,6 +18,8 @@ public class BottledPoop extends CustomRelic {
 
     private static final String IMG_OTL = "img/relics/outline/BottledAir.png";
 
+    public static int num_BottledPoop;
+
     public BottledPoop() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.UNCOMMON, LandingSound.CLINK);
     }
@@ -30,6 +32,7 @@ public class BottledPoop extends CustomRelic {
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         //给予随机诅咒
         addToBot(new MakeTempCardInDrawPileAction(getRadomCurseCard(), 1, true, true));
+        num_BottledPoop = this.counter;
     }
     public AbstractCard getRadomCurseCard(){
         ArrayList<AbstractCard> list = new ArrayList<>();
@@ -46,6 +49,7 @@ public class BottledPoop extends CustomRelic {
     public void onVictory() {
         //在胜利时触发
         this.counter = this.counter + 1;
+        num_BottledPoop = this.counter;
         if(this.counter==5){
             int relicAtIndex = 0;
             for (int i = 0; i < AbstractDungeon.player.relics.size(); i++) {
@@ -57,6 +61,7 @@ public class BottledPoop extends CustomRelic {
             AbstractDungeon.player.relics.get(relicAtIndex).onUnequip();
             AbstractRelic bloodyIdol = RelicLibrary.getRelic("BottledAir").makeCopy();
             bloodyIdol.instantObtain(AbstractDungeon.player, relicAtIndex, false);
+            num_BottledPoop = 0;
         }
     }
 

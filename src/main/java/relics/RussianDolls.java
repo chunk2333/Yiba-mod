@@ -96,6 +96,14 @@ public class RussianDolls extends CustomRelic {
             if(p.hasRelic("RussianDolls")){
                 isGive = true;
                 wasLoad = true;
+
+                if(BottledPoop.num_BottledPoop == 5){
+                    BottledPoop.num_BottledPoop = 0;
+                    YibaMod.logger.info("瓶装答辩层数：" + BottledPoop.num_BottledPoop);
+                    isGive = false;
+                    wasLoad = true;
+                    return;
+                }
                 //给随机遗物
                 RussianDolls rd = new RussianDolls();
                 AbstractDungeon.player.getRelic("RussianDolls").flash();
