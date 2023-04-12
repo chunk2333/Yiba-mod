@@ -20,7 +20,7 @@ public class PositiveFeedback extends CustomCard {
 
     public static final String IMG_PATH = "img/cards/witch/test.png";
 
-    private static final int COST = 1;
+    private static final int COST = 3;
 
     public static final String ID = "PositiveFeedback";
 
@@ -28,7 +28,7 @@ public class PositiveFeedback extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
+        this.isEthereal = true;
     }
 
     @Override
@@ -48,7 +48,10 @@ public class PositiveFeedback extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            //upgradeBaseCost(0);
+            this.isEthereal = false;
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }
