@@ -33,7 +33,7 @@ public class AnnihilatePower extends AbstractPower {
         updateDescription();
         this.region48 = atlas_self.findRegion("48/EyesHeartPower");
         this.region128 = atlas_self.findRegion("128/EyesHeartPower");
-        this.type = AbstractPower.PowerType.BUFF;
+        this.type = AbstractPower.PowerType.DEBUFF;
     }
 
     @Override
