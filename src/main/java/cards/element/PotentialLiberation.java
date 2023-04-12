@@ -27,7 +27,7 @@ public class PotentialLiberation extends CustomCard {
 
     public PotentialLiberation() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 150;
+        this.baseMagicNumber = 200;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
     }
