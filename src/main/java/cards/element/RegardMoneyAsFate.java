@@ -31,6 +31,7 @@ public class RegardMoneyAsFate extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.SELF );
         this.baseBlock = 5;
         this.isEthereal = true;
+        this.baseMagicNumber = 40;
     }
 
     @Override
@@ -40,6 +41,8 @@ public class RegardMoneyAsFate extends CustomCard {
         int random;
         if(goldNum == 0 ){
             goldNum = 1;
+        }else {
+            goldNum = (int) (goldNum * this.baseMagicNumber * 0.01);
         }
 
         if(this.block <= 0){
@@ -62,7 +65,7 @@ public class RegardMoneyAsFate extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(5);
+            upgradeMagicNumber(20);
         }
     }
 }

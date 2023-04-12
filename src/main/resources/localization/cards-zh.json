@@ -591,6 +591,6 @@
   },
   "RegardMoneyAsFate": {
     "NAME": "视金如命",
-    "DESCRIPTION": "获得 !B! ~ 最大金币数 点 格挡 。 NL  虚无 。"
+    "DESCRIPTION": "获得 !B! ~ 最大金币数 !M! % 点 格挡 。 NL  虚无 。"
   }
 }
