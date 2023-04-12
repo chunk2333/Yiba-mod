@@ -20,12 +20,13 @@ public class Penetrate extends CustomCard {
 
     public static final String IMG_PATH = "img/cards/witch/test.png";
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     public static final String ID = "Penetrate";
 
     public Penetrate() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.exhaust = true;
     }
 
     @Override
@@ -51,7 +52,9 @@ public class Penetrate extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            this.exhaust = false;
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }
