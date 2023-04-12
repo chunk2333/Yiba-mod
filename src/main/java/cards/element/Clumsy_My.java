@@ -37,7 +37,7 @@ public class Clumsy_My extends CustomCard {
         //抽牌
         addToBot(new DrawCardAction(p, this.magicNumber));
         //失去元素精通
-        addToBot(new ApplyPowerAction(p, p, new MysteryPower(p, -2), -2));
+        addToBot(new ApplyPowerAction(p, p, new MysteryPower(p, -1), -1));
 
     }
 
