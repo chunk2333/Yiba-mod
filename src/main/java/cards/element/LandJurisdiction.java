@@ -21,7 +21,7 @@ public class LandJurisdiction extends CustomCard {
 
     public static final String IMG_PATH = "img/cards/witch/LandJurisdiction.png";
 
-    private static final int COST = 4;
+    private static final int COST = 3;
 
     public static final String ID = "LandJurisdiction";
 
@@ -48,7 +48,7 @@ public class LandJurisdiction extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(3);
+            upgradeBaseCost(2);
         }
     }
 }
