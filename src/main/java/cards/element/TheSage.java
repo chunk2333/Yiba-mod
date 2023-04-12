@@ -20,7 +20,7 @@ public class TheSage extends CustomCard {
 
     public static final String IMG_PATH = "img/cards/witch/TheSage.png";
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     public static final String ID = "TheSage";
 
@@ -50,7 +50,7 @@ public class TheSage extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(5);
+            upgradeMagicNumber(8);
         }
     }
 }
