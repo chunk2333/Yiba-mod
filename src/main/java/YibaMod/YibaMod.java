@@ -349,7 +349,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         //将自定义的遗物添加到这里
 
         //---------------魔女遗物-----------------------
-        BaseMod.addRelicToCustomPool(new TestTriggerElement(), AbstractCardEnum.Witch_COLOR);//元素反应测试遗物
+        //BaseMod.addRelicToCustomPool(new TestTriggerElement(), AbstractCardEnum.Witch_COLOR);//元素反应测试遗物
         BaseMod.addRelicToCustomPool(new HighLevelMagicBook(), AbstractCardEnum.Witch_COLOR); //很高级的魔导书----魔女专属Boss遗物
         //---------------魔女遗物-----------------------
 
