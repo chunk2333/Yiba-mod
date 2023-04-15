@@ -13,9 +13,9 @@ public class BlindBox extends CustomRelic implements CustomSavable<String> {
 
     public static final String ID = "BlindBox";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/BlindBox.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/BlindBox.png";
 
     private AbstractRelic abstractRelic;
 
