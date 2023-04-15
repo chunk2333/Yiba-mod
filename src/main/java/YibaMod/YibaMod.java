@@ -412,6 +412,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new TheKeyToHeaven(), RelicType.SHARED); //通往天堂的钥匙
         BaseMod.addRelic(new Dice(), RelicType.SHARED); //骰子
         BaseMod.addRelic(new BloodBag(), RelicType.SHARED); //血袋
+        BaseMod.addRelic(new BlindBox(), RelicType.SHARED); //盲盒
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批

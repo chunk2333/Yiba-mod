@@ -24,6 +24,8 @@ public class YiBaHelper {
 
     private static String lastTriggerElementFinalName;
 
+    private static String BlindBoxRelicId;
+
     public static int getPlayerMystery(){
         int mystery = 0;
         AbstractPlayer p = AbstractDungeon.player;
@@ -137,5 +139,15 @@ public class YiBaHelper {
             }
         }
         return false;
+    }
+
+    public static void setBlindBoxRelic(String relicId){
+
+        BlindBoxRelicId = relicId;
+        YibaMod.logger.info(BlindBoxRelicId);
+    }
+
+    public static String getBlindBoxRelic(){
+        return BlindBoxRelicId;
     }
 }

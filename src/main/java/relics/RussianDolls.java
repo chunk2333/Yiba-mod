@@ -20,7 +20,7 @@ public class RussianDolls extends CustomRelic {
 
     private static boolean isGive = false;
 
-    private static boolean wasLoad = false;
+    public static boolean wasLoad = false;
 
     public RussianDolls() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.FLAT);
@@ -37,17 +37,13 @@ public class RussianDolls extends CustomRelic {
         public static void Insert(){
             //玩家已初始化完毕
             AbstractPlayer p = AbstractDungeon.player;
-//            try {
-//                TimeUnit.SECONDS.sleep(1);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
 
             if(p.hasRelic("RussianDolls")){
 
                 wasLoad = true;
                 YibaMod.logger.info("俄罗斯套娃：玩家已完全载入");
             }
+
             for(AbstractRelic re : p.relics){
                 if(re.relicId.equals("RussianDolls")){
                     wasLoad = true;
@@ -55,7 +51,12 @@ public class RussianDolls extends CustomRelic {
                     break;
                 }
             }
+
             YibaMod.logger.info("SL(loadSeeds)：玩家已完全载入");
+            if(p.hasRelic("BlindBox")){
+                wasLoad = true;
+                //AbstractDungeon.player.getRelic("BlindBox").atBattleStart();
+            }
 
         }
     }
