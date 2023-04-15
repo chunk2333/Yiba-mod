@@ -11,9 +11,9 @@ public class BloodBag extends CustomRelic {
 
     public static final String ID = "BloodBag";
 
-    private static final String IMG = "img/relics/BlindBox.png";
+    private static final String IMG = "img/relics/BloodBag.png";
 
-    private static final String IMG_OTL = "img/relics/outline/BlindBox.png";
+    private static final String IMG_OTL = "img/relics/outline/BloodBag.png";
 
     public BloodBag() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.UNCOMMON, LandingSound.HEAVY);
