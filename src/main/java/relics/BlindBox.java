@@ -17,10 +17,6 @@ public class BlindBox extends CustomRelic implements CustomSavable<String> {
 
     private static final String IMG_OTL = "img/relics/outline/BlindBox.png";
 
-    private AbstractRelic abstractRelic;
-
-    private static String nowRelicId;
-
     public BlindBox() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.COMMON, LandingSound.SOLID);
     }
@@ -33,13 +29,13 @@ public class BlindBox extends CustomRelic implements CustomSavable<String> {
         }
         flash();
         addToBot(new GetRandomRelicAction());
-        //YibaMod.logger.info(YiBaHelper.getBlindBoxRelic());
 
     }
 
     @Override
     public void onEquip() {
         RussianDolls.wasLoad = true;
+        YiBaHelper.setBlindBoxRelic(null);
     }
 
     @Override

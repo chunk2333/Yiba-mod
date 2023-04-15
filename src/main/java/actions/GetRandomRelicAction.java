@@ -2,6 +2,7 @@ package actions;
 
 import Tools.YiBaHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -21,6 +22,7 @@ public class GetRandomRelicAction extends AbstractGameAction {
                     AbstractDungeon.returnRandomRelicTier());
             YiBaHelper.setBlindBoxRelic(abstractRelic.relicId);
             this.isTrigger = true;
+            addToBot(new WaitAction(2.0F));
             AbstractDungeon.getCurrRoom().spawnRelicAndObtain(AbstractDungeon.player.drawX, AbstractDungeon.player.drawY, abstractRelic);
 
             tickDuration();

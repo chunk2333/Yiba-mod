@@ -5,6 +5,7 @@ import basemod.abstracts.CustomRelic;
 import YibaMod.YibaMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -105,6 +106,13 @@ public class RussianDolls extends CustomRelic {
                     wasLoad = true;
                     return;
                 }
+
+                if(r.relicId.equals(YiBaHelper.getBlindBoxRelic())){
+                    isGive = false;
+                    wasLoad = true;
+                    return;
+                }
+
                 //给随机遗物
                 RussianDolls rd = new RussianDolls();
                 AbstractDungeon.player.getRelic("RussianDolls").flash();
