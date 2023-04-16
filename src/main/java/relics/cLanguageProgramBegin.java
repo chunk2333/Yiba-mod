@@ -21,7 +21,7 @@ public class cLanguageProgramBegin extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
+    public void atBattleStartPreDraw() {
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToBot(new MakeTempCardInHandAction(new GeoCard(), 1, false));
     }
