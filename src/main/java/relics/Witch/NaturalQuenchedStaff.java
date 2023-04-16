@@ -14,9 +14,9 @@ public class NaturalQuenchedStaff extends CustomRelic {
 
     public static final String ID = "NaturalQuenchedStaff";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/NaturalQuenchedStaff.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/NaturalQuenchedStaff.png";
 
     public NaturalQuenchedStaff() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.SOLID);
