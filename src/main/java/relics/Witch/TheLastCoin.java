@@ -13,9 +13,9 @@ public class TheLastCoin extends ElementRelic {
 
     public static final String ID = "TheLastCoin";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/TheLastCoin.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/TheLastCoin.png";
 
     public TheLastCoin() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.UNCOMMON, LandingSound.FLAT);
