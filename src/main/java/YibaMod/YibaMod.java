@@ -430,6 +430,10 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addPotion(SpacePotions.class, null, null, null, "SpacePotions");
         BaseMod.addPotion(ElementPotions.class, null, null, null, "ElementPotions", ThmodClassEnum.Witch_CLASS);
         BaseMod.addPotion(ElementCardPotions.class, null, null, null, "ElementCardPotions", ThmodClassEnum.Witch_CLASS);
+        BaseMod.addPotion(BottledRelicsPotion.class, null, null, null, "BottledRelicsPotion");
+        BaseMod.addPotion(Yiba_ChaoticPotion.class, null, null, null, "Yiba_ChaoticPotion");
+
+
     }
 
     @Override
