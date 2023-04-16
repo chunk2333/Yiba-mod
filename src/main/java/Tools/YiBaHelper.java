@@ -26,6 +26,10 @@ public class YiBaHelper {
 
     private static String BlindBoxRelicId;
 
+    private static String TempRelicId;
+
+    private static String TempRelicId2;
+
     public static int getPlayerMystery(){
         int mystery = 0;
         AbstractPlayer p = AbstractDungeon.player;
@@ -149,5 +153,25 @@ public class YiBaHelper {
 
     public static String getBlindBoxRelic(){
         return BlindBoxRelicId;
+    }
+
+    public static void setTempRelic(String relicId){
+
+        TempRelicId = relicId;
+        YibaMod.logger.info(TempRelicId);
+    }
+
+    public static String getTempRelic(){
+        return TempRelicId;
+    }
+
+    public static void setTempRelic2(String relicId){
+
+        TempRelicId2 = relicId;
+        YibaMod.logger.info(TempRelicId2);
+    }
+
+    public static String getTempRelic2(){
+        return TempRelicId2;
     }
 }
