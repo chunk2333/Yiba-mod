@@ -1,12 +1,10 @@
 package relics.abstracrt;
 
 import java.util.ArrayList;
-
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import relics.TestTriggerElement;
-
-
+import relics.*;
+import relics.Witch.*;
 
 public class ArrayElementRelic {
 
@@ -18,7 +16,11 @@ public class ArrayElementRelic {
             if(r.relicId.equals("TestTriggerElement")){
                 relics.add(new TestTriggerElement());
             }
+            if(r.relicId.equals("TheLastCoin")){
+                relics.add(new TheLastCoin());
+            }
         }
+
         return relics;
     }
 

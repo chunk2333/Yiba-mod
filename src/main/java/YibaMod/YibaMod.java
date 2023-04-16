@@ -352,6 +352,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         //BaseMod.addRelicToCustomPool(new TestTriggerElement(), AbstractCardEnum.Witch_COLOR);//元素反应测试遗物
         BaseMod.addRelicToCustomPool(new HighLevelMagicBook(), AbstractCardEnum.Witch_COLOR); //很高级的魔导书----魔女专属Boss遗物
         BaseMod.addRelicToCustomPool(new NaturalQuenchedStaff(), AbstractCardEnum.Witch_COLOR); //自然淬炼之杖----魔女专属稀有遗物
+        BaseMod.addRelicToCustomPool(new TheLastCoin(), AbstractCardEnum.Witch_COLOR); //最后的一枚硬币
         //---------------魔女遗物-----------------------
 
         BaseMod.addRelicToCustomPool(new cLanguageProgramBegin(), AbstractCardEnum.Witch_COLOR);
