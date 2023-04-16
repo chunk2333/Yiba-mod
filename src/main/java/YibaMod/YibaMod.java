@@ -416,6 +416,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new BloodBag(), RelicType.SHARED); //血袋
         BaseMod.addRelic(new BlindBox(), RelicType.SHARED); //盲盒
         BaseMod.addRelic(new RuneCircularDisk(), RelicType.SHARED); //符文圆盘
+        BaseMod.addRelic(new VampireFestivalStick(), RelicType.SHARED); //吸血鬼节仗
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批

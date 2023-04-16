@@ -455,5 +455,12 @@
     "DESCRIPTIONS": [
       "每当你触发 #r元素反应 时获得 #b5 #y金币 。"
     ]
+  },
+  "VampireFestivalStick": {
+    "NAME": "吸血鬼节仗",
+    "FLAVOR": "直到万不可以，绝对不会拿出手。",
+    "DESCRIPTIONS": [
+      "你的攻击会回复 #b10 % 伤害的 #y生命 。"
+    ]
   }
 }
