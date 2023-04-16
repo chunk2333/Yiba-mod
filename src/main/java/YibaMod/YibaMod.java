@@ -54,7 +54,7 @@ import pathes.ThmodClassEnum;
 import potions.*;
 import relics.*;
 import relics.ClickRelic.*;
-import relics.Witch.HighLevelMagicBook;
+import relics.Witch.*;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -351,6 +351,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         //---------------魔女遗物-----------------------
         //BaseMod.addRelicToCustomPool(new TestTriggerElement(), AbstractCardEnum.Witch_COLOR);//元素反应测试遗物
         BaseMod.addRelicToCustomPool(new HighLevelMagicBook(), AbstractCardEnum.Witch_COLOR); //很高级的魔导书----魔女专属Boss遗物
+        BaseMod.addRelicToCustomPool(new NaturalQuenchedStaff(), AbstractCardEnum.Witch_COLOR); //自然淬炼之杖----魔女专属稀有遗物
         //---------------魔女遗物-----------------------
 
         BaseMod.addRelicToCustomPool(new cLanguageProgramBegin(), AbstractCardEnum.Witch_COLOR);

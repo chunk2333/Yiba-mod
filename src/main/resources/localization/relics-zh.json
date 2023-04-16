@@ -441,5 +441,12 @@
     "DESCRIPTIONS": [
       "每回合获得 [E] 。 NL 你不在能看到 #y卡牌 的名称和描述。"
     ]
+  },
+  "NaturalQuenchedStaff": {
+    "NAME": "自然淬炼之杖",
+    "FLAVOR": "来自于大自然的鬼斧神工。",
+    "DESCRIPTIONS": [
+      "战斗开始时获得等同你 #y元素牌 数量的 #b元素精通 。"
+    ]
   }
 }
