@@ -489,13 +489,20 @@
   "FLAVOR": "帮帮我吧，快帮帮我吧...",
   "DESCRIPTIONS": [
     "在战斗开始时，将一张随机 #y元素牌 加入到你的抽牌堆，并且在本场战斗中耗能为 #b0 。"
-  ]
+   ]
   },
   "OpenMindedness": {
     "NAME": "开放性思维",
     "FLAVOR": "妈妈省的。",
     "DESCRIPTIONS": [
       "拾起时，在下一场战斗开始时，获得一个随机遗物。 NL 你每打出一张牌就 #y阿巴阿巴 。"
+    ]
+  },
+  "DarkMask": {
+    "NAME": "Dark面罩",
+    "FLAVOR": "Do you like van♂游戏？",
+    "DESCRIPTIONS": [
+      "战斗开始时，从抽牌堆中选择两张牌 #p消耗 。"
     ]
   }
 }
