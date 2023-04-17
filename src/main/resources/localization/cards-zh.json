@@ -595,5 +595,9 @@
   "RegardMoneyAsFate": {
     "NAME": "视金如命",
     "DESCRIPTION": "获得 !B! ~ 最大金币数 !M! % 点 格挡 。 NL  虚无 。"
+  },
+  "ObserverBehavior": {
+    "NAME": "观察者行为",
+    "DESCRIPTION": "若敌方意图为非攻击则获得 !M! 点 元素精通 。"
   }
 }

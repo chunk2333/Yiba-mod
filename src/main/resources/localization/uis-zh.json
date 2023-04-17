@@ -34,5 +34,10 @@
     "TEXT": [
       "我的手牌中还有 #r元素牌 。"
     ]
+  },
+  "ObserverBehaviorAction": {
+    "TEXT": [
+      "敌人的意图是 #r攻击 行为。"
+    ]
   }
 }
