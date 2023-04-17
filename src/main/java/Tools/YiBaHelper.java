@@ -20,6 +20,8 @@ public class YiBaHelper {
         return Loader.isModLoadedOrSideloaded(modId);
     }
 
+    public static boolean TempBoolen;
+
     private static String lastTriggerElementName;
 
     private static String lastTriggerElementFinalName;

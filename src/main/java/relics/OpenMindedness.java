@@ -1,8 +1,10 @@
 package relics;
 //开放性思维
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import actions.GetRandomRelicAction;
 import basemod.abstracts.CustomRelic;
+import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -15,7 +17,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 
-public class OpenMindedness extends CustomRelic {
+public class OpenMindedness extends CustomRelic implements CustomSavable<String> {
 
     public static final String ID = "OpenMindedness";
 
@@ -23,19 +25,17 @@ public class OpenMindedness extends CustomRelic {
 
     private static final String IMG_OTL = "img/relics/outline/OpenMindedness.png";
 
-    private Boolean isUsed = false;
-
     public OpenMindedness() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.COMMON, LandingSound.HEAVY);
     }
 
     @Override
     public void atBattleStart() {
-        if(!this.isUsed){
+        if(!YiBaHelper.TempBoolen){
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             addToBot(new GetRandomRelicAction());
-            this.isUsed = true;
+            YiBaHelper.TempBoolen = true;
         }
     }
 
@@ -95,6 +95,30 @@ public class OpenMindedness extends CustomRelic {
             addToBot(new SFXAction(YiBaHelper.MakeSoundPath("AbaAba")));
 
         }
+    }
+
+    @Override
+    public String onSave()
+    {
+        if(YiBaHelper.TempBoolen){
+            return "已触发";
+        }
+        return "未触发";
+    }
+
+    @Override
+    public void onLoad(String use)
+    {
+        YibaMod.logger.info("开放性思维：" + use);
+
+        if(use != null){
+            if(use.equals("已触发")){
+                YiBaHelper.TempBoolen = true;
+                return;
+            }
+        }
+        YiBaHelper.TempBoolen = false;
+
     }
 
     @Override
