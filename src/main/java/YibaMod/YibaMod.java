@@ -259,6 +259,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new BeAlmostWipedOut());//殆尽
         this.cardsToAdd.add(new OmnipotentAndOmniscient());//全能全知
         this.cardsToAdd.add(new RegardMoneyAsFate());//视金如命
+        this.cardsToAdd.add(new ObserverBehavior());//观察者行为
         //this.cardsToAdd.add(new SavePower());
         //this.cardsToAdd.add(new Printf());
 
@@ -347,6 +348,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelicToCustomPool(new TheLastCoin(), AbstractCardEnum.Witch_COLOR); //最后的一枚硬币
         BaseMod.addRelicToCustomPool(new BlackCat(), AbstractCardEnum.Witch_COLOR); //黑猫
         BaseMod.addRelicToCustomPool(new Fructose(), AbstractCardEnum.Witch_COLOR); //果儿糖
+        BaseMod.addRelicToCustomPool(new AlternateDimensionalPocket(), AbstractCardEnum.Witch_COLOR); //异次元口袋
         //---------------魔女遗物-----------------------
 
         BaseMod.addRelicToCustomPool(new cLanguageProgramBegin(), AbstractCardEnum.Witch_COLOR);
@@ -412,6 +414,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new RuneCircularDisk(), RelicType.SHARED); //符文圆盘
         BaseMod.addRelic(new VampireFestivalStick(), RelicType.SHARED); //吸血鬼节仗
         BaseMod.addRelic(new DingZhen(), RelicType.SHARED); //异眼丁真
+        BaseMod.addRelic(new OpenMindedness(), RelicType.SHARED); //开放性思维
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
@@ -487,6 +490,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addAudio(YiBaHelper.MakeSoundPath("Dio_The_World_Voice01"),"sound/Dio_The_World_Voice01.mp3");
         BaseMod.addAudio(YiBaHelper.MakeSoundPath("Dio_The_World_Voice02"),"sound/Dio_The_World_Voice02.mp3");
         BaseMod.addAudio(YiBaHelper.MakeSoundPath("DaMie"),"sound/AatroxR.ogg");
+        BaseMod.addAudio(YiBaHelper.MakeSoundPath("AbaAba"),"sound/AbaAba.mp3");
         //logger.info("YiBaMod:loading audio done.");
 
 

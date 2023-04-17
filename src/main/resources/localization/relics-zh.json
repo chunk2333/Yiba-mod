@@ -483,5 +483,19 @@
     "DESCRIPTIONS": [
       "你每在同一回合内打出 #b3 张 #y元素牌 ，获得 #b1 点 #y元素精通 。"
     ]
+  },
+  "AlternateDimensionalPocket": {
+  "NAME": "异次元口袋",
+  "FLAVOR": "帮帮我吧，快帮帮我吧...",
+  "DESCRIPTIONS": [
+    "在战斗开始时，将一张随机 #y元素牌 加入到你的抽牌堆，并且在本场战斗中耗能为 #b0 。"
+  ]
+  },
+  "OpenMindedness": {
+    "NAME": "开放性思维",
+    "FLAVOR": "妈妈省的。",
+    "DESCRIPTIONS": [
+      "拾起时，在下一场战斗开始时，获得一个随机遗物。 NL 你每打出一张牌就 #y阿巴阿巴 。"
+    ]
   }
 }
