@@ -46,7 +46,7 @@ public class DingZhen extends CustomRelic implements CustomSavable<String> {
         }
 
         public static AbstractRelic.RelicTier returnAllRandomRelicTier() {
-            int roll = AbstractDungeon.relicRng.random(1, 7);
+            int roll = AbstractDungeon.relicRng.random(1, 5);
 
             switch (roll) {
                 case 2:
@@ -54,13 +54,9 @@ public class DingZhen extends CustomRelic implements CustomSavable<String> {
                 case 3:
                     return AbstractRelic.RelicTier.RARE;
                 case 4:
-                    return AbstractRelic.RelicTier.SPECIAL;
-                case 5:
                     return AbstractRelic.RelicTier.SHOP;
-                case 6:
+                case 5:
                     return AbstractRelic.RelicTier.BOSS;
-                case 7:
-                    return AbstractRelic.RelicTier.STARTER;
                 case 1:
 
                 default:
@@ -70,9 +66,6 @@ public class DingZhen extends CustomRelic implements CustomSavable<String> {
         }
 
     }
-
-
-
 
     @Override
     public String onSave()
