@@ -147,6 +147,45 @@ public class YiBaHelper {
         return false;
     }
 
+    public static Boolean hasHydroElement(AbstractMonster m){
+        if(m == null){
+            return false;
+        }
+
+        for(AbstractPower power : m.powers){
+            if(power.ID.equals("HydroPower")){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static Boolean hasPyroElement(AbstractMonster m){
+        if(m == null){
+            return false;
+        }
+
+        for(AbstractPower power : m.powers){
+            if(power.ID.equals("PyroPower")){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static Boolean hasGeoElement(AbstractMonster m){
+        if(m == null){
+            return false;
+        }
+
+        for(AbstractPower power : m.powers){
+            if(power.ID.equals("GeoPower")){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void setBlindBoxRelic(String relicId){
 
         BlindBoxRelicId = relicId;

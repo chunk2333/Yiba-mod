@@ -260,6 +260,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new OmnipotentAndOmniscient());//全能全知
         this.cardsToAdd.add(new RegardMoneyAsFate());//视金如命
         this.cardsToAdd.add(new ObserverBehavior());//观察者行为
+        this.cardsToAdd.add(new FallToHeaven());//堕天
         //this.cardsToAdd.add(new SavePower());
         //this.cardsToAdd.add(new Printf());
 

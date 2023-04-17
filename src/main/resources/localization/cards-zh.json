@@ -599,5 +599,9 @@
   "ObserverBehavior": {
     "NAME": "观察者行为",
     "DESCRIPTION": "若敌方意图为非攻击则获得 !M! 点 元素精通 。"
+  },
+  "FallToHeaven": {
+    "NAME": "堕天",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 只有敌人同时存在 火元素 和 岩元素 时才能打出。 NL  消耗 。"
   }
 }
