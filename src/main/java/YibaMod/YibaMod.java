@@ -6,8 +6,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import cards.blue.StepDown;
-import cards.blue.ThunderStorm;
+import cards.blue.*;
 import cards.colorless.*;
 import cards.curse.*;
 import cards.element.*;
@@ -23,7 +22,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -39,14 +37,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
-import events.FairyBlessingEvent;
-import events.LuLuEvent;
-import events.Restaurant;
-import events.SanHuanPi;
-import monsters.Dio;
-import monsters.NongPi;
-import monsters.YuanPi;
-import monsters.ZhouPi;
+import events.*;
+import monsters.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import pathes.AbstractCardEnum;
@@ -463,13 +455,13 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         //添加怪物
         //原批
         BaseMod.addMonster(YuanPi.ID, () -> new YuanPi(50F, -20F));
-        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(YuanPi.ID, 20));
+        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(YuanPi.ID, 5));
         //粥批
         BaseMod.addMonster(ZhouPi.ID, () -> new ZhouPi(50F, -20F));
-        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(ZhouPi.ID, 20));
+        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(ZhouPi.ID, 5));
         //农批
         BaseMod.addMonster(NongPi.ID, () -> new NongPi(50F, -20F));
-        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(NongPi.ID, 20));
+        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(NongPi.ID, 5));
         //三幻批
         BaseMod.addMonster("SanHuanPi",
                 () -> new MonsterGroup(new AbstractMonster[]{
