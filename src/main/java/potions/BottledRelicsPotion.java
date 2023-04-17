@@ -3,11 +3,9 @@ package potions;
 import actions.GetRandomRelicAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class BottledRelicsPotion extends AbstractPotion {
 
@@ -19,14 +17,11 @@ public class BottledRelicsPotion extends AbstractPotion {
 
     public BottledRelicsPotion() {
         super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.HEART, PotionColor.SMOKE);
-
         this.isThrown = false;
     }
 
     public void use(AbstractCreature target) {
-
         int num = getPotency();
-
         if(num == 1){
             addToBot(new GetRandomRelicAction());
         }
@@ -35,15 +30,6 @@ public class BottledRelicsPotion extends AbstractPotion {
             addToBot(new GetRandomRelicAction());
             addToBot(new GetRandomRelicAction());
         }
-
-    }
-
-    public boolean canUse() {
-        if (AbstractDungeon.actionManager.turnHasEnded &&
-                (AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT)
-            return false;
-        return (AbstractDungeon.getCurrRoom()).event == null ||
-                !((AbstractDungeon.getCurrRoom()).event instanceof com.megacrit.cardcrawl.events.shrines.WeMeetAgain);
     }
 
     public void initializeData(){
