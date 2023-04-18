@@ -624,5 +624,10 @@
   "MagicWhiteStone": {
     "NAME": "白色魔法石",
     "DESCRIPTION": "获得 !M! 点 元素精通 。 NL  消耗 。 NL  虚无 。"
+  },
+  "AdvancedTrainingTechniques": {
+    "NAME": "高等练成术",
+    "DESCRIPTION": "获得一个非boss遗物。 NL 消耗 。 NL 虚无 。 NL 移除 。",
+    "UPGRADE_DESCRIPTION": "获得一个非Boss遗物。 NL 消耗 。 NL 移除 。"
   }
 }

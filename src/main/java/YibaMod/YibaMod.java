@@ -266,6 +266,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new MagicYellowStone());//黄色魔法石
         this.cardsToAdd.add(new MagicWhiteStone());//白色魔法石
         this.cardsToAdd.add(new MagicStoneMining());//魔法石开采
+        this.cardsToAdd.add(new AdvancedTrainingTechniques());//高等练成术
         //this.cardsToAdd.add(new SavePower());
         //this.cardsToAdd.add(new Printf());
 
