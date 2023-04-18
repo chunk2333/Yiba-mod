@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import relics.abstracrt.ClickableRelic;
 
 public class ScatterCoins extends ClickableRelic {
@@ -24,7 +25,7 @@ public class ScatterCoins extends ClickableRelic {
     @Override
     public void onRightClick(){
         //判断是否能支付5金币
-        if (AbstractDungeon.getMonsters() != null){
+        if (AbstractDungeon.getMonsters() != null && (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)){
             AbstractPlayer p = AbstractDungeon.player;
             int loseHp;
             if(p.gold<5){

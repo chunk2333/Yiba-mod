@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import relics.abstracrt.ClickableRelic;
@@ -26,11 +27,14 @@ public class TheKeyToHeaven extends ClickableRelic {
     }
     @Override
     public void onRightClick(){
-        flash();
-        AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new VFXAction(new LightningEffect(p.hb.cX, p.hb.cY)));
-        addToBot(new LoseHPAction(p, p, 99999));
-        killAllMonsters(false);
+        if (AbstractDungeon.getMonsters() != null && (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)){
+            flash();
+            AbstractPlayer p = AbstractDungeon.player;
+            addToBot(new VFXAction(new LightningEffect(p.hb.cX, p.hb.cY)));
+            addToBot(new LoseHPAction(p, p, 99999));
+            killAllMonsters(false);
+        }
+
     }
 
     public void killAllMonsters(boolean isKillAllMode) {
