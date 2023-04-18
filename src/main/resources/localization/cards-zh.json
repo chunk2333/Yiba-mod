@@ -603,5 +603,26 @@
   "FallToHeaven": {
     "NAME": "堕天",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 只有敌人同时存在 火元素 和 岩元素 时才能打出。 NL  消耗 。"
+  },
+  "MagicStoneMining": {
+    "NAME": "魔法石开采",
+    "DESCRIPTION": "随机获得一种 魔法石 。"
+  },
+  "MagicRedStone": {
+    "NAME": "红色魔法石",
+    "DESCRIPTION": "获得 !M! 点 力量。 NL  消耗 。 NL  虚无 。"
+  },
+  "MagicGreenStone": {
+    "NAME": "绿色魔法石",
+    "DESCRIPTION": "获得 !M! 点 敏捷 。 NL  消耗 。 NL  虚无 。"
+  },
+  "MagicYellowStone": {
+    "NAME": "黄色魔法石",
+    "DESCRIPTION": "获得 [E] 。 NL  消耗 。 NL  虚无 。",
+    "UPGRADE_DESCRIPTION":"获得 [E] [E] 。 NL  消耗 。 NL  虚无 。"
+  },
+  "MagicWhiteStone": {
+    "NAME": "白色魔法石",
+    "DESCRIPTION": "获得 !M! 点 元素精通 。 NL  消耗 。 NL  虚无 。"
   }
 }
