@@ -629,5 +629,9 @@
     "NAME": "高等练成术",
     "DESCRIPTION": "获得一个非boss遗物。 NL 消耗 。 NL 虚无 。 NL 移除 。",
     "UPGRADE_DESCRIPTION": "获得一个非Boss遗物。 NL 消耗 。 NL 移除 。"
+  },
+  "Spiritual": {
+    "NAME": "宁神",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 概率获得 一些加成 。"
   }
 }
