@@ -606,7 +606,7 @@
   },
   "MagicStoneMining": {
     "NAME": "魔法石开采",
-    "DESCRIPTION": "随机获得一种 魔法石 。"
+    "DESCRIPTION": "选择获得一种 魔法石 。"
   },
   "MagicRedStone": {
     "NAME": "红色魔法石",
