@@ -47,14 +47,14 @@ public class SlashAndBurn extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        if(YiBaHelper.hasPyroElement(m)){
+        if(YiBaHelper.hasPyroElement(m) && !YiBaHelper.hasHydroElement(m)){
             addToBot(new ApplyPowerAction(m, m, new HydroPower(m, YiBaHelper.getPlayerMystery()),1));
         }
-        if(YiBaHelper.hasHydroElement(m)){
+        if(YiBaHelper.hasHydroElement(m) && !YiBaHelper.hasPyroElement(m)){
             addToBot(new ApplyPowerAction(m, m, new PyroPower(m, YiBaHelper.getPlayerMystery()),1));
         }
 
-        if(!(YiBaHelper.hasPyroElement(m) && YiBaHelper.hasHydroElement(m))){
+        if(!YiBaHelper.hasPyroElement(m) && !YiBaHelper.hasHydroElement(m)){
             int random;
             random = AbstractDungeon.cardRandomRng.random(1, 2); //随机数
             if(random == 1){
@@ -63,6 +63,7 @@ public class SlashAndBurn extends CustomCard {
                 addToBot(new ApplyPowerAction(m, m, new PyroPower(m, YiBaHelper.getPlayerMystery()),1));
             }
         }
+
         if (m != null)
             addToBot(new VFXAction(new VerticalImpactEffect(m.hb.cX + m.hb.width / 4.0F, m.hb.cY - m.hb.height / 4.0F)));
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
