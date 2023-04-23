@@ -348,8 +348,6 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
 
     @Override
     public void receiveEditRelics() {
-        //将自定义的遗物添加到这里
-
         //---------------魔女遗物-----------------------
         //BaseMod.addRelicToCustomPool(new TestTriggerElement(), AbstractCardEnum.Witch_COLOR);//元素反应测试遗物
         BaseMod.addRelicToCustomPool(new HighLevelMagicBook(), AbstractCardEnum.Witch_COLOR); //很高级的魔导书----魔女专属Boss遗物
@@ -358,6 +356,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelicToCustomPool(new BlackCat(), AbstractCardEnum.Witch_COLOR); //黑猫
         BaseMod.addRelicToCustomPool(new Fructose(), AbstractCardEnum.Witch_COLOR); //果儿糖
         BaseMod.addRelicToCustomPool(new AlternateDimensionalPocket(), AbstractCardEnum.Witch_COLOR); //异次元口袋
+        BaseMod.addRelicToCustomPool(new WaterGun(), AbstractCardEnum.Witch_COLOR); //滋水枪
         //---------------魔女遗物-----------------------
 
         BaseMod.addRelicToCustomPool(new cLanguageProgramBegin(), AbstractCardEnum.Witch_COLOR);
