@@ -25,7 +25,7 @@ public class TheLastCoin extends ElementRelic {
     public void triggerElement(String reactionName){
         show();
 
-        AbstractDungeon.player.gainGold(5);
+        AbstractDungeon.player.gainGold(3);
 
         int randomNumber = ThreadLocalRandom.current().nextInt(1, 100);
 
