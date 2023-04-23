@@ -553,5 +553,12 @@
     "DESCRIPTIONS": [
       "免疫第一次受到的攻击。"
     ]
+  },
+  "GatlingPea": {
+    "NAME": "机枪豌豆",
+    "FLAVOR": "哒哒哒哒哒哒哒。",
+    "DESCRIPTIONS": [
+      "你的攻击牌会被额外打出一次。"
+    ]
   }
 }
