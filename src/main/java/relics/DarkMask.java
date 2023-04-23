@@ -1,9 +1,10 @@
 package relics;
-//dark面罩
+//Dark面罩
 import actions.ExhaustDrawPileCardAction;
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class DarkMask extends CustomRelic {
 
@@ -23,6 +24,12 @@ public class DarkMask extends CustomRelic {
         //在战斗开始时触发
         addToBot(new ExhaustDrawPileCardAction(2));
         flash();
+        this.grayscale = true;
+    }
+
+    @Override
+    public void justEnteredRoom(AbstractRoom room) {
+        this.grayscale = false;
     }
 
     @Override
