@@ -357,6 +357,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelicToCustomPool(new Fructose(), AbstractCardEnum.Witch_COLOR); //果儿糖
         BaseMod.addRelicToCustomPool(new AlternateDimensionalPocket(), AbstractCardEnum.Witch_COLOR); //异次元口袋
         BaseMod.addRelicToCustomPool(new WaterGun(), AbstractCardEnum.Witch_COLOR); //滋水枪
+        BaseMod.addRelicToCustomPool(new StuntDoll(), AbstractCardEnum.Witch_COLOR); //替身娃娃
         //---------------魔女遗物-----------------------
 
         BaseMod.addRelicToCustomPool(new cLanguageProgramBegin(), AbstractCardEnum.Witch_COLOR);
