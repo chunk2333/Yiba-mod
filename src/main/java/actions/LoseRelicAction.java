@@ -14,6 +14,10 @@ public class LoseRelicAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        if(!AbstractDungeon.player.hasRelic(this.relicId)){
+            tickDuration();
+            return;
+        }
         if(AbstractDungeon.player.loseRelic(this.relicId)){
             YibaMod.logger.info("移除遗物：" + this.relicId);
             tickDuration();
