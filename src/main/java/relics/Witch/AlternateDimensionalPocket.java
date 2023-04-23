@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
 
 public class AlternateDimensionalPocket extends CustomRelic {
@@ -35,7 +36,12 @@ public class AlternateDimensionalPocket extends CustomRelic {
         card.current_x = -1000.0F * Settings.xScale;
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, true));
+        this.grayscale = true;
+    }
 
+    @Override
+    public void justEnteredRoom(AbstractRoom room) {
+        this.grayscale = false;
     }
 
     @Override
