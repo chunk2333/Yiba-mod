@@ -2,11 +2,13 @@ package cards.element;
 //爆裂魔法
 import Tools.YiBaHelper;
 import YibaMod.YibaMod;
+import actions.ExplosionDaiLogAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -45,6 +47,11 @@ public class Explosion extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
+        //addToBot(new SFXAction(YiBaHelper.MakeSoundPath("Explosion")));
+        //addToBot(new ExplosionDaiLogAction(1,0.0F));
+        //for(int i = 1; i < 9;i++){
+         //   addToBot(new ExplosionDaiLogAction(i,5.0F));
+        //}
 
         //给予岩元素
         addToBot(new ApplyPowerAction(m, m, new GeoPower(m, YiBaHelper.getPlayerMystery()), 1));
