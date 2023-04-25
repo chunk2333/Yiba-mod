@@ -63,7 +63,7 @@ public class Earthshaking extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(1);
-            upgradeMagicNumber(1);
+            //upgradeMagicNumber(1);
         }
     }
 }
