@@ -16,6 +16,8 @@ import power.GeoPower;
 import power.HydroPower;
 import power.PyroPower;
 
+import java.util.ArrayList;
+
 public class WaterGun extends CustomRelic {
 
     public static final String ID = "WaterGun";
@@ -32,8 +34,23 @@ public class WaterGun extends CustomRelic {
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
         if(!targetCard.hasTag(YibaMod.ELEMENT)){
             int random;
+            ArrayList<AbstractMonster> list = new ArrayList();
             random = AbstractDungeon.relicRng.random(1,4); //随机数
             AbstractMonster m = (AbstractMonster) useCardAction.target;
+            if(m == null){
+                for(AbstractMonster mo :AbstractDungeon.getCurrRoom().monsters.monsters){
+                    if(!mo.isDead){
+                        list.add(mo);
+                    }
+                }
+            }
+
+            if(list.size() == 1){
+                m = list.get(0);
+            }else {
+                m = list.get(AbstractDungeon.cardRandomRng.random(0,list.size()));
+            }
+
             flash();
             addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             switch (random){
