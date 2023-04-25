@@ -20,7 +20,7 @@ public class MagicShield extends CustomCard {
 
     public static final String IMG_PATH = "img/cards/witch/MagicShield.png";
 
-    private static final int COST = 3;
+    private static final int COST = 2;
 
     public static final String ID = "MagicShield";
 
