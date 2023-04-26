@@ -22,7 +22,7 @@ public class StuntDoll extends CustomRelic {
     }
 
     @Override
-    public void atTurnStartPostDraw() {
+    public void atBattleStartPreDraw() {
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BufferPower(AbstractDungeon.player, 1), 1));
