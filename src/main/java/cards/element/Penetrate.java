@@ -26,7 +26,7 @@ public class Penetrate extends CustomCard {
 
     public Penetrate() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.exhaust = true;
+        this.baseMagicNumber = 1;
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Penetrate extends CustomCard {
         for(AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters){
             if(!mo.isDead){
                 if(YiBaHelper.hasElement(mo)){
-                    p.gainEnergy(1);
+                    p.gainEnergy(this.magicNumber);
                 }
             }
         }
@@ -52,7 +52,7 @@ public class Penetrate extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            this.exhaust = false;
+            upgradeMagicNumber(1);
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

@@ -519,8 +519,8 @@
   },
   "Penetrate": {
     "NAME": "识破",
-    "DESCRIPTION": "场上每有一命敌人被 元素附着 ，就获得 [E] 。 NL  消耗 。",
-    "UPGRADE_DESCRIPTION":"场上每有一命敌人被 元素附着 ，就获得 [E] 。"
+    "DESCRIPTION": "场上每有一命敌人被 元素附着 ，就获得 [E] 。",
+    "UPGRADE_DESCRIPTION":"场上每有一命敌人被 元素附着 ，就获得 [E] [E]。"
   },
   "FranticAndChaotic": {
     "NAME": "手忙脚乱",
