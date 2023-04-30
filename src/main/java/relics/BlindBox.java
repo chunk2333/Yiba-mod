@@ -5,6 +5,7 @@ import YibaMod.YibaMod;
 import actions.LoseRelicAction;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import actions.GetRandomRelicAction;
@@ -59,6 +60,11 @@ public class BlindBox extends CustomRelic implements CustomSavable<String> {
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return !AbstractDungeon.player.hasRelic("RussianDolls");
     }
 
     @Override
