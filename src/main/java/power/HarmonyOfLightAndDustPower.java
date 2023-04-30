@@ -56,6 +56,9 @@ public class HarmonyOfLightAndDustPower extends AbstractPower {
         YibaMod.logger.info("和光同尘：当前回合打出的牌数：" + AbstractDungeon.actionManager.cardsPlayedThisTurn.size());
         YibaMod.logger.info("和光同尘：已经触发次数：" + this.useNum);
         if (!card.purgeOnUse && this.amount > 0 && this.useNum <= this.amount){
+            if(card.cost == 0){
+                return;
+            }
             this.useNum = this.useNum + 1;
             flash();
             //返回费用
