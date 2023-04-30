@@ -1,6 +1,7 @@
 package relics;
 //空月祝福
 import basemod.abstracts.CustomRelic;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -26,6 +27,11 @@ public class BlessingOfTheWelkinMoon extends CustomRelic {
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return (Settings.isEndless || AbstractDungeon.floorNum <= 48);
     }
 
     @Override
