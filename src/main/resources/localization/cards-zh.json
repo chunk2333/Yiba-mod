@@ -331,7 +331,7 @@
   },
   "Explosion": {
     "NAME": "爆裂魔法",
-    "DESCRIPTION": "给予 岩元素 。 NL 造成 !D! 点伤害。 NL 你下回合无法打出攻击牌。"
+    "DESCRIPTION": "给予 岩元素 。 NL 造成 !D! 点伤害。 NL 你下回合会少抽 !M! 张牌。"
   },
   "Clumsy_My": {
     "NAME": "弄巧成拙",

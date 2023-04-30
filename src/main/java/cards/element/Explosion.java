@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AngryPower;
+import com.megacrit.cardcrawl.powers.DrawReductionPower;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import pathes.AbstractCardEnum;
 import power.GeoPower;
@@ -39,6 +40,7 @@ public class Explosion extends CustomCard {
     public Explosion() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 20;
+        this.baseMagicNumber = 1;
         this.damage = this.baseDamage;
         this.tags.add(YibaMod.ELEMENT);
         this.tags.add(YibaMod.GEO);
@@ -62,7 +64,8 @@ public class Explosion extends CustomCard {
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
 
         //给予下回合开始时触发丢网效果
-        addToTop(new ApplyPowerAction(p, p, new NextTurnCanNotPlayAttackCardPower(p), 1));
+        //addToTop(new ApplyPowerAction(p, p, new NextTurnCanNotPlayAttackCardPower(p), 1));
+        addToBot(new ApplyPowerAction(p, p, new DrawReductionPower(p, this.baseMagicNumber)));
 
 
 
