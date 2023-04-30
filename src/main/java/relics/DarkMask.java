@@ -2,6 +2,7 @@ package relics;
 //Dark面罩
 import actions.ExhaustDrawPileCardAction;
 import basemod.abstracts.CustomRelic;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -35,6 +36,11 @@ public class DarkMask extends CustomRelic {
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return AbstractDungeon.player.masterDeck.group.size() > 2;
     }
 
     @Override
