@@ -30,7 +30,7 @@ public class SlashAndBurn extends CustomCard {
 
     public static final String IMG_PATH = "img/cards/witch/test.png";
 
-    private static final int COST = 3;
+    private static final int COST = 4;
 
     public static final String ID = "SlashAndBurn";
 
