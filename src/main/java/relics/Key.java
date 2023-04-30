@@ -49,6 +49,11 @@ public class Key extends CustomRelic {
     }
 
     @Override
+    public boolean canSpawn() {
+        return (Settings.isEndless || AbstractDungeon.floorNum <= 48);
+    }
+
+    @Override
     public AbstractRelic makeCopy() {
         return new Key();
     }
