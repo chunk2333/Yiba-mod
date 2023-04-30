@@ -130,7 +130,11 @@ public class RussianDolls extends CustomRelic {
 
     @Override
     public boolean canSpawn() {
-        return !YiBaHelper.hasMod("spireTogether");
+        if(YiBaHelper.hasMod("spireTogether") || AbstractDungeon.player.hasRelic("BlindBox")){
+            return false;
+        }else {
+            return true;
+        }
     }
 
     @Override
