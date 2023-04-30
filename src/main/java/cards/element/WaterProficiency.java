@@ -22,7 +22,7 @@ public class WaterProficiency extends CustomCard {
 
     public static final String IMG_PATH = "img/cards/witch/WaterProficiency.png";
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public static final String ID = "WaterProficiency";
 
