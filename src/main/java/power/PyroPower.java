@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.InvinciblePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import power.abstracrt.ArrayElementPower;
@@ -180,7 +181,28 @@ public class PyroPower extends AbstractPower {
                 AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
                 YibaMod.logger.info("触发2.0蒸发：" + (damageAmount * 2 + this.mystery));
                 YiBaHelper.setLastTriggerElement("蒸发", "2.0蒸发");
-                return damageAmount * 2 + this.mystery;
+                int InvincibleNum = 0;
+                boolean hasInvincible = false;
+                //处理坚不可摧
+                for(AbstractPower power_Invincible : this.owner.powers){
+                    if(power_Invincible.ID.equals("Invincible")){
+                        InvincibleNum = power_Invincible.amount;
+                        hasInvincible = true;
+                    }
+                }
+                //处理无实体
+                for(AbstractPower power_Invincible : this.owner.powers){
+                    if(power_Invincible.ID.equals("IntangiblePlayer")){
+                        return 1;
+                    }
+                }
+                int finalDamage = damageAmount * 2 + this.mystery;
+                if(finalDamage >= InvincibleNum && hasInvincible){
+                    addToTop(new ApplyPowerAction(this.owner, this.owner, new InvinciblePower(this.owner, -InvincibleNum), -InvincibleNum));
+                    return damageAmount + InvincibleNum;
+                }else {
+                    return finalDamage;
+                }
             }
             if (!this.isMultiple) {
                 addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 1, false), 1));
@@ -199,7 +221,28 @@ public class PyroPower extends AbstractPower {
                 YibaMod.logger.info("触发2.0蒸发：" + (damageAmount * 2 + this.mystery));
                 YiBaHelper.setLastTriggerElement("蒸发", "2.0蒸发");
             }
-            return damageAmount * 2 + this.mystery;
+            int InvincibleNum = 0;
+            boolean hasInvincible = false;
+            //处理坚不可摧
+            for(AbstractPower power_Invincible : this.owner.powers){
+                if(power_Invincible.ID.equals("Invincible")){
+                    InvincibleNum = power_Invincible.amount;
+                    hasInvincible = true;
+                }
+            }
+            //处理无实体
+            for(AbstractPower power_Invincible : this.owner.powers){
+                if(power_Invincible.ID.equals("IntangiblePlayer")){
+                    return 1;
+                }
+            }
+            int finalDamage = damageAmount * 2 + this.mystery;
+            if(finalDamage >= InvincibleNum && hasInvincible){
+                addToTop(new ApplyPowerAction(this.owner, this.owner, new InvinciblePower(this.owner, -InvincibleNum), -InvincibleNum));
+                return damageAmount + InvincibleNum;
+            }else {
+                return finalDamage;
+            }
         }
         //1.5蒸发
 
@@ -228,7 +271,30 @@ public class PyroPower extends AbstractPower {
                 }
             }
             YiBaHelper.setLastTriggerElement("蒸发", "1.5蒸发");
-            return (int) (damageAmount * 1.5 + this.mystery);
+
+            int InvincibleNum = 0;
+            boolean hasInvincible = false;
+            //处理坚不可摧
+            for(AbstractPower power_Invincible : this.owner.powers){
+                if(power_Invincible.ID.equals("Invincible")){
+                    InvincibleNum = power_Invincible.amount;
+                    hasInvincible = true;
+                }
+            }
+            //处理无实体
+            for(AbstractPower power_Invincible : this.owner.powers){
+                if(power_Invincible.ID.equals("IntangiblePlayer")){
+                    return 1;
+                }
+            }
+            int finalDamage = (int) (damageAmount * 1.5 + this.mystery);
+            if(finalDamage >= InvincibleNum && hasInvincible){
+                addToTop(new ApplyPowerAction(this.owner, this.owner, new InvinciblePower(this.owner, -InvincibleNum), -InvincibleNum));
+                return damageAmount + InvincibleNum;
+            }else {
+                return finalDamage;
+            }
+
         }
         if (!this.isMultiple) {
             AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "蒸发", Color.RED.cpy()));
@@ -246,6 +312,29 @@ public class PyroPower extends AbstractPower {
             }
             YiBaHelper.setLastTriggerElement("蒸发", "1.5蒸发");
         }
-        return (int) (damageAmount * 1.5 + this.mystery);
+
+        int InvincibleNum = 0;
+        boolean hasInvincible = false;
+        //处理坚不可摧
+        for(AbstractPower power_Invincible : this.owner.powers){
+            if(power_Invincible.ID.equals("Invincible")){
+                InvincibleNum = power_Invincible.amount;
+                hasInvincible = true;
+            }
+        }
+        //处理无实体
+        for(AbstractPower power_Invincible : this.owner.powers){
+            if(power_Invincible.ID.equals("IntangiblePlayer")){
+                return 1;
+            }
+        }
+        int finalDamage = (int) (damageAmount * 1.5 + this.mystery);
+        if(finalDamage >= InvincibleNum && hasInvincible){
+            addToTop(new ApplyPowerAction(this.owner, this.owner, new InvinciblePower(this.owner, -InvincibleNum), -InvincibleNum));
+            return damageAmount + InvincibleNum;
+        }else {
+            return finalDamage;
+        }
+
     }
 }

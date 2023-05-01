@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.InvinciblePower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import power.abstracrt.ArrayElementPower;
@@ -128,7 +129,28 @@ public class GeoPower extends AbstractPower {
                         }
                     }
                     YiBaHelper.setLastTriggerElement("熔岩", "熔岩-岩火");
-                    return damageAmount * 3 + this.mystery;
+                    int InvincibleNum = 0;
+                    boolean hasInvincible = false;
+                    //处理坚不可摧
+                    for(AbstractPower power_Invincible : this.owner.powers){
+                        if(power_Invincible.ID.equals("Invincible")){
+                            InvincibleNum = power_Invincible.amount;
+                            hasInvincible = true;
+                        }
+                    }
+                    //处理无实体
+                    for(AbstractPower power_Invincible : this.owner.powers){
+                        if(power_Invincible.ID.equals("IntangiblePlayer")){
+                            return 1;
+                        }
+                    }
+                    int finalDamage = damageAmount * 3 + this.mystery;
+                    if(finalDamage >= InvincibleNum && hasInvincible){
+                        addToTop(new ApplyPowerAction(this.owner, this.owner, new InvinciblePower(this.owner, -InvincibleNum), -InvincibleNum));
+                        return damageAmount + InvincibleNum;
+                    }else {
+                        return finalDamage;
+                    }
                 }
                 if(!this.isMultiple) {
                     //给予易伤
@@ -151,7 +173,28 @@ public class GeoPower extends AbstractPower {
                     }
                     YiBaHelper.setLastTriggerElement("熔岩", "熔岩-岩火");
                 }
-                return damageAmount * 3 + this.mystery;
+                int InvincibleNum = 0;
+                boolean hasInvincible = false;
+                //处理坚不可摧
+                for(AbstractPower power_Invincible : this.owner.powers){
+                    if(power_Invincible.ID.equals("Invincible")){
+                        InvincibleNum = power_Invincible.amount;
+                        hasInvincible = true;
+                    }
+                }
+                //处理无实体
+                for(AbstractPower power_Invincible : this.owner.powers){
+                    if(power_Invincible.ID.equals("IntangiblePlayer")){
+                        return 1;
+                    }
+                }
+                int finalDamage = damageAmount * 3 + this.mystery;
+                if(finalDamage >= InvincibleNum && hasInvincible){
+                    addToTop(new ApplyPowerAction(this.owner, this.owner, new InvinciblePower(this.owner, -InvincibleNum), -InvincibleNum));
+                    return damageAmount + InvincibleNum;
+                }else {
+                    return finalDamage;
+                }
             }
 
         }
