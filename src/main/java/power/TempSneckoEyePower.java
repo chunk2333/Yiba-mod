@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class TempSneckoEyePower extends AbstractPower {
+
     public static final String POWER_ID = "TempSneckoEyePower";
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("Confusion");
@@ -27,7 +28,7 @@ public class TempSneckoEyePower extends AbstractPower {
         this.owner = owner;
         updateDescription();
         loadRegion("confusion");
-        this.type = AbstractPower.PowerType.BUFF;
+        this.type = AbstractPower.PowerType.DEBUFF;
         this.priority = 0;
     }
 
