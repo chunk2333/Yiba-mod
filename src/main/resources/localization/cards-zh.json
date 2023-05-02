@@ -637,5 +637,10 @@
   "SlashAndBurn": {
     "NAME": "火耕水耨",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌方没有 水元素 / 火元素 则给予 火元素 / 水元素 。 NL 若没有上述两种元素则随机给予 水元素 / 火元素 。 NL 继续对全体敌人造成此伤害的 !M! %伤害。 NL  多次触发 。"
+  },
+  "genocidePain": {
+    "NAME": "灭族之痛",
+    "DESCRIPTION": " 不能被打出 。 NL 这张卡被 消耗 时将一张 *疯狂 加入到手牌。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 这张卡被 消耗 时将一张 *疯狂+ 加入到手牌。"
   }
 }

@@ -15,6 +15,7 @@ import cards.purple.*;
 import cards.red.FleshShock;
 import cards.red.LetMeSee;
 import cards.red.Rally;
+import cards.red.genocidePain;
 import characters.Witch;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -344,6 +345,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new RedPill());//红色药丸
         this.cardsToAdd.add(new RussianTurntable());//红色药丸
         this.cardsToAdd.add(new Spiritual());//宁神
+        this.cardsToAdd.add(new genocidePain());//灭族之痛
     }
 
     @Override
