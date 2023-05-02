@@ -39,7 +39,7 @@ public class ProvokePower extends AbstractPower {
         updateDescription();
         this.region48 = atlas_self.findRegion("48/ProvokePower");
         this.region128 = atlas_self.findRegion("128/ProvokePower");
-        this.type = AbstractPower.PowerType.BUFF;
+        this.type = AbstractPower.PowerType.DEBUFF;
     }
 
     public void atStartOfTurn() {
