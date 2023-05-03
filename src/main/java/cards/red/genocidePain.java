@@ -32,12 +32,14 @@ public class genocidePain extends CustomCard {
             c.upgrade();
         }
         this.cardsToPreview = c;
-        this.dontTriggerOnUseCard = true;
-
+        //this.dontTriggerOnUseCard = true;
     }
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(AbstractPlayer p, AbstractMonster m) { }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
     }
 
     @Override
