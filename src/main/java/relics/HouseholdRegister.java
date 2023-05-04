@@ -26,7 +26,7 @@ public class HouseholdRegister extends CustomRelic {
         //在战斗开始时触发
         //头顶出现遗物特效
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RegenPower(AbstractDungeon.player, 5), 5));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RegenPower(AbstractDungeon.player, 3), 5));
     }
 
     @Override
