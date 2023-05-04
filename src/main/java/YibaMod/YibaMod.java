@@ -481,13 +481,13 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         //添加怪物
         //原批
         BaseMod.addMonster(YuanPi.ID, () -> new YuanPi(50F, -20F));
-        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(YuanPi.ID, 5));
+        //BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(YuanPi.ID, 5));
         //粥批
         BaseMod.addMonster(ZhouPi.ID, () -> new ZhouPi(50F, -20F));
-        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(ZhouPi.ID, 5));
+        //BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(ZhouPi.ID, 5));
         //农批
         BaseMod.addMonster(NongPi.ID, () -> new NongPi(50F, -20F));
-        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(NongPi.ID, 5));
+        //BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(NongPi.ID, 5));
         //三幻批
         BaseMod.addMonster("SanHuanPi",
                 () -> new MonsterGroup(new AbstractMonster[]{
