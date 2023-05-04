@@ -126,7 +126,7 @@ public class Dio extends CustomMonster {
                             .get(0), AbstractGameAction.AttackEffect.BLUNT_HEAVY, true));
                 //最后给予1层易伤
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 1, true), 1));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 1, true), 1));
+                //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 1, true), 1));
                 getMove(999);
                 break;
             case 3:
