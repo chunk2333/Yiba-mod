@@ -62,11 +62,11 @@ public class Dio extends CustomMonster {
         super(NAME, "Dio", 300, 0.0F, 0.0F, 270.0F, 400.0F, null, -50.0F, 0.0F);
         if (AbstractDungeon.ascensionLevel >= 7) {
             setHp(420);
-            this.bellowBlock = 25;
+            this.bellowBlock = 30;
             this.forgeAmt = 15;
         } else {
             setHp(400);
-            this.bellowBlock = 20;
+            this.bellowBlock = 25;
             this.forgeAmt = 12;
         }
         this.dialogX = -50.0F * Settings.scale;
@@ -116,7 +116,7 @@ public class Dio extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
                 //说话：木大...
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MuDa));
-                //获得25格挡
+                //获得30格挡
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.bellowBlock));
                 //造成3*5
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new BloodShotEffect(this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 5), 0.25F));
@@ -124,6 +124,9 @@ public class Dio extends CustomMonster {
                 for (int i = 0; i < 5; i++)
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage
                             .get(0), AbstractGameAction.AttackEffect.BLUNT_HEAVY, true));
+                //最后给予1层易伤
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 1, true), 1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 1, true), 1));
                 getMove(999);
                 break;
             case 3:
@@ -190,7 +193,7 @@ public class Dio extends CustomMonster {
         if(this.roundNum==3){
             //25%强化  75%打人
 
-            random = AbstractDungeon.monsterRng.random(1,4); //怪物随机数
+            random = AbstractDungeon.monsterRng.random(1,6); //怪物随机数
             if(random==1){
                 //强化
                 setMove((byte)123, Intent.BUFF);
@@ -202,12 +205,12 @@ public class Dio extends CustomMonster {
         }
         if(this.roundNum==4){
             //强化或者打人
-            random = AbstractDungeon.monsterRng.random(1,2); //怪物随机数
-            if(random==1){
+            random = AbstractDungeon.monsterRng.random(1,4); //怪物随机数
+            if(random == 1){
                 //强化
                 setMove((byte)123, Intent.BUFF);
             }
-            if(random==2){
+            if(random > 2){
                 //攻击
                 setMove((byte)3, Intent.ATTACK,this.damage.get(1).base);
             }
