@@ -98,21 +98,25 @@ public class SanHuanPi extends AbstractImageEvent {
                 (AbstractDungeon.getCurrRoom()).rewardAllowed = true;
 
                 YibaMod.logger.info("拾取奖励");
-
+                int random_num = AbstractDungeon.eventRng.random(1,100);
                 //添加奖励：金币
-                AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(100, 300));
+                if(random_num >= 50){
+                    AbstractDungeon.getCurrRoom().addGoldToRewards(233);
+                }else{
+                    AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(50, 100));
+                }
                 //添加奖励：药水-起死回骸
                 AbstractDungeon.getCurrRoom().addPotionToRewards(new reborn());
                 //添加奖励：药水-精灵药
-                AbstractDungeon.getCurrRoom().addPotionToRewards(new FairyPotion());
+                //AbstractDungeon.getCurrRoom().addPotionToRewards(new FairyPotion());
                 //添加奖励：遗物-户口本
                 AbstractDungeon.getCurrRoom().addRelicToRewards(RelicLibrary.getRelic("HouseholdRegister").makeCopy());
                 //添加奖励：遗物-稀有
                 AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
                 //添加奖励：遗物-罕见
-                AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.UNCOMMON);
+                //AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.UNCOMMON);
                 //添加奖励：遗物-普通
-                AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.COMMON);
+                //AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.COMMON);
                 //初始化卡片奖励
                 RewardItem cardReward = new RewardItem();
                 //卡片奖励清空。
@@ -126,8 +130,18 @@ public class SanHuanPi extends AbstractImageEvent {
                 if (ModHelper.isModEnabled("Binary"))
                     numCards--;
                 YibaMod.logger.info("掉落卡牌数：" + numCards);
+                random_num = AbstractDungeon.eventRng.random(1,100);
                 for (int i = 0; i < numCards; i++) {
-                    cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,random));
+                    if(random_num > 50){
+                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,random));
+                    }
+                    if(random_num <= 50 && random_num > 25){
+                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON,random));
+                    }
+                    if(random_num <= 25){
+                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON,random));
+                    }
+
                 }
 
                 AbstractDungeon.getCurrRoom().addCardReward(cardReward);
