@@ -37,7 +37,7 @@ public class ZhouPi extends CustomMonster {
 
     public ZhouPi(float x, float y) {
         super(NAME, "ZhouPi", 40, -8.0F, 10.0F, 230.0F, 240.0F, null, x, y);
-        setHp(40);
+        setHp(80);
         this.dialogX = -50.0F * Settings.scale;
         this.dialogY = 100.0F * Settings.scale;
         this.damage.add(new DamageInfo(this, 6));
@@ -50,7 +50,7 @@ public class ZhouPi extends CustomMonster {
     public void usePreBattleAction() {
         //玩家即将进入战斗
         //添加10坚不可摧
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new InvinciblePower(this, 10), 10));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new InvinciblePower(this, 25), 25));
 
     }
     public void takeTurn() {
