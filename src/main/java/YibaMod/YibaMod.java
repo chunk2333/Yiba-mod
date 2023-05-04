@@ -434,6 +434,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new BlessingOfTheWelkinMoon(), RelicType.SHARED); //空月祝福
         BaseMod.addRelic(new GatlingPea(), RelicType.SHARED); //机枪豌豆
         BaseMod.addRelic(new RELX5th(), RelicType.SHARED); //锐刻五代
+        BaseMod.addRelic(new ChaoticReality(), RelicType.SHARED); //混乱现实
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
