@@ -248,7 +248,7 @@
   "KillGod": {
     "NAME": "弑神诛仙",
     "DESCRIPTION": "获得 !M! 点临时 力量 。 NL 进入 神格 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION":"获得 !M! 点临时 力量 。 NL 进入 神格 。"
+    "UPGRADE_DESCRIPTION":"获得 !M! 点临时 力量 。 NL 进入 神格 。 NL 消耗 。"
   },
   "AllInOne": {
     "NAME": "知行合一",
