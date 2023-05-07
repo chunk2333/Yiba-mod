@@ -41,6 +41,11 @@ public class Grail extends CustomRelic {
     }
 
     @Override
+    public void onEquip() {
+        AbstractDungeon.player.decreaseMaxHealth(10);
+    }
+
+    @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
