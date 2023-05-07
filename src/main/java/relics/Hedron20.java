@@ -33,7 +33,7 @@ public class Hedron20 extends CustomRelic {
         if(p.currentHealth >= num){
             addToBot(new GainEnergyAction(1));
         }else{
-            p.heal(2);
+            //p.heal(2);
         }
 
     }
