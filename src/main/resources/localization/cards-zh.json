@@ -642,5 +642,25 @@
     "NAME": "灭族之痛",
     "DESCRIPTION": " 不能被打出 。 NL 这张卡被 消耗 时将一张 *疯狂 加入到手牌。",
     "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 这张卡被 消耗 时将一张 *疯狂+ 加入到手牌。"
+  },
+  "SealedLeftArm": {
+    "NAME": "被封印者的左腕",
+    "DESCRIPTION": " 不能被打出 。"
+  },
+  "SealedRightArm": {
+    "NAME": "被封印者的右腕",
+    "DESCRIPTION": " 不能被打出 。"
+  },
+  "SealedLeftFoot": {
+    "NAME": "被封印者的左足",
+    "DESCRIPTION": " 不能被打出 。"
+  },
+  "SealedRightFoot": {
+    "NAME": "被封印者的右足",
+    "DESCRIPTION": " 不能被打出 。"
+  },
+  "SealedEkkusu": {
+    "NAME": "被封印的艾克佐迪亚",
+    "DESCRIPTION": " 不能被打出 。 NL 当你手卡中有被封印的左腕，被封印的右腕，被封印的左脚，被封印的右脚时，直接获得本场战斗胜利。"
   }
 }

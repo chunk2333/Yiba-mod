@@ -346,6 +346,11 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new RussianTurntable());//红色药丸
         this.cardsToAdd.add(new Spiritual());//宁神
         this.cardsToAdd.add(new genocidePain());//灭族之痛
+        this.cardsToAdd.add(new SealedLeftFoot());//被封印者的左足
+        this.cardsToAdd.add(new SealedRightFoot());//被封印者的右足
+        this.cardsToAdd.add(new SealedRightArm());//被封印者的右腕
+        this.cardsToAdd.add(new SealedLeftArm());//被封印者的左腕
+        this.cardsToAdd.add(new SealedEkkusu());//被封印的艾克佐迪亚
     }
 
     @Override
