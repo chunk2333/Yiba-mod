@@ -15,7 +15,7 @@ public class KnockOut extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "img/cards/KnockOut.png";
-    private static final int COST = 0;
+    private static final int COST = 1;
     public static final String ID = "KnockOut";
     private int num = 0;
 
@@ -74,7 +74,6 @@ public class KnockOut extends CustomCard {
     public void upgrade() {
         //卡牌升级后的效果
         if (!this.upgraded) {
-            //更改名字和减1费
             upgradeName();
             upgradeDamage(2);
         }
