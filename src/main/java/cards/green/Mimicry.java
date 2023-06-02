@@ -41,11 +41,9 @@ public class Mimicry extends CustomCard{
     public void upgrade() {
         //卡牌升级后的效果
         if (!this.upgraded) {
-            //更改费用
-            //upgradeBaseCost(2);
-            //更改名字和取消消耗
             upgradeName();
-            this.exhaust = false;
+            upgradeBaseCost(1);
+            this.selfRetain = true;
             //读取升级后的描述
             this.rawDescription = UPGRADE_DESCRIPTION;
             //重载描述
