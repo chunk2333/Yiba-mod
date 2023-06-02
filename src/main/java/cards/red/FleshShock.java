@@ -24,7 +24,7 @@ public class FleshShock extends CustomCard{
     public static final String ID = "FleshShock";
     public FleshShock() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.RARE, CardTarget.ENEMY);
-        this.baseMagicNumber = 50;
+        this.baseMagicNumber = 75;
         this.magicNumber = this.baseMagicNumber;
     }
 
