@@ -574,5 +574,12 @@
     "DESCRIPTIONS": [
       "你打出的 #r攻击牌 将有此牌单段伤害* #b100 %的概率额外再造成一次伤害。"
     ]
+  },
+  "StoneGhostFace": {
+    "NAME": "石鬼面",
+    "FLAVOR": "嗨↗！",
+    "DESCRIPTIONS": [
+      "让你很嗨。"
+    ]
   }
 }
