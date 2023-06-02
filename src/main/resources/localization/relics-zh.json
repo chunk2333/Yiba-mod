@@ -581,5 +581,12 @@
     "DESCRIPTIONS": [
       "让你很嗨。"
     ]
+  },
+  "ChickenFeet": {
+    "NAME": "永恒鸡爪",
+    "FLAVOR": "反正不是老太太啃的()",
+    "DESCRIPTIONS": [
+      "每进入一场精英战回复 #b15 点生命。"
+    ]
   }
 }
