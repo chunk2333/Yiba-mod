@@ -12,10 +12,7 @@ import cards.curse.*;
 import cards.element.*;
 import cards.green.*;
 import cards.purple.*;
-import cards.red.FleshShock;
-import cards.red.LetMeSee;
-import cards.red.Rally;
-import cards.red.genocidePain;
+import cards.red.*;
 import characters.Witch;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -351,6 +348,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new SealedRightArm());//被封印者的右腕
         this.cardsToAdd.add(new SealedLeftArm());//被封印者的左腕
         this.cardsToAdd.add(new SealedEkkusu());//被封印的艾克佐迪亚
+        this.cardsToAdd.add(new SuddenHungerSickness());//突发饿疾
     }
 
     @Override
