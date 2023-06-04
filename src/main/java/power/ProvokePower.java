@@ -1,10 +1,5 @@
-
-//挑衅
-//public class ProvokePower {
-
 package power;
-//咖啡豆遗物的能力。
-
+//挑衅的能力。
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -25,7 +20,9 @@ public class ProvokePower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
 
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public static TextureAtlas atlas;
+
     public static TextureAtlas atlas_self;
 
     public ProvokePower(AbstractCreature owner, int amt) {
@@ -61,8 +58,14 @@ public class ProvokePower extends AbstractPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        //使用卡片时触发
+
     }
+
+    @Override
+    public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
+        return 0;
+    }
+
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
         //给予伤害时
