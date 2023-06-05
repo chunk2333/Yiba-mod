@@ -1,10 +1,14 @@
 package relics;
 //赛博漂流瓶
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class CyberDriftBottle extends CustomRelic {
 
@@ -16,6 +20,13 @@ public class CyberDriftBottle extends CustomRelic {
 
     public CyberDriftBottle() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.COMMON, LandingSound.MAGICAL);
+    }
+
+    @Override
+    public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
+        //int now_energy = EnergyPanel.getCurrentEnergy();
+        //YibaMod.logger.info("赛博漂流瓶, 当前剩余能量:" + now_energy);
+
     }
 
     @Override
@@ -35,7 +46,7 @@ public class CyberDriftBottle extends CustomRelic {
 
     @Override
     public void onVictory() {
-        this.counter = AbstractDungeon.player.energy.energy;
+        this.counter = EnergyPanel.getCurrentEnergy();
     }
 
     @Override
