@@ -10,15 +10,20 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import power.ProvokePower;
 
 public class Provoke extends CustomCard{
-    //从.json文件中提取键名为LeiPu的信息
+
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Provoke");
+
     public static final String NAME = cardStrings.NAME;
+
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+
     public static final String IMG_PATH = "img/cards/Provoke.png";
+
     private static final int COST = 1;
+
     public static final String ID = "Provoke";
     public Provoke() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.RARE, CardTarget.ENEMY);
         //添加基础攻击标签和将伤害设为6
         this.baseDamage = 8;
         this.damage = this.baseDamage;
