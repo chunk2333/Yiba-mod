@@ -76,5 +76,10 @@
       "High~！",
       "WRYYYYYYYYYYY——"
     ]
+  },
+  "CallWhiteBlackAction": {
+    "TEXT": [
+      "选择一张牌颠倒魔法数字与伤害数字。"
+    ]
   }
 }

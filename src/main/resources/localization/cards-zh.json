@@ -666,5 +666,10 @@
   "SuddenHungerSickness": {
     "NAME": "突发饿疾",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 临时生命 。"
+  },
+  "CallWhiteBlack": {
+    "NAME": "指鹿为马",
+    "DESCRIPTION": "选择一张牌将其 消耗 ，并将一张魔法数字和伤害数字反转的复制品加入到你的手牌中。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 NL 选择一张牌将其 消耗 ，并将一张魔法数字和伤害数字反转的复制品加入到你的手牌中。 NL  消耗 。"
   }
 }
