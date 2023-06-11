@@ -671,5 +671,9 @@
     "NAME": "指鹿为马",
     "DESCRIPTION": "选择一张牌将其 消耗 ，并将一张魔法数字和伤害数字反转的复制品加入到你的手牌中。 NL  消耗 。",
     "UPGRADE_DESCRIPTION": " 保留 NL 选择一张牌将其 消耗 ，并将一张魔法数字和伤害数字反转的复制品加入到你的手牌中。 NL  消耗 。"
+  },
+  "GifTestCard": {
+    "NAME": "测试GIF卡牌",
+    "DESCRIPTION": "非常牛B的动图 。"
   }
 }

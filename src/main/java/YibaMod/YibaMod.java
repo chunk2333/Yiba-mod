@@ -6,6 +6,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import cards.GifTestCard;
 import cards.blue.*;
 import cards.colorless.*;
 import cards.curse.*;
@@ -350,6 +351,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new SealedEkkusu());//被封印的艾克佐迪亚
         this.cardsToAdd.add(new SuddenHungerSickness());//突发饿疾
         this.cardsToAdd.add(new CallWhiteBlack());//指鹿为马
+        //this.cardsToAdd.add(new GifTestCard());//Gif测试卡牌
     }
 
     @Override
