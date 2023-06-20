@@ -13,9 +13,9 @@ public class Ji extends CustomRelic implements CustomSavable<String> {
 
     public static final String ID = "Ji";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/Ji.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/Ji.png";
 
     public Ji() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.BOSS, LandingSound.CLINK);

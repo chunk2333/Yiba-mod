@@ -9,9 +9,9 @@ public class Dian extends ClickableRelic {
 
     public static final String ID = "Dian";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/Dian.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/Dian.png";
 
     public Dian() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.MAGICAL);

@@ -14,9 +14,9 @@ public class Beng extends CustomRelic {
 
     public static final String ID = "Beng";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/Beng.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/Beng.png";
 
     private boolean isActive;
 

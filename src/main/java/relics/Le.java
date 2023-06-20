@@ -13,9 +13,9 @@ public class Le extends CustomRelic {
 
     public static final String ID = "Le";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/Le.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/Le.png";
 
     public Le() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.UNCOMMON, LandingSound.CLINK);

@@ -2,7 +2,6 @@ package relics;
 //孝
 import basemod.abstracts.CustomRelic;
 import cards.curse.DutifulSon;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -14,9 +13,9 @@ public class Xiao extends CustomRelic {
 
     public static final String ID = "Xiao";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/Xiao.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/Xiao.png";
 
     public Xiao() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.COMMON, LandingSound.SOLID);

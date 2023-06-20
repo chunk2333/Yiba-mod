@@ -10,9 +10,9 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 public class Ying extends CustomRelic {
     public static final String ID = "Ying";
 
-    private static final String IMG = "img/relics/test.png";
+    private static final String IMG = "img/relics/Ying.png";
 
-    private static final String IMG_OTL = "img/relics/outline/test.png";
+    private static final String IMG_OTL = "img/relics/outline/Ying.png";
 
     public Ying() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.UNCOMMON, LandingSound.FLAT);
