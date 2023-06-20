@@ -352,6 +352,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new SuddenHungerSickness());//突发饿疾
         this.cardsToAdd.add(new CallWhiteBlack());//指鹿为马
         //this.cardsToAdd.add(new GifTestCard());//Gif测试卡牌
+        this.cardsToAdd.add(new CatBreath());//破败猫息
     }
 
     @Override
@@ -446,6 +447,12 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new PencilBox(), RelicType.SHARED); //文具盒
         BaseMod.addRelic(new CyberDriftBottle(), RelicType.SHARED); //赛博漂流瓶
         BaseMod.addRelic(new SealedBox(), RelicType.SHARED); //被封印的...
+        BaseMod.addRelic(new Ji(), RelicType.SHARED); //急
+        BaseMod.addRelic(new Ying(), RelicType.SHARED); //赢
+        BaseMod.addRelic(new Dian(), RelicType.SHARED); //典
+        BaseMod.addRelic(new Beng(), RelicType.SHARED); //蚌
+        BaseMod.addRelic(new Xiao(), RelicType.SHARED); //孝
+        BaseMod.addRelic(new Le(), RelicType.SHARED); //乐
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批

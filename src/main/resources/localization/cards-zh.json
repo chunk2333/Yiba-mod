@@ -675,5 +675,9 @@
   "GifTestCard": {
     "NAME": "测试GIF卡牌",
     "DESCRIPTION": "非常牛B的动图 。"
+  },
+  "CatBreath": {
+    "NAME": "破败猫息",
+    "DESCRIPTION": "破败猫息 。"
   }
 }

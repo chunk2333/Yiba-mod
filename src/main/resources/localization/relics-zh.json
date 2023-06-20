@@ -609,5 +609,48 @@
     "DESCRIPTIONS": [
       "拾起时将 #y被封印者系列 加入到你的牌组中。"
     ]
+  },
+  "Ji": {
+    "NAME": "急",
+    "FLAVOR": "急了，急了。",
+    "DESCRIPTIONS": [
+      "每回合获得 [E] 。 NL 你将永远处于 #r非加速 模式。"
+    ]
+  },
+  "Ying": {
+    "NAME": "赢",
+    "FLAVOR": "赢麻了！",
+    "DESCRIPTIONS": [
+      "战斗开始时把手牌抽到 #y满 为止。"
+    ]
+  },
+  "Dian": {
+    "NAME": "典",
+    "FLAVOR": "太典了！",
+    "DESCRIPTIONS": [
+      "右键此遗物消耗全部手牌然后抽取同样数量的牌。"
+    ]
+  },
+  "Beng": {
+    "NAME": "蚌",
+    "FLAVOR": "蚌埠住了。",
+    "DESCRIPTIONS": [
+      "当你不足以抵挡此次攻击至 #r死亡 ， #g免疫 此次伤害。下回合死亡。"
+    ]
+  },
+  "Xiao": {
+    "NAME": "孝",
+    "FLAVOR": "孝死了。",
+    "DESCRIPTIONS": [
+      "拾起时，将两张 #y孝子 加入到你牌组中。"
+    ]
+  },
+  "Le": {
+    "NAME": "乐",
+    "FLAVOR": "乐死了。",
+    "DESCRIPTIONS": [
+      "你的卡牌伤害翻倍，在第 #b6 回合开始时死亡。"
+    ]
   }
+
 }
