@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 public class DutifulSon extends CustomCard{
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("DutifulSon");
+    public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("DutifulSon");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "img/cards/DutifulSon.png";
