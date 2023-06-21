@@ -679,5 +679,10 @@
   "CatBreath": {
     "NAME": "破败猫息",
     "DESCRIPTION": "破败猫息 。"
+  },
+  "ReconstructEverything": {
+    "NAME": "重构万物",
+    "DESCRIPTION": "选择手牌中的 !M! 张牌 消耗 ，之后在牌库中选 !M! 张加入手牌。 NL 消耗 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "选择手牌中的 !M! 张牌 消耗 ，之后在牌库中选 !M! 张加入手牌。 NL 消耗 。"
   }
 }
