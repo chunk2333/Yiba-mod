@@ -28,7 +28,7 @@ public class InstantKill extends CustomCard {
 
     public static final String ID = "InstantKill";
 
-    public static final String IMG_PATH = "img/cards/witch/test.png";
+    public static final String IMG_PATH = "img/cards/witch/InstantKill.png";
 
     public InstantKill() {
         super(ID, NAME, IMG_PATH, 1, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
