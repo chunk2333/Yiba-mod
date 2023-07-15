@@ -21,7 +21,7 @@ public class HyperElements extends CustomCard {
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards/witch/test.png";
+    public static final String IMG_PATH = "img/cards/witch/HyperElements.png";
 
     private static final int COST = 1;
 

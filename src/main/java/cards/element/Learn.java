@@ -23,7 +23,7 @@ public class Learn extends CustomCard {
 
     private static final int COST = 1;
 
-    public static final String IMG_PATH = "img/cards/witch/test.png";
+    public static final String IMG_PATH = "img/cards/witch/Learn.png";
 
     public Learn() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);

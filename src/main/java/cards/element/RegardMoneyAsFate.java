@@ -25,7 +25,7 @@ public class RegardMoneyAsFate extends CustomCard {
 
     private static final int COST = 2;
 
-    public static final String IMG_PATH = "img/cards/witch/test.png";
+    public static final String IMG_PATH = "img/cards/witch/RegardMoneyAsFate.png";
 
     public RegardMoneyAsFate() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.SELF );
