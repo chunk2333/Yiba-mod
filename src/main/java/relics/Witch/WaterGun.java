@@ -45,6 +45,10 @@ public class WaterGun extends CustomRelic {
                 }
             }
 
+            if(list.size() == 0 & m == null){
+                return;
+            }
+
             if(list.size() == 1){
                 m = list.get(0);
             }else {
