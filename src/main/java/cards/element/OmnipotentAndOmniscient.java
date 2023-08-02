@@ -23,7 +23,7 @@ public class OmnipotentAndOmniscient extends CustomCard {
 
     private static final int COST = 1;
 
-    public static final String IMG_PATH = "img/cards/witch/test.png";
+    public static final String IMG_PATH = "img/cards/witch/OmnipotentAndOmniscient.png";
 
     public OmnipotentAndOmniscient() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.SELF );

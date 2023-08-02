@@ -26,7 +26,7 @@ public class FallToHeaven extends CustomCard {
 
     private static final int COST = 2;
 
-    public static final String IMG_PATH = "img/cards/witch/test.png";
+    public static final String IMG_PATH = "img/cards/witch/FallToHeaven.png";
 
     public FallToHeaven() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.ENEMY );
