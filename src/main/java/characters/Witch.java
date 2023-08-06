@@ -35,11 +35,11 @@ public class Witch extends CustomPlayer {
     private static final String ORB_VFX = "img/ui/energyBlueVFX.png";
     private static final float[] LAYER_SPEED = new float[] { -40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F };
     //初始生命，最大生命，初始金币,初始的充能球栏位（机器人）,最后一个应该是进阶14时的最大生命值下降
-    private static final int STARTING_HP = 75;
-    private static final int MAX_HP = 75;
+    private static final int STARTING_HP = 71;
+    private static final int MAX_HP = 71;
     private static final int STARTING_GOLD = 99;
     private static final int HAND_SIZE = 0;
-    private static final int ASCENSION_MAX_HP_LOSS = 5;
+    private static final int ASCENSION_MAX_HP_LOSS = 4;
     //返回一个颜色
     public static final Color SILVER = CardHelper.getColor(200, 200, 200);
 
