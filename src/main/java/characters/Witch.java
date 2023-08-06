@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
 import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -104,7 +105,15 @@ public class Witch extends CustomPlayer {
     }
 
     @Override
+    public ArrayList<CutscenePanel> getCutscenePanels() {
+        ArrayList<CutscenePanel> panels = new ArrayList<>();
+        panels.add(new CutscenePanel("img/char_Seles/Victory1.png", YiBaHelper.MakeSoundPath("DaMie"))); //sfx：应该是通关时播放的音乐;更正：应该是特效
+        panels.add(new CutscenePanel("img/char_Seles/Victory2.png"));
+        panels.add(new CutscenePanel("img/char_Seles/Victory3.png"));
+        return panels;
+    }
 
+    @Override
     public AbstractCard.CardColor getCardColor() {
         //选择卡牌颜色
         return AbstractCardEnum.Witch_COLOR;
