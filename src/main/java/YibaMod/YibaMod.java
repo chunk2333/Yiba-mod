@@ -536,6 +536,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addAudio(YiBaHelper.MakeSoundPath("Explosion"),"sound/Explosion.mp3");
         BaseMod.addAudio(YiBaHelper.MakeSoundPath("Dio_high"),"sound/Dio_high.mp3");
         BaseMod.addAudio(YiBaHelper.MakeSoundPath("Dio_wryyyy"),"sound/Dio_wryyyy.mp3");
+        BaseMod.addAudio(YiBaHelper.MakeSoundPath("Dio_BGM"),"sound/Dio_BGM.mp3");
         //logger.info("YiBaMod:loading audio done.");
 
 

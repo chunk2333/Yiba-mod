@@ -1,6 +1,7 @@
 package monsters;
 //迪奥·布兰度
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomMonster;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -11,6 +12,8 @@ import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.audio.MainMusic;
+import com.megacrit.cardcrawl.audio.TempMusic;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,6 +27,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.vfx.combat.BloodShotEffect;
 import power.TimeStop;
+import com.badlogic.gdx.audio.Music;
 
 public class Dio extends CustomMonster {
     public static final String ID = "Dio";
@@ -78,10 +82,31 @@ public class Dio extends CustomMonster {
         this.img = new Texture(Gdx.files.internal("img/monsters/Dio.png"));
         this.type = AbstractMonster.EnemyType.BOSS;
     }
+
+    public static TempMusic tempMusic = new TempMusic("SHRINE", true, true);
+
+    public static TempMusic getTempMusic() {
+        tempMusic = new TempMusic("SHRINE", true, true);
+        tempMusic.silenceInstantly();
+        String s = "sound/Dio_BGM.mp3";
+        Music music = MainMusic.newMusic(s);
+        music.setLooping(true);
+        music.play();
+        //music.setVolume(0.0F);
+        tempMusic.isFadingOut = false;
+        tempMusic.isDone = false;
+        return tempMusic;
+    }
+
     public void usePreBattleAction() {
         CardCrawlGame.music.unsilenceBGM();
         AbstractDungeon.scene.fadeOutAmbiance();
+        YibaMod.logger.info("播放Dio_BGM");
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_CITY");
+        //getTempMusic();
+        //播放自定义BGM
+
+        //AbstractDungeon.getCurrRoom().playBgmInstantly(MainMusic.newMusic(YiBaHelper.MakeSoundPath("Dio_BGM")));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BarricadePower(this)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PlatedArmorPower(this, 7)));
         AbstractPlayer p = AbstractDungeon.player;
