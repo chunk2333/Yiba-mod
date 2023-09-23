@@ -43,7 +43,7 @@ public class Countdown extends CustomRelic {
         //每回合开始时触发
         this.counter = this.counter + 1;
         AbstractPlayer p = AbstractDungeon.player;
-        if (this.counter >= 12) {
+        if (this.counter >= 20) {
             flash();
             //调试出到控制台的内容
             YibaMod.logger.info("终焉倒计时触发：对所有怪物造成int类型上限伤害");
@@ -65,13 +65,13 @@ public class Countdown extends CustomRelic {
             AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLD, true));
             //老头表buff触发特效
             AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
-            if (this.counter <= 9 && this.counter != 1) {
+            if (this.counter <= 17 && this.counter != 1) {
                 addToBot(new TalkAction(true, "#r" + this.counter + "......", 0.8F, 2.0F));
             }
-            if (this.counter == 10) {
+            if (this.counter == 18) {
                 addToBot(new TalkAction(true, "#r@末日临近~~~@", 1.5F, 2.0F));
             }
-            if (this.counter == 11) {
+            if (this.counter == 19) {
                 addToBot(new TalkAction(true, "#r@终焉将至!!!@", 1.5F, 2.0F));
             }
         }
