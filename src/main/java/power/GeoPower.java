@@ -107,10 +107,10 @@ public class GeoPower extends AbstractPower {
                 addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
                 //怪物头顶显示元素反应类型
                 AbstractDungeon.effectsQueue.add(new TextAboveCreatureEffect(this.owner.drawX, this.owner.drawY, "熔岩", Color.GOLD.cpy()));
-                YibaMod.logger.info("触发熔岩：" + damageAmount * 3 + "额外伤害："+ this.mystery);
+                YibaMod.logger.info("触发熔岩：" + damageAmount * 2 + "额外伤害："+ this.mystery);
                 if(this.isMultiple && !this.isMultipleActive){
                     //给予易伤
-                    addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 1, false), 1));
+                    //addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 1, false), 1));
                     //抽1牌
                     //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                     //获得1费
@@ -144,7 +144,8 @@ public class GeoPower extends AbstractPower {
                             return 1;
                         }
                     }
-                    int finalDamage = damageAmount * 3 + this.mystery;
+                    //最终伤害
+                    int finalDamage = damageAmount * 2 + this.mystery;
                     if(finalDamage >= InvincibleNum && hasInvincible){
                         addToTop(new ApplyPowerAction(this.owner, this.owner, new InvinciblePower(this.owner, -InvincibleNum), -InvincibleNum));
                         return damageAmount + InvincibleNum;
@@ -154,7 +155,7 @@ public class GeoPower extends AbstractPower {
                 }
                 if(!this.isMultiple) {
                     //给予易伤
-                    addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 1, false), 2));
+                    //addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 1, false), 2));
                     //抽1牌
                     //addToBot(new DrawCardAction(AbstractDungeon.player, 1));
                     //获得1费
@@ -188,7 +189,7 @@ public class GeoPower extends AbstractPower {
                         return 1;
                     }
                 }
-                int finalDamage = damageAmount * 3 + this.mystery;
+                int finalDamage = damageAmount * 2 + this.mystery;
                 if(finalDamage >= InvincibleNum && hasInvincible){
                     addToTop(new ApplyPowerAction(this.owner, this.owner, new InvinciblePower(this.owner, -InvincibleNum), -InvincibleNum));
                     return damageAmount + InvincibleNum;
