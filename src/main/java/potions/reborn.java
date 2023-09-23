@@ -18,7 +18,7 @@ public class reborn extends AbstractPotion{
     private static final String[] DESCRIPTIONS = PotionStrings.getMockPotionString().DESCRIPTIONS;
 
     public reborn() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.GHOST, PotionColor.ENERGY);
+        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.GHOST, PotionColor.ENERGY);
         this.isThrown = false;
     }
     public void use(AbstractCreature target) {
