@@ -215,7 +215,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new FlamingHoard());//烈焰囤积
         this.cardsToAdd.add(new MagicLoop());//魔力循环
         this.cardsToAdd.add(new SpiritualDomination());//精神支配
-        this.cardsToAdd.add(new AffinityMorphology());//亲和形态
+        //this.cardsToAdd.add(new AffinityMorphology());//亲和形态
         this.cardsToAdd.add(new MagicPress());//魔力压榨
         this.cardsToAdd.add(new TransformingFeatherIntoSpirit());//化羽为灵
         this.cardsToAdd.add(new Chant());//吟唱
@@ -243,7 +243,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new Penetrate());//识破
         this.cardsToAdd.add(new FranticAndChaotic());//手忙脚乱
         this.cardsToAdd.add(new InstantKill());//瞬杀
-        this.cardsToAdd.add(new PositiveFeedback());//正反馈
+        this.cardsToAdd.add(new PositiveFeedback());//正反馈 -> 亲和形态
         this.cardsToAdd.add(new Annihilate());//湮灭
         this.cardsToAdd.add(new HyperElements());//高浓度元素
         this.cardsToAdd.add(new MagicOverflow());//魔力溢出
