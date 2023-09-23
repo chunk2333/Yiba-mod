@@ -27,10 +27,10 @@ public class money extends AbstractPotion{
 
     public void use(AbstractCreature target) {
         //名利双收掉金币动画
-        AbstractDungeon.effectList.add(new RainingGoldEffect(100 * 2, true));
+        AbstractDungeon.effectList.add(new RainingGoldEffect(75 * 2, true));
         AbstractDungeon.effectsQueue.add(new SpotlightPlayerEffect());
         AbstractPlayer p = AbstractDungeon.player;
-        //给予玩家100金币
+        //给予玩家75金币
         p.gainGold(getPotency());
 
     }
@@ -52,7 +52,7 @@ public class money extends AbstractPotion{
         this.tips.add(new PowerTip(this.name, this.description));
     }
     public int getPotency(int ascensionLevel) {
-        return 100;
+        return 75;
     }
     public AbstractPotion makeCopy() {
         return new money();
