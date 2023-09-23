@@ -20,7 +20,7 @@ public class KillGod extends CustomCard{
 
     public static final String IMG_PATH = "img/cards/KillGod.png";
 
-    private static final int COST = 3;
+    private static final int COST = 4;
 
     public static final String ID = "KillGod";
 
@@ -32,6 +32,8 @@ public class KillGod extends CustomCard{
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
+        //虚无
+        this.isEthereal = true;
     }
 
     @Override
@@ -57,13 +59,15 @@ public class KillGod extends CustomCard{
         if (!this.upgraded) {
             //更改名字和费用
             upgradeName();
-            upgradeMagicNumber(2);
-            upgradeBaseCost(2);
+            //虚无
+            this.isEthereal = false;
+            //upgradeMagicNumber(2);
+            //upgradeBaseCost(2);
             //this.exhaust = false;
             //读取升级后的描述
-            //this.rawDescription = UPGRADE_DESCRIPTION;
+            this.rawDescription = UPGRADE_DESCRIPTION;
             //重载描述
-            //initializeDescription();
+            initializeDescription();
         }
     }
 }
