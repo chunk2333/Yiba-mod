@@ -27,7 +27,7 @@ public class TrashFish extends CustomRelic {
         AbstractPlayer p = AbstractDungeon.player;
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToTop(new ApplyPowerAction(p, p, new AngryPower(p, 3), 3));
+        addToTop(new ApplyPowerAction(p, p, new AngryPower(p, 1), 1));
     }
 
     @Override
