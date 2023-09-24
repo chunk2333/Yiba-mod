@@ -32,7 +32,7 @@ public class WaterGun extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
-        if(!targetCard.hasTag(YibaMod.ELEMENT)){
+        if(!targetCard.hasTag(YibaMod.ELEMENT) & useCardAction.target != null){
             int random;
             ArrayList<AbstractMonster> list = new ArrayList();
             random = AbstractDungeon.relicRng.random(1,4); //随机数
@@ -49,9 +49,7 @@ public class WaterGun extends CustomRelic {
                 return;
             }
 
-            if(list.size() == 1){
-                m = list.get(0);
-            }else {
+            if(list.size() != 0){
                 m = list.get(AbstractDungeon.cardRandomRng.random(0,list.size()));
             }
 
