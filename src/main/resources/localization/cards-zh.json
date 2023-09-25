@@ -231,7 +231,7 @@
   },
   "TempSneckoEye": {
     "NAME": "蛇眼体验卡",
-    "DESCRIPTION": "获得 混乱 能力。 NL 回合开始额外抽2张牌。"
+    "DESCRIPTION": "获得 混乱 能力。 NL 回合开始时额外抽2张牌。"
   },
   "ThePeaceOfMind": {
     "NAME": "明镜止水",
