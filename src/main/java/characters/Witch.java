@@ -41,6 +41,8 @@ public class Witch extends CustomPlayer {
     private static final int STARTING_GOLD = 99;
     private static final int HAND_SIZE = 0;
     private static final int ASCENSION_MAX_HP_LOSS = 4;
+    private static final int maxOrbs = 0;
+    private static final int cardDraw = 5;
     //返回一个颜色
     public static final Color SILVER = CardHelper.getColor(200, 200, 200);
 
@@ -92,7 +94,7 @@ public class Witch extends CustomPlayer {
         flavor = "来自符文之地的天才魔女，前来攀登这座高塔，其可以运用元素之力造成伤害。";
 
 
-        return new CharSelectInfo(title, flavor, STARTING_HP, MAX_HP,HAND_SIZE , STARTING_GOLD, ASCENSION_MAX_HP_LOSS, this, getStartingRelics(), getStartingDeck(), false);
+        return new CharSelectInfo(title, flavor, STARTING_HP, MAX_HP,maxOrbs , STARTING_GOLD, cardDraw, this, getStartingRelics(), getStartingDeck(), false);
     }
 
 
