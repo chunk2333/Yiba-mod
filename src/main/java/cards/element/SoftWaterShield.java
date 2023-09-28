@@ -29,7 +29,7 @@ public class SoftWaterShield extends CustomCard {
 
     public SoftWaterShield() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
-        this.baseBlock = 8;
+        this.baseBlock = 9;
         this.tags.add(YibaMod.ELEMENT);
         this.tags.add(YibaMod.HYDRO);
     }
@@ -57,7 +57,7 @@ public class SoftWaterShield extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(2);
+            upgradeBlock(3);
         }
     }
 }
