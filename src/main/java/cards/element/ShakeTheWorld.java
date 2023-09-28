@@ -28,7 +28,7 @@ public class ShakeTheWorld extends CustomCard {
     public static final String ID = "ShakeTheWorld";
 
     public ShakeTheWorld() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.tags.add(YibaMod.ELEMENT);
         this.tags.add(YibaMod.GEO);
         this.exhaust = true;
