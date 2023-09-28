@@ -3,12 +3,14 @@ package cards.element;
 import Tools.YiBaHelper;
 import YibaMod.YibaMod;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import power.GeoPower;
 
 public class GeoCard extends CustomCard{
@@ -16,7 +18,7 @@ public class GeoCard extends CustomCard{
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "img/cards/witch/GeoCard.png";
-    private static final int COST = 1;
+    private static final int COST = 0;
     public static final String ID = "GeoCard";
     public GeoCard() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY);
@@ -24,6 +26,7 @@ public class GeoCard extends CustomCard{
         this.tags.add(YibaMod.ELEMENT);
         this.tags.add(YibaMod.GEO);
         this.selfRetain = true;
+        this.baseMagicNumber = 1;
     }
 
     @Override
@@ -31,14 +34,9 @@ public class GeoCard extends CustomCard{
         //使用卡牌时触发的动作
         //给予岩元素buff
         addToBot(new ApplyPowerAction(m, m, new GeoPower(m, YiBaHelper.getPlayerMystery()), 1));
-        //造成伤害
-        //AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
     }
 
-    @Override
-    public void onRetained() {
-        this.modifyCostForCombat(-1);
-    }
 
     @Override
     public AbstractCard makeCopy() {
@@ -51,7 +49,7 @@ public class GeoCard extends CustomCard{
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeMagicNumber(1);
         }
     }
 }
