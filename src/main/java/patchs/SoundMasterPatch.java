@@ -1,4 +1,4 @@
-package pathes;
+package patchs;
 
 
 import YibaMod.YibaMod;

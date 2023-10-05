@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.watcher.EnergyDownPower;
-import pathes.AbstractCardEnum;
+import patchs.AbstractCardEnum;
 
 public class OmnipotentAndOmniscient extends CustomCard {
 

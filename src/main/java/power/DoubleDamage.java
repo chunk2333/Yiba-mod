@@ -4,8 +4,6 @@ package power;
 
 
 
-import YibaMod.YibaMod;
-import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -15,10 +13,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.badlogic.gdx.files.FileHandle;
-import pathes.AbstractPower_Self;
 
 public class DoubleDamage extends AbstractPower {
     public static final String POWER_ID = "DoubleDamage";

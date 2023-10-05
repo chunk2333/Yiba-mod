@@ -19,8 +19,8 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import pathes.ThmodClassEnum;
-import pathes.AbstractCardEnum;
+import patchs.ThmodClassEnum;
+import patchs.AbstractCardEnum;
 import java.util.ArrayList;
 
 public class Witch extends CustomPlayer {

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import pathes.AbstractCardEnum;
+import patchs.AbstractCardEnum;
 import power.PyroPower;
 
 public class FlamingCharge extends CustomCard {

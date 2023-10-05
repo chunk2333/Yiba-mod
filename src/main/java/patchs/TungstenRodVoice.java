@@ -1,4 +1,4 @@
-package pathes;
+package patchs;
 //为遗物：钨合金棍添加触发时的音效
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;

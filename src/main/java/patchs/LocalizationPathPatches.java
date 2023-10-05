@@ -1,4 +1,4 @@
-package pathes;
+package patchs;
 
 import basemod.BaseMod;
 import basemod.ReflectionHacks;

@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
-import pathes.AbstractCardEnum;
+import patchs.AbstractCardEnum;
 
 public class FallToHeaven extends CustomCard {
 

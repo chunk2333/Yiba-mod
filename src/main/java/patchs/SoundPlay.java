@@ -1,7 +1,5 @@
-package pathes;
+package patchs;
 //SoundPlay
-
-import com.megacrit.cardcrawl.*;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.audio.Sfx;
