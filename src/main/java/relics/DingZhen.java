@@ -7,6 +7,8 @@ import basemod.abstracts.CustomSavable;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
@@ -78,6 +80,13 @@ public class DingZhen extends CustomRelic implements CustomSavable<String> {
     {
         YiBaHelper.setTempRelic(relicId);
         YibaMod.logger.info("异眼丁真，当前遗物：" + relicId);
+    }
+
+    @Override
+    public void onEquip() {
+        //AbstractDungeon.effectList.add(new SFXAction(YiBaHelper.MakeSoundPath("HelloLBW")));
+        //AbstractDungeon.actionManager.actions.add(new SFXAction(YiBaHelper.MakeSoundPath("HelloLBW")));
+        CardCrawlGame.sound.playA("HelloLBW", 0F);
     }
 
     @Override
