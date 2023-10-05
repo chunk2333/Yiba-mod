@@ -4,6 +4,7 @@ import Tools.YiBaHelper;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 //找到钨合金棍遗物的 onLoseHpLast 函数
@@ -13,6 +14,7 @@ public class TungstenRodVoice {
     @SpireInsertPatch(loc = 18)
     public static void Voice() {
         //播放 棍子掉落的声音
-        AbstractDungeon.actionManager.addToTop(new SFXAction(YiBaHelper.MakeSoundPath("Fall_Steel")));
+        //AbstractDungeon.actionManager.addToTop(new SFXAction(YiBaHelper.MakeSoundPath("Fall_Steel")));
+        CardCrawlGame.sound.playA("Fall_Steel", 0F);
     }
 }
