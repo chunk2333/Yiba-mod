@@ -29,8 +29,8 @@ public class Hedron20 extends CustomRelic {
         //转换到整数
         per_maxhp =  Math.ceil(maxhp* 0.5);
         num = Double.valueOf(per_maxhp).intValue();
-        flash();
         if(p.currentHealth >= num){
+            flash();
             addToBot(new GainEnergyAction(1));
         }else{
             //p.heal(2);
