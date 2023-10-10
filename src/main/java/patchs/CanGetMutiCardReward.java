@@ -26,12 +26,13 @@ public class CanGetMutiCardReward {
 @SpirePatch(clz= CardRewardScreen.class, method = "acquireCard")
 class acquire {
     @SpireInsertPatch(loc = 317, localvars={"hoveredCard"})
-    public static void getDraft(CardRewardScreen __instance, AbstractCard hoveredCard){
+    public static void acquireFix(CardRewardScreen __instance, AbstractCard hoveredCard){
         if(AbstractDungeon.player.hasRelic("BlackHand")){
             int i = 0;
             for(AbstractCard c : __instance.rItem.cards){
                 if(c.cardID.equals(hoveredCard.cardID)){
                     __instance.rItem.cards.remove(i);
+                    AbstractDungeon.player.getRelic("BlackHand").flash();
                     break;
                 }
                 i+=1;

@@ -1,6 +1,7 @@
 package relics;
 //黑手
 import basemod.abstracts.CustomRelic;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -13,6 +14,11 @@ public class BlackHand extends CustomRelic {
 
     public BlackHand() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.FLAT);
+    }
+
+    @Override
+    public void onEquip() {
+        CardCrawlGame.sound.playA("BlackHand", 0F);
     }
 
     @Override

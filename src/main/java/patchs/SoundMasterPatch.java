@@ -15,5 +15,6 @@ public class SoundMasterPatch {
         YibaMod.logger.info("开始加载自定义声音...");
         ___map.put("HelloLBW", new Sfx("sound/HelloLBW.mp3", false));
         ___map.put("Fall_Steel", new Sfx("sound/Steelpipefalling.mp3", false));
+        ___map.put("BlackHand", new Sfx("sound/BlackHandVoice.mp3", false));
     }
 }
