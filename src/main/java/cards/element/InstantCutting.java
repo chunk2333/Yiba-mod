@@ -27,7 +27,7 @@ public class InstantCutting extends CustomCard {
 
     private static final int COST = 1;
 
-    public static final String IMG_PATH = "img/cards/witch/test.png";
+    public static final String IMG_PATH = "img/cards/witch/InstantCutting.png";
 
     public InstantCutting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.COMMON, CardTarget.ALL_ENEMY);

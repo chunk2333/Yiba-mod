@@ -25,7 +25,7 @@ public class WandStrike extends CustomCard {
 
     private static final int COST = 0;
 
-    public static final String IMG_PATH = "img/cards/witch/test.png";
+    public static final String IMG_PATH = "img/cards/witch/WandStrike.png";
 
     public WandStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.COMMON, CardTarget.ENEMY);

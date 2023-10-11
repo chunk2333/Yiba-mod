@@ -25,7 +25,7 @@ public class SuddenKick extends CustomCard {
 
     private static final int COST = 1;
 
-    public static final String IMG_PATH = "img/cards/witch/test.png";
+    public static final String IMG_PATH = "img/cards/witch/SuddenKick.png";
 
     public SuddenKick() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.COMMON, CardTarget.ENEMY);

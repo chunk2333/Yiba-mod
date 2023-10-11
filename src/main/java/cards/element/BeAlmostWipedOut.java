@@ -27,7 +27,7 @@ public class BeAlmostWipedOut extends CustomCard {
 
     private static final int COST = 1;
 
-    public static final String IMG_PATH = "img/cards/witch/test.png";
+    public static final String IMG_PATH = "img/cards/witch/BeAlmostWipedOut.png";
 
     public BeAlmostWipedOut() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Witch_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY );
