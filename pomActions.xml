@@ -18,28 +18,28 @@
             <artifactId>modthespire</artifactId>
             <version>1.0</version>
             <scope>system</scope>
-            <systemPath>mod/ModTheSpire.jar</systemPath>
+            <systemPath>${project.basedir}/mod/ModTheSpire.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl</groupId>
             <artifactId>baseMod</artifactId>
             <version>1.0</version>
             <scope>system</scope>
-            <systemPath>mod/BaseMod.jar</systemPath>
+            <systemPath>${project.basedir}/mod/BaseMod.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl</groupId>
             <artifactId>StSLib</artifactId>
             <version>1.0</version>
             <scope>system</scope>
-            <systemPath>mod/StSLib.jar</systemPath>
+            <systemPath>${project.basedir}/mod/StSLib.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl</groupId>
             <artifactId>desktop-1.0</artifactId>
             <version>1.0</version>
             <scope>system</scope>
-            <systemPath>mod/desktop-1.0.jar</systemPath>
+            <systemPath>${project.basedir}/mod/desktop-1.0.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.googlecode.soundlibs</groupId>
