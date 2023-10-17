@@ -37,10 +37,10 @@ jobs:
           curl -L -o mod/BaseMod.jar https://r2.y1ba.com/SpireMod/BaseMod.jar
           curl -L -o mod/StSLib.jar https://r2.y1ba.com/SpireMod/StSLib.jar
     - name: Build with Maven
-      run: mvn -B package --file pomActions.xml
-    - uses: actions/upload-artifact@v2
+      run: mvn -B package --file pom.xml
+    - run: mkdir staging && cp target/*.jar staging
+    - uses: actions/upload-artifact@v3
       with:
         name: Yiba_mod
-        path: target/Yiba_testmod.jar
+        path: staging
       
-
