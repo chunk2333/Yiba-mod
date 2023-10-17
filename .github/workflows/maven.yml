@@ -1,0 +1,46 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 8
+      uses: actions/setup-java@v3
+      with:
+        java-version: '8'
+        distribution: 'temurin'
+        cache: maven
+    - name: create
+      run: mkdir mod
+      working-directory: ${{ github.workspace }}
+    - name: Download Mod jar
+      run: |
+          curl -L -o mod/ModTheSpire.jar https://r2.y1ba.com/SpireMod/ModTheSpire.jar
+          curl -L -o mod/desktop-1.0.jar https://r2.y1ba.com/SpireMod/desktop-1.0.jar
+          curl -L -o mod/BaseMod.jar https://r2.y1ba.com/SpireMod/BaseMod.jar
+          curl -L -o mod/StSLib.jar https://r2.y1ba.com/SpireMod/StSLib.jar
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+    - run: mkdir staging && cp target/*.jar staging
+    - uses: actions/upload-artifact@v3
+      with:
+        name: Yiba_mod
+        path: staging
+      
