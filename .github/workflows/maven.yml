@@ -28,9 +28,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Download Mod jar
-      working-directory: ${{ github.workspace }}
       run: |
-          mkdir -p /mod
+          working-directory: ${{ github.workspace }}
+          mkdir /mod
           curl -L -o /mod/ModTheSpire.jar https://r2.y1ba.com/SpireMod/ModTheSpire.jar
           curl -L -o /mod/desktop-1.0.jar https://r2.y1ba.com/SpireMod/desktop-1.0.jar
           curl -L -o /mod/BaseMod.jar https://r2.y1ba.com/SpireMod/BaseMod.jar
