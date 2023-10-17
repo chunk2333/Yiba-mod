@@ -36,7 +36,6 @@ jobs:
           curl -L -o mod/desktop-1.0.jar https://r2.y1ba.com/SpireMod/desktop-1.0.jar
           curl -L -o mod/BaseMod.jar https://r2.y1ba.com/SpireMod/BaseMod.jar
           curl -L -o mod/StSLib.jar https://r2.y1ba.com/SpireMod/StSLib.jar
-          working-directory: ${{ github.workspace }}
     - name: Build with Maven
       run: mvn -B package --file pomActions.xml
     - run: mkdir staging && cp target/*.jar staging
