@@ -17,7 +17,7 @@ public class Cat extends CustomRelic {
     private static final String IMG_OTL = "img/relics/outline/Cat.png";
 
     public Cat() {
-        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.BOSS, LandingSound.SOLID);
+        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.SPECIAL, LandingSound.SOLID);
     }
 
     @Override

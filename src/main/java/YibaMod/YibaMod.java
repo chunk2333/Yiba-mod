@@ -465,6 +465,8 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addEvent(new AddEventParams.Builder(LuLuEvent.ID, LuLuEvent.class).eventType(EventUtils.EventType.ONE_TIME).create());
         //添加事件：精灵祝福
         BaseMod.addEvent(new AddEventParams.Builder(FairyBlessingEvent.ID, FairyBlessingEvent.class).dungeonID(TheBeyond.ID).create());
+        //添加事件：猫党？狗党？
+        BaseMod.addEvent(new AddEventParams.Builder(CatOrDogEvent.ID, CatOrDogEvent.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID).create());
         //添加药水
         BaseMod.addPotion(time.class, null, null, null, "time");
         BaseMod.addPotion(money.class, null, null, null, "money");

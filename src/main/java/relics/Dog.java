@@ -18,7 +18,7 @@ public class Dog extends CustomRelic {
     private static final String IMG_OTL = "img/relics/outline/Dog.png";
 
     public Dog() {
-        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.UNCOMMON, LandingSound.SOLID);
+        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.SPECIAL, LandingSound.SOLID);
     }
 
     @Override
