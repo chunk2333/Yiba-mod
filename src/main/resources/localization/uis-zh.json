@@ -81,5 +81,12 @@
     "TEXT": [
       "选择一张牌颠倒魔法数字与伤害数字。"
     ]
+  },
+  "ArtificialBrainOverflowAciton": {
+    "TEXT": [
+      "选择一张牌消耗。",
+      "选择至多 ",
+      " 张牌消耗。"
+    ]
   }
 }

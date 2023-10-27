@@ -353,6 +353,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new CallWhiteBlack());//指鹿为马
         this.cardsToAdd.add(new DemonicPact());//恶魔契约
         this.cardsToAdd.add(new Virtual());//虚拟机
+        this.cardsToAdd.add(new ArtificialBrainOverflow());//人工脑溢出
         //this.cardsToAdd.add(new GifTestCard());//Gif测试卡牌
         //this.cardsToAdd.add(new CatBreath());//破败猫息
     }
