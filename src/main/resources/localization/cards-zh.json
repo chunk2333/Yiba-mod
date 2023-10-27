@@ -692,5 +692,10 @@
   "DemonicPact": {
     "NAME": "恶魔契约",
     "DESCRIPTION": "每回合结束时回复自身最大生命值1/13的血量。"
+  },
+  "Virtual": {
+    "NAME": "虚拟机",
+    "DESCRIPTION": "获得自身最大生命值的临时生命。 NL 消耗 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "获得自身最大生命值的临时生命。 NL 消耗 。"
   }
 }
