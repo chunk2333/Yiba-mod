@@ -701,5 +701,15 @@
   "ArtificialBrainOverflow": {
     "NAME": "人工脑溢出",
     "DESCRIPTION": "从弃牌堆中选择至多 !M! 张牌 消耗 。 NL 获得与 消耗 牌数相同数量层数的 集中 和 缓冲 。"
+  },
+  "SnowStorm": {
+    "NAME": "暴风雪",
+    "DESCRIPTION": "生成 X 个 冰霜 充能球。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "生成 X+1 个 冰霜 充能球。 NL 消耗 。"
+  },
+  "SinfulKarma": {
+    "NAME": "涤罪业焰",
+    "DESCRIPTION": " 消耗 你整个战斗中牌库的所有诅咒牌和状态牌。",
+    "UPGRADE_DESCRIPTION": " 消耗 你整个战斗中牌库的所有诅咒牌和状态牌。 NL 保留 。"
   }
 }
