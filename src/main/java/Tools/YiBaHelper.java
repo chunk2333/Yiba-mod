@@ -22,6 +22,8 @@ public class YiBaHelper {
 
     public static boolean TempBoolen;
 
+    public static boolean LoadOutModIsClose = true;
+
     private static String lastTriggerElementName;
 
     private static String lastTriggerElementFinalName;
