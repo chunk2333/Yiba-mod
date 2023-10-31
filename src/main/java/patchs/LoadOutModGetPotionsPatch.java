@@ -6,7 +6,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 
-@SpirePatch(cls = "loadout.screens.AbstractSelectScreen", method = "doneSelecting", optional = true)
+@SpirePatch(cls = "loadout.screens.AbstractSelectScreen", method = "doneSelecting", requiredModId = "loadout", optional = true)
 public class LoadOutModGetPotionsPatch {
 
     @SpireInsertPatch(loc = 121, localvars = {"this.doneSelecting"})
