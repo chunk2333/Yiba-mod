@@ -1,5 +1,6 @@
 package relics;
 //锐刻五代
+import YibaMod.YibaMod;
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,7 +35,7 @@ public class RELX5th extends CustomRelic {
     @Override
     public void update() {
         super.update();
-        if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+        if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && AbstractDungeon.screen==AbstractDungeon.CurrentScreen.GRID) {
             CardCrawlGame.sound.play("CARD_EXHAUST");
             AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards
 
