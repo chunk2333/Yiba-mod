@@ -93,5 +93,10 @@
     "TEXT": [
       " NL 拾起时，获得 #y100 金币 。"
     ]
+  },
+  "ShopEasterEggPatch": {
+    "TEXT": [
+      "买不起别 ~摸~ ~~"
+    ]
   }
 }
