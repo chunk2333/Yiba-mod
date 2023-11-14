@@ -16,9 +16,11 @@ import cards.red.*;
 import characters.Witch;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
@@ -44,13 +46,15 @@ import potions.*;
 import relics.*;
 import relics.ClickRelic.*;
 import relics.Witch.*;
+import screens.RelicSelectScreen;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.List;
 
 
 @SpireInitializer
-public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, PostExhaustSubscriber, PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber, PostEnergyRechargeSubscriber, AddAudioSubscriber {
+public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, PostRenderSubscriber, PostExhaustSubscriber, PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber, PostEnergyRechargeSubscriber, AddAudioSubscriber, PostUpdateSubscriber {
     private static final String MOD_BADGE = "img/ui/badge.png";
     //攻击、技能、能力牌的背景图片(512)
     private static final String ATTACK_CC = "img/512/bg_attack_SELES_s.png";
@@ -69,6 +73,10 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
     public static final Color SILVER = CardHelper.getColor(200, 200, 200);
     private final ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
     public static ArrayList<AbstractCard> recyclecards = new ArrayList<>();
+    //遗物选择界面
+    private static final List<AbstractGameAction> actionList = new ArrayList<>();
+    private static final List<AbstractGameAction> offScreenActionList = new ArrayList<>();
+    public static RelicSelectScreen relicSelectScreen;
 
     public static final Logger logger = LogManager.getLogger(YibaMod.class.getName());
 
@@ -465,6 +473,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new TimeInABottle(), RelicType.SHARED); //时间之瓶
         BaseMod.addRelic(new PhotonGenerator(), RelicType.BLUE); //光子发生装置
         BaseMod.addRelic(new BlackHand(), RelicType.SHARED); //黑手
+        //BaseMod.addRelic(new TestRelicSelect(), RelicType.SHARED); //测试遗物选择
         //添加事件:会员制餐厅
         BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID, Exordium.ID).create());
         //添加事件:三幻批
@@ -533,6 +542,8 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addBoss(TheCity.ID, Dio.ID,
                 "map/boss/Dio.png",
                 "map/bossOutline/Dio.png");
+
+        relicSelectScreen = new RelicSelectScreen();
     }
 
     @Override
@@ -558,6 +569,28 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
             AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, false, true, true));
         }
         recyclecards.clear();
+    }
+
+    @Override
+    public void receivePostUpdate() {
+        if (!actionList.isEmpty()) {
+            (actionList.get(0)).update();
+            if ((actionList.get(0)).isDone)
+                actionList.remove(0);
+        }
+        if (!offScreenActionList.isEmpty() && !AbstractDungeon.isScreenUp) {
+            (offScreenActionList.get(0)).update();
+            if ((offScreenActionList.get(0)).isDone)
+                offScreenActionList.remove(0);
+        }
+        if (!relicSelectScreen.isDone)
+            relicSelectScreen.update();
+    }
+
+    @Override
+    public void receivePostRender(SpriteBatch sb) {
+        if (!relicSelectScreen.isDone)
+            relicSelectScreen.render(sb);
     }
 
 }

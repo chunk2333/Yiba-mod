@@ -679,5 +679,12 @@
     "DESCRIPTIONS": [
       "你现在可以拿取掉落的奖励列表中的 #y全部 卡牌奖励了。"
     ]
+  },
+  "TestRelicSelect": {
+    "NAME": "测试遗物选择",
+    "FLAVOR": "希望不出bug。",
+    "DESCRIPTIONS": [
+      "右键此遗物，选择获得一个遗物"
+    ]
   }
 }
