@@ -22,7 +22,7 @@ public class SealedLeftArm extends CustomCard {
     public static final String ID = "SealedLeftArm";
 
     public SealedLeftArm() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
         this.dontTriggerOnUseCard = true;
     }
     @Override

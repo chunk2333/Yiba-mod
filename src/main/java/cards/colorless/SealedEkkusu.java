@@ -27,7 +27,7 @@ public class SealedEkkusu extends CustomCard {
     public static final String ID = "SealedEkkusu";
 
     public SealedEkkusu() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.RARE, CardTarget.SELF);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {}
