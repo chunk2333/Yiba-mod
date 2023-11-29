@@ -364,6 +364,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new ArtificialBrainOverflow());//人工脑溢出
         this.cardsToAdd.add(new SnowStorm());//暴风雪
         this.cardsToAdd.add(new SinfulKarma());//涤罪业焰
+        this.cardsToAdd.add(new WuZhongShengYou());//无中生有
 
 
 

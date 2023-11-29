@@ -711,5 +711,10 @@
     "NAME": "涤罪业焰",
     "DESCRIPTION": " 消耗 你整个战斗中牌库的所有诅咒牌和状态牌。",
     "UPGRADE_DESCRIPTION": " 消耗 你整个战斗中牌库的所有诅咒牌和状态牌。 NL 保留 。"
+  },
+  "WuZhongShengYou": {
+    "NAME": "无中生有",
+    "DESCRIPTION": "每当你抽到这张牌，都增加一张其复制品到你的手牌。 NL 抽 !M! 张牌。 NL 消耗 。 NL 保留 。",
+    "UPGRADE_DESCRIPTION": "每当你抽到这张牌，都增加一张其复制品到你的手牌。 NL 抽 !M! 张牌。 NL 消耗 。"
   }
 }
