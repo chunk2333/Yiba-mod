@@ -33,6 +33,9 @@ public class TanNangQuWu extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new StealBuffAction(m));
+        if(this.upgraded){
+            addToBot(new StealBuffAction(m));
+        }
     }
 
     @Override

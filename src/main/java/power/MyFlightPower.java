@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class MyFlightPower extends AbstractPower {
-    public static final String POWER_ID = "Flight";
+    public static final String POWER_ID = "MyFlightPower";
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("Flight");
 
@@ -20,7 +20,7 @@ public class MyFlightPower extends AbstractPower {
 
     public MyFlightPower(AbstractCreature owner, int amount) {
         this.name = NAME;
-        this.ID = "Flight";
+        this.ID = "MyFlightPower";
         this.owner = owner;
         this.amount = amount;
         this.storedAmount = amount;
@@ -56,7 +56,7 @@ public class MyFlightPower extends AbstractPower {
         boolean willLive = (calculateDamageTakenAmount(damageAmount, info.type) < this.owner.currentHealth);
         if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount > 0 && willLive) {
             flash();
-            addToBot(new ReducePowerAction(this.owner, this.owner, "Flight", 1));
+            addToBot(new ReducePowerAction(this.owner, this.owner, "MyFlightPower", 1));
         }
         return damageAmount;
     }

@@ -33,7 +33,7 @@ public class StealBuffAction extends AbstractGameAction {
         int buffSize = 0;
         AbstractPower FinalBuff = null;
         for (AbstractPower power : this.m.powers){
-            if (power.type== AbstractPower.PowerType.BUFF){
+            if (power.type == AbstractPower.PowerType.BUFF){
                 buffSize += 1;
                 powersBuff.add(power);
             }
@@ -49,7 +49,6 @@ public class StealBuffAction extends AbstractGameAction {
         } else {
             FinalBuff = powersBuff.get(0);
         }
-        FinalBuff.owner = p;
 
         if (FinalBuff.ID.equals("ReactivePower")){
             //处理扭曲团块的buff
@@ -58,13 +57,19 @@ public class StealBuffAction extends AbstractGameAction {
             return;
         }
 
-        if (FinalBuff.ID.equals("Flight")){
-            addToBot(new ApplyPowerAction(p, p, new MyFlightPower(p, FinalBuff.amount)));
-        }
-        if (FinalBuff.ID.equals("Curl Up")){
-            addToBot(new ApplyPowerAction(p, p, new MyCurlUpPower(p, FinalBuff.amount)));
-        }else {
-            addToBot(new ApplyPowerAction(p, p, FinalBuff));
+        FinalBuff.owner = p;
+
+        switch (FinalBuff.ID){
+            case "Flight":
+                addToBot(new ApplyPowerAction(p, p, new MyFlightPower(p, FinalBuff.amount)));
+                FinalBuff.owner = m;
+                break;
+            case  "Curl Up":
+                addToBot(new ApplyPowerAction(p, p, new MyCurlUpPower(p, FinalBuff.amount)));
+                break;
+            default:
+                addToBot(new ApplyPowerAction(p, p, FinalBuff));
+                break;
         }
         addToBot(new RemoveSpecificPowerAction(m, m, FinalBuff.ID));
         tickDuration();
