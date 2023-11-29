@@ -716,5 +716,9 @@
     "NAME": "无中生有",
     "DESCRIPTION": "每当你抽到这张牌，都增加一张其复制品到你的手牌。 NL 抽 !M! 张牌。 NL 消耗 。 NL 保留 。",
     "UPGRADE_DESCRIPTION": "每当你抽到这张牌，都增加一张其复制品到你的手牌。 NL 抽 !M! 张牌。 NL 消耗 。"
+  },
+  "TanNangQuWu": {
+    "NAME": "探囊取物",
+    "DESCRIPTION": "从目标身上随机偷取至多 !M! 项buff。 NL 消耗 。"
   }
 }
