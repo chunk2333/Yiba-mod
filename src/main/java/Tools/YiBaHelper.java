@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class YiBaHelper {
     public static String MakeSoundPath(String id){
@@ -21,6 +22,12 @@ public class YiBaHelper {
     }
 
     public static boolean TempBoolen;
+
+    public static boolean YuanShenStartBool;
+
+    static {
+        regenerateYuanShenStartBool();
+    }
 
     public static boolean LoadOutModIsClose = true;
 
@@ -216,5 +223,10 @@ public class YiBaHelper {
 
     public static String getTempRelic2(){
         return TempRelicId2;
+    }
+
+    public static void regenerateYuanShenStartBool() {
+        Random random = new Random();
+        YuanShenStartBool = random.nextBoolean();
     }
 }
