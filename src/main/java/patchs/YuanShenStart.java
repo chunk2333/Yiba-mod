@@ -91,11 +91,11 @@ class YuanShenStartUpdate{
                 ___y[0] = 450.0F;
                 if (___timer[0] < 0.96000004F && !___playSfx[0]) {
                     ___playSfx[0] = true;
-                    ___sfxId[0] = CardCrawlGame.sound.play("SPLASH");
+                    ___sfxId[0] = CardCrawlGame.sound.play("YuanShenStartBgm");
                 }
                 if (___timer[0] < 0.0F) {
                     phase = Phase.FADE;
-                    ___timer[0] = 3.0F;
+                    ___timer[0] = 6.5F;
                 }
                 break;
             case FADE:
@@ -109,13 +109,14 @@ class YuanShenStartUpdate{
                 ___timer[0] -= Gdx.graphics.getDeltaTime();
                 if (___timer[0] < 0.0F) {
                     phase = Phase.FADE_OUT;
-                    ___timer[0] = 1.0F;
+                    ___timer[0] = 5.0F;
                 }
                 break;
             case FADE_OUT:
                 ___timer[0] -= Gdx.graphics.getDeltaTime();
                 if (___timer[0] < 0.0F) {
                     ___img[0].dispose();
+                    CardCrawlGame.sound.fadeOut("YuanShenStartBgm", ___sfxId[0]);
                     __instance.isDone = true;
                 }
                 break;

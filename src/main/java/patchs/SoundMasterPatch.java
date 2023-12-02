@@ -17,5 +17,7 @@ public class SoundMasterPatch {
         ___map.put("Fall_Steel", new Sfx("sound/Steelpipefalling.mp3", false));
         ___map.put("BlackHand", new Sfx("sound/BlackHandVoice.mp3", false));
         ___map.put("TimeReversal", new Sfx("sound/TimeReversalVoice.mp3", false));
+        ___map.put("YuanShenStartBgm", new Sfx("sound/YuanShenStartBgm.mp3", false));
+        YibaMod.logger.info("自定义声音加载完毕...");
     }
 }
