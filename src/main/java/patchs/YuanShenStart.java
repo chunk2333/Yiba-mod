@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
@@ -88,7 +89,7 @@ class YuanShenStartUpdate{
                 //___color[0].a = Interpolation.fade.apply(1.0F, 0.0F, ___timer[0] / 1.2F);
                 ___color[0].a = 1.0F;
                 //___y[0] = Interpolation.elasticIn.apply(Settings.HEIGHT / 2.0F, Settings.HEIGHT / 2.0F - 200.0F * Settings.scale, ___timer[0] / 1.2F);
-                ___y[0] = 450.0F;
+                ___y[0] = Settings.HEIGHT / 2.0F;
                 if (___timer[0] < 0.96000004F && !___playSfx[0]) {
                     ___playSfx[0] = true;
                     ___sfxId[0] = CardCrawlGame.sound.play("YuanShenStartBgm");
