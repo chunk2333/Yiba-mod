@@ -27,6 +27,7 @@ public class ReconstructEverything extends CustomCard {
     public ReconstructEverything() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Witch_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber;
         this.isEthereal = true;
         this.exhaust = true;
     }
@@ -51,6 +52,7 @@ public class ReconstructEverything extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             this.isEthereal = false;
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         }
