@@ -720,5 +720,9 @@
   "TanNangQuWu": {
     "NAME": "探囊取物",
     "DESCRIPTION": "从目标身上随机偷取至多 !M! 项buff。 NL 消耗 。"
+  },
+  "PerfectClosing": {
+    "NAME": "完美谢幕",
+    "DESCRIPTION": "本回合：接下来的 !M! 张攻击牌造成原来的120%/150%/200%/300%伤害。"
   }
 }

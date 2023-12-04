@@ -280,5 +280,12 @@
       " 点 #y生命 。",
       ""
     ]
+  },
+  "PerfectClosingPower": {
+    "NAME": "完美谢幕",
+    "DESCRIPTIONS": [
+      "你的下一张攻击牌造成原来的 #b",
+      " 点伤害。"
+    ]
   }
 }
