@@ -729,5 +729,9 @@
     "NAME": "禁制诅咒",
     "DESCRIPTION": "获得 [E] [E] NL 本回合的下两张攻击牌伤害翻倍。 NL 每打出两张攻击牌这张牌自动从消耗牌堆中放入到手牌中。",
     "UPGRADE_DESCRIPTION": "获得 [E] [E] NL 下两张攻击牌伤害翻倍。 NL 每打出两张攻击牌这张牌自动从消耗牌堆中放入到手牌中。"
+  },
+  "CuteAndAdorable": {
+    "NAME": "萌萌哒",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 打出两次后额外获得 !M! 点 力量 。"
   }
 }

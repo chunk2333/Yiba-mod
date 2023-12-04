@@ -368,6 +368,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new TanNangQuWu());//探囊取物
         this.cardsToAdd.add(new PerfectClosing());//完美谢幕
         this.cardsToAdd.add(new ForbiddenCurse());//禁制诅咒-战士
+        this.cardsToAdd.add(new CuteAndAdorable());//萌萌哒-战士
 
 
 
