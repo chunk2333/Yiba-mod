@@ -724,5 +724,10 @@
   "PerfectClosing": {
     "NAME": "完美谢幕",
     "DESCRIPTION": "本回合：接下来的 !M! 张攻击牌造成原来的120%/150%/200%/300%伤害。"
+  },
+  "ForbiddenCurse": {
+    "NAME": "禁制诅咒",
+    "DESCRIPTION": "获得 [E] [E] NL 本回合的下两张攻击牌伤害翻倍。 NL 每打出两张攻击牌这张牌自动从消耗牌堆中放入到手牌中。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] NL 下两张攻击牌伤害翻倍。 NL 每打出两张攻击牌这张牌自动从消耗牌堆中放入到手牌中。"
   }
 }
