@@ -6,6 +6,7 @@ import basemod.abstracts.CustomCard;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -29,7 +30,7 @@ public class ForbiddenCurse extends CustomCard {
 
     public static final String ID = "ForbiddenCurse";
 
-    private static int amout = 0;
+    public static int amout = 0;
 
     public ForbiddenCurse() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.RARE, CardTarget.SELF);
@@ -71,4 +72,14 @@ public class ForbiddenCurse extends CustomCard {
             initializeDescription();
         }
     }
+}
+
+@SpirePatch2(clz = AbstractPlayer.class, method = "onVictory")
+class ForbiddenCurseOnVictory{
+
+    @SpirePostfixPatch
+    public static void PostFix(){
+        ForbiddenCurse.amout = 0;
+    }
+
 }
