@@ -1,8 +1,8 @@
 package cards.red;
 //禁制诅咒
-import YibaMod.YibaMod;
 import actions.GetCardFromExhaustPile;
 import basemod.abstracts.CustomCard;
+import basemod.abstracts.CustomSavable;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import power.ForbiddenCursePower;
 
 @SpirePatch2(clz = AbstractPlayer.class, method = "useCard")
-public class ForbiddenCurse extends CustomCard {
+public class ForbiddenCurse extends CustomCard implements CustomSavable<String> {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("ForbiddenCurse");
 
     public static final String NAME = cardStrings.NAME;
@@ -49,13 +49,24 @@ public class ForbiddenCurse extends CustomCard {
     @SpireInsertPatch(rloc = 0, localvars = {"c", "monster", "energyOnUse"})
     public static void ForbiddenCurseOnUseCard(@ByRef AbstractCard[] ___c, @ByRef AbstractMonster[] ___monster, @ByRef int[] ___energyOnUse){
         if (___c[0].type == CardType.ATTACK){
-            YibaMod.logger.info("你打出了其他的卡牌");
+            //YibaMod.logger.info("你打出了其他的卡牌");
             amout += 1;
             if (amout == 2){
                 AbstractDungeon.actionManager.addToBottom(new GetCardFromExhaustPile(new ForbiddenCurse()));
                 amout = 0;
             }
         }
+    }
+
+    @Override
+    public String onSave(){
+        ForbiddenCurse.amout = 0;
+        return "-1";
+    }
+
+    @Override
+    public void onLoad(String s){
+        ForbiddenCurse.amout = 0;
     }
 
     @Override
