@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.random.Random;
+import power.DemonicPactPower;
+import power.MyCurlUpPower;
 
 public abstract class GetRadomPower {
     private Random rng = AbstractDungeon.relicRng;
@@ -80,8 +82,44 @@ public abstract class GetRadomPower {
             return new CollectPower(owner,newAmount);
         }
         if(radom==18){
-            //自然
+            //自燃
             return new CombustPower(owner,newAmount,newAmount);
+        }
+        if(radom==19){
+            //混乱
+            return new ConfusionPower(owner);
+        }
+        if(radom==20){
+            //保留
+            return new ConservePower(owner,newAmount);
+        }
+        if(radom==21){
+            //缠绕 debuff
+            return new ConstrictedPower(owner, owner, newAmount);
+        }
+        if(radom==22){
+            //腐化
+            return new CorruptionPower(owner);
+        }
+        if(radom==23){
+            //创造性AI
+            return new CreativeAIPower(owner, newAmount);
+        }
+        if(radom==24){
+            //好奇
+            return new CuriosityPower(owner, newAmount);
+        }
+        if(radom==25){
+            //蜷身
+            return new MyCurlUpPower(owner, newAmount);
+        }
+        if(radom==26){
+            //黑暗之拥
+            return new DarkEmbracePower(owner, newAmount);
+        }
+        if(radom==27){
+            //恶魔形态
+            return new DemonFormPower(owner, newAmount);
         }
 
 
