@@ -58,7 +58,7 @@ public class BreakingTheCocoonAndKilling extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int finaldamage = 0;
+        int finaldamage;
 
         finaldamage = this.calculate(p, m);
 
@@ -86,7 +86,7 @@ public class BreakingTheCocoonAndKilling extends CustomCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        int damge = 0;
+        int damge;
         damge = this.calculate(AbstractDungeon.player);
         this.rawDescription = cardStrings.DESCRIPTION;
         this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + damge;
