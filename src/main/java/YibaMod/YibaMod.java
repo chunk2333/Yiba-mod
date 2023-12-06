@@ -40,6 +40,7 @@ import events.*;
 import monsters.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import panel.Solarization;
 import patchs.AbstractCardEnum;
 import patchs.ThmodClassEnum;
 import potions.*;
@@ -369,6 +370,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new PerfectClosing());//完美谢幕
         this.cardsToAdd.add(new ForbiddenCurse());//禁制诅咒-战士
         this.cardsToAdd.add(new CuteAndAdorable());//萌萌哒-战士
+        this.cardsToAdd.add(new BreakingTheCocoonAndKilling());//破茧杀戮-战士
 
 
 
@@ -553,6 +555,8 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
                 "map/bossOutline/Dio.png");
 
         relicSelectScreen = new RelicSelectScreen();
+
+        //BaseMod.addTopPanelItem(new Solarization());
     }
 
     @Override

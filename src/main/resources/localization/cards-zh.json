@@ -733,5 +733,13 @@
   "CuteAndAdorable": {
     "NAME": "萌萌哒",
     "DESCRIPTION": "获得 !M! 点 力量 。 NL 打出两次后额外获得 !M! 点 力量 。"
+  },
+  "BreakingTheCocoonAndKilling": {
+    "NAME": "破茧杀戮",
+    "DESCRIPTION": "造成自己手牌中所有攻击牌伤害总数的伤害，若处于禁制诅咒效果范围内，则该效果额外提高1.5倍。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （造成",
+      " 点伤害。）"
+    ]
   }
 }
