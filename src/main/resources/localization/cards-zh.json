@@ -719,7 +719,7 @@
   },
   "TanNangQuWu": {
     "NAME": "探囊取物",
-    "DESCRIPTION": "从目标身上随机偷取至多 !M! 项buff。 NL 消耗 。"
+    "DESCRIPTION": "从目标身上随机偷取至多 !M! 项Buff。 NL 消耗 。"
   },
   "PerfectClosing": {
     "NAME": "完美谢幕",
