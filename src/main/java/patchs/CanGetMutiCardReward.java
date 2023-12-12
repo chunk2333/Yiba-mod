@@ -29,6 +29,9 @@ class acquire {
     public static void acquireFix(CardRewardScreen __instance, AbstractCard hoveredCard){
         if(AbstractDungeon.player.hasRelic("BlackHand")){
             int i = 0;
+            if (__instance.rItem.cards.isEmpty()){
+                return;
+            }
             for(AbstractCard c : __instance.rItem.cards){
                 if(c.cardID.equals(hoveredCard.cardID)){
                     __instance.rItem.cards.remove(i);
