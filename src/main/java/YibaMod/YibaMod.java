@@ -483,6 +483,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new Crossbow(), RelicType.SHARED); //诸葛连弩
         //BaseMod.addRelic(new TestRelicSelect(), RelicType.SHARED); //测试遗物选择
         BaseMod.addRelic(new Charcoal(), RelicType.RED); //木炭-战士专属
+        BaseMod.addRelic(new Akaishi(), RelicType.SHARED); //赤石
 
 
         //添加事件:会员制餐厅
