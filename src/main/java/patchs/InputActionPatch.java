@@ -31,10 +31,10 @@ public class InputActionPatch extends InputAdapter{
 //            YibaMod.logger.info("A键被按下");
 //        }
         String key1 = "19192020212221223029"; //↑↑↓↓←→←→BA
-        YibaMod.logger.info(Input.Keys.toString(keycode) + "键被按下");
+        //YibaMod.logger.info(Input.Keys.toString(keycode) + "键被按下");
         keys += Integer.toString(keycode);
         if (keys.contains(key1)){
-            YibaMod.logger.info("触发了秘技");
+            //YibaMod.logger.info("触发了秘技");
             keys = "";
             AbstractRoom currentRoom;
             try{
