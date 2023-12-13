@@ -719,7 +719,7 @@
   },
   "TanNangQuWu": {
     "NAME": "探囊取物",
-    "DESCRIPTION": "从目标身上随机偷取至多 !M! 项Buff。 NL 消耗 。"
+    "DESCRIPTION": "从目标身上随机偷取至多 !M! 项buff。 NL 消耗 。"
   },
   "PerfectClosing": {
     "NAME": "完美谢幕",
@@ -727,8 +727,8 @@
   },
   "ForbiddenCurse": {
     "NAME": "禁制诅咒",
-    "DESCRIPTION": "获得 [E] [E] NL 本回合的下两张攻击牌伤害翻倍。 NL 每打出两张攻击牌这张牌自动从消耗牌堆中放入到手牌中。",
-    "UPGRADE_DESCRIPTION": "获得 [E] [E] NL 下两张攻击牌伤害翻倍。 NL 每打出两张攻击牌这张牌自动从消耗牌堆中放入到手牌中。"
+    "DESCRIPTION": "获得 [E] [E] NL 本回合的下两张攻击牌伤害翻倍。 NL 每打出两张攻击牌这张牌自动从消耗牌堆中放入到手牌中。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] NL 下两张攻击牌伤害翻倍。 NL 每打出两张攻击牌这张牌自动从消耗牌堆中放入到手牌中。 NL 消耗 。"
   },
   "CuteAndAdorable": {
     "NAME": "萌萌哒",
