@@ -487,7 +487,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
 
 
         //添加事件:会员制餐厅
-        BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID, Exordium.ID).create());
+        BaseMod.addEvent(new AddEventParams.Builder(Restaurant.ID, Restaurant.class).eventType(EventUtils.EventType.ONE_TIME).dungeonID(Exordium.ID).dungeonID(TheCity.ID).create());
         //添加事件:三幻批
         BaseMod.addEvent(new AddEventParams.Builder(SanHuanPi.ID, SanHuanPi.class).dungeonID(TheBeyond.ID).create());
         //添加事件：LuLuEvent
