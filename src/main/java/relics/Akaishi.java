@@ -2,15 +2,12 @@ package relics;
 //赤石
 import basemod.abstracts.CustomRelic;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.unique.FeedAction;
-import com.megacrit.cardcrawl.cards.red.Feed;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 @SpirePatch2(clz = FeedAction.class, method = "update")
@@ -42,9 +39,11 @@ public class Akaishi extends CustomRelic {
 
     @Override
     public int onPlayerHeal(int healAmount) {
-        flash();
-        addToBot(new GainEnergyAction(1));
-        addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        if (healAmount > 0){
+            flash();
+            addToBot(new GainEnergyAction(1));
+            addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        }
         return healAmount;
     }
 
