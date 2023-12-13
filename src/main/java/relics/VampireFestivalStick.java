@@ -21,8 +21,11 @@ public class VampireFestivalStick extends CustomRelic {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        flash();
-        AbstractDungeon.player.heal((int) (damageAmount * 0.1));
+        int heal = (int) (damageAmount * 0.1);
+        if (heal > 0){
+            flash();
+            AbstractDungeon.player.heal(heal);
+        }
     }
 
     @Override
