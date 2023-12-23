@@ -1,5 +1,6 @@
 package relics;
 //赢
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
@@ -19,10 +20,10 @@ public class Ying extends CustomRelic {
     }
 
     @Override
-    public void atPreBattle() {
+    public void atBattleStart() {
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToBot(new ExpertiseAction(AbstractDungeon.player, 10));
+        addToBot(new ExpertiseAction(AbstractDungeon.player, BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()));
         this.grayscale = true;
     }
 
