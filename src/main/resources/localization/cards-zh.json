@@ -243,7 +243,7 @@
   },
   "PiFace": {
     "NAME": "批脸",
-    "DESCRIPTION": " 不能被打出 。 NL 抽到时随机 消耗 所有手牌。 NL 虚无 。"
+    "DESCRIPTION": " 不能被打出 。 NL 抽到时将你的手牌 消耗 为一张。 NL 虚无 。"
   },
   "KillGod": {
     "NAME": "弑神诛仙",
