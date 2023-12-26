@@ -741,5 +741,13 @@
       " NL （造成",
       " 点伤害。）"
     ]
+  },
+  "GuardianForce": {
+    "NAME": "守护之力",
+    "DESCRIPTION": " !M! 回合内抵挡来临的任何负面效果。"
+  },
+  "FrontalAmbush": {
+    "NAME": "正面偷袭",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 使敌方无法行动一回合。"
   }
 }
