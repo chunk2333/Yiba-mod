@@ -18,6 +18,9 @@ public class SoundMasterPatch {
         ___map.put("BlackHand", new Sfx("sound/BlackHandVoice.mp3", false));
         ___map.put("TimeReversal", new Sfx("sound/TimeReversalVoice.mp3", false));
         ___map.put("YuanShenStartBgm", new Sfx("sound/YuanShenStartBgm.mp3", false));
+        ___map.put("TimeStop", new Sfx("sound/TimeStop.mp3", false));
+        ___map.put("TimeStop01", new Sfx("sound/TimeStop01.mp3", false));
+        ___map.put("TimeStop02", new Sfx("sound/TimeStop02.mp3", false));
         YibaMod.logger.info("自定义声音加载完毕...");
     }
 }
