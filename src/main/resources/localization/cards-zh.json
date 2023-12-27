@@ -749,5 +749,13 @@
   "FrontalAmbush": {
     "NAME": "正面偷袭",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 使敌方无法行动一回合。"
+  },
+  "FlameOfLife": {
+    "NAME": "生命火焰",
+    "DESCRIPTION": "失去最大生命值 !M! %的血量，使全体敌人无法行动一回合。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （失去",
+      " 点生命值。）"
+    ]
   }
 }
