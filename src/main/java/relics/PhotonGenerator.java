@@ -48,7 +48,7 @@ public class PhotonGenerator extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
-        flash();
+        //flash();
         this.counter += 1;
     }
 
