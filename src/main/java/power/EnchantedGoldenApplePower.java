@@ -41,7 +41,10 @@ public class EnchantedGoldenApplePower extends AbstractPower {
 
     @SpireInsertPatch(loc = 297, localvars = {"powerToApply"})
     public static void PostFix(AbstractPower powerToApply){
-        if (powerToApply.type == AbstractPower.PowerType.DEBUFF && powerToApply.owner != AbstractDungeon.player){
+//        if (powerToApply.type == AbstractPower.PowerType.DEBUFF && powerToApply.owner != AbstractDungeon.player){
+//            EnchantedGoldenApplePower.Trigger();
+//        }
+        if (powerToApply.type == AbstractPower.PowerType.DEBUFF){
             EnchantedGoldenApplePower.Trigger();
         }
     }
