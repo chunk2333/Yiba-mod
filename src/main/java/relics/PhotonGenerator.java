@@ -32,7 +32,7 @@ public class PhotonGenerator extends CustomRelic {
 
     @Override
     public void atTurnStart() {
-        if (this.counter <= 7 && !this.isFirst){
+        if (this.counter <= 6 && !this.isFirst){
             AbstractPlayer p = AbstractDungeon.player;
             flash();
             addToBot(new RelicAboveCreatureAction(p, this));

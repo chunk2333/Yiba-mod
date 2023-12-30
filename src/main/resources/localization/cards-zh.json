@@ -695,8 +695,8 @@
   },
   "Virtual": {
     "NAME": "虚拟机",
-    "DESCRIPTION": "获得自身最大生命值的临时生命。 NL 消耗 。 NL 虚无 。",
-    "UPGRADE_DESCRIPTION": "获得自身最大生命值的临时生命。 NL 消耗 。"
+    "DESCRIPTION": "获得自身最大生命值的临时生命。 NL 每回合开始时少获得 [B] 。 NL 消耗 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "获得自身最大生命值的临时生命。 NL 每回合开始时少获得 [B] 。 NL 消耗 。"
   },
   "ArtificialBrainOverflow": {
     "NAME": "人工脑溢出",
