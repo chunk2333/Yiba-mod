@@ -1,9 +1,9 @@
 package power;
 //时间暂停
+import actions.MyPressEndTurnButtonAction;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -38,7 +38,7 @@ public class TimeStop extends AbstractPower {
         //移除buff
         addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         //结束回合
-        addToBot(new PressEndTurnButtonAction());
+        addToBot(new MyPressEndTurnButtonAction());
     }
 
     @Override
