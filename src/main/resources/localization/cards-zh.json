@@ -766,5 +766,13 @@
     "NAME": "强制退场",
     "DESCRIPTION": "固有 。 NL 使一名非boss敌人立即逃跑。 NL 消耗 。 NL 移除 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 保留 。 NL 使一名非boss敌人立即逃跑。 NL 消耗 。 NL 移除 。"
+  },
+  "LosingAnger": {
+    "NAME": "泄愤",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗进入 愤怒 次数次。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （造成",
+      " 次伤害。）"
+    ]
   }
 }
