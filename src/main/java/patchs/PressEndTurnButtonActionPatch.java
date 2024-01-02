@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import java.util.Random;
 
 @SpirePatch(clz = PressEndTurnButtonAction.class, method = "update")
 public class PressEndTurnButtonActionPatch {
@@ -19,9 +20,16 @@ public class PressEndTurnButtonActionPatch {
                 break;
             }
         }
+        Random random_ = new Random();
+        int randomNumber = random_.nextInt(100) + 1;
+        if (randomNumber <= 5){
+            isPlay = true;
+        }
+
         if (!isPlay){
             return;
         }
+
         int random;
         random = AbstractDungeon.cardRandomRng.random(1, 3); //随机数
         switch (random){
