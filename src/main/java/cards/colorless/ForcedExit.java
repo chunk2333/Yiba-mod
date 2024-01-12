@@ -31,6 +31,7 @@ public class ForcedExit extends CustomCard {
     public ForcedExit() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.exhaust = true;
+        this.isInnate = true;
     }
 
     @Override
