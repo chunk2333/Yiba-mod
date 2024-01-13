@@ -778,5 +778,10 @@
   "Lust": {
     "NAME": "色欲",
     "DESCRIPTION": "固有 。 NL 不能被打出 。 NL 本场战斗不能SL。"
+  },
+  "Outmaneuver": {
+    "NAME": "抢占先机",
+    "DESCRIPTION": "获得 [G] [G] 。 NL 下一回合 NL 获得 [G] 。",
+    "UPGRADE_DESCRIPTION": "获得 [G] [G] 。 NL 下一回合 NL 获得 [G] [G] 。"
   }
 }
