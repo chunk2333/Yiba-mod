@@ -378,6 +378,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new ForcedExit());//强制退场
         this.cardsToAdd.add(new LosingAnger());//泄愤-观者
         this.cardsToAdd.add(new Lust());//色欲-诅咒
+        this.cardsToAdd.add(new Backtrack());//回溯-无色
 
 
 

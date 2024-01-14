@@ -171,7 +171,7 @@
   },
   "SpireScience": {
     "NAME": "尖塔学",
-    "DESCRIPTION": "消耗一个卡牌随机数。 NL  消耗 。 NL 然后复制一张到你的手牌。"
+    "DESCRIPTION": "消耗一个卡牌随机数。 NL  消耗 。 NL 增加一张其复制品到你的手牌。"
   },
   "Provoke": {
     "NAME": "挑衅",
@@ -783,5 +783,13 @@
     "NAME": "抢占先机",
     "DESCRIPTION": "获得 [G] [G] 。 NL 下一回合 NL 获得 [G] 。",
     "UPGRADE_DESCRIPTION": "获得 [G] [G] 。 NL 下一回合 NL 获得 [G] [G] 。"
+  },
+  "Backtrack": {
+    "NAME": "回溯",
+    "DESCRIPTION": "打出你上一次打出的牌。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （",
+      " 。）"
+    ]
   }
 }

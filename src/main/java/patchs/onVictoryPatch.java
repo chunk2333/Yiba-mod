@@ -1,6 +1,6 @@
 package patchs;
 
-import YibaMod.YibaMod;
+import Tools.YiBaHelper;
 import cards.purple.LosingAnger;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -12,7 +12,8 @@ public abstract class onVictoryPatch {
     @SpirePostfixPatch
     public static void PostFix(){
         LosingAnger.times = 0;
-        //YibaMod.logger.info("onVictoryPatch:本场战斗胜利了");
+        YiBaHelper.LastAttackMonster = null;
+        YiBaHelper.LastPlayedCard = null;
     }
 
 }

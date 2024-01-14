@@ -31,6 +31,10 @@ public class YiBaHelper {
 
     public static boolean LoadOutModIsClose = true;
 
+    public static AbstractCard LastPlayedCard = null;
+
+    public static AbstractMonster LastAttackMonster = null;
+
     private static String lastTriggerElementName;
 
     private static String lastTriggerElementFinalName;
