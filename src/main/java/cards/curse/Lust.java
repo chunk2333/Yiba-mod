@@ -42,6 +42,25 @@ public class Lust extends CustomCard {
                 return true;
             }
         }
+
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group){
+            if (c.cardID.equals("Lust")){
+                return true;
+            }
+        }
+
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group){
+            if (c.cardID.equals("Lust")){
+                return true;
+            }
+        }
+
+        for (AbstractCard c : AbstractDungeon.player.hand.group){
+            if (c.cardID.equals("Lust")){
+                return true;
+            }
+        }
+
         return false;
     }
 
