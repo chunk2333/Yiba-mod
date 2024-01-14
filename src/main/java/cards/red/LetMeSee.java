@@ -11,16 +11,21 @@ import power.power1power;
 
 public class LetMeSee extends CustomCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("power1");
+
     public static final String NAME = cardStrings.NAME;
+
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+
     public static final String IMG_PATH = "img/cards/power1.png";
+
     private static final int COST = 2;
+
     public static final String ID = "power1";
     public LetMeSee() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-
+        this.tags.add(CardTags.HEALING);
     }
 
     @Override

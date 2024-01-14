@@ -47,6 +47,9 @@ public class Backtrack extends CustomCard {
 
     @Override
     public void triggerOnGlowCheck() {
+        if (YiBaHelper.LastPlayedCard == null){
+            return;
+        }
         this.rawDescription = cardStrings.DESCRIPTION;
         this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + YiBaHelper.LastPlayedCard.name;
         this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
