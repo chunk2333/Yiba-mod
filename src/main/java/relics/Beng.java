@@ -34,6 +34,7 @@ public class Beng extends CustomRelic {
         if (this.isActive){
             AbstractPlayer p = AbstractDungeon.player;
             addToBot(new ApplyPowerAction(p, p, new EndTurnDeathPower(p)));
+            this.isActive = false;
         }
     }
 
@@ -41,20 +42,17 @@ public class Beng extends CustomRelic {
     public int onAttacked(DamageInfo info, int damageAmount) {
         //被攻击时触发
         AbstractPlayer p = AbstractDungeon.player;
-        if(damageAmount > p.currentHealth && !isActive){
+        if(damageAmount >= p.currentHealth && !isActive){
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player,this));
             this.isActive = true;
-            this.grayscale = true;
             return 0;
         }
         return damageAmount;
     }
     @Override
     public void onVictory() {
-        //在胜利时触发
         this.isActive = false;
-        this.grayscale = false;
     }
 
     @Override
