@@ -315,5 +315,11 @@
       "每抽1张牌就抽获得 #b",
       " 点 #y格挡 。"
     ]
+  },
+  "CorruptionAndDeadBranchPower": {
+    "NAME": "临时枯木树枝",
+    "DESCRIPTIONS": [
+      "每当你 #y消耗 一张牌，增加一张随机卡牌到你的手牌。"
+    ]
   }
 }
