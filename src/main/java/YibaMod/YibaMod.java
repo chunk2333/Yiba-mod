@@ -91,6 +91,8 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
 
     @SpireEnum public static AbstractCard.CardTags PYRO;
 
+    @SpireEnum public static AbstractCard.CardTags VANISH;//消逝
+
     public YibaMod() {
         //构造方法，初始化各种参数
         BaseMod.subscribe(this);

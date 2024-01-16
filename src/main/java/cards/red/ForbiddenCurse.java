@@ -1,5 +1,6 @@
 package cards.red;
 //禁制诅咒
+import YibaMod.YibaMod;
 import actions.GetCardFromExhaustPile;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.CustomSavable;
@@ -37,6 +38,7 @@ public class ForbiddenCurse extends CustomCard implements CustomSavable<String> 
         this.exhaust = true;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        this.tags.add(YibaMod.VANISH);
     }
 
     @Override
