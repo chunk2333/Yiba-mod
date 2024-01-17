@@ -1,5 +1,5 @@
 package patchs;
-
+//原神，启动 彩蛋
 import Tools.YiBaHelper;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -16,6 +16,10 @@ import com.megacrit.cardcrawl.screens.splash.SplashScreen;
 public class YuanShenStart {
     @SpireInsertPatch(loc = 39, localvars={"img"})
     public static void StartYuanShen(@ByRef Texture[] ___img){
+        if(!(YiBaHelper.YuanShenStartRandomNum <= YiBaHelper.YuanShenStartInt)){
+            return;
+        }
+
         if (YiBaHelper.YuanShenStartBool){
             ___img[0] = ImageMaster.loadImage("img/ui/yuanshen-black.png");
         } else {
@@ -31,21 +35,21 @@ class YuanShenStartBlack{
 
     @SpireInsertPatch(loc = 118, localvars={"bgColor"})
     public static void StartYuanShenBlack (@ByRef Color[] ___bgColor){
-        if (YiBaHelper.YuanShenStartBool){
+        if (YiBaHelper.YuanShenStartBool && YiBaHelper.YuanShenStartRandomNum <= YiBaHelper.YuanShenStartInt){
             ___bgColor[0] = new Color(255.0F, 255.0F, 255.0F, 1.0F);
         }
     }
 
     @SpireInsertPatch(loc = 120, localvars={"shadowColor"})
     public static void StartYuanShenBlackFix01(@ByRef Color[] ___shadowColor){
-        if (YiBaHelper.YuanShenStartBool){
+        if (YiBaHelper.YuanShenStartBool && YiBaHelper.YuanShenStartRandomNum <= YiBaHelper.YuanShenStartInt){
             ___shadowColor[0] = new Color(255.0F, 255.0F, 255.0F, 1.0F);
         }
 
     }
     @SpireInsertPatch(loc = 139, localvars={"s"})
     public static void StartYuanShenBlackFix02(@ByRef Color[] ___s){
-        if (YiBaHelper.YuanShenStartBool){
+        if (YiBaHelper.YuanShenStartBool && YiBaHelper.YuanShenStartRandomNum <= YiBaHelper.YuanShenStartInt){
             ___s[0] = new Color(0.0F, 0.0F, 0.0F, 0.0F);
         }
 
@@ -55,15 +59,18 @@ class YuanShenStartBlack{
 @SpirePatch2(clz = SplashScreen.class, method = "update")
 class YuanShenStartUpdate{
 
-
     public enum Phase {
-        INIT, BOUNCE, FADE, WAIT, FADE_OUT;
+        INIT, BOUNCE, FADE, WAIT, FADE_OUT
     }
 
     public static Phase phase = Phase.INIT;
 
     @SpireInsertPatch(loc = 42, localvars={"timer", "img", "phase", "color", "y", "playSfx", "sfxKey", "sfxId"})
     public static SpireReturn<Void> fixUpdate(SplashScreen __instance, @ByRef float[] ___timer, @ByRef Texture[] ___img, @ByRef Color[] ___color, @ByRef float[] ___y, @ByRef boolean[] ___playSfx, @ByRef String[] ___sfxKey, @ByRef long[] ___sfxId){
+
+        if (!(YiBaHelper.YuanShenStartRandomNum <= YiBaHelper.YuanShenStartInt)){
+            return SpireReturn.Continue();
+        }
 
         if (!YiBaHelper.YuanShenStartBool){
             return SpireReturn.Continue();

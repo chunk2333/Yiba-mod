@@ -25,6 +25,10 @@ public class YiBaHelper {
 
     public static boolean YuanShenStartBool;
 
+    public static int YuanShenStartInt = 5;
+
+    public static int YuanShenStartRandomNum = YiBaHelper.getRandomNum();
+
     static {
         regenerateYuanShenStartBool();
     }
@@ -232,5 +236,20 @@ public class YiBaHelper {
     public static void regenerateYuanShenStartBool() {
         Random random = new Random();
         YuanShenStartBool = random.nextBoolean();
+    }
+
+    public static int getRandomNum(int min, int max){
+        if (min > max){
+            return -1;
+        }
+        Random random = new Random();
+        int range = max - min + 1;
+
+        return random.nextInt(range) + 1;
+    }
+
+    public static int getRandomNum(){
+        Random random = new Random();
+        return random.nextInt(101);
     }
 }
