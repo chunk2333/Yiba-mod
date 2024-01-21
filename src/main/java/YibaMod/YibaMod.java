@@ -383,6 +383,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         this.cardsToAdd.add(new Backtrack());//回溯-无色
         this.cardsToAdd.add(new CorruptionAndDeadBranch());//腐化树枝体验卡-无色
         this.cardsToAdd.add(new Melancholy());//忧郁-诅咒
+        this.cardsToAdd.add(new KingCrimson());//绯红之王-无色
 
 
 
