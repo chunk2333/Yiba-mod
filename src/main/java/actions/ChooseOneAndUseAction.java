@@ -16,7 +16,6 @@ public class ChooseOneAndUseAction extends AbstractGameAction {
 
     private ArrayList<AbstractCard> c = new ArrayList<>();
 
-
     private AbstractMonster m;
 
     private boolean retrieveCard = false;
