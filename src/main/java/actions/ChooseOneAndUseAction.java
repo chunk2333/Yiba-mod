@@ -1,5 +1,6 @@
 package actions;
 
+import YibaMod.YibaMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -44,6 +45,9 @@ public class ChooseOneAndUseAction extends AbstractGameAction {
     @Override
     public void update(){
         if (this.duration == Settings.ACTION_DUR_FAST) {
+            for(AbstractCard c:this.c){
+                YibaMod.logger.info("打开选择卡牌界面：" + c.name);
+            }
             AbstractDungeon.cardRewardScreen.customCombatOpen(this.c, CardRewardScreen.TEXT[1], true);
             tickDuration();
             return;

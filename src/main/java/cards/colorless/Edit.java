@@ -54,45 +54,54 @@ public class Edit extends CustomCard {
     public ArrayList<AbstractCard> getRandomEditCards(ArrayList<AbstractCard> cardsArray){
         ArrayList<AbstractCard> temp = new ArrayList<>();
         int random;
+        AbstractCard c1;
+        AbstractCard c2;
+        AbstractCard c3;
         for (int i=0; i<3; i++){
             random = AbstractDungeon.cardRandomRng.random(1, cardsArray.size());
             temp.add(cardsArray.get(random-1));
         }
+//        c1 = temp.get(0);
+//        c2 = temp.get(1);
+//        c3 = temp.get(0);
+//        if(c1 == c2 || c2 == c3){
+//
+//        }
         return temp;
     }
 
 
-    public AbstractCard CreateEnergyCards(int cost){
-        String num = "";
-        for(int i = 0; i < cost; i++){
-            num += "[E] ";
-        }
-        AbstractCard temp = new AbstractCard("选择费用", "选择费用", "img/cards/test.png", cost, "使用 " + num + "。", CardType.SKILL, CardColor.COLORLESS, CardRarity.BASIC, CardTarget.SELF) {
-
-            @Override
-            public void upgrade() {
-                upgradeName();
-            }
-
-            @Override
-            public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-                ChooseOneAndUseAction.cost = this.cost;
-                if(CreateChooseAndUseCard.cards.isEmpty()){
-                    CreateChooseAndUseCard.addCards();
-                }
-
-                addToBot(new ChooseOneAndUseAction(CreateChooseAndUseCard.cards, monster));
-                YibaMod.logger.info(this.rawDescription + "被使用了");
-            }
-
-            @Override
-            public AbstractCard makeCopy() {
-                return this;
-            }
-        };
-
-        return temp;
-    }
+//    public AbstractCard CreateEnergyCards(int cost){
+//        String num = "";
+//        for(int i = 0; i < cost; i++){
+//            num += "[E] ";
+//        }
+//        AbstractCard temp = new AbstractCard("选择费用", "选择费用", "img/cards/test.png", cost, "使用 " + num + "。", CardType.SKILL, CardColor.COLORLESS, CardRarity.BASIC, CardTarget.SELF) {
+//
+//            @Override
+//            public void upgrade() {
+//                upgradeName();
+//            }
+//
+//            @Override
+//            public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+//                ChooseOneAndUseAction.cost = this.cost;
+//                if(CreateChooseAndUseCard.cards.isEmpty()){
+//                    CreateChooseAndUseCard.addCards();
+//                }
+//
+//                addToBot(new ChooseOneAndUseAction(CreateChooseAndUseCard.cards, monster));
+//                YibaMod.logger.info(this.rawDescription + "被使用了");
+//            }
+//
+//            @Override
+//            public AbstractCard makeCopy() {
+//                return this;
+//            }
+//        };
+//
+//        return temp;
+//    }
 
     @Override
     public AbstractCard makeCopy() {

@@ -1,6 +1,5 @@
 package Tools;
-
-import YibaMod.YibaMod;
+//实现卡牌：编辑 的N种匿名卡牌
 import actions.DeletePotionAction;
 import actions.DianAction;
 import actions.GetRandomRelicAction;
@@ -252,7 +251,7 @@ public class CreateChooseAndUseCard {
             }
         };
         cards.add(temp);
-        temp = new AbstractCard("攻击：决斗", "攻击：决斗",defaultImg, 0, "造成 !D! 点伤害。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+        temp = new AbstractCard("攻击：决斗", "攻击：决斗",defaultImg, 0, "造成 !D! 点伤害。", AbstractCard.CardType.ATTACK, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
             {
                 this.baseDamage = 8;
                 this.damage = this.baseDamage;
@@ -264,7 +263,7 @@ public class CreateChooseAndUseCard {
 
             @Override
             public void use(AbstractPlayer p, AbstractMonster m) {
-                addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
             }
 
             @Override
@@ -273,7 +272,7 @@ public class CreateChooseAndUseCard {
             }
         };
         cards.add(temp);
-        temp = new AbstractCard("攻击：混沌", "攻击：混沌",defaultImg, 0, "对随机敌人造成 !D! 点伤害。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+        temp = new AbstractCard("攻击：混沌", "攻击：混沌",defaultImg, 0, "对随机敌人造成 !D! 点伤害。", AbstractCard.CardType.ATTACK, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
             {
                 this.baseDamage = 10;
                 this.damage = this.baseDamage;
@@ -294,10 +293,11 @@ public class CreateChooseAndUseCard {
             }
         };
         cards.add(temp);
-        temp = new AbstractCard("攻击：一切", "攻击：一切",defaultImg, 0, "对全体敌人造成 !D! 点伤害。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+        temp = new AbstractCard("攻击：一切", "攻击：一切",defaultImg, 0, "对全体敌人造成 !D! 点伤害。", AbstractCard.CardType.ATTACK, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ALL_ENEMY) {
             {
                 this.baseDamage = 8;
-                this.isMultiDamage = true;
+                this.damage = this.baseDamage;
+                //this.isMultiDamage = true;
             }
             @Override
             public void upgrade() {
@@ -307,8 +307,9 @@ public class CreateChooseAndUseCard {
             @Override
             public void use(AbstractPlayer p, AbstractMonster m) {
                 addToBot(new SFXAction("ATTACK_HEAVY"));
-                addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-                addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+                if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                    addToBot(new DamageAllEnemiesAction(p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                }
             }
 
             @Override
@@ -843,7 +844,7 @@ public class CreateChooseAndUseCard {
             @Override
             public void use(AbstractPlayer p, AbstractMonster m) {
                 for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters){
-                    addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                    addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
                 }
             }
             @Override
@@ -869,7 +870,7 @@ public class CreateChooseAndUseCard {
 
             @Override
             public void use(AbstractPlayer p, AbstractMonster m) {
-                addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
             }
 
             @Override
@@ -900,33 +901,6 @@ public class CreateChooseAndUseCard {
             }
         };
         cards.add(temp);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         temp = new AbstractCard("中毒「指定」", "中毒「指定」",defaultImg, 0, "给予 !M! 层 中毒 。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
             {
                 this.baseMagicNumber = 2;
@@ -939,7 +913,7 @@ public class CreateChooseAndUseCard {
 
             @Override
             public void use(AbstractPlayer p, AbstractMonster m) {
-                addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber));
+                addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
             }
 
             @Override
@@ -961,7 +935,7 @@ public class CreateChooseAndUseCard {
             @Override
             public void use(AbstractPlayer p, AbstractMonster m) {
                 for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters){
-                    addToBot(new ApplyPowerAction(mo, p, new PoisonPower(mo, p, this.magicNumber), this.magicNumber));
+                    addToBot(new ApplyPowerAction(mo, p, new PoisonPower(mo, p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
                 }
             }
             @Override
