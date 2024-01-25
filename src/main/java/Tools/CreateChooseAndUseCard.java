@@ -1,9 +1,7 @@
 package Tools;
 //实现卡牌：编辑 的N种匿名卡牌
-import actions.DeletePotionAction;
-import actions.DianAction;
-import actions.GetRandomRelicAction;
-import actions.ScapegoatActions;
+import YibaMod.YibaMod;
+import actions.*;
 import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,7 +9,9 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.defect.*;
 import com.megacrit.cardcrawl.actions.unique.BladeFuryAction;
+import com.megacrit.cardcrawl.actions.unique.DoublePoisonAction;
 import com.megacrit.cardcrawl.actions.unique.LimitBreakAction;
+import com.megacrit.cardcrawl.actions.unique.TriplePoisonAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.actions.watcher.NotStanceCheckAction;
@@ -306,10 +306,57 @@ public class CreateChooseAndUseCard {
 
             @Override
             public void use(AbstractPlayer p, AbstractMonster m) {
-                addToBot(new SFXAction("ATTACK_HEAVY"));
                 if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                     addToBot(new DamageAllEnemiesAction(p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                 }
+            }
+
+            @Override
+            public AbstractCard makeCopy() {
+                return this;
+            }
+        };
+        cards.add(temp);
+        temp = new AbstractCard("攻击「多段」：单体", "攻击「多段」：单体",defaultImg, 0, "造成 !D! 点伤害 !M! 次。", AbstractCard.CardType.ATTACK, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+            {
+                this.baseDamage = 4;
+                this.damage = this.baseDamage;
+                this.baseMagicNumber = 3;
+                this.magicNumber = this.baseMagicNumber;
+            }
+            @Override
+            public void upgrade() {
+                upgradeName();
+            }
+
+            @Override
+            public void use(AbstractPlayer p, AbstractMonster m) {
+                for (int i = 0; i < this.magicNumber; i++)
+                    addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            }
+
+            @Override
+            public AbstractCard makeCopy() {
+                return this;
+            }
+        };
+        cards.add(temp);
+        temp = new AbstractCard("攻击「多段」：随机", "攻击「多段」：随机",defaultImg, 0, "对随机敌人造成 !D! 点伤害 !M! 次。", AbstractCard.CardType.ATTACK, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+            {
+                this.baseDamage = 5;
+                this.damage = this.baseDamage;
+                this.baseMagicNumber = 3;
+                this.magicNumber = this.baseMagicNumber;
+            }
+            @Override
+            public void upgrade() {
+                upgradeName();
+            }
+
+            @Override
+            public void use(AbstractPlayer p, AbstractMonster m) {
+                for (int i = 0; i < this.magicNumber; i++)
+                    addToBot(new NewRipAndTearAction(this));
             }
 
             @Override
@@ -565,7 +612,7 @@ public class CreateChooseAndUseCard {
             }
         };
         cards.add(temp);
-        temp = new AbstractCard("创造：遗物", "创造：遗物",defaultImg, 0, "获得一个非BOSS遗物。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+        temp = new AbstractCard("创造：遗物", "创造：遗物",defaultImg, 0, "获得一个非boss遗物。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
             @Override
             public void upgrade() {
                 upgradeName();
@@ -903,7 +950,7 @@ public class CreateChooseAndUseCard {
         cards.add(temp);
         temp = new AbstractCard("中毒「指定」", "中毒「指定」",defaultImg, 0, "给予 !M! 层 中毒 。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
             {
-                this.baseMagicNumber = 2;
+                this.baseMagicNumber = 5;
                 this.magicNumber = this.baseMagicNumber;
             }
             @Override
@@ -924,7 +971,7 @@ public class CreateChooseAndUseCard {
         cards.add(temp);
         temp = new AbstractCard("中毒「群体」", "中毒「群体」",defaultImg, 0, "给予全体敌人 !M! 层 中毒 。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
             {
-                this.baseMagicNumber = 2;
+                this.baseMagicNumber = 3;
                 this.magicNumber = this.baseMagicNumber;
             }
             @Override
@@ -937,6 +984,38 @@ public class CreateChooseAndUseCard {
                 for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters){
                     addToBot(new ApplyPowerAction(mo, p, new PoisonPower(mo, p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
                 }
+            }
+            @Override
+            public AbstractCard makeCopy() {
+                return this;
+            }
+        };
+        cards.add(temp);
+        temp = new AbstractCard("中毒「催化」", "中毒「催化」",defaultImg, 0, "将一名敌人的 中毒 层数翻倍。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+            @Override
+            public void upgrade() {
+                upgradeName();
+            }
+
+            @Override
+            public void use(AbstractPlayer p, AbstractMonster m) {
+                addToBot(new DoublePoisonAction(m, p));
+            }
+            @Override
+            public AbstractCard makeCopy() {
+                return this;
+            }
+        };
+        cards.add(temp);
+        temp = new AbstractCard("中毒「催化」", "中毒「催化」",defaultImg, 0, "将一名敌人的 中毒 层数变为三倍。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+            @Override
+            public void upgrade() {
+                upgradeName();
+            }
+
+            @Override
+            public void use(AbstractPlayer p, AbstractMonster m) {
+                addToBot(new TriplePoisonAction(m, p));
             }
             @Override
             public AbstractCard makeCopy() {
@@ -1080,7 +1159,7 @@ public class CreateChooseAndUseCard {
             }
         };
         cards.add(temp);
-        temp = new AbstractCard("归零", "归零",defaultImg, 0, "消耗所有手牌然后从抽牌堆抽取同样数量的卡牌。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+        temp = new AbstractCard("交替：消耗", "交替：消耗",defaultImg, 0, "消耗所有手牌然后从抽牌堆抽取同样数量的卡牌。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
             @Override
             public void upgrade() {
                 upgradeName();
@@ -1138,6 +1217,48 @@ public class CreateChooseAndUseCard {
             @Override
             public void use(AbstractPlayer p, AbstractMonster m) {
                 addToBot(new ApplyPowerAction(p, p, new AmplifyPower(p, 1), 1));
+            }
+            @Override
+            public AbstractCard makeCopy() {
+                return this;
+            }
+        };
+        cards.add(temp);
+        temp = new AbstractCard("创造「万物皆允」", "创造「万物皆允」",defaultImg, 0, "打出一张随机牌。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+            @Override
+            public void upgrade() {
+                upgradeName();
+            }
+
+            @Override
+            public void use(AbstractPlayer p, AbstractMonster m) {
+                addToBot(new AbstractGameAction() {
+                    public void update() {
+                        addToBot(new PlayRandomCardAction(
+
+                                (AbstractDungeon.getCurrRoom()).monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));
+                        this.isDone = true;
+                    }
+                });
+            }
+            @Override
+            public AbstractCard makeCopy() {
+                return this;
+            }
+        };
+        cards.add(temp);
+        temp = new AbstractCard("清空：远见明察", "清空：远见明察",defaultImg, 0, "将一名敌人的所有buff移除。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+            @Override
+            public void upgrade() {
+                upgradeName();
+            }
+
+            @Override
+            public void use(AbstractPlayer p, AbstractMonster m) {
+                ArrayList<AbstractPower> power = m.powers;
+                for (AbstractPower po : power) {
+                    addToBot(new RemoveSpecificPowerAction(m, m, po.ID));
+                }
             }
             @Override
             public AbstractCard makeCopy() {
