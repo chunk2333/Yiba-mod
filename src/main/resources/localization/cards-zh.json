@@ -809,5 +809,10 @@
   "Edit": {
     "NAME": "编辑",
     "DESCRIPTION": "失去你当前拥有的 [E] 。从以下N 种效果 选择至多 !M! 种 (每次随机展示3种，会多次出现)"
+  },
+  "InstructionsCollect": {
+    "NAME": "指令：收集",
+    "DESCRIPTION": "获得与充能球栏位相同数量的 集中 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得与充能球栏位相同数量+1的 集中 。 NL 消耗 。"
   }
 }

@@ -1,17 +1,12 @@
 package relics;
-
-import basemod.abstracts.CustomCard;
+//闪存颗粒
 import basemod.abstracts.CustomRelic;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DoubleDamagePower;
-import com.megacrit.cardcrawl.powers.watcher.EndTurnDeathPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class Nand extends CustomRelic {
