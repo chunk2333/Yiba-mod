@@ -962,7 +962,6 @@ public class CreateChooseAndUseCard {
             public void use(AbstractPlayer p, AbstractMonster m) {
                 addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
             }
-
             @Override
             public AbstractCard makeCopy() {
                 return this;
@@ -1007,7 +1006,7 @@ public class CreateChooseAndUseCard {
             }
         };
         cards.add(temp);
-        temp = new AbstractCard("中毒「催化」", "中毒「催化」",defaultImg, 0, "将一名敌人的 中毒 层数变为三倍。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+        temp = new AbstractCard("中毒「催化」Plus", "中毒「催化」Plus",defaultImg, 0, "将一名敌人的 中毒 层数变为三倍。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
             @Override
             public void upgrade() {
                 upgradeName();
@@ -1175,7 +1174,6 @@ public class CreateChooseAndUseCard {
             }
         };
         cards.add(temp);
-
         temp = new AbstractCard("双发", "双发",defaultImg, 0, "你的下一张攻击牌将被额外打出一次。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
             @Override
             public void upgrade() {
@@ -1185,6 +1183,21 @@ public class CreateChooseAndUseCard {
             @Override
             public void use(AbstractPlayer p, AbstractMonster m) {
                 addToBot(new ApplyPowerAction(p, p, new DoubleTapPower(p, 1), 1));
+            }
+            @Override
+            public AbstractCard makeCopy() {
+                return this;
+            }
+        };
+        temp = new AbstractCard("复制", "复制",defaultImg, 0, "你的下一张牌将被额外打出一次。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+            @Override
+            public void upgrade() {
+                upgradeName();
+            }
+
+            @Override
+            public void use(AbstractPlayer p, AbstractMonster m) {
+                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, (AbstractPower)new DuplicationPower(AbstractDungeon.player, 1), 1));
             }
             @Override
             public AbstractCard makeCopy() {
@@ -1247,7 +1260,7 @@ public class CreateChooseAndUseCard {
             }
         };
         cards.add(temp);
-        temp = new AbstractCard("清空：远见明察", "清空：远见明察",defaultImg, 0, "将一名敌人的所有buff移除。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
+        temp = new AbstractCard("清除：远见明察", "清除：远见明察",defaultImg, 0, "将一名敌人的所有buff移除。", AbstractCard.CardType.SKILL, AbstractCard.CardColor.COLORLESS, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.NONE) {
             @Override
             public void upgrade() {
                 upgradeName();

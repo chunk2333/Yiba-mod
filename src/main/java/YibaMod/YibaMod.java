@@ -500,6 +500,7 @@ public class YibaMod implements RelicGetSubscriber, PostPowerApplySubscriber, Po
         BaseMod.addRelic(new Akaishi(), RelicType.SHARED); //赤石
         BaseMod.addRelic(new Antimatter(), RelicType.SHARED); //反物质
         BaseMod.addRelic(new MechanismScroll(), RelicType.SHARED); //机关卷轴
+        BaseMod.addRelic(new Nand(), RelicType.BLUE); //闪存颗粒-机器人罕见
 
 
         //添加事件:会员制餐厅
