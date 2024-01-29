@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
-import power.MysteryPower;
 
 public class Spiritual extends CustomCard {
 
@@ -51,7 +50,7 @@ public class Spiritual extends CustomCard {
             addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1)); //力量
             addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1)); //敏捷
             addToBot(new ApplyPowerAction(p, p, new FocusPower(p, 1), 1)); //集中
-            addToBot(new ApplyPowerAction(p, p, new MysteryPower(p, 1),1)); //精通
+            //addToBot(new ApplyPowerAction(p, p, new MysteryPower(p, 1),1)); //精通
             addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 1), 1)); //多层护甲
             addToBot(new ApplyPowerAction(p, p, new MetallicizePower(p, 1), 1)); //金属化
             addToBot(new GainBlockAction(p, p, 1));

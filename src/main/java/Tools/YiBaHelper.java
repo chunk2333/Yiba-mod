@@ -1,15 +1,16 @@
 package Tools;
 
 import YibaMod.YibaMod;
-import cards.element.AnemoCard;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class YiBaHelper {
@@ -71,39 +72,6 @@ public class YiBaHelper {
         return list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
     }
 
-    public static AbstractCard getRandomElementCard(){
-
-        ArrayList<AbstractCard> list = new ArrayList<>();
-        for (AbstractCard c : AbstractDungeon.srcRareCardPool.group) {
-            if(c.hasTag(YibaMod.ELEMENT)){
-                list.add(c);
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.srcUncommonCardPool.group) {
-            if(c.hasTag(YibaMod.ELEMENT)){
-                list.add(c);
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
-            if(c.hasTag(YibaMod.ELEMENT)){
-                list.add(c);
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.srcColorlessCardPool.group) {
-            if(c.hasTag(YibaMod.ELEMENT)){
-                list.add(c);
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.srcCurseCardPool.group) {
-            if(c.hasTag(YibaMod.ELEMENT)){
-                list.add(c);
-            }
-        }
-        if(list.size() == 0){
-            return new AnemoCard();
-        }
-        return list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
-    }
 
     public static int getTagsCardNum(AbstractCard.CardTags tags){
         ArrayList<AbstractCard> list = new ArrayList<>();
@@ -251,5 +219,20 @@ public class YiBaHelper {
     public static int getRandomNum(){
         Random random = new Random();
         return random.nextInt(101);
+    }
+
+    public static void addRelic(List<List<AbstractRelic>> relics, List<AbstractRelic> selectedRelics, int index) {
+        AbstractDungeon.isScreenUp = true;
+        if (index == relics.size()) {
+            selectedRelics.forEach(AbstractRelic::instantObtain);
+            YibaMod.relicSelectScreen.isDone = true;
+            AbstractDungeon.isScreenUp = false;
+            return;
+        }
+        YibaMod.relicSelectScreen.open(relics.get(index), relic -> {
+            selectedRelics.add(relic);
+            YibaMod.relicSelectScreen.isDone = true;
+            AbstractDungeon.isScreenUp = false;
+        },() -> addRelic(relics, selectedRelics, index + 1));
     }
 }
