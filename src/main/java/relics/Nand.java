@@ -40,7 +40,7 @@ public class Nand extends CustomRelic {
 
     @Override
     public void onVictory() {
-        this.counter = 0;
+        this.counter = -1;
     }
 
     @Override
@@ -50,6 +50,6 @@ public class Nand extends CustomRelic {
 
     @Override
     public void onEquip() {
-        this.counter = 0;
+        this.counter = -1;
     }
 }
