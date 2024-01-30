@@ -379,7 +379,7 @@
   },
   "ArtificialBrainOverflow": {
     "NAME": "人工脑溢出",
-    "DESCRIPTION": "从弃牌堆中选择至多 !M! 张牌 消耗 。 NL 获得与 消耗 牌数相同数量层数的 集中 和 缓冲 。"
+    "DESCRIPTION": "从弃牌堆中选择至多 !M! 张牌 消耗 。 NL 获得与 消耗 牌数相同数量层数的 集中 和 缓冲 。 NL 消耗 。"
   },
   "SnowStorm": {
     "NAME": "暴风雪",
