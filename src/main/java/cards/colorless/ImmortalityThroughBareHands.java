@@ -44,6 +44,8 @@ public class ImmortalityThroughBareHands extends CustomCard {
         if (!this.upgraded) {
             this.isEthereal = false;
             this.upgradeName();
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }
