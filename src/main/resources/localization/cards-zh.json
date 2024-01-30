@@ -496,7 +496,7 @@
   },
   "Yiba:ImmortalityThroughBareHands": {
     "NAME": "不死于徒手",
-    "DESCRIPTION": "回合结束时，自动打出一切由于费用不足的牌的复制品。 NL 虚无 。",
-    "UPGRADE_DESCRIPTION": "回合结束时，自动打出一切由于费用不足的牌的复制品。"
+    "DESCRIPTION": "回合结束时，自动打出一切由于费用不足的牌。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "回合结束时，自动打出一切由于费用不足的牌。"
   }
 }

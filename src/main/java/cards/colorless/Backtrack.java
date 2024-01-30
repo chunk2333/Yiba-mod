@@ -1,7 +1,7 @@
 package cards.colorless;
 //回溯
 import Tools.YiBaHelper;
-import actions.PlayCardAction;
+import actions.PlayCopyCardAction;
 import basemod.abstracts.CustomCard;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
@@ -33,7 +33,7 @@ public class Backtrack extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new PlayCardAction(YiBaHelper.LastPlayedCard, YiBaHelper.LastAttackMonster));
+        addToBot(new PlayCopyCardAction(YiBaHelper.LastPlayedCard, YiBaHelper.LastAttackMonster));
     }
 
     @SpireInsertPatch(rloc = 0, localvars = {"c", "monster", "energyOnUse"})

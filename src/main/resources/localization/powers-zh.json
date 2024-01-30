@@ -219,7 +219,7 @@
   "Yiba:ImmortalityThroughBareHandsPower": {
     "NAME": "不死手",
     "DESCRIPTIONS": [
-      "回合结束时，自动打出手牌中由于费用不足的牌的复制品。"
+      "回合结束时，自动打出手牌中由于费用不足的牌。"
     ]
   }
 }

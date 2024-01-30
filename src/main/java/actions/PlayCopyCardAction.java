@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 
-public class PlayCardAction extends AbstractGameAction {
+public class PlayCopyCardAction extends AbstractGameAction {
 
     private AbstractCard card;
 
     private AbstractMonster monster;
 
-    public PlayCardAction(AbstractCard c, AbstractMonster m){
+    public PlayCopyCardAction(AbstractCard c, AbstractMonster m){
         this.card = c;
         this.monster = m;
     }

@@ -1,7 +1,7 @@
 package power;
 
 import YibaMod.YibaMod;
-import actions.PlayCardAction;
+import actions.PlayHandCardAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import java.util.ArrayList;
 
@@ -42,7 +43,7 @@ public class ImmortalityThroughBareHandsPower extends AbstractPower {
         }
         ArrayList<AbstractCard> cardsToAutoPlay = new ArrayList<>();
         for(AbstractCard c : p.hand.group){
-            if(c.cost > 0){
+            if(c.cost > 0 && c.cost > EnergyPanel.totalCount){
                 cardsToAutoPlay.add(c);
             }
         }
@@ -53,7 +54,7 @@ public class ImmortalityThroughBareHandsPower extends AbstractPower {
         for(AbstractCard c : cardsToAutoPlay){
             addToBot(new AbstractGameAction() {
                 public void update() {
-                    addToBot(new PlayCardAction(c, (AbstractDungeon.getCurrRoom()).monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng)));
+                    addToBot(new PlayHandCardAction((AbstractDungeon.getCurrRoom()).monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), c, false));
                     this.isDone = true;
                 }
             });
