@@ -35,7 +35,8 @@ import org.apache.logging.log4j.Logger;
 import potions.*;
 import relics.*;
 import relics.ClickRelic.*;
-import screens.RelicSelectScreen;
+import relics.choose.TheCurseOfTheGods;
+import screens.RelicViewScreenYiba;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -53,16 +54,16 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
 
     private static final List<AbstractGameAction> offScreenActionList = new ArrayList<>();
 
-    public static RelicSelectScreen relicSelectScreen;
-
     public static final Logger logger = LogManager.getLogger(YibaMod.class.getName());
+
+    public static RelicViewScreenYiba relicScreen;
 
     private static final String modID = "Yiba";
 
     @SpireEnum public static AbstractCard.CardTags VANISH;//消逝
 
     public static String makeModID(String name){
-        return modID +":" + name;
+        return modID + ":" + name;
     }
 
     public YibaMod() {
@@ -81,7 +82,6 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
             BaseMod.addCard(card);
         }
     }
-
 
     @Override
     public void receiveEditKeywords() {
@@ -337,7 +337,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         BaseMod.addRelic(new Antimatter(), RelicType.SHARED); //反物质
         BaseMod.addRelic(new MechanismScroll(), RelicType.SHARED); //机关卷轴
         BaseMod.addRelic(new Nand(), RelicType.BLUE); //闪存颗粒-机器人罕见
-        //BaseMod.addRelic(new TheCurseOfTheGods(), RelicType.SHARED);
+        BaseMod.addRelic(new TheCurseOfTheGods(), RelicType.SHARED);//众神的诅咒
 
 
         //添加事件:会员制餐厅
@@ -390,7 +390,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
                 "map/boss/Dio.png",
                 "map/bossOutline/Dio.png");
 
-        relicSelectScreen = new RelicSelectScreen();
+        relicScreen = new RelicViewScreenYiba();
 
         //BaseMod.addTopPanelItem(new Solarization());
     }
@@ -432,14 +432,15 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
             if ((offScreenActionList.get(0)).isDone)
                 offScreenActionList.remove(0);
         }
-        if (!relicSelectScreen.isDone)
-            relicSelectScreen.update();
+        if (!relicScreen.isDone)
+            relicScreen.update();
+
     }
 
     @Override
     public void receivePostRender(SpriteBatch sb) {
-        if (!relicSelectScreen.isDone){
-            relicSelectScreen.render(sb);
+        if (!relicScreen.isDone){
+            relicScreen.render(sb);
         }
     }
 

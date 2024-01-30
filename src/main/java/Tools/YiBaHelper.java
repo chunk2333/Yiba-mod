@@ -221,18 +221,4 @@ public class YiBaHelper {
         return random.nextInt(101);
     }
 
-    public static void addRelic(List<List<AbstractRelic>> relics, List<AbstractRelic> selectedRelics, int index) {
-        AbstractDungeon.isScreenUp = true;
-        if (index == relics.size()) {
-            selectedRelics.forEach(AbstractRelic::instantObtain);
-            YibaMod.relicSelectScreen.isDone = true;
-            AbstractDungeon.isScreenUp = false;
-            return;
-        }
-        YibaMod.relicSelectScreen.open(relics.get(index), relic -> {
-            selectedRelics.add(relic);
-            YibaMod.relicSelectScreen.isDone = true;
-            AbstractDungeon.isScreenUp = false;
-        },() -> addRelic(relics, selectedRelics, index + 1));
-    }
 }

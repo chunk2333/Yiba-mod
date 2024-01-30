@@ -365,13 +365,6 @@
       "非BOSS和精英战斗中的敌人生命减少 #b25% 。"
     ]
   },
-  "TestTriggerElement": {
-    "NAME": "测试触发元素反应的遗物",
-    "FLAVOR": "java.lang.NullPointerException",
-    "DESCRIPTIONS": [
-      "每次触发 #y元素反应 都会输出对应触发的类型。"
-    ]
-  },
   "DeadLeaves": {
     "NAME": "腐朽枯叶",
     "FLAVOR": "传闻是某颗参天大树上腐朽的树叶。",
@@ -624,13 +617,6 @@
       "你现在可以拿取掉落的奖励列表中的 #y全部 卡牌奖励了。"
     ]
   },
-  "TestRelicSelect": {
-    "NAME": "测试遗物选择",
-    "FLAVOR": "希望不出bug。",
-    "DESCRIPTIONS": [
-      "右键此遗物，选择获得一个遗物"
-    ]
-  },
   "Crossbow": {
     "NAME": "诸葛连弩",
     "FLAVOR": "“亮性长于巧思，损益连弩，木牛流马，皆出其意。推演兵法，作八阵图，咸得其要。”",
@@ -675,7 +661,7 @@
   },
   "TheCurseOfTheGods": {
     "NAME": "众神的诅咒",
-    "FLAVOR": "是性能、寿命、价格较为平衡的TLC颗粒，不是QLC颗粒。",
+    "FLAVOR": "你激怒了众神！",
     "DESCRIPTIONS": [
       "拾起时，选择获得任意一个非boss遗物。在你的下一场战斗中受到来自任何敌人的伤害当场死亡(战斗胜利或死亡一次移除此效果)。"
     ]

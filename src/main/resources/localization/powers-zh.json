@@ -221,5 +221,11 @@
     "DESCRIPTIONS": [
       "回合结束时，自动打出手牌中由于费用不足的牌。"
     ]
+  },
+  "Yiba:TheCurseOfTheGodsPower": {
+    "NAME": "众神的诅咒",
+    "DESCRIPTIONS": [
+      "你激怒了众神！"
+    ]
   }
 }
