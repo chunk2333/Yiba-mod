@@ -215,5 +215,11 @@
     "DESCRIPTIONS": [
       "每当你 #y消耗 一张牌，增加一张随机卡牌到你的手牌。"
     ]
+  },
+  "Yiba:ImmortalityThroughBareHandsPower": {
+    "NAME": "不死手",
+    "DESCRIPTIONS": [
+      "回合结束时，自动打出手牌中由于费用不足的牌的复制品。"
+    ]
   }
 }

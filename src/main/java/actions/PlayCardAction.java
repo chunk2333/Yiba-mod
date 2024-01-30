@@ -36,7 +36,7 @@ public class PlayCardAction extends AbstractGameAction {
                     list.add(mo);
                 }
             }
-            int random = AbstractDungeon.cardRandomRng.random(1, list.size()); //随机数
+            int random = AbstractDungeon.monsterRng.random(1, list.size()); //随机数
             this.monster = list.get(random - 1);
         }
         AbstractCard tmp = this.card.makeSameInstanceOf();

@@ -43,7 +43,8 @@ import java.util.List;
 
 
 @SpireInitializer
-public class YibaMod implements  PostRenderSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, PostEnergyRechargeSubscriber, AddAudioSubscriber, PostUpdateSubscriber {
+public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, PostEnergyRechargeSubscriber, AddAudioSubscriber, PostUpdateSubscriber {
+
     private final ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
 
     public static ArrayList<AbstractCard> recyclecards = new ArrayList<>();
@@ -56,7 +57,13 @@ public class YibaMod implements  PostRenderSubscriber, PostInitializeSubscriber,
 
     public static final Logger logger = LogManager.getLogger(YibaMod.class.getName());
 
+    private static final String modID = "Yiba";
+
     @SpireEnum public static AbstractCard.CardTags VANISH;//消逝
+
+    public static String makeModID(String name){
+        return modID +":" + name;
+    }
 
     public YibaMod() {
         BaseMod.subscribe(this);
@@ -226,6 +233,7 @@ public class YibaMod implements  PostRenderSubscriber, PostInitializeSubscriber,
         this.cardsToAdd.add(new KingCrimson());//绯红之王-无色
         this.cardsToAdd.add(new Edit());//编辑-无色
         this.cardsToAdd.add(new InstructionsCollect());//指令：收集-机器人
+        this.cardsToAdd.add(new ImmortalityThroughBareHands());//不死于徒手-无色
 
 
 

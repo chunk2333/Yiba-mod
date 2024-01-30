@@ -493,5 +493,10 @@
     "NAME": "指令：收集",
     "DESCRIPTION": "获得与充能球栏位相同数量的 集中 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得与充能球栏位相同数量+1的 集中 。 NL 消耗 。"
+  },
+  "Yiba:ImmortalityThroughBareHands": {
+    "NAME": "不死于徒手",
+    "DESCRIPTION": "回合结束时，自动打出一切由于费用不足的牌的复制品。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "回合结束时，自动打出一切由于费用不足的牌的复制品。"
   }
 }
