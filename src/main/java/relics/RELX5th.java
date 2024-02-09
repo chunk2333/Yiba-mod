@@ -28,6 +28,11 @@ public class RELX5th extends CustomRelic {
     }
 
     @Override
+    public boolean canSpawn() {
+        return false;
+    }
+
+    @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }

@@ -1,5 +1,6 @@
 package patchs;
 //第勇召唤狗男女
+import Tools.YiBaHelper;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
@@ -18,6 +19,9 @@ public class ChampPatch {
 
     @SpireInsertPatch(loc = 295, localvars = {"numTurns"})
     public static SpireReturn<Void> InsertGetMoveFix(Champ __instance, int ___numTurns){
+        if (YiBaHelper.hasMod("RouZa")){
+            return SpireReturn.Continue();
+        }
 
         if (GameActionManager.turn == 3){
             __instance.setMove((byte)114514, AbstractMonster.Intent.UNKNOWN);
@@ -31,6 +35,9 @@ public class ChampPatch {
 class ChampPatchTake{
     @SpireInsertPatch(loc = 149)
     public static SpireReturn<Void> Fix(Champ __instance){
+        if (YiBaHelper.hasMod("RouZa")){
+            return SpireReturn.Continue();
+        }
         if (__instance.nextMove == (byte)114514){
             AbstractDungeon.actionManager.addToBottom(new AnimateShakeAction(__instance, 1.0F, 0.1F));
             AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new Healer(200.0F, 20.0F), false));
