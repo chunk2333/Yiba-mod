@@ -27,24 +27,27 @@ public class NonexistentSacrificialLance extends CustomRelic {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         //在用户使用牌时触发
         //判断打出的是否为能力牌
-        int random;
-        random = AbstractDungeon.relicRng.random(1,100); //随机数
-        if(card.type == AbstractCard.CardType.POWER && random<=30 && !card.purgeOnUse){
-            flash();
-            addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractMonster m = null;
-            if (action.target != null)
-                m = (AbstractMonster)action.target;
-            AbstractCard tmp = card.makeSameInstanceOf();
-            AbstractDungeon.player.limbo.addToBottom(tmp);
-            tmp.current_x = card.current_x;
-            tmp.current_y = card.current_y;
-            tmp.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-            tmp.target_y = Settings.HEIGHT / 2.0F;
-            if (m != null)
-                tmp.calculateCardDamage(m);
-            tmp.purgeOnUse = true;
-            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
+
+        if(card.type == AbstractCard.CardType.POWER){
+            int random;
+            random = AbstractDungeon.relicRng.random(1,100); //随机数
+            if(random<=30 && !card.purgeOnUse){
+                flash();
+                addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                AbstractMonster m = null;
+                if (action.target != null)
+                    m = (AbstractMonster)action.target;
+                AbstractCard tmp = card.makeSameInstanceOf();
+                AbstractDungeon.player.limbo.addToBottom(tmp);
+                tmp.current_x = card.current_x;
+                tmp.current_y = card.current_y;
+                tmp.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+                tmp.target_y = Settings.HEIGHT / 2.0F;
+                if (m != null)
+                    tmp.calculateCardDamage(m);
+                tmp.purgeOnUse = true;
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
+            }
         }
     }
 
