@@ -234,6 +234,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         this.cardsToAdd.add(new Edit());//编辑-无色
         this.cardsToAdd.add(new InstructionsCollect());//指令：收集-机器人
         this.cardsToAdd.add(new ImmortalityThroughBareHands());//不死于徒手-无色
+        this.cardsToAdd.add(new DoubleChanting());//双重吟唱-无色
 
 
 

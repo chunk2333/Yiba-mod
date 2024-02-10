@@ -498,5 +498,10 @@
     "NAME": "不死于徒手",
     "DESCRIPTION": "回合结束时，自动打出一切由于费用不足的牌。 NL 虚无 。",
     "UPGRADE_DESCRIPTION": "回合结束时，自动打出一切由于费用不足的牌。"
+  },
+  "Yiba:DoubleChanting": {
+    "NAME": "双重吟唱",
+    "DESCRIPTION": "本回合你打出的所有牌会额外打出一次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 本回合你打出的所有牌会额外打出一次。 NL 消耗 。"
   }
 }
