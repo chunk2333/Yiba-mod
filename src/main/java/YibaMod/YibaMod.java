@@ -12,6 +12,8 @@ import cards.curse.*;
 import cards.green.*;
 import cards.purple.*;
 import cards.red.*;
+import cards.status.AcidLiquor;
+import cards.status.WoundInfection;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -235,6 +237,9 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         this.cardsToAdd.add(new InstructionsCollect());//指令：收集-机器人
         this.cardsToAdd.add(new ImmortalityThroughBareHands());//不死于徒手-无色
         this.cardsToAdd.add(new DoubleChanting());//双重吟唱-无色
+        this.cardsToAdd.add(new BaiLan());//摆烂-诅咒
+        this.cardsToAdd.add(new WoundInfection());//伤口感染-状态
+        this.cardsToAdd.add(new AcidLiquor());//酸液-状态
 
 
 

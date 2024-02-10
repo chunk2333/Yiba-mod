@@ -30,3 +30,4 @@ mod
 .idea
 *.iml
 /mod/
+pom.xml
