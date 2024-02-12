@@ -21,6 +21,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
@@ -46,7 +47,7 @@ import java.util.List;
 
 
 @SpireInitializer
-public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, PostEnergyRechargeSubscriber, AddAudioSubscriber, PostUpdateSubscriber {
+public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, PostEnergyRechargeSubscriber, AddAudioSubscriber, PostUpdateSubscriber{
 
     private final ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
 
@@ -398,6 +399,8 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
                 "map/bossOutline/Dio.png");
 
         relicScreen = new RelicViewScreenYiba();
+        YiBaHelper.InitializationYibaColorlessCards();
+        YiBaHelper.InitializationYibaRelics();
 
         //BaseMod.addTopPanelItem(new Solarization());
     }
