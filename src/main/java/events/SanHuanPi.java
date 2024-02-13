@@ -63,7 +63,6 @@ public class SanHuanPi extends AbstractImageEvent {
         switch (this.screen) {
             case INTRO:
                 if (buttonPressed == 0){
-                    //TODO:进入战斗
                     YibaMod.logger.info("选择进入战斗");
                     //设置怪物
                     (AbstractDungeon.getCurrRoom()).rewardAllowed = false;
@@ -79,7 +78,6 @@ public class SanHuanPi extends AbstractImageEvent {
                     break;
                 }
                 if (buttonPressed == 1){
-                    //TODO：离开
                     YibaMod.logger.info("选择离开");
                     //清除事件所有描述文本
                     this.imageEventText.clearAllDialogs();
@@ -133,13 +131,13 @@ public class SanHuanPi extends AbstractImageEvent {
                 random_num = AbstractDungeon.eventRng.random(1,100);
                 for (int i = 0; i < numCards; i++) {
                     if(random_num > 50){
-                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,random));
+                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE));
                     }
                     if(random_num <= 50 && random_num > 25){
-                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON,random));
+                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON));
                     }
                     if(random_num <= 25){
-                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON,random));
+                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON));
                     }
 
                 }

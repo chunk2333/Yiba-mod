@@ -1,5 +1,6 @@
 package relics;
 //大别墅
+import Tools.YiBaHelper;
 import YibaMod.YibaMod;
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -77,13 +78,13 @@ public class GrandVilla extends CustomRelic {
         if (ModHelper.isModEnabled("Binary"))
             numCards--;
         YibaMod.logger.info("掉落卡牌数：" + numCards);
-        for (int i = 0; i < numCards; i++) {
-            cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE,AbstractDungeon.relicRng));
-        }
+        ArrayList<AbstractCard> temp = new ArrayList<>();
+        temp = YiBaHelper.getRandomMultiCards(AbstractDungeon.rareCardPool.group, numCards);
+        cardReward.cards.addAll(temp);
         AbstractDungeon.player.increaseMaxHp(10, true);
         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
-        AbstractDungeon.getCurrRoom().addPotionToRewards(PotionHelper.getRandomPotion(AbstractDungeon.miscRng));
-        AbstractDungeon.getCurrRoom().addPotionToRewards(PotionHelper.getRandomPotion(AbstractDungeon.miscRng));
+        AbstractDungeon.getCurrRoom().addPotionToRewards(PotionHelper.getRandomPotion(AbstractDungeon.potionRng));
+        AbstractDungeon.getCurrRoom().addPotionToRewards(PotionHelper.getRandomPotion(AbstractDungeon.potionRng));
         AbstractDungeon.getCurrRoom().addCardReward(cardReward);
         AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[1]);
         (AbstractDungeon.getCurrRoom()).rewardPopOutTimer = 0.0F;

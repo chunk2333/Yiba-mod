@@ -369,6 +369,9 @@ public class YiBaHelper {
 
     public static ArrayList<AbstractCard> getRandomMultiCards(ArrayList<AbstractCard> cardsArray, int num){
         ArrayList<AbstractCard> temp = new ArrayList<>();
+        if (cardsArray.size() < num){
+            num = cardsArray.size();
+        }
         int random;
         do {
             temp.clear();  // 清空temp数组
