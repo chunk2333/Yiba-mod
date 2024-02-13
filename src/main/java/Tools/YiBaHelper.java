@@ -248,7 +248,7 @@ public class YiBaHelper {
         YibaColorlessCards.add(new HiddenEnergyInTheBack());
         YibaColorlessCards.add(new ImmortalityThroughBareHands());
         YibaColorlessCards.add(new Joker());
-        //YibaColorlessCards.add(new KingCrimson());
+        YibaColorlessCards.add(new KingCrimson());
         YibaColorlessCards.add(new Luck());
         YibaColorlessCards.add(new PerfectClosing());
         YibaColorlessCards.add(new Provoke());
