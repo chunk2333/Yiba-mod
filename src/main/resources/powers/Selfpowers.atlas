@@ -87,163 +87,170 @@ repeat: none
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/LandJurisdictionPower
+48/KingCrimson
   rotate: false
   xy: 96, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/MagicalProgressPower
+48/LandJurisdictionPower
   rotate: false
   xy: 144, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/MagicFeedbackPower
+48/MagicalProgressPower
   rotate: false
   xy: 192, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/MagicLoopPower
+48/MagicFeedbackPower
   rotate: false
   xy: 240, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/MagicReservePower
+48/MagicLoopPower
   rotate: false
   xy: 288, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/MysteryPower
+48/MagicReservePower
   rotate: false
   xy: 336, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/NextTurnCanNotLossHp
+48/MysteryPower
   rotate: false
   xy: 384, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/NextTurnDiePower
+48/NextTurnCanNotLossHp
   rotate: false
   xy: 432, 48
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/PoisonPower
+48/NextTurnDiePower
   rotate: false
   xy: 0, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/ProvokePower
+48/PoisonPower
   rotate: false
   xy: 48, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/PyroPower
+48/ProvokePower
   rotate: false
   xy: 96, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/Rebound_MyPower
+48/PyroPower
   rotate: false
   xy: 144, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/RedPantsPower
+48/Rebound_MyPower
   rotate: false
   xy: 192, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/ReturnGoodForEvilPower
+48/RedPantsPower
   rotate: false
   xy: 240, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/SpiritualDominationPower
+48/ReturnGoodForEvilPower
   rotate: false
   xy: 288, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TheCurseOfTheGodsPower
+48/SpiritualDominationPower
   rotate: false
   xy: 336, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/ThePeaceOfMindPower
+48/TheCurseOfTheGodsPower
   rotate: false
   xy: 384, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TheSagePower
+48/ThePeaceOfMindPower
   rotate: false
   xy: 432, 96
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TidePower
+48/TheSagePower
   rotate: false
   xy: 0, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TimeStop
+48/TidePower
   rotate: false
   xy: 48, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-48/TreacherousPower
+48/TimeStop
   rotate: false
   xy: 96, 144
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-128/AffinityMorphologyPower
+48/TreacherousPower
   rotate: false
   xy: 144, 144
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+128/AffinityMorphologyPower
+  rotate: false
+  xy: 192, 144
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 128/AnemoPower
   rotate: false
-  xy: 272, 144
+  xy: 320, 144
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
@@ -318,149 +325,156 @@ repeat: none
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/LandJurisdictionPower
+128/KingCrimson
   rotate: false
   xy: 256, 528
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/MagicalProgressPower
+128/LandJurisdictionPower
   rotate: false
   xy: 384, 528
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/MagicFeedbackPower
+128/MagicalProgressPower
   rotate: false
   xy: 0, 656
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/MagicLoopPower
+128/MagicFeedbackPower
   rotate: false
   xy: 128, 656
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/MagicReservePower
+128/MagicLoopPower
   rotate: false
   xy: 256, 656
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/MysteryPower
+128/MagicReservePower
   rotate: false
   xy: 384, 656
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/NextTurnCanNotLossHp
+128/MysteryPower
   rotate: false
   xy: 0, 784
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/NextTurnDiePower
+128/NextTurnCanNotLossHp
   rotate: false
   xy: 128, 784
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/PoisonPower
+128/NextTurnDiePower
   rotate: false
   xy: 256, 784
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/ProvokePower
+128/PoisonPower
   rotate: false
   xy: 384, 784
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/PyroPower
+128/ProvokePower
   rotate: false
   xy: 0, 912
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/Rebound_MyPower
+128/PyroPower
   rotate: false
   xy: 128, 912
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/RedPantsPower
+128/Rebound_MyPower
   rotate: false
   xy: 256, 912
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/ReturnGoodForEvilPower
+128/RedPantsPower
   rotate: false
   xy: 384, 912
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/SpiritualDominationPower
+128/ReturnGoodForEvilPower
   rotate: false
   xy: 0, 1040
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/TheCurseOfTheGodsPower
+128/SpiritualDominationPower
   rotate: false
   xy: 128, 1040
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/ThePeaceOfMindPower
+128/TheCurseOfTheGodsPower
   rotate: false
   xy: 256, 1040
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/TheSagePower
+128/ThePeaceOfMindPower
   rotate: false
   xy: 384, 1040
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/TidePower
+128/TheSagePower
   rotate: false
   xy: 0, 1168
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/TimeStop
+128/TidePower
   rotate: false
   xy: 128, 1168
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
-128/TreacherousPower
+128/TimeStop
   rotate: false
   xy: 256, 1168
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+128/TreacherousPower
+  rotate: false
+  xy: 384, 1168
   size: 128, 128
   orig: 128, 128
   offset: 0, 0

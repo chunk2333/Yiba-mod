@@ -29,7 +29,7 @@ public class InstructionsCollect extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int count = p.masterMaxOrbs;
+        int count = p.orbs.size();
         if(this.upgraded){
             count += 1;
         }

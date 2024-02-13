@@ -232,7 +232,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         this.cardsToAdd.add(new Backtrack());//回溯-无色
         this.cardsToAdd.add(new CorruptionAndDeadBranch());//腐化树枝体验卡-无色
         this.cardsToAdd.add(new Melancholy());//忧郁-诅咒
-        //this.cardsToAdd.add(new KingCrimson());//绯红之王-无色
+        this.cardsToAdd.add(new KingCrimson());//绯红之王-无色
         this.cardsToAdd.add(new Edit());//编辑-无色
         this.cardsToAdd.add(new InstructionsCollect());//指令：收集-机器人
         this.cardsToAdd.add(new ImmortalityThroughBareHands());//不死于徒手-无色

@@ -235,5 +235,11 @@
       "接下来 #b",
       " 回合内打出的牌都会被额外打出一次。"
     ]
+  },
+  "Yiba:KingCrimsonPower": {
+    "NAME": "时间删除",
+    "DESCRIPTIONS": [
+      "无法行动一回合。"
+    ]
   }
 }

@@ -480,7 +480,7 @@
     "NAME": "忧郁",
     "DESCRIPTION": "不能被打出 。 NL 在你的回合结束时，清除自身全部能力。 NL 虚无 。"
   },
-  "KingCrimson": {
+  "Yiba:KingCrimson": {
     "NAME": "绯红之王",
     "DESCRIPTION": "跳过敌方回合。 NL 回满 [E] 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "跳过敌方回合。 NL 回满 [E] 。 NL 抽 !M! 张牌。 NL 消耗 。"
