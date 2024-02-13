@@ -334,7 +334,10 @@ public class YiBaHelper {
         YibaRelics.add(new YoyoBall()); //悠悠球
         YibaRelics.add(new BlessingOfTheWelkinMoon()); //空月祝福
         YibaRelics.add(new GatlingPea()); //机枪豌豆
-        YibaRelics.add(new RELX5th()); //锐刻五代
+        AbstractRelic temp = new RELX5th();
+        if (temp.canSpawn()){
+            YibaRelics.add(new RELX5th()); //锐刻五代
+        }
         YibaRelics.add(new ChaoticReality()); //混乱现实
         YibaRelics.add(new StoneGhostFace()); //石鬼面
         YibaRelics.add(new ChickenFeet()); //永恒鸡爪
