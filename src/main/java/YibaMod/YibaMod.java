@@ -369,6 +369,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         BaseMod.addPotion(BottledRelicsPotion.class, null, null, null, "BottledRelicsPotion");
         BaseMod.addPotion(Yiba_ChaoticPotion.class, null, null, null, "Yiba_ChaoticPotion");
         BaseMod.addPotion(DeletePotion.class, null, null, null, "DeletePotion");
+        BaseMod.addPotion(KingCrimsonPotion.class, null, null, null, YibaMod.makeModID("KingCrimsonPotion"));
 
 
     }

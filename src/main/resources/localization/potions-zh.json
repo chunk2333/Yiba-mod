@@ -52,5 +52,11 @@
       "从牌库中选择 #b",
       " 张牌删除。"
     ]
+  },
+  "Yiba:KingCrimsonPotion": {
+    "NAME": "绯色物质药水",
+    "DESCRIPTIONS": [
+      "让全体敌人无法执行当前意图一回合。"
+    ]
   }
 }
