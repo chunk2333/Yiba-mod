@@ -54,9 +54,9 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
 
     public static ArrayList<AbstractCard> recyclecards = new ArrayList<>();
 
-    private static final List<AbstractGameAction> actionList = new ArrayList<>();
+    public static final List<AbstractGameAction> actionList = new ArrayList<>();
 
-    private static final List<AbstractGameAction> offScreenActionList = new ArrayList<>();
+    public static final List<AbstractGameAction> offScreenActionList = new ArrayList<>();
 
     public static final Logger logger = LogManager.getLogger(YibaMod.class.getName());
 
