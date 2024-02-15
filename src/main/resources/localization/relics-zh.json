@@ -672,5 +672,12 @@
     "DESCRIPTIONS": [
       "在同一场战斗中，你生成 #b3 个 #y额外充能球栏位 ，获得 #b1 点 #y集中 。"
     ]
+  },
+  "Yiba:MoltenMaterial": {
+    "NAME": "熔融物质",
+    "FLAVOR": "熔融时间。",
+    "DESCRIPTIONS": [
+      "拾起时选择获得一个非boss遗物。 #r时间不稳定 。"
+    ]
   }
 }

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import relics.*;
 import relics.ClickRelic.*;
+import relics.choose.MoltenMaterial;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -356,6 +357,7 @@ public class YiBaHelper {
         YibaRelics.add(new Akaishi()); //赤石
         YibaRelics.add(new Antimatter()); //反物质
         YibaRelics.add(new MechanismScroll()); //机关卷轴
+        YibaRelics.add(new MoltenMaterial());//熔融物质
     }
 
     public static AbstractCard getYibaRandomColorlessCard(){

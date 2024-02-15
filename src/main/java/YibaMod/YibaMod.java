@@ -35,8 +35,10 @@ import monsters.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import potions.*;
+import power.UnstableTime;
 import relics.*;
 import relics.ClickRelic.*;
+import relics.choose.MoltenMaterial;
 import relics.choose.TheCurseOfTheGods;
 import screens.RelicViewScreenYiba;
 
@@ -345,6 +347,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         BaseMod.addRelic(new Nand(), RelicType.BLUE); //闪存颗粒-机器人罕见
         BaseMod.addRelic(new TheCurseOfTheGods(), RelicType.SHARED);//众神的诅咒
         BaseMod.addRelic(new KorvaxCasing(), RelicType.BLUE);//科尔瓦克斯外壳-机器人罕见
+        BaseMod.addRelic(new MoltenMaterial(), RelicType.SHARED);//熔融物质
 
 
         //添加事件:会员制餐厅

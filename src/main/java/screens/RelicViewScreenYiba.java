@@ -647,8 +647,19 @@ public class RelicViewScreenYiba implements ScrollBarListener {
         this.row = -1;
         this.col = 0;
         sb.setColor(new Color(0.0F, 0.0F, 0.0F, 0.8F));
+        ArrayList<AbstractRelic> MyCommonList = new ArrayList();
+        if (AbstractDungeon.player.hasRelic(YibaMod.makeModID("MoltenMaterial"))){
+            for (AbstractRelic r : RelicLibrary.commonList){
+                if (!r.relicId.equals(YibaMod.makeModID("MoltenMaterial"))){
+                    MyCommonList.add(r);
+                }
+            }
+        } else {
+            MyCommonList = RelicLibrary.commonList;
+        }
+
         renderList(sb, TEXT[1], TEXT[2], RelicLibrary.starterList);
-        renderList(sb, TEXT[3], TEXT[4], RelicLibrary.commonList);
+        renderList(sb, TEXT[3], TEXT[4], MyCommonList);
         renderList(sb, TEXT[5], TEXT[6], RelicLibrary.uncommonList);
         renderList(sb, TEXT[7], TEXT[8], RelicLibrary.rareList);
         //renderList(sb, TEXT[9], TEXT[10], RelicLibrary.bossList);
@@ -667,7 +678,7 @@ public class RelicViewScreenYiba implements ScrollBarListener {
         this.row++;
         this.col = 0;
         for (AbstractRelic r : list) {
-            if(r.relicId.equals("TheCurseOfTheGods")){
+            if(r.relicId.equals("TheCurseOfTheGods") || r.relicId.equals(YibaMod.makeModID("MoltenMaterial"))){
                 continue;
             }
             if (this.col == 10) {
