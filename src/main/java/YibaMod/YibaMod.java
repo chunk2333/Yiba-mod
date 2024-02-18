@@ -348,6 +348,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         BaseMod.addRelic(new TheCurseOfTheGods(), RelicType.SHARED);//众神的诅咒
         BaseMod.addRelic(new KorvaxCasing(), RelicType.BLUE);//科尔瓦克斯外壳-机器人罕见
         BaseMod.addRelic(new MoltenMaterial(), RelicType.SHARED);//熔融物质
+        BaseMod.addRelic(new SealOfConfinement(), RelicType.SHARED);//禁锢之符
 
 
         //添加事件:会员制餐厅

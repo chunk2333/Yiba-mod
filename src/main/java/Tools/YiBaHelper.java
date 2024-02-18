@@ -39,6 +39,8 @@ public class YiBaHelper {
 
     public static boolean LoadOutModIsClose = true;
 
+    public static boolean canDraw = false;
+
     public static AbstractCard LastPlayedCard = null;
 
     public static AbstractMonster LastAttackMonster = null;

@@ -679,5 +679,12 @@
     "DESCRIPTIONS": [
       "拾起时选择获得一个非boss遗物。 #r时间不稳定 。"
     ]
+  },
+  "Yiba:SealOfConfinement": {
+    "NAME": "禁锢之符",
+    "FLAVOR": "你的某种行为被禁止了！",
+    "DESCRIPTIONS": [
+      "你每回合开始都会抽牌到手牌上限，但你不能以任何形式额外抽牌。"
+    ]
   }
 }
