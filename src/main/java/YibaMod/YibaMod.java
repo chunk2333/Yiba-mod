@@ -48,9 +48,11 @@ import java.util.List;
 
 
 @SpireInitializer
-public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, PostEnergyRechargeSubscriber, AddAudioSubscriber, PostUpdateSubscriber{
+public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, PostEnergyRechargeSubscriber, AddAudioSubscriber, PostUpdateSubscriber, OnCardUseSubscriber{
 
     private final ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
+
+    public static ArrayList<AbstractCard> usedCards = new ArrayList<>();
 
     public static ArrayList<AbstractCard> recyclecards = new ArrayList<>();
 
@@ -242,6 +244,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         this.cardsToAdd.add(new BaiLan());//摆烂-诅咒
         this.cardsToAdd.add(new WoundInfection());//伤口感染-状态
         this.cardsToAdd.add(new AcidLiquor());//酸液-状态
+        this.cardsToAdd.add(new TheFaintLampCrows());//幽灯啼
 
 
 
@@ -455,6 +458,14 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
     public void receivePostRender(SpriteBatch sb) {
         if (!relicScreen.isDone){
             relicScreen.render(sb);
+        }
+    }
+
+    @Override
+    public void receiveCardUsed(AbstractCard c){
+        if (!c.cardID.equals(YibaMod.makeModID("TheFaintLampCrows"))){
+            YibaMod.logger.info("添加已使用卡牌：" + c.name);
+            usedCards.add(c);
         }
     }
 

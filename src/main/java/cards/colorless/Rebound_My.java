@@ -36,24 +36,24 @@ public class Rebound_My extends CustomCard{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
-        Texture Circle;
-
-        Circle = new Texture(Gdx.files.internal("img/VFX/c2.png"));
-
-        AbstractGameEffect CircleEffect = new VfxBuilder(Circle, Settings.WIDTH/2, (float) (Settings.HEIGHT/1.5), 2f)
-                //.moveY(Settings.HEIGHT, m.hb.y + m.hb.height / 6, VfxBuilder.Interpolations.BOUNCE)
-                //.moveX()
-                .setColor(Color.GOLD)
-                .fadeIn(0.25f)
-                .fadeOut(0.25f)
-                .setScale(1.5f)
-                .rotate(-200f)
-                .playSoundAt( 0.35f,"BELL")
-                .build();
-
-        AbstractDungeon.effectsQueue.add(CircleEffect);
-
-        addToBot(new VFXAction(new WhirlwindEffect(new Color(1.0F, 0.9F, 0.4F, 2.0F), true)));
+//        Texture Circle;
+//
+//        Circle = new Texture(Gdx.files.internal("img/VFX/c2.png"));
+//
+//        AbstractGameEffect CircleEffect = new VfxBuilder(Circle, Settings.WIDTH/2, (float) (Settings.HEIGHT/1.5), 2f)
+//                //.moveY(Settings.HEIGHT, m.hb.y + m.hb.height / 6, VfxBuilder.Interpolations.BOUNCE)
+//                //.moveX()
+//                .setColor(Color.GOLD)
+//                .fadeIn(0.25f)
+//                .fadeOut(0.25f)
+//                .setScale(1.5f)
+//                .rotate(-200f)
+//                .playSoundAt( 0.35f,"BELL")
+//                .build();
+//
+//        AbstractDungeon.effectsQueue.add(CircleEffect);
+//
+//        addToBot(new VFXAction(new WhirlwindEffect(new Color(1.0F, 0.9F, 0.4F, 2.0F), true)));
 
         addToBot(new ApplyPowerAction(p, p, new Rebound_MyPower(p, this.magicNumber), this.magicNumber));
     }

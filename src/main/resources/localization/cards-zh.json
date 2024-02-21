@@ -515,5 +515,10 @@
   "Yiba:AcidLiquor": {
     "NAME": "酸液",
     "DESCRIPTION": " 不能被打出 。 NL 回合结束时失去所有 格挡 。"
+  },
+  "Yiba:TheFaintLampCrows": {
+    "NAME": "幽灯啼",
+    "DESCRIPTION": "从已打出的牌中选择一张，将其复制品放入到你手牌中。 NL 消逝 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从已打出的牌中选择一张，将其复制品放入到你手牌中，在本场战斗耗能为0。 NL 消逝 。 NL 消耗 。"
   }
 }

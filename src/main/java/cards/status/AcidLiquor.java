@@ -23,7 +23,7 @@ public class AcidLiquor extends CustomCard {
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards/test.png";
+    public static final String IMG_PATH = "img/cards/AcidLiquor.png";
 
     private static final int COST = -2;
 

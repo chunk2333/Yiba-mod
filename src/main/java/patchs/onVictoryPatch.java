@@ -1,6 +1,8 @@
 package patchs;
 
 import Tools.YiBaHelper;
+import YibaMod.YibaMod;
+import cards.colorless.TheFaintLampCrows;
 import cards.purple.LosingAnger;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -14,6 +16,7 @@ public abstract class onVictoryPatch {
         LosingAnger.times = 0;
         YiBaHelper.LastAttackMonster = null;
         YiBaHelper.LastPlayedCard = null;
+        YibaMod.usedCards.clear();
     }
 
 }
