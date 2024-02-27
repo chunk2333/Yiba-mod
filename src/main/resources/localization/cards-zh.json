@@ -520,5 +520,10 @@
     "NAME": "幽灯啼",
     "DESCRIPTION": "从已打出的牌中选择一张，将其复制品放入到你手牌中。 NL 消逝 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "从已打出的牌中选择一张，将其复制品放入到你手牌中，在本场战斗耗能为0。 NL 消逝 。 NL 消耗 。"
+  },
+  "Yiba:Mix": {
+    "NAME": "调配",
+    "DESCRIPTION": "在 一定范围 内随机加入一张到手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "在 一定范围 内随机加入一张到手牌，本回合耗能变为0。 NL 消耗 。"
   }
 }

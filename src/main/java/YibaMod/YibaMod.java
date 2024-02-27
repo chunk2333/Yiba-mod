@@ -245,6 +245,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         this.cardsToAdd.add(new WoundInfection());//伤口感染-状态
         this.cardsToAdd.add(new AcidLiquor());//酸液-状态
         this.cardsToAdd.add(new TheFaintLampCrows());//幽灯啼
+        this.cardsToAdd.add(new Mix());//调配-猎人
 
 
 
