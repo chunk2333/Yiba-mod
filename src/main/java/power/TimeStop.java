@@ -19,13 +19,18 @@ public class TimeStop extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static TextureAtlas atlas;
     public static TextureAtlas atlas_self;
-    public TimeStop(AbstractCreature owner) {
+    public TimeStop(AbstractCreature owner){
+        this(owner, 1);
+    }
+
+    public TimeStop(AbstractCreature owner, int amount) {
         super();
         atlas_self = new TextureAtlas(Gdx.files.internal("powers/Selfpowers.atlas"));
         this.name = NAME;
         updateDescription();
         this.ID = POWER_ID;
         this.owner = owner;
+        this.amount = amount;
         updateDescription();
         this.region48 = atlas_self.findRegion("48/TimeStop");
         this.region128 = atlas_self.findRegion("128/TimeStop");
@@ -34,9 +39,11 @@ public class TimeStop extends AbstractPower {
 
     @Override
     public void atStartOfTurn(){
-        //回合开始时
-        //移除buff
-        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+        if (this.amount == 0) {
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+        } else {
+            addToBot(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
+        }
         //结束回合
         addToBot(new MyPressEndTurnButtonAction());
     }

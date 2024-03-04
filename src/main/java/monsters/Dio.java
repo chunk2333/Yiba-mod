@@ -7,10 +7,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.audio.MainMusic;
 import com.megacrit.cardcrawl.audio.TempMusic;
@@ -22,8 +24,6 @@ import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.vfx.combat.BloodShotEffect;
 import power.TimeStop;
@@ -34,7 +34,7 @@ public class Dio extends CustomMonster {
 
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("Dio");
 
-    UIStrings GetIntoDioRoom = CardCrawlGame.languagePack.getUIString("GetIntoDioRoom");
+    private final UIStrings GetIntoDioRoom = CardCrawlGame.languagePack.getUIString("GetIntoDioRoom");
 
     public static final String NAME = monsterStrings.NAME;
 
@@ -56,11 +56,15 @@ public class Dio extends CustomMonster {
 
     private static final String BuffUp = DIALOG[5];
 
-    private int roundNum = 1 ;
+    public static int roundNum = 1 ;
 
     private final int bellowBlock;
 
     private final int forgeAmt;
+
+    private boolean isHeal;
+
+    private int TimeStopAmount;
 
     public Dio() {
         super(NAME, "Dio", 300, 0.0F, 0.0F, 270.0F, 400.0F, null, -50.0F, 0.0F);
@@ -78,9 +82,11 @@ public class Dio extends CustomMonster {
         this.damage.add(new DamageInfo(this, 5));
         this.damage.add(new DamageInfo(this, 20));
         this.damage.add(new DamageInfo(this, 30));
-        this.damage.add(new DamageInfo(this, 999));
+        this.damage.add(new DamageInfo(this, 55));
         this.img = new Texture(Gdx.files.internal("img/monsters/Dio.png"));
         this.type = AbstractMonster.EnemyType.BOSS;
+        this.isHeal = false;
+        this.TimeStopAmount = 1;
     }
 
     public void usePreBattleAction() {
@@ -94,7 +100,7 @@ public class Dio extends CustomMonster {
         AbstractDungeon.actionManager.addToBottom(new TalkAction(true, GetIntoDioRoom.TEXT[0], 1.0F, 2.0F));
     }
     public void takeTurn() {
-        this.roundNum = this.roundNum + 1;
+        roundNum = roundNum + 1;
         String talkText;
         switch (this.nextMove) {
             case 1:
@@ -102,7 +108,7 @@ public class Dio extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
                 //说话
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this, The_World));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new TimeStop(AbstractDungeon.player)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new TimeStop(AbstractDungeon.player, this.TimeStopAmount)));
                 //时停声音
                 int randomNum;
                 randomNum = AbstractDungeon.monsterRng.random(1,2);
@@ -112,11 +118,6 @@ public class Dio extends CustomMonster {
                 if(randomNum == 2){
                     addToBot(new SFXAction(YiBaHelper.MakeSoundPath("Dio_The_World_Voice02")));
                 }
-
-                //行动
-                getMove(999);
-                break;
-
             case 2:
                 //给予2虚弱
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
@@ -133,10 +134,7 @@ public class Dio extends CustomMonster {
                 //最后给予1层易伤
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 1, true), 1));
                 //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 1, true), 1));
-                getMove(999);
-                break;
             case 3:
-
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
                 //说话：西内！xxx
                 talkText = Go_To_Die + AbstractDungeon.player.name;
@@ -144,18 +142,15 @@ public class Dio extends CustomMonster {
                 //造成伤害
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage
                         .get(1), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-                getMove(999);
-                break;
             case 4:
                 //说话：xx回合过去了
-                talkText = this.roundNum + Round_Pass;
+                talkText = GameActionManager.turn + Round_Pass;
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this, talkText));
-                if(this.roundNum==9){
+                if(roundNum==9){
                     //获得格挡  第8回合
                     AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.bellowBlock + 10));
                 }
-                getMove(999);
-                break;
+
             case 5:
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
                 //获得金属化
@@ -163,40 +158,50 @@ public class Dio extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage
                         .get(2), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
                 getMove(999);
-                break;
+
             case 123:
                 //强化，自身获得5力量
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 5), 5));
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this, BuffUp));
-                getMove(999);
-                break;
+
+
             case 9:
                 //第11回合的究极攻击
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this, FinalTurn));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage
                         .get(3), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-                getMove(999);
-                break;
 
-            default:
-                getMove(999);
-                break;
+            case 73:
+                //愚蠢
+                AbstractDungeon.actionManager.addToBottom(new SFXAction(YiBaHelper.MakeSoundPath("Dio_wryyyy")));
+                AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
+                AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth / 2 - this.currentHealth));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, 30));
+                TimeStopAmount += 1;
+
+            getMove(999);
+
         }
     }
     protected void getMove(int num) {
-        int random;
-        if(this.roundNum>=12){
-            random = AbstractDungeon.monsterRng.random(9,10); //怪物随机数
-            this.roundNum = random;
+        if (this.currentHealth <= 150 && !this.isHeal){
+            this.isHeal = true;
+            setMove((byte)73, Intent.BUFF);
         }
-        if(this.roundNum==1){
+        int random;
+        if(roundNum>=12){
+            random = AbstractDungeon.monsterRng.random(9,10); //怪物随机数
+            roundNum = random;
+        }
+        if(roundNum==1){
             setMove(TheWorld_Power_Name, (byte)1, Intent.STRONG_DEBUFF);
         }
-        if(this.roundNum==2){
+        if(roundNum==2){
             setMove((byte)2, Intent.ATTACK_DEFEND, this.damage.get(0).base, 5, true);
         }
-        if(this.roundNum==3){
+        if(roundNum==3){
             //25%强化  75%打人
 
             random = AbstractDungeon.monsterRng.random(1,6); //怪物随机数
@@ -209,7 +214,7 @@ public class Dio extends CustomMonster {
                 setMove((byte)3, Intent.ATTACK,this.damage.get(1).base);
             }
         }
-        if(this.roundNum==4){
+        if(roundNum==4){
             //强化或者打人
             random = AbstractDungeon.monsterRng.random(1,4); //怪物随机数
             if(random == 1){
@@ -221,27 +226,27 @@ public class Dio extends CustomMonster {
                 setMove((byte)3, Intent.ATTACK,this.damage.get(1).base);
             }
         }
-        if(this.roundNum==5){
+        if(roundNum==5){
             //时停
             setMove(TheWorld_Power_Name, (byte)1, Intent.DEBUFF);
         }
-        if(this.roundNum==6){
+        if(roundNum==6){
             setMove((byte)4, Intent.BUFF);
         }
-        if(this.roundNum==7){
+        if(roundNum==7){
             setMove((byte)5, Intent.ATTACK_BUFF,this.damage.get(2).base);
         }
-        if(this.roundNum==8){
+        if(roundNum==8){
             setMove((byte)4, Intent.BUFF);
         }
-        if(this.roundNum==9){
+        if(roundNum==9){
             //时停
             setMove(TheWorld_Power_Name, (byte)1, Intent.DEBUFF);
         }
-        if(this.roundNum==10){
+        if(roundNum==10){
             setMove((byte)4, Intent.BUFF);
         }
-        if(this.roundNum==11){
+        if(roundNum==11){
             setMove((byte)9, Intent.ATTACK,this.damage.get(3).base);
         }
     }
