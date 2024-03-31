@@ -37,7 +37,7 @@ jobs:
           curl -L -o mod/BaseMod.jar https://r2.y1ba.com/SpireMod/BaseMod.jar
           curl -L -o mod/StSLib.jar https://r2.y1ba.com/SpireMod/StSLib.jar
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B package --file actionsPom.xml
     - run: mkdir staging && cp target/*.jar staging
     - uses: actions/upload-artifact@v3
       with:
