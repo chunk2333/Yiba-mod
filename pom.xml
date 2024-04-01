@@ -54,6 +54,33 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <!-- 添加 maven-resources-plugin 插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>target</directory> <!-- 目标文件所在目录 -->
+                                    <includes>
+                                        <include>Yiba_testmod.jar</include> <!-- 包含的文件类型，根据实际情况修改 -->
+                                    </includes>
+                                </resource>
+                            </resources>
+                            <overwrite>true</overwrite> <!-- 是否覆盖已有文件 -->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
