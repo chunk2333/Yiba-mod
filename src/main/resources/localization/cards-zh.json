@@ -525,5 +525,10 @@
     "NAME": "调配",
     "DESCRIPTION": "在 一定范围 内随机加入一张到手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "在 一定范围 内随机加入一张到手牌，本回合耗能变为0。 NL 消耗 。"
+  },
+  "Yiba:YanWangDianMao": {
+    "NAME": "阎王点卯",
+    "DESCRIPTION": "每回合开始时对自己或全部敌人造成1~999点伤害。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合开始时对自己或全部敌人造成1~999点伤害。"
   }
 }
