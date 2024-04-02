@@ -44,6 +44,7 @@ public class YanWangDianMaoPower extends AbstractPower {
 
     @Override
     public void atStartOfTurn(){
+        flash();
         int damage = AbstractDungeon.cardRandomRng.random(1, 999);
         if (AbstractDungeon.cardRandomRng.randomBoolean()){
             addToBot(new AbstractGameAction() {
