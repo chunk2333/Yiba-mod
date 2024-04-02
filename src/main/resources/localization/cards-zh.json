@@ -530,5 +530,10 @@
     "NAME": "阎王点卯",
     "DESCRIPTION": "每回合开始时对自己或全部敌人造成1~999点伤害。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 每回合开始时对自己或全部敌人造成1~999点伤害。"
+  },
+  "Yiba:FuturePerspective": {
+    "NAME": "未来视角",
+    "DESCRIPTION": "从全部卡牌中选择加入一张到你的手牌。 NL 场上所有敌人立即执行当前意图。 NL 虚无 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从全部卡牌中选择加入一张到你的手牌，其本回合耗能为0。 NL 场上所有敌人立即执行当前意图。 NL 虚无 。 NL 消耗 。"
   }
 }

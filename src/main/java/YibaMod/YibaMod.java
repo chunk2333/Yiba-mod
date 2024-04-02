@@ -246,6 +246,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         this.cardsToAdd.add(new TheFaintLampCrows());//幽灯啼
         this.cardsToAdd.add(new Mix());//调配-猎人
         this.cardsToAdd.add(new YanWangDianMao());//阎王点卯
+        this.cardsToAdd.add(new FuturePerspective());//未来视角
 
 
 

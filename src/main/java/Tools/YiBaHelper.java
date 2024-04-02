@@ -6,6 +6,7 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -388,6 +389,17 @@ public class YiBaHelper {
 
         } while (temp.size() != num);
 
+        return temp;
+    }
+
+    public static ArrayList<AbstractCard> getAllCards(boolean inGame){
+        ArrayList<AbstractCard> temp = new ArrayList<>();
+        for (AbstractCard c : CardLibrary.getAllCards()){
+            if (inGame && c.hasTag(AbstractCard.CardTags.HEALING)) {
+                continue;
+            }
+            temp.add(c);
+        }
         return temp;
     }
 
