@@ -247,6 +247,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         this.cardsToAdd.add(new Mix());//调配-猎人
         this.cardsToAdd.add(new YanWangDianMao());//阎王点卯
         this.cardsToAdd.add(new FuturePerspective());//未来视角
+        this.cardsToAdd.add(new BullAndHorseMorphology());//牛马形态
 
 
 
@@ -365,6 +366,8 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         BaseMod.addEvent(new AddEventParams.Builder(FairyBlessingEvent.ID, FairyBlessingEvent.class).dungeonID(TheBeyond.ID).create());
         //添加事件：猫党？狗党？
         BaseMod.addEvent(new AddEventParams.Builder(CatOrDogEvent.ID, CatOrDogEvent.class).eventType(EventUtils.EventType.ONE_TIME).dungeonIDs(TheCity.ID).create());
+        //添加事件：抉择
+        BaseMod.addEvent(new AddEventParams.Builder(JueZeEvent.ID, JueZeEvent.class).eventType(EventUtils.EventType.NORMAL).create());
         //添加药水
         BaseMod.addPotion(time.class, null, null, null, "time");
         BaseMod.addPotion(money.class, null, null, null, "money");

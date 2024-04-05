@@ -535,5 +535,9 @@
     "NAME": "未来视角",
     "DESCRIPTION": "从全部卡牌中选择加入一张到你的手牌。 NL 场上所有敌人立即执行当前意图。 NL 虚无 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "从全部卡牌中选择加入一张到你的手牌，其本回合耗能为0。 NL 场上所有敌人立即执行当前意图。 NL 虚无 。 NL 消耗 。"
+  },
+  "Yiba:BullAndHorseMorphology": {
+    "NAME": "牛马形态",
+    "DESCRIPTION": "每回合失去 [E] ，给予自身99层 虚弱 ，99层 易伤 ，99层 脆弱 ，每回合结束获得 !M! 金币。"
   }
 }

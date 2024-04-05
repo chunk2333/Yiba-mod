@@ -253,5 +253,19 @@
     "DESCRIPTIONS": [
       "每回合开始时对自己或全部敌人造成1~999点伤害，"
     ]
+  },
+  "Yiba:NiuPower": {
+    "NAME": "牛",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，失去 ",
+      ""
+    ]
+  },
+  "Yiba:MaPower": {
+    "NAME": "马",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b ",
+      " #g金币 。"
+    ]
   }
 }
