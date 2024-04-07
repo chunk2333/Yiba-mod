@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 
 public class RELX5th extends CustomRelic {
@@ -36,6 +37,9 @@ public class RELX5th extends CustomRelic {
     @Override
     public void update() {
         super.update();
+        if ((AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.EVENT){
+            return;
+        }
         YibaMod.actionList.add(new AbstractGameAction() {
             @Override
             public void update() {

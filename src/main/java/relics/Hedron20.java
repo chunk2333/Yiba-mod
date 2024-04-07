@@ -1,6 +1,7 @@
 package relics;
 //符文20面体
 import basemod.abstracts.CustomRelic;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,9 +32,12 @@ public class Hedron20 extends CustomRelic {
         num = Double.valueOf(per_maxhp).intValue();
         if(p.currentHealth >= num){
             flash();
+            this.pulse = true;
+            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             addToBot(new GainEnergyAction(1));
         }else{
             //p.heal(2);
+            this.pulse = false;
         }
 
     }
