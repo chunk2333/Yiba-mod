@@ -37,9 +37,14 @@ public class RELX5th extends CustomRelic {
     @Override
     public void update() {
         super.update();
-        if ((AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.EVENT){
+        try {
+            if ((AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.EVENT){
+                return;
+            }
+        } catch (NullPointerException e){
             return;
         }
+
         YibaMod.actionList.add(new AbstractGameAction() {
             @Override
             public void update() {
