@@ -47,7 +47,10 @@ public class YiBaHelper {
     public static AbstractMonster LastAttackMonster = null;
 
     public static ArrayList<AbstractCard> YibaColorlessCards = new ArrayList<>();
+
     public static ArrayList<AbstractRelic> YibaRelics = new ArrayList<>();
+
+    public static boolean isInitializeDeck = false;
 
     private static String lastTriggerElementName;
 

@@ -67,6 +67,8 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
 
     @SpireEnum public static AbstractCard.CardTags VANISH;//消逝
 
+    @SpireEnum public static AbstractCard.CardTags LAST;//沉底
+
     public static String makeModID(String name){
         return modID + ":" + name;
     }

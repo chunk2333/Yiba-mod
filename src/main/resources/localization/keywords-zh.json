@@ -88,5 +88,8 @@
   },
   {"NAMES": ["一定范围"],
     "DESCRIPTION": "致命毒药 NL 毒雾 NL 致残毒云 NL 弹跳药瓶 NL 尸爆术 NL 催化剂 NL 荼毒 NL #y炼制药水 "
+  },
+  {"NAMES": ["沉底"],
+    "DESCRIPTION": "每次洗牌时，这张牌必定在抽牌堆最底部。"
   }
 ]
