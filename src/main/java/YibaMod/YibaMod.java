@@ -250,6 +250,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         this.cardsToAdd.add(new YanWangDianMao());//阎王点卯
         this.cardsToAdd.add(new FuturePerspective());//未来视角
         this.cardsToAdd.add(new BullAndHorseMorphology());//牛马形态
+        this.cardsToAdd.add(new Amnesia());//失忆
 
 
 
@@ -470,7 +471,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
     @Override
     public void receiveCardUsed(AbstractCard c){
         if (!c.cardID.equals(YibaMod.makeModID("TheFaintLampCrows"))){
-            YibaMod.logger.info("添加已使用卡牌：" + c.name);
+            //YibaMod.logger.info("添加已使用卡牌：" + c.name);
             usedCards.add(c);
         }
     }

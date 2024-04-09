@@ -539,5 +539,9 @@
   "Yiba:BullAndHorseMorphology": {
     "NAME": "牛马形态",
     "DESCRIPTION": "每回合失去 [E] ，给予自身99层 虚弱 ，99层 易伤 ，99层 脆弱 ，每回合结束获得 !M! 金币。"
+  },
+  "Yiba:Amnesia": {
+    "NAME": "失忆",
+    "DESCRIPTION": "不能被打出 。 NL 在你的回合结束时，随机消耗一张抽牌堆的牌。"
   }
 }
