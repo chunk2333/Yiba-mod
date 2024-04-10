@@ -178,22 +178,6 @@
     "DESCRIPTION": "使一名敌人只能进行攻击宣言。 NL  消耗 。",
     "UPGRADE_DESCRIPTION": "使一名敌人只能进行攻击宣言。"
   },
-  "HydroCard": {
-    "NAME": "水元素",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 水元素 。 NL  消耗 。"
-  },
-  "PyroCard": {
-    "NAME": "火元素",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 火元素 。 NL  消耗 。"
-  },
-  "GeoCard": {
-    "NAME": "岩元素",
-    "DESCRIPTION": " 保留 。 NL 给予 岩元素 。 NL 给予 !M! 层 易伤 。 NL  消耗 。"
-  },
-  "AnemoCard": {
-    "NAME": "风元素",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL  扩散 。 NL  消耗 。"
-  },
   "YouAreOne_OneByOne": {
     "NAME": "你是一个，一个一个",
     "DESCRIPTION": " 不能被打出 。 NL 当你抽到这张牌时你本回合不能在抽任何牌。 NL  虚无 。"
@@ -543,5 +527,25 @@
   "Yiba:Amnesia": {
     "NAME": "失忆",
     "DESCRIPTION": "不能被打出 。 NL 在你的回合结束时，随机消耗一张抽牌堆的牌。"
+  },
+  "Yiba:Fear": {
+    "NAME": "恐惧",
+    "DESCRIPTION": "不能被打出 。 NL 在你的回合结束时，在抽牌堆顶部加入一张随机诅咒牌。 NL 虚无 。"
+  },
+  "Yiba:Shameful": {
+    "NAME": "丢人",
+    "DESCRIPTION": "不能被打出 。 NL 在你的回合结束时，立刻逃离非boss和精英怪战斗。 NL 虚无 。"
+  },
+  "Yiba:Nervous": {
+    "NAME": "紧张",
+    "DESCRIPTION": "不能被打出 。 NL 抽到这张牌时，5s后结束你的回合。"
+  },
+  "Yiba:Shame": {
+    "NAME": "羞辱",
+    "DESCRIPTION": "不能被打出 。 NL 你被故障机器人狠狠的羞辱了一番，你觉得你失了智。 NL 在你的回合结束时，失去 !M! 点 集中 。 NL 虚无 。"
+  },
+  "Yiba:SuddenStop": {
+    "NAME": "骤停",
+    "DESCRIPTION": "不能被打出 。 NL 这张牌被累计抽到4次时，直接死亡。 NL 消逝 。 NL 沉底 。"
   }
 }

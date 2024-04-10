@@ -52,26 +52,11 @@ public class YiBaHelper {
 
     public static boolean isInitializeDeck = false;
 
-    private static String lastTriggerElementName;
-
-    private static String lastTriggerElementFinalName;
-
     private static String BlindBoxRelicId;
 
     private static String TempRelicId;
 
     private static String TempRelicId2;
-
-    public static int getPlayerMystery(){
-        int mystery = 0;
-        AbstractPlayer p = AbstractDungeon.player;
-        for(AbstractPower power:p.powers){
-            if(power.ID.equals("MysteryPower")){
-                mystery = power.amount;
-            }
-        }
-        return mystery;
-    }
 
     public static AbstractCard getRandomCurseCard(){
         //取随机诅咒牌
@@ -95,93 +80,6 @@ public class YiBaHelper {
         return list.size();
     }
 
-    public static boolean canTriggerElement(AbstractMonster m, String ElementName){
-        if(ElementName.equals("HydroPower")){
-            if(m.hasPower("PyroPower")){
-                return true;
-            }
-            return m.hasPower("GeoPower");
-        }
-        if(ElementName.equals("PyroPower")){
-            if(m.hasPower("HydroPower")){
-                return true;
-            }
-            return m.hasPower("GeoPower");
-        }
-        if(ElementName.equals("GeoPower")){
-            if(m.hasPower("HydroPower")){
-                return true;
-            }
-            return m.hasPower("PyroPower");
-        }
-        return false;
-    }
-
-    public static void setLastTriggerElement(String name, String finalName){
-        lastTriggerElementName = name;
-        lastTriggerElementFinalName = finalName;
-    }
-
-    public static String getLastTriggerElementName(){
-        return lastTriggerElementName;
-    }
-    public static String getLastTriggerElementFinalName(){
-        return lastTriggerElementFinalName;
-    }
-
-    public static Boolean hasElement(AbstractMonster m){
-        for(AbstractPower power : m.powers){
-            if(power.ID.equals("HydroPower")){
-                return true;
-            }
-            if(power.ID.equals("PyroPower")){
-                return true;
-            }
-            if(power.ID.equals("GeoPower")){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static Boolean hasHydroElement(AbstractMonster m){
-        if(m == null){
-            return false;
-        }
-
-        for(AbstractPower power : m.powers){
-            if(power.ID.equals("HydroPower")){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static Boolean hasPyroElement(AbstractMonster m){
-        if(m == null){
-            return false;
-        }
-
-        for(AbstractPower power : m.powers){
-            if(power.ID.equals("PyroPower")){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static Boolean hasGeoElement(AbstractMonster m){
-        if(m == null){
-            return false;
-        }
-
-        for(AbstractPower power : m.powers){
-            if(power.ID.equals("GeoPower")){
-                return true;
-            }
-        }
-        return false;
-    }
 
     public static void setBlindBoxRelic(String relicId){
 
