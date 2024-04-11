@@ -118,6 +118,8 @@ public class Dio extends CustomMonster {
                 if(randomNum == 2){
                     addToBot(new SFXAction(YiBaHelper.MakeSoundPath("Dio_The_World_Voice02")));
                 }
+                getMove(999);
+                break;
             case 2:
                 //给予2虚弱
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
@@ -134,6 +136,8 @@ public class Dio extends CustomMonster {
                 //最后给予1层易伤
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 1, true), 1));
                 //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 1, true), 1));
+                getMove(999);
+                break;
             case 3:
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
                 //说话：西内！xxx
@@ -142,6 +146,8 @@ public class Dio extends CustomMonster {
                 //造成伤害
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage
                         .get(1), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                getMove(999);
+                break;
             case 4:
                 //说话：xx回合过去了
                 talkText = GameActionManager.turn + Round_Pass;
@@ -150,7 +156,8 @@ public class Dio extends CustomMonster {
                     //获得格挡  第8回合
                     AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.bellowBlock + 10));
                 }
-
+                getMove(999);
+                break;
             case 5:
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
                 //获得金属化
@@ -158,12 +165,14 @@ public class Dio extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage
                         .get(2), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
                 getMove(999);
+                break;
 
             case 123:
                 //强化，自身获得5力量
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 5), 5));
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this, BuffUp));
-
+                getMove(999);
+                break;
 
             case 9:
                 //第11回合的究极攻击
@@ -171,6 +180,8 @@ public class Dio extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this, FinalTurn));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage
                         .get(3), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                getMove(999);
+                break;
 
             case 73:
                 //愚蠢
@@ -180,8 +191,8 @@ public class Dio extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth / 2 - this.currentHealth));
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, 30));
                 TimeStopAmount += 1;
-
-            getMove(999);
+                getMove(999);
+                break;
 
         }
     }
@@ -189,8 +200,10 @@ public class Dio extends CustomMonster {
         if (this.currentHealth <= 150 && !this.isHeal){
             this.isHeal = true;
             setMove((byte)73, Intent.BUFF);
+            return;
         }
         int random;
+        roundNum = GameActionManager.turn;
         if(roundNum>=12){
             random = AbstractDungeon.monsterRng.random(9,10); //怪物随机数
             roundNum = random;
