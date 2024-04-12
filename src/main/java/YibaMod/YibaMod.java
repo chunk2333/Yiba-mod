@@ -21,6 +21,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
@@ -44,6 +45,7 @@ import screens.RelicViewScreenYiba;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 @SpireInitializer
@@ -473,6 +475,21 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
 
     @Override
     public void receiveCardUsed(AbstractCard c){
+        if (Objects.equals(c.cardID, "Dash")){
+            int random = AbstractDungeon.cardRandomRng.random(3);
+            switch (random){
+                case 1:
+                    CardCrawlGame.sound.playA("rush", 0F);
+                    break;
+                case 2:
+                    CardCrawlGame.sound.playA("sprint", 0F);
+                    break;
+                case 3:
+                    CardCrawlGame.sound.playA("rushrush", 0F);
+                    break;
+            }
+
+        }
         if (!c.cardID.equals(YibaMod.makeModID("TheFaintLampCrows"))){
             //YibaMod.logger.info("添加已使用卡牌：" + c.name);
             usedCards.add(c);

@@ -23,6 +23,9 @@ public class SoundMasterPatch {
         ___map.put("TimeStop02", new Sfx("sound/TimeStop02.mp3", false));
         ___map.put("AUGHHHH", new Sfx("sound/AUGHHHH.mp3", false));
         ___map.put("KingCrimson", new Sfx("sound/KingCrimson.mp3", false));
+        ___map.put("rush", new Sfx("sound/rush.mp3", false));
+        ___map.put("rushrush", new Sfx("sound/rushrush.mp3", false));
+        ___map.put("sprint", new Sfx("sound/sprint.mp3", false));
         YibaMod.logger.info("自定义声音加载完毕...");
     }
 }
