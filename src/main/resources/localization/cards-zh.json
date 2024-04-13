@@ -546,6 +546,10 @@
   },
   "Yiba:SuddenStop": {
     "NAME": "骤停",
-    "DESCRIPTION": "不能被打出 。 NL 这张牌被累计抽到4次时，直接死亡。 NL 消逝 。 NL 沉底 。"
+    "DESCRIPTION": "不能被打出 。 NL 这张牌被累计抽到4次时，直接死亡。 NL 消逝 。 NL 沉底 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （已抽到",
+      " 次。）"
+    ]
   }
 }
