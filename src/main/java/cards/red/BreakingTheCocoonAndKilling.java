@@ -32,6 +32,7 @@ public class BreakingTheCocoonAndKilling extends CustomCard {
 
     public BreakingTheCocoonAndKilling() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.exhaust = true;
     }
 
     public int calculate(AbstractPlayer p, AbstractMonster m){

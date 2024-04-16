@@ -22,7 +22,7 @@ public class Shameful extends CustomCard {
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards/test.png";
+    public static final String IMG_PATH = "img/cards/Shameful.png";
 
     private static final int COST = -2;
 

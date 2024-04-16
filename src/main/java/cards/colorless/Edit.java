@@ -1,5 +1,5 @@
 package cards.colorless;
-
+//编辑
 import Tools.CreateChooseAndUseCard;
 import actions.ChooseOneAndUseAction;
 import basemod.abstracts.CustomCard;
@@ -20,7 +20,7 @@ public class Edit extends CustomCard {
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards/test.png";
+    public static final String IMG_PATH = "img/cards/Edit.png";
 
     private static final int COST = 1;
 
