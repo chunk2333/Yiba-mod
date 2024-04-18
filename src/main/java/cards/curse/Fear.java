@@ -21,7 +21,7 @@ public class Fear extends CustomCard {
 
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    public static final String IMG_PATH = "img/cards/test.png";
+    public static final String IMG_PATH = "img/cards/Fear.png";
 
     private static final int COST = -2;
 
@@ -32,7 +32,7 @@ public class Fear extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.dontTriggerOnUseCard){
+        if (this.dontTriggerOnUseCard) {
             AbstractCard card = YiBaHelper.getRandomCurseCard();
             addToBot(new MakeTempCardInDrawPileAction(card, 1, false, true));
         }
