@@ -1,7 +1,6 @@
 package events;
-
-//public class SanHuanPi {
-
+//三幻批
+import Tools.YiBaHelper;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import YibaMod.YibaMod;
@@ -51,7 +50,7 @@ public class SanHuanPi extends AbstractImageEvent {
     public SanHuanPi() {
         super(NAME, INTRO_MSG, "img/events/SanHuanPi.png");
         //this.noCardsInRewards = true;
-        YibaMod.logger.info("进入事件：三幻批");
+        //YibaMod.logger.info("进入事件：三幻批");
         this.imageEventText.clearRemainingOptions();
         this.imageEventText.setDialogOption(FRIGHT);
         this.imageEventText.setDialogOption(LEAVE);
@@ -63,7 +62,7 @@ public class SanHuanPi extends AbstractImageEvent {
         switch (this.screen) {
             case INTRO:
                 if (buttonPressed == 0){
-                    YibaMod.logger.info("选择进入战斗");
+                    //YibaMod.logger.info("选择进入战斗");
                     //设置怪物
                     (AbstractDungeon.getCurrRoom()).rewardAllowed = false;
                     (AbstractDungeon.getCurrRoom()).monsters = MonsterHelper.getEncounter("SanHuanPi");
@@ -78,7 +77,7 @@ public class SanHuanPi extends AbstractImageEvent {
                     break;
                 }
                 if (buttonPressed == 1){
-                    YibaMod.logger.info("选择离开");
+                    //YibaMod.logger.info("选择离开");
                     //清除事件所有描述文本
                     this.imageEventText.clearAllDialogs();
                     //清除事件所有选项
@@ -95,7 +94,7 @@ public class SanHuanPi extends AbstractImageEvent {
             case END_FIGHT:
                 (AbstractDungeon.getCurrRoom()).rewardAllowed = true;
 
-                YibaMod.logger.info("拾取奖励");
+                //YibaMod.logger.info("拾取奖励");
                 int random_num = AbstractDungeon.eventRng.random(1,100);
                 //添加奖励：金币
                 if(random_num >= 50){
@@ -127,19 +126,35 @@ public class SanHuanPi extends AbstractImageEvent {
                     numCards = r.changeNumberOfCardsInReward(numCards);
                 if (ModHelper.isModEnabled("Binary"))
                     numCards--;
-                YibaMod.logger.info("掉落卡牌数：" + numCards);
+                //YibaMod.logger.info("掉落卡牌数：" + numCards);
                 random_num = AbstractDungeon.eventRng.random(1,100);
+                int RARE_CARD_NUM = 0;
+                int UNCOMMON_CARD_NUM = 0;
+                int COMMON_CARD_NUM = 0;
                 for (int i = 0; i < numCards; i++) {
                     if(random_num > 50){
-                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE));
+                        //cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE));
+                        RARE_CARD_NUM += 1;
                     }
                     if(random_num <= 50 && random_num > 25){
-                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON));
+                        //cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON));
+                        UNCOMMON_CARD_NUM += 1;
                     }
                     if(random_num <= 25){
-                        cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON));
+                        //cardReward.cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON));
+                        COMMON_CARD_NUM += 1;
                     }
 
+                }
+
+                if (RARE_CARD_NUM != 0){
+                    cardReward.cards.addAll(YiBaHelper.getRandomMultiCards(AbstractDungeon.rareCardPool.group, RARE_CARD_NUM));
+                }
+                if (UNCOMMON_CARD_NUM != 0){
+                    cardReward.cards.addAll(YiBaHelper.getRandomMultiCards(AbstractDungeon.uncommonCardPool.group, UNCOMMON_CARD_NUM));
+                }
+                if (COMMON_CARD_NUM != 0){
+                    cardReward.cards.addAll(YiBaHelper.getRandomMultiCards(AbstractDungeon.commonCardPool.group, COMMON_CARD_NUM));
                 }
 
                 AbstractDungeon.getCurrRoom().addCardReward(cardReward);
@@ -154,7 +169,7 @@ public class SanHuanPi extends AbstractImageEvent {
             case END:
                 this.imageEventText.updateDialogOption(0,"离开");
                 openMap();
-                YibaMod.logger.info("整个事件结束。打开地图了。");
+                //YibaMod.logger.info("整个事件结束。打开地图了。");
                 break;
         }
     }
@@ -165,7 +180,7 @@ public class SanHuanPi extends AbstractImageEvent {
             AbstractDungeon.player.drawX = Settings.WIDTH * 0.25F;
             AbstractDungeon.player.preBattlePrep();
             enterImageFromCombat();
-            YibaMod.logger.info("战斗结束，进入拾取奖励界面");
+            //YibaMod.logger.info("战斗结束，进入拾取奖励界面");
             this.imageEventText.clearAllDialogs();
             //清除事件所有选项
             this.imageEventText.clearRemainingOptions();
