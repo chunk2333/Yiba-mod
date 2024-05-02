@@ -258,6 +258,9 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         this.cardsToAdd.add(new Nervous());//紧张
         this.cardsToAdd.add(new ShameYiba());//羞辱
         this.cardsToAdd.add(new SuddenStop());//骤停
+        this.cardsToAdd.add(new Tiptoe());//蹑手蹑脚
+        this.cardsToAdd.add(new PlanAndStrategize());//运筹帷幄
+        this.cardsToAdd.add(new TravelLight());//轻装上阵
 
 
 
