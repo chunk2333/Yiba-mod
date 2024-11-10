@@ -105,7 +105,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         if (keywords != null)
             for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(keyword.NAMES, keyword.DESCRIPTION);
+                BaseMod.addKeyword("yiba",keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
             }
     }
 
@@ -480,21 +480,21 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
 
     @Override
     public void receiveCardUsed(AbstractCard c){
-        if (Objects.equals(c.cardID, "Dash")){
-            int random = AbstractDungeon.cardRandomRng.random(3);
-            switch (random){
-                case 1:
-                    CardCrawlGame.sound.playA("rush", 0F);
-                    break;
-                case 2:
-                    CardCrawlGame.sound.playA("sprint", 0F);
-                    break;
-                case 3:
-                    CardCrawlGame.sound.playA("rushrush", 0F);
-                    break;
-            }
-
-        }
+//        if (Objects.equals(c.cardID, "Dash")){
+//            int random = AbstractDungeon.cardRandomRng.random(3);
+//            switch (random){
+//                case 1:
+//                    CardCrawlGame.sound.playA("rush", 0F);
+//                    break;
+//                case 2:
+//                    CardCrawlGame.sound.playA("sprint", 0F);
+//                    break;
+//                case 3:
+//                    CardCrawlGame.sound.playA("rushrush", 0F);
+//                    break;
+//            }
+//
+//        }
         if (!c.cardID.equals(YibaMod.makeModID("TheFaintLampCrows"))){
             //YibaMod.logger.info("添加已使用卡牌：" + c.name);
             usedCards.add(c);

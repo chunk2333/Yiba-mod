@@ -67,7 +67,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods</outputDirectory>
+                            <outputDirectory>D:\SteamLibrary\steamapps\common\SlayTheSpire\mods</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>target</directory> <!-- 目标文件所在目录 -->

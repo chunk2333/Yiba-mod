@@ -101,7 +101,7 @@
   },
   "Treacherous": {
     "NAME": "诡谲",
-    "DESCRIPTION": "获得 !M! 点力量 !M! 点敏捷。 NL 进入 诡谲状态 。"
+    "DESCRIPTION": "获得 !M! 点力量 !M! 点敏捷。 NL 进入 yiba:诡谲状态 。"
   },
   "LongevityInHeavenAndEarth": {
     "NAME": "天地同寿",
@@ -158,16 +158,16 @@
   },
   "ThunderstormVientiane": {
     "NAME": "风雷万象",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 根据打出的上一张牌类型给予自身 不同效果 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 根据打出的上一张牌类型给予自身 yiba:不同效果 。"
   },
   "TimeReversal": {
     "NAME": "时光倒流",
-    "DESCRIPTION": "回复满自身生命，清除自身全部负面效果，回满 [E] 。 NL  消耗 。 NL  移除 。 NL  虚无 。",
-    "UPGRADE_DESCRIPTION":"回复满自身生命，清除自身全部负面效果，回满 [E] 。 NL  消耗 。 NL  移除 。"
+    "DESCRIPTION": "回复满自身生命，清除自身全部负面效果，回满 [E] 。 NL  消耗 。 NL  yiba:移除 。 NL  虚无 。",
+    "UPGRADE_DESCRIPTION":"回复满自身生命，清除自身全部负面效果，回满 [E] 。 NL  消耗 。 NL  yiba:移除 。"
   },
   "WuhuTakeOff": {
     "NAME": "芜湖～起飞！",
-    "DESCRIPTION": "获得 !M! 层 飞行 。 NL  消耗 。"
+    "DESCRIPTION": "获得 !M! 层 yiba:飞行 。 NL  消耗 。"
   },
   "SpireScience": {
     "NAME": "尖塔学",
@@ -192,12 +192,12 @@
   },
   "HiddenEnergyInTheBack": {
     "NAME": "后背隐藏能源",
-    "DESCRIPTION": "对所有敌人造成成吨的伤害。 NL 在下回合死亡。 NL  消耗 。 NL  移除 。",
-    "UPGRADE_DESCRIPTION":" 保留 。 NL 对所有敌人造成成吨的伤害。 NL 在下回合死亡。 NL  消耗 。 NL  移除 。"
+    "DESCRIPTION": "对所有敌人造成成吨的伤害。 NL 在下回合死亡。 NL  消耗 。 NL  yiba:移除 。",
+    "UPGRADE_DESCRIPTION":" 保留 。 NL 对所有敌人造成成吨的伤害。 NL 在下回合死亡。 NL  消耗 。 NL  yiba:移除 。"
   },
   "PurplePoison": {
     "NAME": "幽鳞紫尘",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予一层 剧毒 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予一层 yiba:剧毒 。"
   },
   "WeirdThings": {
     "NAME": "怪力乱神",
@@ -303,12 +303,12 @@
   },
   "RussianTurntable": {
     "NAME": "俄罗斯转盘",
-    "DESCRIPTION": "16.6%概率立即死亡。 NL 获得300金币。 NL  消耗 。 NL  虚无 。 NL  移除 。",
+    "DESCRIPTION": "16.6%概率立即死亡。 NL 获得300金币。 NL  消耗 。 NL  虚无 。 NL  yiba:移除 。",
     "UPGRADE_DESCRIPTION":"16.6%概率立即死亡。 NL 获得300金币。 NL  消耗 。 NL  虚无 。"
   },
   "Spiritual": {
     "NAME": "宁神",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 概率获得 一些加成 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 概率获得 yiba:一些加成 。"
   },
   "genocidePain": {
     "NAME": "灭族之痛",
@@ -363,7 +363,7 @@
   },
   "ArtificialBrainOverflow": {
     "NAME": "人工脑溢出",
-    "DESCRIPTION": "从弃牌堆中选择至多 !M! 张牌 消耗 。 NL 获得与 消耗 牌数相同数量层数的 集中 和 缓冲 。 NL 消耗 。"
+    "DESCRIPTION": "从弃牌堆中选择至多 !M! 张牌 消耗 。 NL 获得与 消耗 牌数相同数量层数的 集中 和 yiba:缓冲 。 NL 消耗 。"
   },
   "SnowStorm": {
     "NAME": "暴风雪",
@@ -427,8 +427,8 @@
   },
   "ForcedExit": {
     "NAME": "强制退场",
-    "DESCRIPTION": "固有 。 NL 使一名非boss敌人立即逃跑。 NL 消耗 。 NL 移除 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 保留 。 NL 使一名非boss敌人立即逃跑。 NL 消耗 。 NL 移除 。"
+    "DESCRIPTION": "固有 。 NL 使一名非boss敌人立即逃跑。 NL 消耗 。 NL yiba:移除 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 保留 。 NL 使一名非boss敌人立即逃跑。 NL 消耗 。 NL yiba:移除 。"
   },
   "LosingAnger": {
     "NAME": "泄愤",
@@ -471,7 +471,7 @@
   },
   "Edit": {
     "NAME": "编辑",
-    "DESCRIPTION": "失去你当前拥有的 [E] 。从以下N 种效果 选择至多 !M! 种 (每次随机展示3种，会多次出现)"
+    "DESCRIPTION": "失去你当前拥有的 [E] 。从以下N yiba:种效果 选择至多 !M! 种 (每次随机展示3种，会多次出现)"
   },
   "InstructionsCollect": {
     "NAME": "指令：收集",
@@ -490,7 +490,7 @@
   },
   "Yiba:BaiLan": {
     "NAME": "摆烂",
-    "DESCRIPTION": " 不能被打出 。 NL 抽到这张牌时失去所有能量。 NL 消逝 。"
+    "DESCRIPTION": " 不能被打出 。 NL 抽到这张牌时失去所有能量。 NL yiba:消逝 。"
   },
   "Yiba:WoundInfection": {
     "NAME": "伤口感染",
@@ -502,13 +502,13 @@
   },
   "Yiba:TheFaintLampCrows": {
     "NAME": "幽灯啼",
-    "DESCRIPTION": "从已打出的牌中选择一张，将其复制品放入到你手牌中。 NL 消逝 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从已打出的牌中选择一张，将其复制品放入到你手牌中，在本场战斗耗能为0。 NL 消逝 。 NL 消耗 。"
+    "DESCRIPTION": "从已打出的牌中选择一张，将其复制品放入到你手牌中。 NL yiba:消逝 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从已打出的牌中选择一张，将其复制品放入到你手牌中，在本场战斗耗能为0。 NL yiba:消逝 。 NL 消耗 。"
   },
   "Yiba:Mix": {
     "NAME": "调配",
-    "DESCRIPTION": "在 一定范围 内随机加入一张到手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "在 一定范围 内随机加入一张到手牌，本回合耗能变为0。 NL 消耗 。"
+    "DESCRIPTION": "在 yiba:一定范围 内随机加入一张到手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "在 yiba:一定范围 内随机加入一张到手牌，本回合耗能变为0。 NL 消耗 。"
   },
   "Yiba:YanWangDianMao": {
     "NAME": "阎王点卯",
@@ -546,7 +546,7 @@
   },
   "Yiba:SuddenStop": {
     "NAME": "骤停",
-    "DESCRIPTION": "不能被打出 。 NL 这张牌被累计抽到4次时，直接死亡。 NL 消逝 。 NL 沉底 。",
+    "DESCRIPTION": "不能被打出 。 NL 这张牌被累计抽到4次时，直接死亡。 NL yiba:消逝 。 NL yiba:沉底 。",
     "EXTENDED_DESCRIPTION": [
       " NL （已抽到",
       " 次。）"
