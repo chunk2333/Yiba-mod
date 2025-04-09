@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.yiba</groupId>
-    <artifactId>yiba_testmod</artifactId>
+    <artifactId>ZaRou</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -43,7 +43,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>Yiba_testmod</finalName>
+        <finalName>ZaRou</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -67,12 +67,12 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>D:\SteamLibrary\steamapps\common\SlayTheSpire\mods</outputDirectory>
+                            <outputDirectory>F:\SteamLibrary\steamapps\common\SlayTheSpire\mods</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>target</directory> <!-- 目标文件所在目录 -->
                                     <includes>
-                                        <include>Yiba_testmod.jar</include> <!-- 包含的文件类型，根据实际情况修改 -->
+                                        <include>ZaRou.jar</include> <!-- 包含的文件类型，根据实际情况修改 -->
                                     </includes>
                                 </resource>
                             </resources>
