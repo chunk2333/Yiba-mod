@@ -20,9 +20,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up JDK 8
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         java-version: '8'
         distribution: 'temurin'
@@ -39,8 +39,8 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file actionsPom.xml
     - run: mkdir staging && cp target/*.jar staging
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
-        name: Yiba_mod
+        name: ZaRou
         path: staging
       
