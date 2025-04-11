@@ -3,6 +3,7 @@ package patchs;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 
@@ -14,7 +15,11 @@ public class TungstenRodVoice {
     public static void Voice() {
         //播放 棍子掉落的声音
         //AbstractDungeon.actionManager.addToTop(new SFXAction(YiBaHelper.MakeSoundPath("Fall_Steel")));
-        CardCrawlGame.sound.playA("Fall_Steel", 0F);
+        int random_num = AbstractDungeon.relicRng.random(1,100);
+        if (random_num == 2) {
+            CardCrawlGame.sound.playA("Fall_Steel", 0F);
+        }
+
     }
 
     //实现当点开遗物页触发时
