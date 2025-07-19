@@ -261,6 +261,7 @@ public class YibaMod implements PostRenderSubscriber, PostInitializeSubscriber, 
         this.cardsToAdd.add(new Tiptoe());//蹑手蹑脚
         this.cardsToAdd.add(new PlanAndStrategize());//运筹帷幄
         this.cardsToAdd.add(new TravelLight());//轻装上阵
+        this.cardsToAdd.add(new HandSlip());//手滑
 
 
 

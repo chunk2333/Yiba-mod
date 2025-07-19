@@ -51,6 +51,7 @@ public class TheFaintLampCrowsAction extends AbstractGameAction {
                 c.unhover();
                 if (this.upgrade){
                     c.cost = 0;
+                    c.costForTurn = 0;
                 }
                 addToBot(new MakeTempCardInHandAction(c));
             }

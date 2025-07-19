@@ -31,7 +31,8 @@ public class ArtificialBrainOverflowAciton extends AbstractGameAction {
                 this.isDone = true;
                 return;
             }
-            AbstractDungeon.gridSelectScreen.open(this.player.discardPile, this.numberOfCards, true, TEXT[1] + this.numberOfCards + TEXT[2]);
+            int maxSelectable = Math.min(this.numberOfCards, this.player.discardPile.size());
+            AbstractDungeon.gridSelectScreen.open(this.player.discardPile, maxSelectable, true, TEXT[1] + this.numberOfCards + TEXT[2]);
             tickDuration();
             return;
         }
@@ -41,8 +42,12 @@ public class ArtificialBrainOverflowAciton extends AbstractGameAction {
                 AbstractDungeon.player.discardPile.moveToExhaustPile(c);
                 AbstractDungeon.player.discardPile.group.remove(c);
             }
-            addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BufferPower(AbstractDungeon.player, AbstractDungeon.gridSelectScreen.selectedCards.size()), AbstractDungeon.gridSelectScreen.selectedCards.size()));
-            addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FocusPower(AbstractDungeon.player, AbstractDungeon.gridSelectScreen.selectedCards.size()), AbstractDungeon.gridSelectScreen.selectedCards.size()));
+            int selectedCount = AbstractDungeon.gridSelectScreen.selectedCards.size();
+            if (selectedCount > 0) {
+                addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BufferPower(AbstractDungeon.player, AbstractDungeon.gridSelectScreen.selectedCards.size()), AbstractDungeon.gridSelectScreen.selectedCards.size()));
+                addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FocusPower(AbstractDungeon.player, AbstractDungeon.gridSelectScreen.selectedCards.size()), AbstractDungeon.gridSelectScreen.selectedCards.size()));
+
+            }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             AbstractDungeon.player.hand.refreshHandLayout();
         }

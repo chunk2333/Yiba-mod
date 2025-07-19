@@ -563,5 +563,9 @@
   "Yiba:TravelLight": {
     "NAME": "轻装上阵",
     "DESCRIPTION": "连续三回合发动，回合开始时选择 消耗 一张手牌。"
+  },
+  "Yiba:HandSlip": {
+    "NAME": "手滑",
+    "DESCRIPTION": "不能被打出 。 NL 当打出卡牌时，若该卡牌的耗能在手牌中不是唯一，取消打出，并随机打出一张对应耗能相同的手牌。"
   }
 }
